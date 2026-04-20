@@ -1,0 +1,20 @@
+/**
+ * This file was generated automatically by Supernova.io and should not be changed manually.
+ * To modify the format or content of this file, please contact your design system team. 
+ */
+
+:root {
+  --pepper-shadow-focus-rings-default: 0px 0px 0px 4px rgba(var(--rgb-pepper-color-semantic-color-foreground-stroke-brand-default), 1), 0px 0px 0px 2px rgba(var(--rgb-pepper-color-semantic-color-foreground-stroke-inverse-strong), 1);
+  --pepper-shadow-focus-rings-inverse: 0px 0px 0px 4px rgba(var(--rgb-pepper-color-semantic-color-foreground-stroke-inverse-strong), 1), 0px 0px 0px 2px rgba(var(--rgb-pepper-color-semantic-color-foreground-stroke-strong), 1);
+  --pepper-shadow-focus-rings-error: 0px 0px 0px 4px rgba(var(--rgb-pepper-color-primitive-color-system-red-700), 1), 0px 0px 0px 2px rgba(var(--rgb-pepper-color-semantic-color-foreground-stroke-inverse-strong), 1);
+  --pepper-shadow-focus-rings-subtle: 0px 0px 0px 4px rgba(var(--rgb-pepper-color-semantic-color-foreground-stroke-strong), 1), 0px 0px 0px 2px rgba(var(--rgb-pepper-color-semantic-color-foreground-stroke-inverse-strong), 1);
+  --pepper-shadow-icon-light-effect: inset 0px -3px 2px 0px #347ffc1a, inset 2px 3px 2px 0px #ffffff1a;
+  --pepper-shadow-icon-dark-effect: 0px 4px 6px -1px rgba(var(--rgb-pepper-color-shadow-xs-color), 0.05), inset -3px 3px 14px 0px #ffffff4d, inset 15px -15px 27px 0px #00000033, inset 0px -1px 2px 0px #00276833;
+  --pepper-shadow-2xs: 0px 1px 1px 0px rgba(var(--rgb-pepper-color-shadow-2xs-color), 0.05);
+  --pepper-shadow-xs: 0px 1px 3px 0px rgba(var(--rgb-pepper-color-shadow-xs-color), 0.05);
+  --pepper-shadow-sm: 0px 2px 4px -1px rgba(var(--rgb-pepper-color-shadow-sm-color), 0.1);
+  --pepper-shadow-md: 0px 4px 6px -1px rgba(var(--rgb-pepper-color-shadow-md-color), 0.1);
+  --pepper-shadow-lg: 0px 10px 15px -3px rgba(var(--rgb-pepper-color-shadow-lg-color), 0.1);
+  --pepper-shadow-xl: 0px 20px 25px -5px rgba(var(--rgb-pepper-color-shadow-xl-color), 0.1);
+  --pepper-shadow-2xl: 0px 25px 50px -12px rgba(var(--rgb-pepper-color-shadow-2xl-color), 0.25);
+}

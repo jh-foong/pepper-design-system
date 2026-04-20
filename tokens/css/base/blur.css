@@ -1,0 +1,14 @@
+/**
+ * This file was generated automatically by Supernova.io and should not be changed manually.
+ * To modify the format or content of this file, please contact your design system team. 
+ */
+
+:root {
+  --pepper-blur-lg: blur(16px);
+  --pepper-blur-md-2: blur(12px);
+  --pepper-blur-sm-3: blur(8px);
+  --pepper-blur-xl-4: blur(40px);
+  --pepper-blur-2xl-5: blur(40px);
+  --pepper-blur-3xl-6: blur(64px);
+  --pepper-blur-xs-7: blur(4px);
+}
