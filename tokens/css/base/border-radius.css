@@ -1,0 +1,18 @@
+/**
+ * This file was generated automatically by Supernova.io and should not be changed manually.
+ * To modify the format or content of this file, please contact your design system team. 
+ */
+
+:root {
+  /* Straight edges */
+  --pepper-border-radius-none: 0px;
+  --pepper-border-radius-xs: 2px;
+  --pepper-border-radius-sm: 4px;
+  --pepper-border-radius-md: 8px;
+  --pepper-border-radius-lg: 12px;
+  --pepper-border-radius-xl: 16px;
+  --pepper-border-radius-2xl: 24px;
+  --pepper-border-radius-3xl: 32px;
+  /* Creates a "pill" shape */
+  --pepper-border-radius-full: 9999px;
+}

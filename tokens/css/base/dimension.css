@@ -1,0 +1,315 @@
+/**
+ * This file was generated automatically by Supernova.io and should not be changed manually.
+ * To modify the format or content of this file, please contact your design system team. 
+ */
+
+:root {
+  /* 0px */
+  --pepper-dimension-global-unit-0: 0px;
+  /* 1px */
+  --pepper-dimension-global-unit-0-25: 1px;
+  /* 2px */
+  --pepper-dimension-global-unit-0-5: 2px;
+  /* 4px (base) */
+  --pepper-dimension-global-unit-1: 4px;
+  /* 6px */
+  --pepper-dimension-global-unit-1-5: 6px;
+  /* 8px */
+  --pepper-dimension-global-unit-2: 8px;
+  /* 10px */
+  --pepper-dimension-global-unit-2-5: 10px;
+  /* 12px */
+  --pepper-dimension-global-unit-3: 12px;
+  /* 14px */
+  --pepper-dimension-global-unit-3-5: 14px;
+  /* 16px */
+  --pepper-dimension-global-unit-4: 16px;
+  /* 20px */
+  --pepper-dimension-global-unit-5: 20px;
+  /* 24px */
+  --pepper-dimension-global-unit-6: 24px;
+  /* 28px */
+  --pepper-dimension-global-unit-7: 28px;
+  /* 32px */
+  --pepper-dimension-global-unit-8: 32px;
+  /* 36px */
+  --pepper-dimension-global-unit-9: 36px;
+  /* 40px */
+  --pepper-dimension-global-unit-10: 40px;
+  /* 44px */
+  --pepper-dimension-global-unit-11: 44px;
+  /* 48px */
+  --pepper-dimension-global-unit-12: 48px;
+  /* 52px */
+  --pepper-dimension-global-unit-13: 52px;
+  /* 56px */
+  --pepper-dimension-global-unit-14: 56px;
+  /* 60px */
+  --pepper-dimension-global-unit-15: 60px;
+  /* 64px */
+  --pepper-dimension-global-unit-16: 64px;
+  /* 68px */
+  --pepper-dimension-global-unit-17: 68px;
+  /* 72px */
+  --pepper-dimension-global-unit-18: 72px;
+  /* 76px */
+  --pepper-dimension-global-unit-19: 76px;
+  /* 80px */
+  --pepper-dimension-global-unit-20: 80px;
+  /* 84px */
+  --pepper-dimension-global-unit-21: 84px;
+  /* 88px */
+  --pepper-dimension-global-unit-22: 88px;
+  /* 92px */
+  --pepper-dimension-global-unit-23: 92px;
+  /* 96px */
+  --pepper-dimension-global-unit-24: 96px;
+  /* 100px */
+  --pepper-dimension-global-unit-25: 100px;
+  /* 104px */
+  --pepper-dimension-global-unit-26: 104px;
+  /* 108px */
+  --pepper-dimension-global-unit-27: 108px;
+  /* 112px */
+  --pepper-dimension-global-unit-28: 112px;
+  /* 116px */
+  --pepper-dimension-global-unit-29: 116px;
+  /* 120px */
+  --pepper-dimension-global-unit-30: 120px;
+  /* 124px */
+  --pepper-dimension-global-unit-31: 124px;
+  /* 128px */
+  --pepper-dimension-global-unit-32: 128px;
+  /* 132px */
+  --pepper-dimension-global-unit-33: 132px;
+  /* 136px */
+  --pepper-dimension-global-unit-34: 136px;
+  /* 140px */
+  --pepper-dimension-global-unit-35: 140px;
+  /* 144px */
+  --pepper-dimension-global-unit-36: 144px;
+  /* 148px */
+  --pepper-dimension-global-unit-37: 148px;
+  /* 152px */
+  --pepper-dimension-global-unit-38: 152px;
+  /* 156px */
+  --pepper-dimension-global-unit-39: 156px;
+  /* 160px */
+  --pepper-dimension-global-unit-40: 160px;
+  /* 164px */
+  --pepper-dimension-global-unit-41: 164px;
+  /* 168px */
+  --pepper-dimension-global-unit-42: 168px;
+  /* 172px */
+  --pepper-dimension-global-unit-43: 172px;
+  /* 176px */
+  --pepper-dimension-global-unit-44: 176px;
+  /* 180px */
+  --pepper-dimension-global-unit-45: 180px;
+  /* 188px */
+  --pepper-dimension-global-unit-46: 184px;
+  /* 192px */
+  --pepper-dimension-global-unit-47: 188px;
+  /* 192px */
+  --pepper-dimension-global-unit-48: 192px;
+  /* 196px */
+  --pepper-dimension-global-unit-49: 196px;
+  /* 200px */
+  --pepper-dimension-global-unit-50: 200px;
+  /* 204px */
+  --pepper-dimension-global-unit-51: 204px;
+  /* 208px */
+  --pepper-dimension-global-unit-52: 208px;
+  /* 212px */
+  --pepper-dimension-global-unit-53: 212px;
+  /* 216px */
+  --pepper-dimension-global-unit-54: 216px;
+  /* 220px */
+  --pepper-dimension-global-unit-55: 220px;
+  /* 224px */
+  --pepper-dimension-global-unit-56: 224px;
+  /* 228px */
+  --pepper-dimension-global-unit-57: 228px;
+  /* 232px */
+  --pepper-dimension-global-unit-58: 232px;
+  /* 236px */
+  --pepper-dimension-global-unit-59: 236px;
+  /* 240px */
+  --pepper-dimension-global-unit-60: 240px;
+  /* 244px */
+  --pepper-dimension-global-unit-61: 244px;
+  /* 248px */
+  --pepper-dimension-global-unit-62: 248px;
+  /* 252px */
+  --pepper-dimension-global-unit-63: 256px;
+  /* 256px */
+  --pepper-dimension-global-unit-64: 256px;
+  /* 260px */
+  --pepper-dimension-global-unit-65: 260px;
+  /* 264px */
+  --pepper-dimension-global-unit-66: 264px;
+  /* 268px */
+  --pepper-dimension-global-unit-67: 268px;
+  /* 272px */
+  --pepper-dimension-global-unit-68: 272px;
+  /* 276px */
+  --pepper-dimension-global-unit-69: 276px;
+  /* 280px */
+  --pepper-dimension-global-unit-70: 280px;
+  /* 284px */
+  --pepper-dimension-global-unit-71: 284px;
+  /* 288px */
+  --pepper-dimension-global-unit-72: 288px;
+  /* 292px */
+  --pepper-dimension-global-unit-73: 292px;
+  /* 296px */
+  --pepper-dimension-global-unit-74: 296px;
+  /* 300px */
+  --pepper-dimension-global-unit-75: 300px;
+  /* 304px */
+  --pepper-dimension-global-unit-76: 304px;
+  /* 308px */
+  --pepper-dimension-global-unit-77: 308px;
+  /* 312px */
+  --pepper-dimension-global-unit-78: 312px;
+  /* 316px */
+  --pepper-dimension-global-unit-79: 320px;
+  /* 320px */
+  --pepper-dimension-global-unit-80: 320px;
+  /* 324px */
+  --pepper-dimension-global-unit-81: 324px;
+  /* 328px */
+  --pepper-dimension-global-unit-82: 328px;
+  /* 332px */
+  --pepper-dimension-global-unit-83: 332px;
+  /* 336px */
+  --pepper-dimension-global-unit-84: 336px;
+  /* 340px */
+  --pepper-dimension-global-unit-85: 340px;
+  /* 344px */
+  --pepper-dimension-global-unit-86: 344px;
+  /* 348px */
+  --pepper-dimension-global-unit-87: 348px;
+  /* 352px */
+  --pepper-dimension-global-unit-88: 352px;
+  /* 356px */
+  --pepper-dimension-global-unit-89: 356px;
+  /* 360px */
+  --pepper-dimension-global-unit-90: 360px;
+  /* 364px */
+  --pepper-dimension-global-unit-91: 364px;
+  /* 368px */
+  --pepper-dimension-global-unit-92: 368px;
+  /* 372px */
+  --pepper-dimension-global-unit-93: 372px;
+  /* 374px */
+  --pepper-dimension-global-unit-94: 376px;
+  /* 376px */
+  --pepper-dimension-global-unit-95: 380px;
+  /* 384px */
+  --pepper-dimension-global-unit-96: 384px;
+  /* 388px */
+  --pepper-dimension-global-unit-97: 388px;
+  /* 392px */
+  --pepper-dimension-global-unit-98: 392px;
+  /* 396px */
+  --pepper-dimension-global-unit-99: 396px;
+  /* 400px */
+  --pepper-dimension-global-unit-100: 400px;
+  --pepper-dimension-font-weight-regular-400: 400px;
+  --pepper-dimension-font-weight-semi-bold-600: 600px;
+  --pepper-dimension-font-weight-bold-700: 700px;
+  /* Spacing: None */
+  --pepper-dimension-scale-spacing-none: 0px;
+  /* 2px */
+  --pepper-dimension-scale-spacing-2: 2px;
+  /* 4px */
+  --pepper-dimension-scale-spacing-4: 4px;
+  /* 8px */
+  --pepper-dimension-scale-spacing-8: 8px;
+  /* 12px */
+  --pepper-dimension-scale-spacing-12: 12px;
+  /* 16px */
+  --pepper-dimension-scale-spacing-16: 16px;
+  /* 20px */
+  --pepper-dimension-scale-spacing-20: 20px;
+  /* 24px */
+  --pepper-dimension-scale-spacing-24: 24px;
+  /* 28px */
+  --pepper-dimension-scale-spacing-28: 28px;
+  /* 32px */
+  --pepper-dimension-scale-spacing-32: 32px;
+  /* 36px */
+  --pepper-dimension-scale-spacing-36: 36px;
+  /* 40px */
+  --pepper-dimension-scale-spacing-40: 40px;
+  /* 48px */
+  --pepper-dimension-scale-spacing-48: 48px;
+  /* 56px */
+  --pepper-dimension-scale-spacing-56: 56px;
+  /* 64px */
+  --pepper-dimension-scale-spacing-64: 64px;
+  /* 80px */
+  --pepper-dimension-scale-spacing-80: 80px;
+  /* 96px */
+  --pepper-dimension-scale-spacing-96: 96px;
+  /* 128px */
+  --pepper-dimension-scale-spacing-128: 128px;
+  /* 160px */
+  --pepper-dimension-scale-spacing-160: 160px;
+  /* 256px */
+  --pepper-dimension-scale-spacing-256: 256px;
+  --pepper-dimension-shadow-md-spread-radius: -1px;
+  --pepper-dimension-shadow-sm-spread-radius: -1px;
+  --pepper-dimension-shadow-lg-spread-radius: -4px;
+  --pepper-dimension-shadow-xl-spread-radius: -6px;
+  --pepper-dimension-shadow-2xl-spread-radius: -12px;
+  --pepper-dimension-heading-h2-font-weight: var(--pepper-dimension-font-weight-bold-700);
+  --pepper-dimension-heading-h3-font-weight: var(--pepper-dimension-font-weight-bold-700);
+  --pepper-dimension-heading-h4-font-weight: var(--pepper-dimension-font-weight-bold-700);
+  --pepper-dimension-heading-h5-font-weight: var(--pepper-dimension-font-weight-bold-700);
+  --pepper-dimension-heading-h6-font-weight: var(--pepper-dimension-font-weight-bold-700);
+  --pepper-dimension-heading-h1-font-weight: var(--pepper-dimension-font-weight-bold-700);
+  --pepper-dimension-body-sm-font-weight: var(--pepper-dimension-font-weight-regular-400);
+  --pepper-dimension-body-xs-font-weight: var(--pepper-dimension-font-weight-regular-400);
+  --pepper-dimension-body-md-font-weight: var(--pepper-dimension-font-weight-regular-400);
+  --pepper-dimension-body-lg-font-weight: var(--pepper-dimension-font-weight-regular-400);
+  --pepper-dimension-label-md-font-weight: var(--pepper-dimension-font-weight-semi-bold-600);
+  --pepper-dimension-label-sm-font-weight: var(--pepper-dimension-font-weight-semi-bold-600);
+  --pepper-dimension-label-lg-font-weight: var(--pepper-dimension-font-weight-semi-bold-600);
+  --pepper-dimension-body-2xs-font-weight: var(--pepper-dimension-font-weight-regular-400);
+  --pepper-dimension-label-xs-font-weight: var(--pepper-dimension-font-weight-semi-bold-600);
+  --pepper-dimension-label-2xs-font-weight: var(--pepper-dimension-font-weight-semi-bold-600);
+  /* Number of Columns */
+  --pepper-dimension-canvas-columns: var(--pepper-dimension-global-unit-3);
+  --pepper-dimension-blur-xs: var(--pepper-dimension-global-unit-1);
+  --pepper-dimension-blur-sm: var(--pepper-dimension-global-unit-2);
+  --pepper-dimension-blur-md: var(--pepper-dimension-global-unit-3);
+  --pepper-dimension-blur-lg: var(--pepper-dimension-global-unit-4);
+  --pepper-dimension-blur-xl: var(--pepper-dimension-global-unit-6);
+  --pepper-dimension-blur-2xl: var(--pepper-dimension-global-unit-10);
+  --pepper-dimension-blur-3xl: var(--pepper-dimension-global-unit-16);
+  --pepper-dimension-shadow-2xs-offset-x: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-2xs-offset-y: var(--pepper-dimension-global-unit-0-25);
+  --pepper-dimension-shadow-2xs-blur-radius: var(--pepper-dimension-global-unit-0-25);
+  --pepper-dimension-shadow-2xs-spread-radius: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-xs-offset-x: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-sm-offset-x: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-md-offset-x: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-md-offset-y: var(--pepper-dimension-global-unit-1);
+  --pepper-dimension-shadow-md-blur-radius: var(--pepper-dimension-global-unit-1-5);
+  --pepper-dimension-shadow-sm-offset-y: var(--pepper-dimension-global-unit-0-5);
+  --pepper-dimension-shadow-xs-offset-y: var(--pepper-dimension-global-unit-0-25);
+  --pepper-dimension-shadow-sm-blur-radius: var(--pepper-dimension-global-unit-1);
+  --pepper-dimension-shadow-xs-blur-radius: var(--pepper-dimension-global-unit-0-5);
+  --pepper-dimension-shadow-xs-spread-radius: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-lg-offset-x: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-lg-offset-y: var(--pepper-dimension-global-unit-2-5);
+  --pepper-dimension-shadow-lg-blur-radius: var(--pepper-dimension-global-unit-3-5);
+  --pepper-dimension-shadow-xl-offset-x: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-xl-offset-y: var(--pepper-dimension-global-unit-5);
+  --pepper-dimension-shadow-xl-blur-radius: var(--pepper-dimension-global-unit-6);
+  --pepper-dimension-shadow-2xl-offset-x: var(--pepper-dimension-global-unit-0);
+  --pepper-dimension-shadow-2xl-offset-y: var(--pepper-dimension-global-unit-6);
+  --pepper-dimension-shadow-2xl-blur-radius: var(--pepper-dimension-global-unit-12);
+}
