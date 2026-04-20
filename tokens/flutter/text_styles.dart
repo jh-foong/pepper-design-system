@@ -1,0 +1,236 @@
+import 'package:flutter/material.dart';
+
+class AppTextStyles {
+  static const bodyBodyLg = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 18,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.5555555555555556,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodyMd = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodySm = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 14,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.4285714285714286,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodyXs = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 12,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodyLgUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 18,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.5555555555555556,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodyMdUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodyMdDashed = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodySmUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 14,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.4285714285714286,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBodyXsUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 12,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelLg = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 18,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelMd = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelSm = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 14,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.4285714285714286,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelMdUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelMdDashed = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelSmUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 14,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.4285714285714286,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const headingH1 = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.normal,
+    fontSize: 96,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.0416666666666667,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const headingH2 = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.normal,
+    fontSize: 72,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.0555555555555556,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const headingH3 = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.normal,
+    fontSize: 48,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.0833333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const headingH4 = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.normal,
+    fontSize: 30,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.2,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const headingH5 = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.normal,
+    fontSize: 24,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const headingH6 = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.normal,
+    fontSize: 20,
+    decoration: TextDecoration.none,
+    letterSpacing: -0.6,
+    height: 1.4,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  AppTextStyles._();
+}
