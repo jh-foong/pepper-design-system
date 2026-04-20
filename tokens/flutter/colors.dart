@@ -1,0 +1,1620 @@
+import 'package:flutter/material.dart';
+
+class AppColors {
+  static const iconGlassLight = Color(0x8099c1fd); 
+  
+  /// Base Layer or Canvas
+  static const semanticColorBackgroundSurfacePrimary = Color(0xffffffff); 
+  
+  /// Use as a "raised" area. Or base layer of a component.
+  static const semanticColorBackgroundSurfaceSecondary = Color(0xfff5f5f5); 
+  
+  static const semanticColorBackgroundSurfaceDisabled = Color(0x1a0a0a0a); 
+  
+  /// Use when no color is used.
+  static const semanticColorBackgroundSurfaceTransparent = Color(0x00ffffff); 
+  
+  /// Floating Elements: Cards, Modals, Bottom Sheet, etc. Can be used along with shadow effects.
+  static const semanticColorBackgroundSurfaceElevated = Color(0xffffffff); 
+  
+  /// Used to describe a base Layer or Canvas that is "recessed"
+  static const semanticColorBackgroundSurfaceSunken = Color(0xfff5f5f5); 
+  
+  static const semanticColorBackgroundSurfaceNegative = Color(0xffe7000b); 
+  
+  static const semanticColorBackgroundSurfacePositive = Color(0xff008236); 
+  
+  static const semanticColorBackgroundSurfacePrimaryHover = Color(0xfff5f5f5); 
+  
+  static const semanticColorBackgroundSurfaceSecondaryHover = Color(0xffe5e5e5); 
+  
+  static const semanticColorBackgroundSurfaceNegativeHover = Color(0xffc10007); 
+  
+  static const semanticColorBackgroundSurfacePositiveHover = Color(0xff016630); 
+  
+  static const semanticColorBackgroundSurfaceSystemSuccess = Color(0xffdcfce7); 
+  
+  static const semanticColorBackgroundSurfaceSystemError = Color(0xffffe2e2); 
+  
+  static const semanticColorBackgroundSurfaceSystemWarning = Color(0xffffedd4); 
+  
+  static const semanticColorBackgroundSurfaceBrandSubtle = Color(0xffe6f0ff); 
+  
+  static const semanticColorBackgroundSurfaceBrandPrimary = Color(0xff0165fa); 
+  
+  static const semanticColorBackgroundSurfaceBrandSecondary = Color(0xff00d3f3); 
+  
+  static const semanticColorBackgroundSurfaceBrandCrypto = Color(0xffff5000); 
+  
+  static const semanticColorBackgroundSurfaceBrandSubtleHover = Color(0xff99c1fd); 
+  
+  static const semanticColorBackgroundSurfaceBrandPrimaryHover = Color(0xff0032c7); 
+  
+  static const semanticColorBackgroundSurfaceBrandSecondaryHover = Color(0xff00b8db); 
+  
+  static const semanticColorBackgroundSurfaceBrandCryptoHover = Color(0xffcc3702); 
+  
+  /// Transparency layer used onSurface to adapt to background colour.
+  static const semanticColorBackgroundSurfaceAccentTonalSubtle = Color(0x1a0a0a0a); 
+  
+  /// Transparency layer used onSurface to adapt to background colour.
+  static const semanticColorBackgroundSurfaceAccentTonalStrong = Color(0x990a0a0a); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentRedSubtle = Color(0xffffe2e2); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentRedStrong = Color(0xffe7000b); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentOrangeSubtle = Color(0xffffedd4); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentOrangeStrong = Color(0xffff8904); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentYellowSubtle = Color(0xfffef7c8); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentYellowStrong = Color(0xffeed12b); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentLimeSubtle = Color(0xffd3f1a7); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentLimeStrong = Color(0xff94c748); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentGreenSubtle = Color(0xffdcfce7); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentGreenStrong = Color(0xff00a63e); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentTurqoiseSubtle = Color(0xffd7f9ed); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentTurqoiseStrong = Color(0xff47e0a8); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentCyanSubtle = Color(0xffcefafe); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentCyanStrong = Color(0xff00d3f3); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentBlueSubtle = Color(0xffe6f0ff); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentBlueStrong = Color(0xff0165fa); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentVioletSubtle = Color(0xffe3c0f0); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentVioletStrong = Color(0xffaa30d8); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentMagentaSubtle = Color(0xfffdd0ec); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceAccentMagentaStrong = Color(0xffe774bb); 
+  
+  /// Base Layer or Canvas
+  static const semanticColorBackgroundSurfaceInversePrimary = Color(0xff0a0a0a); 
+  
+  /// Use as a "raised" area. Or base layer of a component.
+  static const semanticColorBackgroundSurfaceInverseSecondary = Color(0xff262626); 
+  
+  static const semanticColorBackgroundSurfaceInverseDisabled = Color(0x33ffffff); 
+  
+  /// Use when no color is used.
+  static const semanticColorBackgroundSurfaceInverseTransparent = Color(0x000a0a0a); 
+  
+  /// Floating Elements: Cards, Modals, Bottom Sheet, etc. Can be used along with shadow effects.
+  static const semanticColorBackgroundSurfaceInverseElevated = Color(0xff0a0a0a); 
+  
+  /// Used to describe a base Layer or Canvas that is "recessed"
+  static const semanticColorBackgroundSurfaceInverseSunken = Color(0xff262626); 
+  
+  static const semanticColorBackgroundSurfaceInverseNegative = Color(0xfffb2c36); 
+  
+  static const semanticColorBackgroundSurfaceInversePositive = Color(0xff00c950); 
+  
+  static const semanticColorBackgroundSurfaceInversePrimaryHover = Color(0xff262626); 
+  
+  static const semanticColorBackgroundSurfaceInverseSecondaryHover = Color(0xff404040); 
+  
+  static const semanticColorBackgroundSurfaceInverseNegativeHover = Color(0xffff6467); 
+  
+  static const semanticColorBackgroundSurfaceInversePositiveHover = Color(0xff05df72); 
+  
+  static const semanticColorBackgroundSurfaceInverseSystemSuccess = Color(0xff032e15); 
+  
+  static const semanticColorBackgroundSurfaceInverseSystemError = Color(0xff460809); 
+  
+  static const semanticColorBackgroundSurfaceInverseSystemWarning = Color(0xff441306); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandSubtle = Color(0xff000061); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandPrimary = Color(0xff0165fa); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandSecondary = Color(0xff00d3f3); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandCrypto = Color(0xffff5000); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandSubtleHover = Color(0xff000094); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandPrimaryHover = Color(0xff0032c7); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandSecondaryHover = Color(0xff00b8db); 
+  
+  static const semanticColorBackgroundSurfaceInverseBrandCryptoHover = Color(0xffcc3702); 
+  
+  /// Transparency layer used onSurface to adapt to background colour.
+  static const semanticColorBackgroundSurfaceInverseAccentTonalSubtle = Color(0x4dffffff); 
+  
+  /// Transparency layer used onSurface to adapt to background colour.
+  static const semanticColorBackgroundSurfaceInverseAccentTonalStrong = Color(0xccffffff); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentRedSubtle = Color(0xff460809); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentRedStrong = Color(0xfffb2c36); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentOrangeSubtle = Color(0xff441306); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentOrangeStrong = Color(0xffff6900); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentYellowSubtle = Color(0xff451a03); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentYellowStrong = Color(0xffddb30e); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentLimeSubtle = Color(0xff1a2e05); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentLimeStrong = Color(0xff82b536); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentGreenSubtle = Color(0xff032e15); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentGreenStrong = Color(0xff00c950); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentTurqoiseSubtle = Color(0xff134e4a); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentTurqoiseStrong = Color(0xff3ac190); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentCyanSubtle = Color(0xff053345); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentCyanStrong = Color(0xff53eafd); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentBlueSubtle = Color(0xff000061); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentBlueStrong = Color(0xff3484fb); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentVioletSubtle = Color(0xff260333); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentVioletStrong = Color(0xff7f00ad); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentMagentaSubtle = Color(0xff500724); 
+  
+  /// Used for decorative purposes.
+  static const semanticColorBackgroundSurfaceInverseAccentMagentaStrong = Color(0xffda62ac); 
+  
+  static const semanticColorForegroundTextPrimary = Color(0xff0a0a0a); 
+  
+  static const semanticColorForegroundTextSecondary = Color(0xff525252); 
+  
+  static const semanticColorForegroundTextDisabled = Color(0xffa1a1a1); 
+  
+  static const semanticColorForegroundTextNegative = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundTextPositive = Color(0xff008236); 
+  
+  static const semanticColorForegroundTextSystemError = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundTextSystemSuccess = Color(0xff008236); 
+  
+  static const semanticColorForegroundTextSystemWarning = Color(0xffca3500); 
+  
+  static const semanticColorForegroundTextBrandDefault = Color(0xff0165fa); 
+  
+  static const semanticColorForegroundTextBrandStrong = Color(0xff000061); 
+  
+  static const semanticColorForegroundTextBrandSecondaryDefault = Color(0xff00d3f3); 
+  
+  static const semanticColorForegroundTextBrandSecondaryStrong = Color(0xff053345); 
+  
+  static const semanticColorForegroundTextAccentRedDefault = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundTextAccentRedStrong = Color(0xff82181a); 
+  
+  static const semanticColorForegroundTextAccentOrangeDefault = Color(0xffca3500); 
+  
+  static const semanticColorForegroundTextAccentOrangeStrong = Color(0xff7e2a0c); 
+  
+  static const semanticColorForegroundTextAccentYellowDefault = Color(0xff916a00); 
+  
+  static const semanticColorForegroundTextAccentYellowStrong = Color(0xff451a03); 
+  
+  static const semanticColorForegroundTextAccentLimeDefault = Color(0xff4d7c0f); 
+  
+  static const semanticColorForegroundTextAccentLimeStrong = Color(0xff1a2e05); 
+  
+  static const semanticColorForegroundTextAccentGreenDefault = Color(0xff008236); 
+  
+  static const semanticColorForegroundTextAccentGreenStrong = Color(0xff0d542b); 
+  
+  static const semanticColorForegroundTextAccentTurqoiseDefault = Color(0xff0d9488); 
+  
+  static const semanticColorForegroundTextAccentTurqoiseStrong = Color(0xff134e4a); 
+  
+  static const semanticColorForegroundTextAccentCyanDefault = Color(0xff00d3f3); 
+  
+  static const semanticColorForegroundTextAccentCyanStrong = Color(0xff007595); 
+  
+  static const semanticColorForegroundTextAccentBlueDefault = Color(0xff0165fa); 
+  
+  static const semanticColorForegroundTextAccentBlueStrong = Color(0xff000061); 
+  
+  static const semanticColorForegroundTextAccentVioletDefault = Color(0xff3f144f); 
+  
+  static const semanticColorForegroundTextAccentVioletStrong = Color(0xff260333); 
+  
+  static const semanticColorForegroundTextAccentMagentaDefault = Color(0xff9d174d); 
+  
+  static const semanticColorForegroundTextAccentMagentaStrong9 = Color(0xff500724); 
+  
+  static const semanticColorForegroundTextInversePrimary = Color(0xffffffff); 
+  
+  static const semanticColorForegroundTextInverseSecondary = Color(0xffa1a1a1); 
+  
+  static const semanticColorForegroundIconPrimary = Color(0xff0a0a0a); 
+  
+  static const semanticColorForegroundIconSecondary = Color(0xff525252); 
+  
+  static const semanticColorForegroundIconDisabled = Color(0xffa1a1a1); 
+  
+  static const semanticColorForegroundIconNegative = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundIconPositive = Color(0xff008236); 
+  
+  static const semanticColorForegroundIconSystemError = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundIconSystemSuccess = Color(0xff008236); 
+  
+  static const semanticColorForegroundIconSystemWarning = Color(0xffca3500); 
+  
+  static const semanticColorForegroundIconBrandDefault = Color(0xff0165fa); 
+  
+  static const semanticColorForegroundIconBrandStrong = Color(0xff000061); 
+  
+  static const semanticColorForegroundIconBrandSecondaryDefault = Color(0xff00d3f3); 
+  
+  static const semanticColorForegroundIconBrandSecondaryStrong = Color(0xff053345); 
+  
+  static const semanticColorForegroundIconAccentRedDefault = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundIconAccentRedStrong = Color(0xff82181a); 
+  
+  static const semanticColorForegroundIconAccentOrangeDefault = Color(0xffca3500); 
+  
+  static const semanticColorForegroundIconAccentOrangeStrong = Color(0xff7e2a0c); 
+  
+  static const semanticColorForegroundIconAccentYellowDefault = Color(0xff916a00); 
+  
+  static const semanticColorForegroundIconAccentYellowStrong = Color(0xff451a03); 
+  
+  static const semanticColorForegroundIconAccentLimeDefault = Color(0xff4d7c0f); 
+  
+  static const semanticColorForegroundIconAccentLimeStrong = Color(0xff1a2e05); 
+  
+  static const semanticColorForegroundIconAccentGreenDefault = Color(0xff008236); 
+  
+  static const semanticColorForegroundIconAccentGreenStrong = Color(0xff0d542b); 
+  
+  static const semanticColorForegroundIconAccentTurqoiseDefault = Color(0xff0d9488); 
+  
+  static const semanticColorForegroundIconAccentTurqoiseStrong = Color(0xff134e4a); 
+  
+  static const semanticColorForegroundIconAccentCyanDefault = Color(0xff00d3f3); 
+  
+  static const semanticColorForegroundIconAccentCyanStrong = Color(0xff007595); 
+  
+  static const semanticColorForegroundIconAccentBlueDefault = Color(0xff0165fa); 
+  
+  static const semanticColorForegroundIconAccentBlueStrong = Color(0xff000061); 
+  
+  static const semanticColorForegroundIconAccentVioletDefault = Color(0xff3f144f); 
+  
+  static const semanticColorForegroundIconAccentVioletStrong = Color(0xff260333); 
+  
+  static const semanticColorForegroundIconAccentMagentaDefault = Color(0xff9d174d); 
+  
+  static const semanticColorForegroundIconAccentMagentaStrong = Color(0xff500724); 
+  
+  static const semanticColorForegroundIconInversePrimary = Color(0xffffffff); 
+  
+  static const semanticColorForegroundIconInverseSecondary = Color(0xffa1a1a1); 
+  
+  static const semanticColorForegroundStrokeSubtle = Color(0xffd4d4d4); 
+  
+  static const semanticColorForegroundStrokeStrong = Color(0xff0a0a0a); 
+  
+  static const semanticColorForegroundStrokeNegative = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundStrokePositive = Color(0xff008236); 
+  
+  static const semanticColorForegroundStrokeDividerDefault = Color(0x33000000); 
+  
+  static const semanticColorForegroundStrokeSystemError = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundStrokeBrandDefault = Color(0xff0165fa); 
+  
+  static const semanticColorForegroundStrokeBrandStrong = Color(0xff000061); 
+  
+  static const semanticColorForegroundStrokeAccentTonalDefault = Color(0x33000000); 
+  
+  static const semanticColorForegroundStrokeInverseSubtle = Color(0xff525252); 
+  
+  static const semanticColorForegroundStrokeInverseStrong = Color(0xffffffff); 
+  
+  static const semanticColorForegroundStrokeInverseNegative = Color(0xfffb2c36); 
+  
+  static const semanticColorForegroundStrokeInversePositive = Color(0xff00c950); 
+  
+  static const semanticColorForegroundStrokeInverseDividerDefault = Color(0x4dffffff); 
+  
+  static const semanticColorForegroundStrokeInverseSystemError = Color(0xfffb2c36); 
+  
+  static const semanticColorForegroundStrokeInverseAccentTonalDefault = Color(0x4dffffff); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfacePrimaryNone = Color(0x00ffffff); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfacePrimaryFull = Color(0xffffffff); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceBrandPrimaryNone = Color(0x000165fa); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceBrandPrimaryFull = Color(0xff0165fa); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceAccentRedNone = Color(0x00e7000b); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceAccentRedFull = Color(0xffe7000b); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceAccentGreenNone = Color(0x00008236); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceAccentGreenFull = Color(0xff008236); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceInversePrimaryNone = Color(0x000a0a0a); 
+  
+  static const semanticColorForegroundEffectsOverlayGradientSurfaceInversePrimaryFull = Color(0xff0a0a0a); 
+  
+  static const semanticColorForegroundEffectsOverlayHighlightTonalPrimary = Color(0x0d0a0a0a); 
+  
+  static const semanticColorForegroundEffectsOverlayHighlightBrandPrimary = Color(0x593484fb); 
+  
+  static const semanticColorForegroundEffectsOverlayHighlightInverseTonalPrimary = Color(0x33f5f5f5); 
+  
+  static const semanticColorForegroundEffectsOverlayHighlightInverseBrand2Primary = Color(0x1a0165fa); 
+  
+  static const semanticColorComponentBuysellButtonBgBuyDefault = Color(0xff008236); 
+  
+  static const semanticColorComponentBuysellButtonBgBuyHover = Color(0xff016630); 
+  
+  static const semanticColorComponentBuysellButtonBgBuyBlur = Color(0x33008236); 
+  
+  static const semanticColorComponentBuysellButtonBgSellDefault = Color(0xffe7000b); 
+  
+  static const semanticColorComponentBuysellButtonBgSellHover = Color(0xffc10007); 
+  
+  static const semanticColorComponentBuysellButtonBgSellBlur = Color(0x33fb2c36); 
+  
+  static const semanticColorComponentInputSurface = Color(0xffffffff); 
+  
+  static const semanticColorComponentInputStrokeActive = Color(0xff0a0a0a); 
+  
+  static const semanticColorComponentInputStrokeDefault = Color(0xffd4d4d4); 
+  
+  static const shadow2XsColor = Color(0x0d000000); 
+  
+  static const shadowXsColor = Color(0x0d000000); 
+  
+  static const shadowMdColor = Color(0x1a000000); 
+  
+  static const shadowSmColor = Color(0x0d000000); 
+  
+  static const shadowLgColor = Color(0x1a000000); 
+  
+  static const shadowXlColor = Color(0x1a000000); 
+  
+  static const shadow2XlColor = Color(0x40000000); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity0 = Color(0x00ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity5 = Color(0x0dffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity10 = Color(0x1affffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity15 = Color(0x26ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity20 = Color(0x33ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity25 = Color(0x40ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity30 = Color(0x4dffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity35 = Color(0x59ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity40 = Color(0x66ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity45 = Color(0x73ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity50 = Color(0x80ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity55 = Color(0x8cffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity60 = Color(0x99ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity65 = Color(0xa6ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity70 = Color(0xb2ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity75 = Color(0xbfffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity80 = Color(0xccffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity85 = Color(0xd9ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity90 = Color(0xe5ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity95 = Color(0xf2ffffff); 
+  
+  static const opacityOpacityColorNeutralWhiteOpacity100 = Color(0xffffffff); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity0 = Color(0x00f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity5 = Color(0x0df5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity10 = Color(0x1af5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity15 = Color(0x26f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity20 = Color(0x33f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity25 = Color(0x40f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity30 = Color(0x4df5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity35 = Color(0x59f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity40 = Color(0x66f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity45 = Color(0x73f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity50 = Color(0x80f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity55 = Color(0x8cf5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity60 = Color(0x99f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity65 = Color(0xa6f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity70 = Color(0xb2f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity75 = Color(0xbff5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity80 = Color(0xccf5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity85 = Color(0xd9f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity90 = Color(0xe5f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity95 = Color(0xf2f5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral100Opacity100 = Color(0xfff5f5f5); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity0 = Color(0x00262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity5 = Color(0x0d262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity10 = Color(0x1a262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity15 = Color(0x26262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity20 = Color(0x33262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity25 = Color(0x40262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity30 = Color(0x4d262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity35 = Color(0x59262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity40 = Color(0x66262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity45 = Color(0x73262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity50 = Color(0x80262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity55 = Color(0x8c262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity60 = Color(0x99262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity65 = Color(0xa6262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity70 = Color(0xb2262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity75 = Color(0xbf262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity80 = Color(0xcc262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity85 = Color(0xd9262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity90 = Color(0xe5262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity95 = Color(0xf2262626); 
+  
+  static const opacityOpacityColorNeutralNeutral800Opacity100 = Color(0xff262626); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity0 = Color(0x000a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity5 = Color(0x0d0a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity10 = Color(0x1a0a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity15 = Color(0x260a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity20 = Color(0x330a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity25 = Color(0x400a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity30 = Color(0x4d0a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity35 = Color(0x590a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity40 = Color(0x660a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity45 = Color(0x730a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity50 = Color(0x800a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity55 = Color(0x8c0a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity60 = Color(0x990a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity65 = Color(0xa60a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity70 = Color(0xb20a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity75 = Color(0xbf0a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity80 = Color(0xcc0a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity85 = Color(0xd90a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity90 = Color(0xe50a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity95 = Color(0xf20a0a0a); 
+  
+  static const opacityOpacityColorNeutralNeutral950Opacity100 = Color(0xff0a0a0a); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity0 = Color(0x00000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity5 = Color(0x0d000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity10 = Color(0x1a000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity15 = Color(0x26000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity20 = Color(0x33000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity25 = Color(0x40000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity30 = Color(0x4d000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity35 = Color(0x59000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity40 = Color(0x66000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity45 = Color(0x73000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity50 = Color(0x80000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity55 = Color(0x8c000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity60 = Color(0x99000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity65 = Color(0xa6000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity70 = Color(0xb2000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity75 = Color(0xbf000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity80 = Color(0xcc000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity85 = Color(0xd9000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity90 = Color(0xe5000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity95 = Color(0xf2000000); 
+  
+  static const opacityOpacityColorNeutralBlackOpacity100 = Color(0xff000000); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity0 = Color(0x0099c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity5 = Color(0x0d99c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity10 = Color(0x1a99c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity15 = Color(0x2699c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity20 = Color(0x3399c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity25 = Color(0x4099c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity30 = Color(0x4d99c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity35 = Color(0x5999c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity40 = Color(0x6699c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity45 = Color(0x7399c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity50 = Color(0x8099c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity55 = Color(0x8c99c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity60 = Color(0x9999c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity65 = Color(0xa699c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity70 = Color(0xb299c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity75 = Color(0xbf99c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity80 = Color(0xcc99c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity85 = Color(0xd999c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity90 = Color(0xe599c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity95 = Color(0xf299c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue100Opacity100 = Color(0xff99c1fd); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity0 = Color(0x003484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity5 = Color(0x0d3484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity10 = Color(0x1a3484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity15 = Color(0x263484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity20 = Color(0x333484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity25 = Color(0x403484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity30 = Color(0x4d3484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity35 = Color(0x593484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity40 = Color(0x663484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity45 = Color(0x733484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity50 = Color(0x803484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity55 = Color(0x8c3484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity60 = Color(0x993484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity65 = Color(0xa63484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity70 = Color(0xb23484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity75 = Color(0xbf3484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity80 = Color(0xcc3484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity85 = Color(0xd93484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity90 = Color(0xe53484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity95 = Color(0xf23484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue300Opacity100 = Color(0xff3484fb); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity0 = Color(0x000165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity5 = Color(0x0d0165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity10 = Color(0x1a0165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity15 = Color(0x260165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity20 = Color(0x330165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity25 = Color(0x400165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity30 = Color(0x4d0165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity35 = Color(0x590165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity40 = Color(0x660165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity45 = Color(0x730165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity50 = Color(0x800165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity55 = Color(0x8c0165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity60 = Color(0x990165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity65 = Color(0xa60165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity70 = Color(0xb20165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity75 = Color(0xbf0165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity80 = Color(0xcc0165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity85 = Color(0xd90165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity90 = Color(0xe50165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity95 = Color(0xf20165fa); 
+  
+  static const opacityOpacityColorBrandPrimaryBlue400Opacity100 = Color(0xff0165fa); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity0 = Color(0x0000d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity5 = Color(0x0d00d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity10 = Color(0x1a00d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity15 = Color(0x2600d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity20 = Color(0x3300d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity25 = Color(0x4000d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity30 = Color(0x4d00d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity35 = Color(0x5900d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity40 = Color(0x6600d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity45 = Color(0x7300d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity50 = Color(0x8000d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity55 = Color(0x8c00d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity60 = Color(0x9900d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity65 = Color(0xa600d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity70 = Color(0xb200d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity75 = Color(0xbf00d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity80 = Color(0xcc00d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity85 = Color(0xd900d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity90 = Color(0xe500d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity95 = Color(0xf200d3f3); 
+  
+  static const opacityOpacityColorBrandSecondaryCyan400Opacity100 = Color(0xff00d3f3); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity0 = Color(0x00ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity5 = Color(0x0dff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity10 = Color(0x1aff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity15 = Color(0x26ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity20 = Color(0x33ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity25 = Color(0x40ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity30 = Color(0x4dff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity35 = Color(0x59ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity40 = Color(0x66ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity45 = Color(0x73ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity50 = Color(0x80ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity55 = Color(0x8cff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity60 = Color(0x99ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity65 = Color(0xa6ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity70 = Color(0xb2ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity75 = Color(0xbfff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity80 = Color(0xccff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity85 = Color(0xd9ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity90 = Color(0xe5ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity95 = Color(0xf2ff5000); 
+  
+  static const opacityOpacityColorBrandCryptoOrange600Opacity100 = Color(0xffff5000); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity0 = Color(0x00ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity5 = Color(0x0dffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity10 = Color(0x1affe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity15 = Color(0x26ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity20 = Color(0x33ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity25 = Color(0x40ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity30 = Color(0x4dffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity35 = Color(0x59ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity40 = Color(0x66ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity45 = Color(0x73ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity50 = Color(0x80ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity55 = Color(0x8cffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity60 = Color(0x99ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity65 = Color(0xa6ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity70 = Color(0xb2ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity75 = Color(0xbfffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity80 = Color(0xccffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity85 = Color(0xd9ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity90 = Color(0xe5ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity95 = Color(0xf2ffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed100Opacity100 = Color(0xffffe2e2); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity0 = Color(0x00fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity5 = Color(0x0dfb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity10 = Color(0x1afb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity15 = Color(0x26fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity20 = Color(0x33fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity25 = Color(0x40fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity30 = Color(0x4dfb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity35 = Color(0x59fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity40 = Color(0x66fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity45 = Color(0x73fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity50 = Color(0x80fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity55 = Color(0x8cfb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity60 = Color(0x99fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity65 = Color(0xa6fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity70 = Color(0xb2fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity75 = Color(0xbffb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity80 = Color(0xccfb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity85 = Color(0xd9fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity90 = Color(0xe5fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity95 = Color(0xf2fb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed500Opacity100 = Color(0xfffb2c36); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity0 = Color(0x00e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity5 = Color(0x0de7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity10 = Color(0x1ae7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity15 = Color(0x26e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity20 = Color(0x33e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity25 = Color(0x40e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity30 = Color(0x4de7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity35 = Color(0x59e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity40 = Color(0x66e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity45 = Color(0x73e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity50 = Color(0x80e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity55 = Color(0x8ce7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity60 = Color(0x99e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity65 = Color(0xa6e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity70 = Color(0xb2e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity75 = Color(0xbfe7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity80 = Color(0xcce7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity85 = Color(0xd9e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity90 = Color(0xe5e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity95 = Color(0xf2e7000b); 
+  
+  static const opacityOpacityColorSystemRedRed600Opacity100 = Color(0xffe7000b); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity0 = Color(0x00ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity5 = Color(0x0dffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity10 = Color(0x1affedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity15 = Color(0x26ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity20 = Color(0x33ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity25 = Color(0x40ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity30 = Color(0x4dffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity35 = Color(0x59ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity40 = Color(0x66ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity45 = Color(0x73ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity50 = Color(0x80ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity55 = Color(0x8cffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity60 = Color(0x99ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity65 = Color(0xa6ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity70 = Color(0xb2ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity75 = Color(0xbfffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity80 = Color(0xccffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity85 = Color(0xd9ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity90 = Color(0xe5ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity95 = Color(0xf2ffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange100Opacity100 = Color(0xffffedd4); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity0 = Color(0x00ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity5 = Color(0x0dffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity10 = Color(0x1affb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity15 = Color(0x26ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity20 = Color(0x33ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity25 = Color(0x40ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity30 = Color(0x4dffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity35 = Color(0x59ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity40 = Color(0x66ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity45 = Color(0x73ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity50 = Color(0x80ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity55 = Color(0x8cffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity60 = Color(0x99ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity65 = Color(0xa6ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity70 = Color(0xb2ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity75 = Color(0xbfffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity80 = Color(0xccffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity85 = Color(0xd9ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity90 = Color(0xe5ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity95 = Color(0xf2ffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange300Opacity100 = Color(0xffffb86a); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity0 = Color(0x00ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity5 = Color(0x0dff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity10 = Color(0x1aff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity15 = Color(0x26ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity20 = Color(0x33ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity25 = Color(0x40ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity30 = Color(0x4dff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity35 = Color(0x59ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity40 = Color(0x66ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity45 = Color(0x73ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity50 = Color(0x80ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity55 = Color(0x8cff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity60 = Color(0x99ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity65 = Color(0xa6ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity70 = Color(0xb2ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity75 = Color(0xbfff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity80 = Color(0xccff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity85 = Color(0xd9ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity90 = Color(0xe5ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity95 = Color(0xf2ff8904); 
+  
+  static const opacityOpacityColorSystemOrangeOrange400Opacity100 = Color(0xffff8904); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity0 = Color(0x00dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity5 = Color(0x0ddcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity10 = Color(0x1adcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity15 = Color(0x26dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity20 = Color(0x33dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity25 = Color(0x40dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity30 = Color(0x4ddcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity35 = Color(0x59dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity40 = Color(0x66dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity45 = Color(0x73dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity50 = Color(0x80dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity55 = Color(0x8cdcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity60 = Color(0x99dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity65 = Color(0xa6dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity70 = Color(0xb2dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity75 = Color(0xbfdcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity80 = Color(0xccdcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity85 = Color(0xd9dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity90 = Color(0xe5dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity95 = Color(0xf2dcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen100Opacity100 = Color(0xffdcfce7); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity0 = Color(0x0000c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity5 = Color(0x0d00c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity10 = Color(0x1a00c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity15 = Color(0x2600c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity20 = Color(0x3300c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity25 = Color(0x4000c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity30 = Color(0x4d00c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity35 = Color(0x5900c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity40 = Color(0x6600c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity45 = Color(0x7300c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity50 = Color(0x8000c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity55 = Color(0x8c00c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity60 = Color(0x9900c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity65 = Color(0xa600c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity70 = Color(0xb200c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity75 = Color(0xbf00c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity80 = Color(0xcc00c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity85 = Color(0xd900c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity90 = Color(0xe500c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity95 = Color(0xf200c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen500Opacity100 = Color(0xff00c950); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity0 = Color(0x0000a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity5 = Color(0x0d00a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity10 = Color(0x1a00a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity15 = Color(0x2600a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity20 = Color(0x3300a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity25 = Color(0x4000a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity30 = Color(0x4d00a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity35 = Color(0x5900a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity40 = Color(0x6600a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity45 = Color(0x7300a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity50 = Color(0x8000a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity55 = Color(0x8c00a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity60 = Color(0x9900a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity65 = Color(0xa600a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity70 = Color(0xb200a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity75 = Color(0xbf00a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity80 = Color(0xcc00a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity85 = Color(0xd900a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity90 = Color(0xe500a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity95 = Color(0xf200a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen600Opacity100 = Color(0xff00a63e); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity0 = Color(0x00008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity5 = Color(0x0d008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity10 = Color(0x1a008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity15 = Color(0x26008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity20 = Color(0x33008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity25 = Color(0x40008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity30 = Color(0x4d008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity35 = Color(0x59008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity40 = Color(0x66008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity45 = Color(0x73008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity50 = Color(0x80008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity55 = Color(0x8c008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity60 = Color(0x99008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity65 = Color(0xa6008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity70 = Color(0xb2008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity75 = Color(0xbf008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity80 = Color(0xcc008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity85 = Color(0xd9008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity90 = Color(0xe5008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity95 = Color(0xf2008236); 
+  
+  static const opacityOpacityColorSystemGreenGreen700Opacity100 = Color(0xff008236); 
+  
+  static const primitiveColorBrandPrimaryBlue50 = Color(0xffe6f0ff); 
+  
+  static const primitiveColorBrandPrimaryBlue100 = Color(0xff99c1fd); 
+  
+  static const primitiveColorBrandPrimaryBlue200 = Color(0xff67a3fc); 
+  
+  static const primitiveColorBrandPrimaryBlue300 = Color(0xff3484fb); 
+  
+  /// Pepperstone Blue
+  static const primitiveColorBrandPrimaryBlue400 = Color(0xff0165fa); 
+  
+  static const primitiveColorBrandPrimaryBlue500 = Color(0xff0032c7); 
+  
+  static const primitiveColorBrandPrimaryBlue600 = Color(0xff000094); 
+  
+  static const primitiveColorBrandPrimaryBlue700 = Color(0xff000061); 
+  
+  static const primitiveColorBrandSecondaryCyan50 = Color(0xffecfeff); 
+  
+  static const primitiveColorBrandSecondaryCyan100 = Color(0xffcefafe); 
+  
+  static const primitiveColorBrandSecondaryCyan200 = Color(0xffa2f4fd); 
+  
+  static const primitiveColorBrandSecondaryCyan300 = Color(0xff53eafd); 
+  
+  static const primitiveColorBrandSecondaryCyan400 = Color(0xff00d3f3); 
+  
+  static const primitiveColorBrandSecondaryCyan500 = Color(0xff00b8db); 
+  
+  static const primitiveColorBrandSecondaryCyan600 = Color(0xff0092b8); 
+  
+  static const primitiveColorBrandSecondaryCyan700 = Color(0xff007595); 
+  
+  static const primitiveColorBrandSecondaryCyan800 = Color(0xff005f78); 
+  
+  static const primitiveColorBrandSecondaryCyan900 = Color(0xff104e64); 
+  
+  static const primitiveColorBrandSecondaryCyan950 = Color(0xff053345); 
+  
+  static const primitiveColorBrandCryptoOrange50 = Color(0xfffff6ec); 
+  
+  static const primitiveColorBrandCryptoOrange100 = Color(0xffffecd3); 
+  
+  static const primitiveColorBrandCryptoOrange200 = Color(0xffffd4a5); 
+  
+  static const primitiveColorBrandCryptoOrange300 = Color(0xffffb66d); 
+  
+  static const primitiveColorBrandCryptoOrange400 = Color(0xffff8b32); 
+  
+  static const primitiveColorBrandCryptoOrange500 = Color(0xffff6a0a); 
+  
+  /// Pepperstone Crypto Orange
+  static const primitiveColorBrandCryptoOrange600 = Color(0xffff5000); 
+  
+  static const primitiveColorBrandCryptoOrange700 = Color(0xffcc3702); 
+  
+  static const primitiveColorBrandCryptoOrange800 = Color(0xffa12c0b); 
+  
+  static const primitiveColorBrandCryptoOrange900 = Color(0xff82270c); 
+  
+  static const primitiveColorBrandCryptoOrange950 = Color(0xff461004); 
+  
+  static const primitiveColorNeutralWhite = Color(0xffffffff); 
+  
+  static const primitiveColorNeutral50 = Color(0xfffafafa); 
+  
+  static const primitiveColorNeutral100 = Color(0xfff5f5f5); 
+  
+  static const primitiveColorNeutral200 = Color(0xffe5e5e5); 
+  
+  static const primitiveColorNeutral300 = Color(0xffd4d4d4); 
+  
+  static const primitiveColorNeutral400 = Color(0xffa1a1a1); 
+  
+  static const primitiveColorNeutral500 = Color(0xff737373); 
+  
+  static const primitiveColorNeutral600 = Color(0xff525252); 
+  
+  static const primitiveColorNeutral700 = Color(0xff404040); 
+  
+  static const primitiveColorNeutral800 = Color(0xff262626); 
+  
+  static const primitiveColorNeutral900 = Color(0xff171717); 
+  
+  static const primitiveColorNeutral950 = Color(0xff0a0a0a); 
+  
+  static const primitiveColorNeutralBlack = Color(0xff000000); 
+  
+  static const primitiveColorSystemRed50 = Color(0xfffef2f2); 
+  
+  static const primitiveColorSystemRed100 = Color(0xffffe2e2); 
+  
+  static const primitiveColorSystemRed200 = Color(0xffffc9c9); 
+  
+  static const primitiveColorSystemRed300 = Color(0xffffa2a2); 
+  
+  static const primitiveColorSystemRed400 = Color(0xffff6467); 
+  
+  static const primitiveColorSystemRed500 = Color(0xfffb2c36); 
+  
+  static const primitiveColorSystemRed600 = Color(0xffe7000b); 
+  
+  static const primitiveColorSystemRed700 = Color(0xffc10007); 
+  
+  static const primitiveColorSystemRed800 = Color(0xff9f0712); 
+  
+  static const primitiveColorSystemRed900 = Color(0xff82181a); 
+  
+  static const primitiveColorSystemRed950 = Color(0xff460809); 
+  
+  static const primitiveColorSystemOrange50 = Color(0xfffff7ed); 
+  
+  static const primitiveColorSystemOrange100 = Color(0xffffedd4); 
+  
+  static const primitiveColorSystemOrange200 = Color(0xffffd6a8); 
+  
+  static const primitiveColorSystemOrange300 = Color(0xffffb86a); 
+  
+  static const primitiveColorSystemOrange400 = Color(0xffff8904); 
+  
+  static const primitiveColorSystemOrange500 = Color(0xffff6900); 
+  
+  static const primitiveColorSystemOrange600 = Color(0xfff54900); 
+  
+  static const primitiveColorSystemOrange700 = Color(0xffca3500); 
+  
+  static const primitiveColorSystemOrange800 = Color(0xff9f2d00); 
+  
+  static const primitiveColorSystemOrange900 = Color(0xff7e2a0c); 
+  
+  static const primitiveColorSystemOrange950 = Color(0xff441306); 
+  
+  static const primitiveColorSystemGreen50 = Color(0xfff0fdf4); 
+  
+  static const primitiveColorSystemGreen100 = Color(0xffdcfce7); 
+  
+  static const primitiveColorSystemGreen200 = Color(0xffb9f8cf); 
+  
+  static const primitiveColorSystemGreen300 = Color(0xff7bf1a8); 
+  
+  static const primitiveColorSystemGreen400 = Color(0xff05df72); 
+  
+  static const primitiveColorSystemGreen500 = Color(0xff00c950); 
+  
+  static const primitiveColorSystemGreen600 = Color(0xff00a63e); 
+  
+  static const primitiveColorSystemGreen700 = Color(0xff008236); 
+  
+  static const primitiveColorSystemGreen800 = Color(0xff016630); 
+  
+  static const primitiveColorSystemGreen900 = Color(0xff0d542b); 
+  
+  static const primitiveColorSystemGreen950 = Color(0xff032e15); 
+  
+  static const primitiveColorDecorativeYellow50 = Color(0xfffef7c8); 
+  
+  static const primitiveColorDecorativeYellow100 = Color(0xfff5e989); 
+  
+  static const primitiveColorDecorativeYellow200 = Color(0xffefdd4e); 
+  
+  static const primitiveColorDecorativeYellow300 = Color(0xffeed12b); 
+  
+  static const primitiveColorDecorativeYellow400 = Color(0xffddb30e); 
+  
+  static const primitiveColorDecorativeYellow500 = Color(0xffcf9f02); 
+  
+  static const primitiveColorDecorativeYellow600 = Color(0xff916a00); 
+  
+  static const primitiveColorDecorativeYellow700 = Color(0xff451a03); 
+  
+  static const primitiveColorDecorativeLime50 = Color(0xffefffd6); 
+  
+  static const primitiveColorDecorativeLime100 = Color(0xffd3f1a7); 
+  
+  static const primitiveColorDecorativeLime200 = Color(0xffbde97c); 
+  
+  static const primitiveColorDecorativeLime300 = Color(0xffb3df72); 
+  
+  static const primitiveColorDecorativeLime400 = Color(0xff94c748); 
+  
+  static const primitiveColorDecorativeLime500 = Color(0xff82b536); 
+  
+  static const primitiveColorDecorativeLime600 = Color(0xff4d7c0f); 
+  
+  static const primitiveColorDecorativeLime700 = Color(0xff1a2e05); 
+  
+  static const primitiveColorDecorativeTurqoise50 = Color(0xffecfcf6); 
+  
+  static const primitiveColorDecorativeTurqoise100 = Color(0xffd7f9ed); 
+  
+  static const primitiveColorDecorativeTurqoise200 = Color(0xffaef3d9); 
+  
+  static const primitiveColorDecorativeTurqoise300 = Color(0xff99efcf); 
+  
+  static const primitiveColorDecorativeTurqoise400 = Color(0xff47e0a8); 
+  
+  static const primitiveColorDecorativeTurqoise500 = Color(0xff3ac190); 
+  
+  static const primitiveColorDecorativeTurqoise600 = Color(0xff0d9488); 
+  
+  static const primitiveColorDecorativeTurqoise700 = Color(0xff134e4a); 
+  
+  static const primitiveColorDecorativeMagenta50 = Color(0xffffecf8); 
+  
+  static const primitiveColorDecorativeMagenta100 = Color(0xfffdd0ec); 
+  
+  static const primitiveColorDecorativeMagenta200 = Color(0xfffcb6e1); 
+  
+  static const primitiveColorDecorativeMagenta300 = Color(0xfff797d2); 
+  
+  static const primitiveColorDecorativeMagenta400 = Color(0xffe774bb); 
+  
+  static const primitiveColorDecorativeMagenta500 = Color(0xffda62ac); 
+  
+  static const primitiveColorDecorativeMagenta600 = Color(0xff9d174d); 
+  
+  static const primitiveColorDecorativeMagenta700 = Color(0xff500724); 
+  
+  static const primitiveColorDecorativeViolet50 = Color(0xfffcf4ff); 
+  
+  static const primitiveColorDecorativeViolet100 = Color(0xffe3c0f0); 
+  
+  static const primitiveColorDecorativeViolet200 = Color(0xffe6a5fe); 
+  
+  static const primitiveColorDecorativeViolet300 = Color(0xffd460ff); 
+  
+  static const primitiveColorDecorativeViolet400 = Color(0xffaa30d8); 
+  
+  static const primitiveColorDecorativeViolet500 = Color(0xff7f00ad); 
+  
+  static const primitiveColorDecorativeViolet600 = Color(0xff3f144f); 
+  
+  static const primitiveColorDecorativeViolet700 = Color(0xff260333); 
+  
+  static const staticColorTextPrimary = Color(0xff0a0a0a); 
+  
+  static const staticColorTextInversePrimary = Color(0xffffffff); 
+  
+  static const staticColorTextBrandSecondary = Color(0xff00d3f3); 
+  
+  static const staticColorIconPrimary = Color(0xff0a0a0a); 
+  
+  static const staticColorIconInversePrimary = Color(0xffffffff); 
+  
+  static const staticColorStrokeInverseSubtle = Color(0x33ffffff); 
+  
+  static const staticColorStrokeInverseStrong = Color(0xffffffff); 
+  
+  /// The "inverse" colour has been chosen on purpose to stand out brighter. This colour carries over regardless of light/dark modes.
+  static const staticColorSurfaceSystemSuccess = Color(0xff00c950); 
+  
+  /// The "inverse" colour has been chosen on purpose to stand out brighter. This colour carries over regardless of light/dark modes.
+  static const staticColorSurfaceSystemError = Color(0xfffb2c36); 
+  
+  /// The "inverse" colour has been chosen on purpose to stand out brighter. This colour carries over regardless of light/dark modes.
+  static const staticColorSurfaceSystemWarning = Color(0xffff8904); 
+  
+  /// The "inverse" colour has been chosen on purpose to stand out brighter. This colour carries over regardless of light/dark modes.
+  static const staticColorSurfaceSystemNotficationBrand = Color(0xff3484fb); 
+  
+  /// The "inverse" colour has been chosen on purpose to stand out brighter. This colour carries over regardless of light/dark modes.
+  static const staticColorSurfaceSystemNotficationAlert = Color(0xfffb2c36); 
+  
+  static const staticColorSurfaceBrandPrimary = Color(0xff0165fa); 
+  
+  static const staticColorSurfaceBrandSecondary = Color(0xff00d3f3); 
+  
+  static const staticColorSurfaceBrandCrypto = Color(0xffff5000); 
+  
+  static const staticOverlayLow = Color(0x33000000); 
+  
+  static const staticOverlayMedium = Color(0x73000000); 
+  
+  static const staticOverlayHigh = Color(0xb2000000); 
+  
+  static const staticOverlayInverseLow = Color(0x4dffffff); 
+  
+  static const staticOverlayInverseMedium = Color(0x8cffffff); 
+  
+  static const staticOverlayInverseHigh = Color(0xccffffff); 
+  
+  /// For Overlays or where we need to obscure the screen.
+  static const staticEffectGlassPrimaryLow = Color(0x1a0a0a0a); 
+  
+  /// For Overlays or where we need to obscure the screen.
+  static const staticEffectGlassPrimaryMedium = Color(0x330a0a0a); 
+  
+  /// For Overlays or where we need to obscure the screen.
+  static const staticEffectGlassPrimaryHigh = Color(0x4d262626); 
+  
+  /// For Overlays or where we need to obscure the screen.
+  static const staticEffectGlassInversePrimaryLow = Color(0x26ffffff); 
+  
+  /// For Overlays or where we need to obscure the screen.
+  static const staticEffectGlassInversePrimaryMedium = Color(0x40ffffff); 
+  
+  /// For Overlays or where we need to obscure the screen.
+  static const staticEffectGlassInversePrimaryHigh = Color(0x59ffffff); 
+  
+  /// Use as a generic fill layer on top of a colour to mimic hover state where solid colour is not available.
+  static const stateOpacityHoverSubtle = Color(0x0d0a0a0a); 
+  
+  /// Use as a generic fill layer on top of a colour to mimic hover state where solid colour is not available.
+  static const stateOpacityHoverStrong = Color(0x330a0a0a); 
+  
+  /// Use as a generic fill layer on top of a colour to mimic hover state where solid colour is not available.
+  static const stateOpacityInverseHoverSubtle = Color(0x1affffff); 
+  
+  /// Use as a generic fill layer on top of a colour to mimic hover state where solid colour is not available.
+  static const stateOpacityInverseHoverStrong = Color(0x40ffffff); 
+  
+  AppColors._();
+}

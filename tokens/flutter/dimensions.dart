@@ -1,0 +1,940 @@
+class AppDimensions {
+  static const dimensionFontFontWeightRegular400 = 400;
+
+  static const dimensionFontFontWeightSemiBold600 = 600;
+
+  static const dimensionFontFontWeightBold700 = 700;
+
+  /// Number of Columns
+  static const dimensionCanvasCanvasColumns = 12;
+
+  static const dimensionHeadingH1FontWeight = 700;
+
+  static const dimensionHeadingH2FontWeight = 700;
+
+  static const dimensionHeadingH3FontWeight = 700;
+
+  static const dimensionHeadingH4FontWeight = 700;
+
+  static const dimensionHeadingH5FontWeight = 700;
+
+  static const dimensionHeadingH6FontWeight = 700;
+
+  static const dimensionBodyBodySmFontWeight = 400;
+
+  static const dimensionBodyBodyXsFontWeight = 400;
+
+  static const dimensionBodyBody2XsFontWeight = 400;
+
+  static const dimensionBodyBodyMdFontWeight = 400;
+
+  static const dimensionBodyBodyLgFontWeight = 400;
+
+  static const dimensionLabelLabelMdFontWeight = 600;
+
+  static const dimensionLabelLabelSmFontWeight = 600;
+
+  static const dimensionLabelLabelLgFontWeight = 600;
+
+  static const dimensionLabelLabelXsFontWeight = 600;
+
+  static const dimensionLabelLabel2XsFontWeight = 600;
+
+  /// Spacing: None
+  static const dimensionScaleSpacingNone = 0;
+
+  /// 2px
+  static const dimensionScaleSpacing2 = 2;
+
+  /// 4px
+  static const dimensionScaleSpacing4 = 4;
+
+  /// 8px
+  static const dimensionScaleSpacing8 = 8;
+
+  /// 12px
+  static const dimensionScaleSpacing12 = 12;
+
+  /// 16px
+  static const dimensionScaleSpacing16 = 16;
+
+  /// 20px
+  static const dimensionScaleSpacing20 = 20;
+
+  /// 24px
+  static const dimensionScaleSpacing24 = 24;
+
+  /// 28px
+  static const dimensionScaleSpacing28 = 28;
+
+  /// 32px
+  static const dimensionScaleSpacing32 = 32;
+
+  /// 36px
+  static const dimensionScaleSpacing36 = 36;
+
+  /// 40px
+  static const dimensionScaleSpacing40 = 40;
+
+  /// 48px
+  static const dimensionScaleSpacing48 = 48;
+
+  /// 56px
+  static const dimensionScaleSpacing56 = 56;
+
+  /// 64px
+  static const dimensionScaleSpacing64 = 64;
+
+  /// 80px
+  static const dimensionScaleSpacing80 = 80;
+
+  /// 96px
+  static const dimensionScaleSpacing96 = 96;
+
+  /// 128px
+  static const dimensionScaleSpacing128 = 128;
+
+  /// 160px
+  static const dimensionScaleSpacing160 = 160;
+
+  /// 256px
+  static const dimensionScaleSpacing256 = 256;
+
+  static const dimensionBlurXs = 4;
+
+  static const dimensionBlurSm = 8;
+
+  static const dimensionBlurMd = 12;
+
+  static const dimensionBlurLg = 16;
+
+  static const dimensionBlurXl = 24;
+
+  static const dimensionBlur2Xl = 40;
+
+  static const dimensionBlur3Xl = 64;
+
+  static const dimensionShadow2XsOffsetX = 0;
+
+  static const dimensionShadow2XsOffsetY = 1;
+
+  static const dimensionShadow2XsBlurRadius = 1;
+
+  static const dimensionShadow2XsSpreadRadius = 0;
+
+  static const dimensionShadowXsOffsetX = 0;
+
+  static const dimensionShadowXsOffsetY = 1;
+
+  static const dimensionShadowXsBlurRadius = 2;
+
+  static const dimensionShadowXsSpreadRadius = 0;
+
+  static const dimensionShadowSmOffsetX = 0;
+
+  static const dimensionShadowSmOffsetY = 2;
+
+  static const dimensionShadowSmBlurRadius = 4;
+
+  static const dimensionShadowSmSpreadRadius = -1;
+
+  static const dimensionShadowMdOffsetX = 0;
+
+  static const dimensionShadowMdOffsetY = 4;
+
+  static const dimensionShadowMdBlurRadius = 6;
+
+  static const dimensionShadowMdSpreadRadius = -1;
+
+  static const dimensionShadowLgOffsetX = 0;
+
+  static const dimensionShadowLgOffsetY = 10;
+
+  static const dimensionShadowLgBlurRadius = 14;
+
+  static const dimensionShadowLgSpreadRadius = -4;
+
+  static const dimensionShadowXlOffsetX = 0;
+
+  static const dimensionShadowXlOffsetY = 20;
+
+  static const dimensionShadowXlBlurRadius = 24;
+
+  static const dimensionShadowXlSpreadRadius = -6;
+
+  static const dimensionShadow2XlOffsetX = 0;
+
+  static const dimensionShadow2XlOffsetY = 24;
+
+  static const dimensionShadow2XlBlurRadius = 48;
+
+  static const dimensionShadow2XlSpreadRadius = -12;
+
+  /// 0px
+  static const dimensionGlobalUnit0 = 0;
+
+  /// 1px
+  static const dimensionGlobalUnit025 = 1;
+
+  /// 2px
+  static const dimensionGlobalUnit05 = 2;
+
+  /// 4px (base)
+  static const dimensionGlobalUnit1 = 4;
+
+  /// 6px
+  static const dimensionGlobalUnit15 = 6;
+
+  /// 8px
+  static const dimensionGlobalUnit2 = 8;
+
+  /// 10px
+  static const dimensionGlobalUnit25 = 10;
+
+  /// 12px
+  static const dimensionGlobalUnit3 = 12;
+
+  /// 14px
+  static const dimensionGlobalUnit35 = 14;
+
+  /// 16px
+  static const dimensionGlobalUnit4 = 16;
+
+  /// 20px
+  static const dimensionGlobalUnit5 = 20;
+
+  /// 24px
+  static const dimensionGlobalUnit6 = 24;
+
+  /// 28px
+  static const dimensionGlobalUnit7 = 28;
+
+  /// 32px
+  static const dimensionGlobalUnit8 = 32;
+
+  /// 36px
+  static const dimensionGlobalUnit9 = 36;
+
+  /// 40px
+  static const dimensionGlobalUnit10 = 40;
+
+  /// 44px
+  static const dimensionGlobalUnit11 = 44;
+
+  /// 48px
+  static const dimensionGlobalUnit12 = 48;
+
+  /// 52px
+  static const dimensionGlobalUnit13 = 52;
+
+  /// 56px
+  static const dimensionGlobalUnit14 = 56;
+
+  /// 60px
+  static const dimensionGlobalUnit15 = 60;
+
+  /// 64px
+  static const dimensionGlobalUnit16 = 64;
+
+  /// 68px
+  static const dimensionGlobalUnit17 = 68;
+
+  /// 72px
+  static const dimensionGlobalUnit18 = 72;
+
+  /// 76px
+  static const dimensionGlobalUnit19 = 76;
+
+  /// 80px
+  static const dimensionGlobalUnit20 = 80;
+
+  /// 84px
+  static const dimensionGlobalUnit21 = 84;
+
+  /// 88px
+  static const dimensionGlobalUnit22 = 88;
+
+  /// 92px
+  static const dimensionGlobalUnit23 = 92;
+
+  /// 96px
+  static const dimensionGlobalUnit24 = 96;
+
+  /// 100px
+  static const dimensionGlobalUnit25 = 100;
+
+  /// 104px
+  static const dimensionGlobalUnit26 = 104;
+
+  /// 108px
+  static const dimensionGlobalUnit27 = 108;
+
+  /// 112px
+  static const dimensionGlobalUnit28 = 112;
+
+  /// 116px
+  static const dimensionGlobalUnit29 = 116;
+
+  /// 120px
+  static const dimensionGlobalUnit30 = 120;
+
+  /// 124px
+  static const dimensionGlobalUnit31 = 124;
+
+  /// 128px
+  static const dimensionGlobalUnit32 = 128;
+
+  /// 132px
+  static const dimensionGlobalUnit33 = 132;
+
+  /// 136px
+  static const dimensionGlobalUnit34 = 136;
+
+  /// 140px
+  static const dimensionGlobalUnit35 = 140;
+
+  /// 144px
+  static const dimensionGlobalUnit36 = 144;
+
+  /// 148px
+  static const dimensionGlobalUnit37 = 148;
+
+  /// 152px
+  static const dimensionGlobalUnit38 = 152;
+
+  /// 156px
+  static const dimensionGlobalUnit39 = 156;
+
+  /// 160px
+  static const dimensionGlobalUnit40 = 160;
+
+  /// 164px
+  static const dimensionGlobalUnit41 = 164;
+
+  /// 168px
+  static const dimensionGlobalUnit42 = 168;
+
+  /// 172px
+  static const dimensionGlobalUnit43 = 172;
+
+  /// 176px
+  static const dimensionGlobalUnit44 = 176;
+
+  /// 180px
+  static const dimensionGlobalUnit45 = 180;
+
+  /// 188px
+  static const dimensionGlobalUnit46 = 184;
+
+  /// 192px
+  static const dimensionGlobalUnit47 = 188;
+
+  /// 192px
+  static const dimensionGlobalUnit48 = 192;
+
+  /// 196px
+  static const dimensionGlobalUnit49 = 196;
+
+  /// 200px
+  static const dimensionGlobalUnit50 = 200;
+
+  /// 204px
+  static const dimensionGlobalUnit51 = 204;
+
+  /// 208px
+  static const dimensionGlobalUnit52 = 208;
+
+  /// 212px
+  static const dimensionGlobalUnit53 = 212;
+
+  /// 216px
+  static const dimensionGlobalUnit54 = 216;
+
+  /// 220px
+  static const dimensionGlobalUnit55 = 220;
+
+  /// 224px
+  static const dimensionGlobalUnit56 = 224;
+
+  /// 228px
+  static const dimensionGlobalUnit57 = 228;
+
+  /// 232px
+  static const dimensionGlobalUnit58 = 232;
+
+  /// 236px
+  static const dimensionGlobalUnit59 = 236;
+
+  /// 240px
+  static const dimensionGlobalUnit60 = 240;
+
+  /// 244px
+  static const dimensionGlobalUnit61 = 244;
+
+  /// 248px
+  static const dimensionGlobalUnit62 = 248;
+
+  /// 252px
+  static const dimensionGlobalUnit63 = 256;
+
+  /// 256px
+  static const dimensionGlobalUnit64 = 256;
+
+  /// 260px
+  static const dimensionGlobalUnit65 = 260;
+
+  /// 264px
+  static const dimensionGlobalUnit66 = 264;
+
+  /// 268px
+  static const dimensionGlobalUnit67 = 268;
+
+  /// 272px
+  static const dimensionGlobalUnit68 = 272;
+
+  /// 276px
+  static const dimensionGlobalUnit69 = 276;
+
+  /// 280px
+  static const dimensionGlobalUnit70 = 280;
+
+  /// 284px
+  static const dimensionGlobalUnit71 = 284;
+
+  /// 288px
+  static const dimensionGlobalUnit72 = 288;
+
+  /// 292px
+  static const dimensionGlobalUnit73 = 292;
+
+  /// 296px
+  static const dimensionGlobalUnit74 = 296;
+
+  /// 300px
+  static const dimensionGlobalUnit75 = 300;
+
+  /// 304px
+  static const dimensionGlobalUnit76 = 304;
+
+  /// 308px
+  static const dimensionGlobalUnit77 = 308;
+
+  /// 312px
+  static const dimensionGlobalUnit78 = 312;
+
+  /// 316px
+  static const dimensionGlobalUnit79 = 320;
+
+  /// 320px
+  static const dimensionGlobalUnit80 = 320;
+
+  /// 324px
+  static const dimensionGlobalUnit81 = 324;
+
+  /// 328px
+  static const dimensionGlobalUnit82 = 328;
+
+  /// 332px
+  static const dimensionGlobalUnit83 = 332;
+
+  /// 336px
+  static const dimensionGlobalUnit84 = 336;
+
+  /// 340px
+  static const dimensionGlobalUnit85 = 340;
+
+  /// 344px
+  static const dimensionGlobalUnit86 = 344;
+
+  /// 348px
+  static const dimensionGlobalUnit87 = 348;
+
+  /// 352px
+  static const dimensionGlobalUnit88 = 352;
+
+  /// 356px
+  static const dimensionGlobalUnit89 = 356;
+
+  /// 360px
+  static const dimensionGlobalUnit90 = 360;
+
+  /// 364px
+  static const dimensionGlobalUnit91 = 364;
+
+  /// 368px
+  static const dimensionGlobalUnit92 = 368;
+
+  /// 372px
+  static const dimensionGlobalUnit93 = 372;
+
+  /// 374px
+  static const dimensionGlobalUnit94 = 376;
+
+  /// 376px
+  static const dimensionGlobalUnit95 = 380;
+
+  /// 384px
+  static const dimensionGlobalUnit96 = 384;
+
+  /// 388px
+  static const dimensionGlobalUnit97 = 388;
+
+  /// 392px
+  static const dimensionGlobalUnit98 = 392;
+
+  /// 396px
+  static const dimensionGlobalUnit99 = 396;
+
+  /// 400px
+  static const dimensionGlobalUnit100 = 400;
+
+  static const opacityOpacityOpacityValuesOpacity0 = 0;
+
+  static const opacityOpacityOpacityValuesOpacity5 = 5;
+
+  static const opacityOpacityOpacityValuesOpacity10 = 10;
+
+  static const opacityOpacityOpacityValuesOpacity15 = 15;
+
+  static const opacityOpacityOpacityValuesOpacity20 = 20;
+
+  static const opacityOpacityOpacityValuesOpacity25 = 25;
+
+  static const opacityOpacityOpacityValuesOpacity30 = 30;
+
+  static const opacityOpacityOpacityValuesOpacity35 = 35;
+
+  static const opacityOpacityOpacityValuesOpacity40 = 40;
+
+  static const opacityOpacityOpacityValuesOpacity45 = 45;
+
+  static const opacityOpacityOpacityValuesOpacity50 = 50;
+
+  static const opacityOpacityOpacityValuesOpacity55 = 55.00000000000001;
+
+  static const opacityOpacityOpacityValuesOpacity60 = 60;
+
+  static const opacityOpacityOpacityValuesOpacity65 = 65;
+
+  static const opacityOpacityOpacityValuesOpacity70 = 70;
+
+  static const opacityOpacityOpacityValuesOpacity75 = 75;
+
+  static const opacityOpacityOpacityValuesOpacity80 = 80;
+
+  static const opacityOpacityOpacityValuesOpacity85 = 85;
+
+  static const opacityOpacityOpacityValuesOpacity90 = 90;
+
+  static const opacityOpacityOpacityValuesOpacity95 = 95;
+
+  static const opacityOpacityOpacityValuesOpacity100 = 100;
+
+  /// *Only use as a layer opacity to describe loading where loading colour token is not appropriate.
+  static const opacityStateOpacityLoading = 5;
+
+  /// *Only use as a layer opacity to describe loading where loading colour token is not appropriate.
+  static const opacityStateOpacityDisabled = 10;
+
+  /// *Only use as a layer opacity to describe loading where loading colour token is not appropriate.
+  static const opacityStateOpacityInverseLoading = 10;
+
+  /// *Only use as a layer opacity to describe loading where loading colour token is not appropriate.
+  static const opacityStateOpacityInverseDisabled = 20;
+
+  /// Size in px
+  static const sizeCanvasViewportWidth = 1440;
+
+  /// Size in px
+  static const sizeCanvasViewportHeight = 1024;
+
+  /// This is NOT a standard tailwind breakpoint but is important to consider for people using mobile phone web browsers.
+  static const sizeSizeScreenWidth2Xs = 320;
+
+  /// This is NOT a standard tailwind breakpoint but is important to consider for people using mobile phone web browsers.
+  static const sizeSizeScreenWidthXs = 375;
+
+  /// The TABLET screen by default in tailwind.config.js 
+  /// To be considered as the first size that is NOT mobile, and therefore may require custom styling.
+  static const sizeSizeScreenWidthSm = 640;
+
+  static const sizeSizeScreenWidthMd = 768;
+
+  /// The LAPTOP screen by default in tailwind.config.js
+  static const sizeSizeScreenWidthLg = 1024;
+
+  /// The DESKTOP screen by default in tailwind.config.js
+  static const sizeSizeScreenWidthXl = 1280;
+
+  /// The breakpoint used for EXTRA WIDE DESKTOP devices
+  static const sizeSizeScreenWidth2Xl = 1440;
+
+  /// Icon size: 12px
+  static const sizeSizeUtilityIconSizeIcon12 = 12;
+
+  /// Icon size: 16px
+  static const sizeSizeUtilityIconSizeIcon16 = 16;
+
+  /// Icon size: 20px
+  static const sizeSizeUtilityIconSizeIcon20 = 20;
+
+  /// Icon size: 24px
+  static const sizeSizeUtilityIconSizeIcon24 = 24;
+
+  /// Icon size: 32px
+  static const sizeSizeUtilityIconSizeIcon32 = 32;
+
+  /// Icon size: 40px
+  static const sizeSizeUtilityIconSizeIcon40 = 40;
+
+  /// Icon size: 48px
+  static const sizeSizeSystemIconSizeIcon48 = 48;
+
+  /// Icon size: 64px
+  static const sizeSizeSystemIconSizeIcon64 = 64;
+
+  /// Icon size: 80px
+  static const sizeSizeSystemIconSizeIcon80 = 80;
+
+  /// Icon size: 96px
+  static const sizeSizeSystemIconSizeIcon96 = 96;
+
+  /// Icon size: 128px
+  static const sizeSizeSystemIconSizeIcon128 = 128;
+
+  /// Icon size: 12px
+  static const sizeSizeInstrumentIconSizeIcon12 = 12;
+
+  /// Icon size: 16px
+  static const sizeSizeInstrumentIconSizeIcon16 = 16;
+
+  /// Icon size: 20px
+  static const sizeSizeInstrumentIconSizeIcon20 = 20;
+
+  /// Icon size: 24px
+  static const sizeSizeInstrumentIconSizeIcon24 = 24;
+
+  /// Icon size: 32px
+  static const sizeSizeInstrumentIconSizeIcon32 = 32;
+
+  /// Icon size: 40px
+  static const sizeSizeInstrumentIconSizeIcon40 = 40;
+
+  /// Icon size: 48px
+  static const sizeSizeInstrumentIconSizeIcon48 = 48;
+
+  /// Icon size: 64px
+  static const sizeSizeInstrumentIconSizeIcon64 = 64;
+
+  /// Icon size: 48px
+  static const sizeSizeMarketingIconSizeIcon48 = 48;
+
+  /// Icon size: 64px
+  static const sizeSizeMarketingIconSizeIcon64 = 64;
+
+  /// Icon size: 80px
+  static const sizeSizeMarketingIconSizeIcon80 = 80;
+
+  /// Icon size: 96px
+  static const sizeSizeMarketingIconSizeIcon96 = 96;
+
+  /// Icon size: 128px
+  static const sizeSizeMarketingIconSizeIcon128 = 128;
+
+  /// Icon size: 148px
+  static const sizeSizeMarketingIconSizeIcon148 = 148;
+
+  /// Icon size: 160px
+  static const sizeSizeMarketingIconSizeIcon160 = 160;
+
+  /// Icon size: 192px
+  static const sizeSizeMarketingIconSizeIcon192 = 192;
+
+  /// Icon size: 256px
+  static const sizeSizeMarketingIconSizeIcon256 = 256;
+
+  static const spaceThemeSpacingLayoutGutter = 20;
+
+  static const spaceThemeSpacingLayoutMargin = 80;
+
+  static const spaceThemeSpacingLayoutPad = 80;
+
+  static const spaceThemeSpacingLayoutGutterStackLg = 20;
+
+  static const spaceThemeSpacingLayoutGutterStackMd = 20;
+
+  static const spaceThemeSpacingLayoutGutterStackStackSm = 20;
+
+  static const spaceThemeSpacingLayoutGapLg = 80;
+
+  static const spaceThemeSpacingLayoutGapMd = 40;
+
+  static const spaceThemeSpacingContentPadLg = 64;
+
+  static const spaceThemeSpacingContentPadMd = 40;
+
+  static const spaceThemeSpacingContentPadSm = 32;
+
+  static const spaceThemeSpacingContentGapLg = 64;
+
+  static const spaceThemeSpacingContentGapMd = 40;
+
+  static const spaceThemeSpacingContentGapSm = 32;
+
+  static const spaceThemeSpacingContentGapXs = 24;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInsetNone = 0;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInset3Xs = 2;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInset2Xs = 4;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInsetXs = 8;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInsetSm = 12;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInsetMd = 16;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInsetLg = 24;
+
+  /// Inset Tokens (Internal Padding). These define the space inside a container.
+  static const spaceInsetXl = 32;
+
+  /// Gap Tokens (Proximity/Stacking)
+  /// These define the relationship between elements.
+  static const spaceGapNone = 0;
+
+  /// Gap Tokens (Proximity/Stacking)
+  /// These define the relationship between elements.
+  static const spaceGapXs = 4;
+
+  /// Gap Tokens (Proximity/Stacking)
+  /// These define the relationship between elements.
+  static const spaceGapSm = 8;
+
+  /// Gap Tokens (Proximity/Stacking)
+  /// These define the relationship between elements.
+  static const spaceGapMd = 16;
+
+  /// Gap Tokens (Proximity/Stacking)
+  /// These define the relationship between elements.
+  static const spaceGapLg = 24;
+
+  /// Gap Tokens (Proximity/Stacking)
+  /// These define the relationship between elements.
+  static const spaceGapXl = 48;
+
+  /// 10px *This is a NON-standard size and should be extended beyond the original typography scale.
+  static const fontSizeFontFontSize2Xs = 10;
+
+  /// 12px (Tailwind Typography Scale)
+  static const fontSizeFontFontSizeXs = 12;
+
+  /// 14px (Tailwind Typography Scale)
+  static const fontSizeFontFontSizeSm = 14;
+
+  /// 16px (Tailwind Typography Scale)
+  static const fontSizeFontFontSizeBase = 16;
+
+  /// 18px (Tailwind Typography Scale)
+  static const fontSizeFontFontSizeLg = 18;
+
+  /// 20px (Tailwind Typography Scale)
+  static const fontSizeFontFontSizeXl = 20;
+
+  /// 24px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize2Xl = 24;
+
+  /// 30px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize3Xl = 30;
+
+  /// 36px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize4Xl = 36;
+
+  /// 48px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize5Xl = 48;
+
+  /// 60px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize6Xl = 60;
+
+  /// 72px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize7Xl = 72;
+
+  /// 96px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize8Xl = 96;
+
+  /// 128px (Tailwind Typography Scale)
+  static const fontSizeFontFontSize9Xl = 128;
+
+  static const fontSizeHeadingH1FontSize = 96;
+
+  static const fontSizeHeadingH2FontSize = 72;
+
+  static const fontSizeHeadingH3FontSize = 48;
+
+  static const fontSizeHeadingH4FontSize = 30;
+
+  static const fontSizeHeadingH5FontSize = 24;
+
+  static const fontSizeHeadingH6FontSize = 20;
+
+  static const fontSizeBodyBodySmFontSize = 14;
+
+  static const fontSizeBodyBodyXsFontSize = 12;
+
+  static const fontSizeBodyBody2XsFontSize = 10;
+
+  static const fontSizeBodyBodyMdFontSize = 16;
+
+  static const fontSizeBodyBodyLgFontSize = 18;
+
+  static const fontSizeLabelLabelMdFontSize = 16;
+
+  static const fontSizeLabelLabelSmFontSize = 14;
+
+  static const fontSizeLabelLabelLgFontSize = 18;
+
+  static const fontSizeLabelLabelXsFontSize = 12;
+
+  static const fontSizeLabelLabel2XsFontSize = 10;
+
+  /// *This is a NON-Tailwind Global Class. Please extend the scale to include this.
+  static const lineHeightFontLineHeightLeading14 = 14;
+
+  static const lineHeightFontLineHeightLeading16 = 16;
+
+  static const lineHeightFontLineHeightLeading20 = 20;
+
+  static const lineHeightFontLineHeightLeading24 = 24;
+
+  static const lineHeightFontLineHeightLeading28 = 28;
+
+  static const lineHeightFontLineHeightLeading32 = 32;
+
+  static const lineHeightFontLineHeightLeading36 = 36;
+
+  static const lineHeightFontLineHeightLeading40 = 40;
+
+  /// *This is a NON-Tailwind Global Class. Please extend the scale to include this.
+  static const lineHeightFontLineHeightLeading52 = 52;
+
+  static const lineHeightFontLineHeightLeading64 = 64;
+
+  /// *This is a NON-Tailwind Global Class. Please extend the scale to include this.
+  static const lineHeightFontLineHeightLeading76 = 76;
+
+  /// *This is a NON-Tailwind Global Class. Please extend the scale to include this.
+  static const lineHeightFontLineHeightLeading100 = 100;
+
+  /// *This is a NON-Tailwind Global Class. Please extend the scale to include this.
+  static const lineHeightFontLineHeightLeading132 = 132;
+
+  static const lineHeightHeadingH1LineHeight = 100;
+
+  static const lineHeightHeadingH2LineHeight = 76;
+
+  static const lineHeightHeadingH3LineHeight = 52;
+
+  static const lineHeightHeadingH4LineHeight = 36;
+
+  static const lineHeightHeadingH5LineHeight = 32;
+
+  static const lineHeightHeadingH6LineHeight = 28;
+
+  static const lineHeightBodyBodySmLineHeight = 20;
+
+  static const lineHeightBodyBodyXsLineHeight = 16;
+
+  static const lineHeightBodyBody2XsLineHeight = 14;
+
+  static const lineHeightBodyBodyMdLineHeight = 24;
+
+  static const lineHeightBodyBodyLgLineHeight = 28;
+
+  static const lineHeightLabelLabelMdLineHeight = 24;
+
+  static const lineHeightLabelLabelSmLineHeight = 20;
+
+  static const lineHeightLabelLabelLgLineHeight = 28;
+
+  static const lineHeightLabelLabelXsLineHeight = 16;
+
+  static const lineHeightLabelLabel2XsLineHeight = 14;
+
+  /// No border
+  static const borderWidthStrokeStrokeWidthNone = 0;
+
+  /// Standard border
+  static const borderWidthStrokeStrokeWidthXs = 1;
+
+  /// Accent. Use for "focus states" or to imply when something is being "selected"
+  static const borderWidthStrokeStrokeWidthSm = 2;
+
+  /// Heavy. Use for decorative accents.
+  static const borderWidthStrokeStrokeWidthMd = 4;
+
+  /// Very Heavy. Use for heavy branding or for decorative use.
+  static const borderWidthStrokeStrokeWidthLg = 8;
+
+  /// Icon size=12px, Icon stroke=0.75px
+  static const borderWidthStrokeIconWidthIcon12 = 0.75;
+
+  /// Icon size=16px, Icon stroke=1px
+  static const borderWidthStrokeIconWidthIcon16 = 1;
+
+  /// Icon size=20px, Icon stroke=1.25px
+  static const borderWidthStrokeIconWidthIcon20 = 1.25;
+
+  /// Icon size=24px, Icon stroke=1.5px
+  static const borderWidthStrokeIconWidthIcon24 = 1.5;
+
+  /// Icon size=28px, Icon stroke=1.75px
+  static const borderWidthStrokeIconWidthIcon28 = 1.75;
+
+  /// Icon size=32px, Icon stroke=2px
+  static const borderWidthStrokeIconWidthIcon32 = 2;
+
+  /// Icon size=36px, Icon stroke=2.25px
+  static const borderWidthStrokeIconWidthIcon36 = 2.25;
+
+  /// Icon size=40px, Icon stroke=2.5px
+  static const borderWidthStrokeIconWidthIcon40 = 2.5;
+
+  /// Icon size=48px, Icon stroke=3px
+  static const borderWidthStrokeIconWidthIcon48 = 3;
+
+  /// Icon size=56px, Icon stroke=3.5px
+  static const borderWidthStrokeIconWidthIcon56 = 3.5;
+
+  /// Icon size=64px, Icon stroke=4px
+  static const borderWidthStrokeIconWidthIcon64 = 4;
+
+  /// Straight edges
+  static const borderRadiusRadiusNone = 0;
+
+  static const borderRadiusRadiusXs = 2;
+
+  static const borderRadiusRadiusSm = 4;
+
+  static const borderRadiusRadiusMd = 8;
+
+  static const borderRadiusRadiusLg = 12;
+
+  static const borderRadiusRadiusXl = 16;
+
+  static const borderRadiusRadius2Xl = 24;
+
+  static const borderRadiusRadius3Xl = 32;
+
+  /// Creates a "pill" shape
+  static const borderRadiusRadiusFull = 9999;
+
+  AppDimensions._();
+}
