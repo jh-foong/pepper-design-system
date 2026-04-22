@@ -26,12 +26,26 @@ Token categories currently in Supernova: Color, Typography, Font Family, Font Si
 
 | Font | Source | Use |
 |------|--------|-----|
-| Manrope (Pepperstone fork) | [github.com/cssobral2013/manrope](https://github.com/cssobral2013/manrope) | Primary typeface — headings, body, labels |
+| Manrope (Pepperstone fork) | [github.com/jh-foong/manrope](https://github.com/jh-foong/manrope) | Primary typeface — headings, body, labels |
 | Noto Sans Arabic | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+Arabic) | Arabic language support |
 | Noto Sans TC | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+TC) | Traditional Chinese support |
 | Noto Sans JP | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+JP) | Japanese support |
 
-> **Note on Manrope:** We use a forked version of Manrope. Do not pull from the original Google Fonts version — always reference the fork above.
+> **Important:** Always use the Pepperstone fork of Manrope linked above — not the original Google Fonts version. The fork is the controlled source for this design system.
+
+### How to download Manrope
+
+1. Go to [github.com/jh-foong/manrope](https://github.com/jh-foong/manrope)
+2. Click the green **Code** button
+3. Select **Download ZIP**
+4. Unzip the file — the font files (.ttf) are inside the `fonts/` folder
+5. Install by double-clicking each font file and clicking **Install Font**
+
+### How to download Noto fonts
+
+1. Click the Google Fonts link for the language you need (above)
+2. Click **Download family** (top right of the Google Fonts page)
+3. Unzip and install the same way as above
 
 ---
 

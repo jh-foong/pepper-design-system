@@ -20,7 +20,7 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 |-|------|
 | Figma | [Pepperstone DS (branch)](https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT) |
 | Supernova | [Pepper Design System v2](https://app.supernova.io/711966-pepperstone/764138-pepper-design-system-v-2/803332-shared-draft/810225-default/overview) |
-| Fonts | [Manrope fork](https://github.com/cssobral2013/manrope) · Noto Sans Arabic · Noto Sans TC · Noto Sans JP |
+| Fonts | [Manrope fork](https://github.com/jh-foong/manrope) · Noto Sans Arabic · Noto Sans TC · Noto Sans JP |
 | GitHub | [jh-foong/pepper-ds](https://github.com/jh-foong/pepper-ds) _(test repo)_ |
 
 ## Contributing
