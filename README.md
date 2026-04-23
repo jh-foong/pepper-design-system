@@ -94,8 +94,8 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 | Tier | Format | Path | Status |
 |------|--------|------|--------|
-| 1 | CSS custom properties | [`tokens/css/`](tokens/css/) | Canonical — used in production |
-| 1 | Flutter / Dart | [`tokens/flutter/`](tokens/flutter/) | Canonical — used in production |
+| 1 | CSS custom properties | [`tokens/css/`](tokens/css/) | Canonical |
+| 1 | Flutter / Dart | [`tokens/flutter/`](tokens/flutter/) | Canonical |
 | 2 | JSON (W3C DTCG) | [`tokens/json/tokens.json`](tokens/json/tokens.json) | Interop — feed into Style Dictionary, Token Studio, etc. |
 | 3 | iOS Swift | [`tokens/experimental/ios/`](tokens/experimental/ios/) | **Experimental, untested** |
 | 3 | Android XML | [`tokens/experimental/android/`](tokens/experimental/android/) | **Experimental, untested** |

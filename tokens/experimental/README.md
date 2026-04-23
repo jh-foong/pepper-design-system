@@ -6,7 +6,7 @@
 
 | Tier | Location | Status |
 |------|----------|--------|
-| Tier 1 (canonical) | `tokens/css/` · `tokens/flutter/` | Used in production Pepperstone surfaces |
+| Tier 1 (canonical) | `tokens/css/` · `tokens/flutter/` | Canonical Pepper token exports |
 | Tier 2 (interop)   | `tokens/json/` (DTCG) | Stable — any Style Dictionary / Token Studio pipeline can consume |
 | Tier 3 (experimental) | `tokens/experimental/` | **This folder.** Untested. No guarantees. |
 
