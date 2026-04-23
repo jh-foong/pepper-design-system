@@ -2,7 +2,7 @@
 
 Pepper is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
 
-**Current version:** [`v1.1.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
+**Current version:** [`v1.2.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.2.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
 ---
 
@@ -90,6 +90,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 | Version | Date | Summary |
 |---------|------|---------|
+| [v1.2.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.2.0) | 2026-04-23 | Designer onboarding: moved repo to public personal sandbox, added pre-merge scope callout, swapped recommended AI tool to Claude Design (web), added retokenization methods (screenshot, Dev Mode CSS, Figma MCP) for translating legacy designs |
 | [v1.1.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) | 2026-04-23 | Added `DESIGN.md`, raw Figma source files, and legal text styles (+ body-2xs, label-xs/2xs). Fixed Flutter `labelLabelLg` weight bug |
 | v1.0.4 | 2026-04-23 | Cleaned up docs — removed Supernova references, added changelogs |
 | v1.0.3 | 2026-04-23 | Removed Supernova scripts |

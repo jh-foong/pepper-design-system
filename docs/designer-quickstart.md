@@ -128,6 +128,8 @@ Figma's **Dev Mode** exports exact CSS for any element (colours as hex, sizes in
 
 ### Most accurate — Figma MCP *(semi-technical)*
 
+> 💡 Skip this method if you're using **Option 1 (Claude Design web)**. MCP only works with Claude Code or Cursor — go with the screenshot or Dev Mode CSS method instead.
+
 Figma's official **Dev Mode MCP server** lets Claude read your selected Figma frame directly — no exporting or pasting. Claude sees the real structure (layers, auto-layout, variants) and can translate it to DESIGN.md tokens precisely.
 
 **Requirements:**
