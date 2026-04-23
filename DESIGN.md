@@ -1,8 +1,8 @@
-<!-- Pepper DESIGN.md · v1.2.0 · 2026-04-23 · compare against https://github.com/jh-foong/pepper-design-system/releases -->
+<!-- Pepper DESIGN.md · v1.3.0 · 2026-04-23 · compare against https://github.com/jh-foong/pepper-design-system/releases -->
 
 # Pepper Design System — DESIGN.md
 
-**Version:** `v1.2.0` · Released 2026-04-23 · [Check for newer](https://github.com/jh-foong/pepper-design-system/releases)
+**Version:** `v1.3.0` · Released 2026-04-23 · [Check for newer](https://github.com/jh-foong/pepper-design-system/releases)
 
 > ⚠️ **Scope — pre-merge state**
 >
@@ -420,6 +420,7 @@ Everything summarised here is derived from the authoritative token files in this
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v1.3.0 | 2026-04-23 | No spec changes — version bump to align with repo release adding JSON (DTCG) and experimental Tier 3 platform token exports (iOS, Android, React Native, Tailwind) |
 | v1.2.0 | 2026-04-23 | Added pre-merge scope callout at top — flags this as for new/exploratory work only, instructs AI agents to surface mismatches when asked to extend existing designs |
 | v1.1.0 | 2026-04-23 | Added "What this file covers" (known limitations) and "Example prompts" sections |
 | v1.0.0 | 2026-04-23 | Initial DESIGN.md — curated AI-ingestable spec for Pepper |
