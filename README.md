@@ -25,6 +25,7 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 ## Documentation
 
 - [DESIGN.md](DESIGN.md) — Full AI-ready visual spec (colours, typography, spacing, shadows, rules)
+- [Designer Quickstart](docs/designer-quickstart.md) — 15-min setup to vibe code with Pepper in Claude Design, Claude Code, Cursor, or any AI tool
 - [Getting Started](docs/getting-started.md) — How to use Pepper as a designer or developer
 - [Resources](docs/resources.md) — Fonts, Figma, and all external sources
 - [Figma → Claude Sync](docs/figma-claude-sync.md) — How design tokens are synced from Figma to this repo
