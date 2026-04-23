@@ -5,49 +5,49 @@
 
 :root {
   /* 10px *This is a NON-standard size and should be extended beyond the original typography scale. */
-  --pepper-font-size-font-size-2xs: 10px;
+  --pepper-core-font-size-font-size-2xs: 10px;
   /* 12px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-xs: 12px;
+  --pepper-core-font-size-font-size-xs: 12px;
   /* 14px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-sm: 14px;
+  --pepper-core-font-size-font-size-sm: 14px;
   /* 16px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-base: 16px;
+  --pepper-core-font-size-font-size-base: 16px;
   /* 18px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-lg: 18px;
+  --pepper-core-font-size-font-size-lg: 18px;
   /* 20px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-xl: 20px;
+  --pepper-core-font-size-font-size-xl: 20px;
   /* 24px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-2xl: 24px;
+  --pepper-core-font-size-font-size-2xl: 24px;
   /* 30px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-3xl: 30px;
+  --pepper-core-font-size-font-size-3xl: 30px;
   /* 36px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-4xl: 36px;
+  --pepper-core-font-size-font-size-4xl: 36px;
   /* 48px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-5xl: 48px;
+  --pepper-core-font-size-font-size-5xl: 48px;
   /* 60px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-6xl: 60px;
+  --pepper-core-font-size-font-size-6xl: 60px;
   /* 72px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-7xl: 72px;
+  --pepper-core-font-size-font-size-7xl: 72px;
   /* 96px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-8xl: 96px;
+  --pepper-core-font-size-font-size-8xl: 96px;
   /* 128px (Tailwind Typography Scale) */
-  --pepper-font-size-font-size-9xl: 128px;
-  --pepper-font-size-heading-h2-font-size: var(--pepper-font-size-font-size-7xl);
-  --pepper-font-size-heading-h3-font-size: var(--pepper-font-size-font-size-5xl);
-  --pepper-font-size-heading-h4-font-size: var(--pepper-font-size-font-size-3xl);
-  --pepper-font-size-heading-h5-font-size: var(--pepper-font-size-font-size-2xl);
-  --pepper-font-size-heading-h6-font-size: var(--pepper-font-size-font-size-xl);
-  --pepper-font-size-heading-h1-font-size: var(--pepper-font-size-font-size-8xl);
-  --pepper-font-size-body-sm-font-size: var(--pepper-font-size-font-size-sm);
-  --pepper-font-size-body-xs-font-size: var(--pepper-font-size-font-size-xs);
-  --pepper-font-size-body-md-font-size: var(--pepper-font-size-font-size-base);
-  --pepper-font-size-body-lg-font-size: var(--pepper-font-size-font-size-lg);
-  --pepper-font-size-label-md-font-size: var(--pepper-font-size-font-size-base);
-  --pepper-font-size-label-sm-font-size: var(--pepper-font-size-font-size-sm);
-  --pepper-font-size-label-lg-font-size: var(--pepper-font-size-font-size-lg);
-  --pepper-font-size-body-2xs-font-size: var(--pepper-font-size-font-size-2xs);
-  --pepper-font-size-label-xs-font-size: var(--pepper-font-size-font-size-xs);
-  --pepper-font-size-label-2xs-font-size: var(--pepper-font-size-font-size-2xs);
-  --pepper-font-size-legal-md-font-size: var(--pepper-font-size-font-size-base);
-  --pepper-font-size-legal-xs-font-size: var(--pepper-font-size-font-size-xs);
+  --pepper-core-font-size-font-size-9xl: 128px;
+  --pepper-core-font-size-heading-h2-font-size: var(--pepper-core-font-size-font-size-7xl);
+  --pepper-core-font-size-heading-h3-font-size: var(--pepper-core-font-size-font-size-5xl);
+  --pepper-core-font-size-heading-h4-font-size: var(--pepper-core-font-size-font-size-3xl);
+  --pepper-core-font-size-heading-h5-font-size: var(--pepper-core-font-size-font-size-2xl);
+  --pepper-core-font-size-heading-h6-font-size: var(--pepper-core-font-size-font-size-xl);
+  --pepper-core-font-size-heading-h1-font-size: var(--pepper-core-font-size-font-size-8xl);
+  --pepper-core-font-size-body-sm-font-size: var(--pepper-core-font-size-font-size-sm);
+  --pepper-core-font-size-body-xs-font-size: var(--pepper-core-font-size-font-size-xs);
+  --pepper-core-font-size-body-md-font-size: var(--pepper-core-font-size-font-size-base);
+  --pepper-core-font-size-body-lg-font-size: var(--pepper-core-font-size-font-size-lg);
+  --pepper-core-font-size-label-md-font-size: var(--pepper-core-font-size-font-size-base);
+  --pepper-core-font-size-label-sm-font-size: var(--pepper-core-font-size-font-size-sm);
+  --pepper-core-font-size-label-lg-font-size: var(--pepper-core-font-size-font-size-lg);
+  --pepper-core-font-size-body-2xs-font-size: var(--pepper-core-font-size-font-size-2xs);
+  --pepper-core-font-size-label-xs-font-size: var(--pepper-core-font-size-font-size-xs);
+  --pepper-core-font-size-label-2xs-font-size: var(--pepper-core-font-size-font-size-2xs);
+  --pepper-core-font-size-legal-md-font-size: var(--pepper-core-font-size-font-size-base);
+  --pepper-core-font-size-legal-xs-font-size: var(--pepper-core-font-size-font-size-xs);
 }

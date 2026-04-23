@@ -100,7 +100,7 @@ Pepper is Pepperstone's design system. It defines the complete visual language: 
 
 ### Semantic tokens (use these)
 
-All colours are referenced via CSS custom properties with the `--pepper-color-` prefix.
+All colours are referenced via CSS custom properties with the `--pepper-core-color-` prefix.
 
 #### Text (foreground/text/*)
 
@@ -170,24 +170,24 @@ Always Manrope. Match weight, size, and line-height exactly.
 
 | Style | Weight | Size | Line height | Token |
 |-------|--------|------|-------------|-------|
-| Heading H1 | 700 | 96px | 100px | `--pepper-typography-heading-h1` |
-| Heading H2 | 700 | 72px | 76px | `--pepper-typography-heading-h2` |
-| Heading H3 | 700 | 48px | 52px | `--pepper-typography-heading-h3` |
-| Heading H4 | 700 | 30px | 36px | `--pepper-typography-heading-h4` |
-| Heading H5 | 700 | 24px | 32px | `--pepper-typography-heading-h5` |
-| Heading H6 | 700 | 20px | 28px | `--pepper-typography-heading-h6` |
-| Body lg | 400 | 18px | 28px | `--pepper-typography-body-lg` |
-| Body md | 400 | 16px | 24px | `--pepper-typography-body-md` |
-| Body sm | 400 | 14px | 20px | `--pepper-typography-body-sm` |
-| Body xs | 400 | 12px | 16px | `--pepper-typography-body-xs` |
-| Body 2xs | 400 | 10px | 14px | `--pepper-typography-body-2xs` |
-| Label lg | 600 | 18px | 24px | `--pepper-typography-label-lg` |
-| Label md | 600 | 16px | 24px | `--pepper-typography-label-md` |
-| Label sm | 600 | 14px | 20px | `--pepper-typography-label-sm` |
-| Label xs | 600 | 12px | 16px | `--pepper-typography-label-xs` |
-| Label 2xs | 600 | 10px | 14px | `--pepper-typography-label-2xs` |
-| Legal md | 400 | 16px | 24px | `--pepper-typography-legal-md` |
-| Legal xs | 400 | 12px | 16px | `--pepper-typography-legal-xs` |
+| Heading H1 | 700 | 96px | 100px | `--pepper-core-typography-heading-h1` |
+| Heading H2 | 700 | 72px | 76px | `--pepper-core-typography-heading-h2` |
+| Heading H3 | 700 | 48px | 52px | `--pepper-core-typography-heading-h3` |
+| Heading H4 | 700 | 30px | 36px | `--pepper-core-typography-heading-h4` |
+| Heading H5 | 700 | 24px | 32px | `--pepper-core-typography-heading-h5` |
+| Heading H6 | 700 | 20px | 28px | `--pepper-core-typography-heading-h6` |
+| Body lg | 400 | 18px | 28px | `--pepper-core-typography-body-lg` |
+| Body md | 400 | 16px | 24px | `--pepper-core-typography-body-md` |
+| Body sm | 400 | 14px | 20px | `--pepper-core-typography-body-sm` |
+| Body xs | 400 | 12px | 16px | `--pepper-core-typography-body-xs` |
+| Body 2xs | 400 | 10px | 14px | `--pepper-core-typography-body-2xs` |
+| Label lg | 600 | 18px | 24px | `--pepper-core-typography-label-lg` |
+| Label md | 600 | 16px | 24px | `--pepper-core-typography-label-md` |
+| Label sm | 600 | 14px | 20px | `--pepper-core-typography-label-sm` |
+| Label xs | 600 | 12px | 16px | `--pepper-core-typography-label-xs` |
+| Label 2xs | 600 | 10px | 14px | `--pepper-core-typography-label-2xs` |
+| Legal md | 400 | 16px | 24px | `--pepper-core-typography-legal-md` |
+| Legal xs | 400 | 12px | 16px | `--pepper-core-typography-legal-xs` |
 
 **Each style also has `*-underlined` and (for md sizes) `*-dashed` variants.**
 
@@ -274,29 +274,29 @@ Always Manrope. Match weight, size, and line-height exactly.
 
 | Token | Use |
 |-------|-----|
-| `--pepper-shadow-2xs` | Subtle lift (input focus, small chip) |
-| `--pepper-shadow-xs` | Low elevation (resting button) |
-| `--pepper-shadow-sm` | Card resting state |
-| `--pepper-shadow-md` | Card hover, dropdown |
-| `--pepper-shadow-lg` | Popover, menu |
-| `--pepper-shadow-xl` | Modal, dialog |
-| `--pepper-shadow-2xl` | Top-level overlay, drawer |
+| `--pepper-core-shadow-2xs` | Subtle lift (input focus, small chip) |
+| `--pepper-core-shadow-xs` | Low elevation (resting button) |
+| `--pepper-core-shadow-sm` | Card resting state |
+| `--pepper-core-shadow-md` | Card hover, dropdown |
+| `--pepper-core-shadow-lg` | Popover, menu |
+| `--pepper-core-shadow-xl` | Modal, dialog |
+| `--pepper-core-shadow-2xl` | Top-level overlay, drawer |
 
 ### Focus rings (accessibility — mandatory on interactive elements)
 
 | Token | Use |
 |-------|-----|
-| `--pepper-shadow-focus-rings-default` | Default focus ring (brand blue) |
-| `--pepper-shadow-focus-rings-error` | Focus ring on error states (red) |
-| `--pepper-shadow-focus-rings-inverse` | Focus ring on dark surfaces |
-| `--pepper-shadow-focus-rings-subtle` | Focus ring on light neutral surfaces |
+| `--pepper-core-shadow-focus-rings-default` | Default focus ring (brand blue) |
+| `--pepper-core-shadow-focus-rings-error` | Focus ring on error states (red) |
+| `--pepper-core-shadow-focus-rings-inverse` | Focus ring on dark surfaces |
+| `--pepper-core-shadow-focus-rings-subtle` | Focus ring on light neutral surfaces |
 
 ### Icon effects
 
 | Token | Use |
 |-------|-----|
-| `--pepper-shadow-icon-light-effect` | Glass / light icon treatment |
-| `--pepper-shadow-icon-dark-effect` | Glass / dark icon treatment |
+| `--pepper-core-shadow-icon-light-effect` | Glass / light icon treatment |
+| `--pepper-core-shadow-icon-dark-effect` | Glass / dark icon treatment |
 
 ---
 
@@ -328,7 +328,7 @@ Always Manrope. Match weight, size, and line-height exactly.
 
 | Category | Rule |
 |----------|------|
-| Colour | Use semantic tokens only. Reference as `var(--pepper-color-semantic-color-*)`. Never hex literals. |
+| Colour | Use semantic tokens only. Reference as `var(--pepper-core-color-semantic-color-*)`. Never hex literals. |
 | Typography | Match family, weight, size, line-height exactly. Always Manrope. |
 | Spacing | Use tokens only. Never arbitrary px values. 4px grid. |
 | Radius | Use radius tokens only. |
@@ -346,21 +346,21 @@ Always Manrope. Match weight, size, and line-height exactly.
 
 ```css
 .button-primary {
-  background: var(--pepper-color-semantic-color-background-surface-brand-primary);
-  color: var(--pepper-color-semantic-color-foreground-text-inverse-primary);
-  padding: var(--pepper-dimension-scale-spacing-12) var(--pepper-dimension-scale-spacing-24);
-  border-radius: var(--pepper-border-radius-md);
-  font: var(--pepper-typography-label-md);
-  box-shadow: var(--pepper-shadow-xs);
+  background: var(--pepper-core-color-semantic-color-background-surface-brand-primary);
+  color: var(--pepper-core-color-semantic-color-foreground-text-inverse-primary);
+  padding: var(--pepper-core-dimension-scale-spacing-12) var(--pepper-core-dimension-scale-spacing-24);
+  border-radius: var(--pepper-core-border-radius-md);
+  font: var(--pepper-core-typography-label-md);
+  box-shadow: var(--pepper-core-shadow-xs);
 }
 
 .button-primary:focus-visible {
   outline: none;
-  box-shadow: var(--pepper-shadow-focus-rings-default);
+  box-shadow: var(--pepper-core-shadow-focus-rings-default);
 }
 
 .button-primary:hover {
-  background: var(--pepper-color-semantic-color-background-surface-brand-primary-hover);
+  background: var(--pepper-core-color-semantic-color-background-surface-brand-primary-hover);
 }
 ```
 
@@ -420,7 +420,7 @@ Everything summarised here is derived from the authoritative token files in this
 
 | Version | Date | Summary |
 |---------|------|---------|
-| v1.3.0 | 2026-04-23 | No spec changes — version bump to align with repo release adding JSON (DTCG) and experimental Tier 3 platform token exports (iOS, Android, React Native, Tailwind) |
+| v1.3.0 | 2026-04-23 | **Breaking:** tokens now use the `pepper-core-` prefix (previously `pepper-`). All CSS custom properties renamed `--pepper-*` → `--pepper-core-*`; equivalent rename applied to Swift enums, Android XML, React Native, and Tailwind. Version bump also covers the repo release adding JSON (DTCG) and experimental Tier 3 platform token exports (iOS, Android, React Native, Tailwind) |
 | v1.2.0 | 2026-04-23 | Added pre-merge scope callout at top — flags this as for new/exploratory work only, instructs AI agents to surface mismatches when asked to extend existing designs |
 | v1.1.0 | 2026-04-23 | Added "What this file covers" (known limitations) and "Example prompts" sections |
 | v1.0.0 | 2026-04-23 | Initial DESIGN.md — curated AI-ingestable spec for Pepper |

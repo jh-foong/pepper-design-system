@@ -2138,7 +2138,7 @@ export const space = {
   },
 } as const;
 
-export const pepperTokens = {
+export const pepperCoreTokens = {
   border,
   color,
   dimension,

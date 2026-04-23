@@ -4,24 +4,24 @@
  */
 
 :root {
-  --pepper-font-family-font-family-manrope: "Manrope";
-  --pepper-font-family-font-family-noto-sans-arabic: "Noto Sans Arabic";
-  --pepper-font-family-font-family-noto-sans-tc: "Noto Sans TC";
-  --pepper-font-family-font-family-noto-sans-jp: "Noto Sans JP";
-  --pepper-font-family-heading-h1-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-heading-h2-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-heading-h3-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-heading-h4-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-heading-h5-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-heading-h6-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-body-lg-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-body-md-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-body-sm-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-body-xs-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-label-lg-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-label-md-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-label-sm-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-body-2xs-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-label-xs-font-family: var(--pepper-font-family-font-family-manrope);
-  --pepper-font-family-label-2xs-font-family: var(--pepper-font-family-font-family-manrope);
+  --pepper-core-font-family-font-family-manrope: "Manrope";
+  --pepper-core-font-family-font-family-noto-sans-arabic: "Noto Sans Arabic";
+  --pepper-core-font-family-font-family-noto-sans-tc: "Noto Sans TC";
+  --pepper-core-font-family-font-family-noto-sans-jp: "Noto Sans JP";
+  --pepper-core-font-family-heading-h1-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-heading-h2-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-heading-h3-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-heading-h4-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-heading-h5-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-heading-h6-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-body-lg-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-body-md-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-body-sm-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-body-xs-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-label-lg-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-label-md-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-label-sm-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-body-2xs-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-label-xs-font-family: var(--pepper-core-font-family-font-family-manrope);
+  --pepper-core-font-family-label-2xs-font-family: var(--pepper-core-font-family-font-family-manrope);
 }

@@ -4,11 +4,11 @@
  */
 
 :root {
-  --pepper-blur-lg: blur(16px);
-  --pepper-blur-md-2: blur(12px);
-  --pepper-blur-sm-3: blur(8px);
-  --pepper-blur-xl-4: blur(40px);
-  --pepper-blur-2xl-5: blur(40px);
-  --pepper-blur-3xl-6: blur(64px);
-  --pepper-blur-xs-7: blur(4px);
+  --pepper-core-blur-lg: blur(16px);
+  --pepper-core-blur-md-2: blur(12px);
+  --pepper-core-blur-sm-3: blur(8px);
+  --pepper-core-blur-xl-4: blur(40px);
+  --pepper-core-blur-2xl-5: blur(40px);
+  --pepper-core-blur-3xl-6: blur(64px);
+  --pepper-core-blur-xs-7: blur(4px);
 }

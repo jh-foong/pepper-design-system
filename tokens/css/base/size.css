@@ -5,77 +5,77 @@
 
 :root {
   /* This is NOT a standard tailwind breakpoint but is important to consider for people using mobile phone web browsers. */
-  --pepper-size-screen-width-2xs: 320px;
+  --pepper-core-size-screen-width-2xs: 320px;
   /* This is NOT a standard tailwind breakpoint but is important to consider for people using mobile phone web browsers. */
-  --pepper-size-screen-width-xs: 375px;
+  --pepper-core-size-screen-width-xs: 375px;
   /* The TABLET screen by default in tailwind.config.js 
 To be considered as the first size that is NOT mobile, and therefore may require custom styling. */
-  --pepper-size-screen-width-sm: 640px;
-  --pepper-size-screen-width-md: 768px;
+  --pepper-core-size-screen-width-sm: 640px;
+  --pepper-core-size-screen-width-md: 768px;
   /* The LAPTOP screen by default in tailwind.config.js */
-  --pepper-size-screen-width-lg: 1024px;
+  --pepper-core-size-screen-width-lg: 1024px;
   /* The DESKTOP screen by default in tailwind.config.js */
-  --pepper-size-screen-width-xl: 1280px;
+  --pepper-core-size-screen-width-xl: 1280px;
   /* The breakpoint used for EXTRA WIDE DESKTOP devices */
-  --pepper-size-screen-width-2xl: 1440px;
+  --pepper-core-size-screen-width-2xl: 1440px;
   /* Icon size: 12px */
-  --pepper-size-utility-icon-size-icon-12: 12px;
+  --pepper-core-size-utility-icon-size-icon-12: 12px;
   /* Icon size: 16px */
-  --pepper-size-utility-icon-size-icon-16: 16px;
+  --pepper-core-size-utility-icon-size-icon-16: 16px;
   /* Icon size: 20px */
-  --pepper-size-utility-icon-size-icon-20: 20px;
+  --pepper-core-size-utility-icon-size-icon-20: 20px;
   /* Icon size: 24px */
-  --pepper-size-utility-icon-size-icon-24: 24px;
+  --pepper-core-size-utility-icon-size-icon-24: 24px;
   /* Icon size: 32px */
-  --pepper-size-utility-icon-size-icon-32: 32px;
+  --pepper-core-size-utility-icon-size-icon-32: 32px;
   /* Icon size: 40px */
-  --pepper-size-utility-icon-size-icon-40: 40px;
+  --pepper-core-size-utility-icon-size-icon-40: 40px;
   /* Icon size: 48px */
-  --pepper-size-system-icon-size-icon-48: 48px;
+  --pepper-core-size-system-icon-size-icon-48: 48px;
   /* Icon size: 64px */
-  --pepper-size-system-icon-size-icon-64: 64px;
+  --pepper-core-size-system-icon-size-icon-64: 64px;
   /* Icon size: 80px */
-  --pepper-size-system-icon-size-icon-80: 80px;
+  --pepper-core-size-system-icon-size-icon-80: 80px;
   /* Icon size: 96px */
-  --pepper-size-system-icon-size-icon-96: 96px;
+  --pepper-core-size-system-icon-size-icon-96: 96px;
   /* Icon size: 128px */
-  --pepper-size-system-icon-size-icon-128: 128px;
+  --pepper-core-size-system-icon-size-icon-128: 128px;
   /* Icon size: 12px */
-  --pepper-size-instrument-icon-size-icon-12: 12px;
+  --pepper-core-size-instrument-icon-size-icon-12: 12px;
   /* Icon size: 16px */
-  --pepper-size-instrument-icon-size-icon-16: 16px;
+  --pepper-core-size-instrument-icon-size-icon-16: 16px;
   /* Icon size: 20px */
-  --pepper-size-instrument-icon-size-icon-20: 20px;
+  --pepper-core-size-instrument-icon-size-icon-20: 20px;
   /* Icon size: 24px */
-  --pepper-size-instrument-icon-size-icon-24: 24px;
+  --pepper-core-size-instrument-icon-size-icon-24: 24px;
   /* Icon size: 32px */
-  --pepper-size-instrument-icon-size-icon-32: 32px;
+  --pepper-core-size-instrument-icon-size-icon-32: 32px;
   /* Icon size: 40px */
-  --pepper-size-instrument-icon-size-icon-40: 40px;
+  --pepper-core-size-instrument-icon-size-icon-40: 40px;
   /* Icon size: 48px */
-  --pepper-size-instrument-icon-size-icon-48: 48px;
+  --pepper-core-size-instrument-icon-size-icon-48: 48px;
   /* Icon size: 64px */
-  --pepper-size-instrument-icon-size-icon-64: 64px;
+  --pepper-core-size-instrument-icon-size-icon-64: 64px;
   /* Icon size: 48px */
-  --pepper-size-marketing-icon-size-icon-48: 48px;
+  --pepper-core-size-marketing-icon-size-icon-48: 48px;
   /* Icon size: 64px */
-  --pepper-size-marketing-icon-size-icon-64: 64px;
+  --pepper-core-size-marketing-icon-size-icon-64: 64px;
   /* Icon size: 80px */
-  --pepper-size-marketing-icon-size-icon-80: 80px;
+  --pepper-core-size-marketing-icon-size-icon-80: 80px;
   /* Icon size: 96px */
-  --pepper-size-marketing-icon-size-icon-96: 96px;
+  --pepper-core-size-marketing-icon-size-icon-96: 96px;
   /* Icon size: 128px */
-  --pepper-size-marketing-icon-size-icon-128: 128px;
+  --pepper-core-size-marketing-icon-size-icon-128: 128px;
   /* Icon size: 148px */
-  --pepper-size-marketing-icon-size-icon-148: 148px;
+  --pepper-core-size-marketing-icon-size-icon-148: 148px;
   /* Icon size: 160px */
-  --pepper-size-marketing-icon-size-icon-160: 160px;
+  --pepper-core-size-marketing-icon-size-icon-160: 160px;
   /* Icon size: 192px */
-  --pepper-size-marketing-icon-size-icon-192: 192px;
+  --pepper-core-size-marketing-icon-size-icon-192: 192px;
   /* Icon size: 256px */
-  --pepper-size-marketing-icon-size-icon-256: 256px;
+  --pepper-core-size-marketing-icon-size-icon-256: 256px;
   /* Size in px */
-  --pepper-size-canvas-viewport-height: 1024px;
+  --pepper-core-size-canvas-viewport-height: 1024px;
   /* Size in px */
-  --pepper-size-canvas-viewport-width: var(--pepper-size-screen-width-2xl);
+  --pepper-core-size-canvas-viewport-width: var(--pepper-core-size-screen-width-2xl);
 }

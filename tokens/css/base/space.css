@@ -5,52 +5,52 @@
 
 :root {
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-none: var(--pepper-dimension-scale-spacing-none);
+  --pepper-core-space-inset-none: var(--pepper-core-dimension-scale-spacing-none);
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-3xs: var(--pepper-dimension-scale-spacing-2);
+  --pepper-core-space-inset-3xs: var(--pepper-core-dimension-scale-spacing-2);
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-2xs: var(--pepper-dimension-scale-spacing-4);
+  --pepper-core-space-inset-2xs: var(--pepper-core-dimension-scale-spacing-4);
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-xs: var(--pepper-dimension-scale-spacing-8);
+  --pepper-core-space-inset-xs: var(--pepper-core-dimension-scale-spacing-8);
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-sm: var(--pepper-dimension-scale-spacing-12);
+  --pepper-core-space-inset-sm: var(--pepper-core-dimension-scale-spacing-12);
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-md: var(--pepper-dimension-scale-spacing-16);
+  --pepper-core-space-inset-md: var(--pepper-core-dimension-scale-spacing-16);
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-lg: var(--pepper-dimension-scale-spacing-24);
+  --pepper-core-space-inset-lg: var(--pepper-core-dimension-scale-spacing-24);
   /* Inset Tokens (Internal Padding). These define the space inside a container. */
-  --pepper-space-inset-xl: var(--pepper-dimension-scale-spacing-32);
+  --pepper-core-space-inset-xl: var(--pepper-core-dimension-scale-spacing-32);
   /* Gap Tokens (Proximity/Stacking)
 These define the relationship between elements. */
-  --pepper-space-gap-none: var(--pepper-dimension-scale-spacing-none);
+  --pepper-core-space-gap-none: var(--pepper-core-dimension-scale-spacing-none);
   /* Gap Tokens (Proximity/Stacking)
 These define the relationship between elements. */
-  --pepper-space-gap-xs: var(--pepper-dimension-scale-spacing-4);
+  --pepper-core-space-gap-xs: var(--pepper-core-dimension-scale-spacing-4);
   /* Gap Tokens (Proximity/Stacking)
 These define the relationship between elements. */
-  --pepper-space-gap-sm: var(--pepper-dimension-scale-spacing-8);
+  --pepper-core-space-gap-sm: var(--pepper-core-dimension-scale-spacing-8);
   /* Gap Tokens (Proximity/Stacking)
 These define the relationship between elements. */
-  --pepper-space-gap-md: var(--pepper-dimension-scale-spacing-16);
+  --pepper-core-space-gap-md: var(--pepper-core-dimension-scale-spacing-16);
   /* Gap Tokens (Proximity/Stacking)
 These define the relationship between elements. */
-  --pepper-space-gap-lg: var(--pepper-dimension-scale-spacing-24);
+  --pepper-core-space-gap-lg: var(--pepper-core-dimension-scale-spacing-24);
   /* Gap Tokens (Proximity/Stacking)
 These define the relationship between elements. */
-  --pepper-space-gap-xl: var(--pepper-dimension-scale-spacing-48);
-  --pepper-space-theme-spacing-layout-gutter: var(--pepper-dimension-scale-spacing-20);
-  --pepper-space-theme-spacing-layout-gutter-stack-lg: var(--pepper-dimension-scale-spacing-20);
-  --pepper-space-theme-spacing-layout-gutter-stack-md: var(--pepper-dimension-scale-spacing-20);
-  --pepper-space-theme-spacing-layout-gutter-stack-sm: var(--pepper-dimension-scale-spacing-20);
-  --pepper-space-theme-spacing-layout-margin: var(--pepper-dimension-scale-spacing-80);
-  --pepper-space-theme-spacing-layout-pad: var(--pepper-dimension-scale-spacing-80);
-  --pepper-space-theme-spacing-layout-gap-lg: var(--pepper-dimension-scale-spacing-80);
-  --pepper-space-theme-spacing-layout-gap-md: var(--pepper-dimension-scale-spacing-40);
-  --pepper-space-theme-spacing-content-pad-lg: var(--pepper-dimension-scale-spacing-64);
-  --pepper-space-theme-spacing-content-pad-md: var(--pepper-dimension-scale-spacing-40);
-  --pepper-space-theme-spacing-content-pad-sm: var(--pepper-dimension-scale-spacing-32);
-  --pepper-space-theme-spacing-content-gap-lg: var(--pepper-dimension-scale-spacing-64);
-  --pepper-space-theme-spacing-content-gap-md: var(--pepper-dimension-scale-spacing-40);
-  --pepper-space-theme-spacing-content-gap-sm: var(--pepper-dimension-scale-spacing-32);
-  --pepper-space-theme-spacing-content-gap-xs: var(--pepper-dimension-scale-spacing-24);
+  --pepper-core-space-gap-xl: var(--pepper-core-dimension-scale-spacing-48);
+  --pepper-core-space-theme-spacing-layout-gutter: var(--pepper-core-dimension-scale-spacing-20);
+  --pepper-core-space-theme-spacing-layout-gutter-stack-lg: var(--pepper-core-dimension-scale-spacing-20);
+  --pepper-core-space-theme-spacing-layout-gutter-stack-md: var(--pepper-core-dimension-scale-spacing-20);
+  --pepper-core-space-theme-spacing-layout-gutter-stack-sm: var(--pepper-core-dimension-scale-spacing-20);
+  --pepper-core-space-theme-spacing-layout-margin: var(--pepper-core-dimension-scale-spacing-80);
+  --pepper-core-space-theme-spacing-layout-pad: var(--pepper-core-dimension-scale-spacing-80);
+  --pepper-core-space-theme-spacing-layout-gap-lg: var(--pepper-core-dimension-scale-spacing-80);
+  --pepper-core-space-theme-spacing-layout-gap-md: var(--pepper-core-dimension-scale-spacing-40);
+  --pepper-core-space-theme-spacing-content-pad-lg: var(--pepper-core-dimension-scale-spacing-64);
+  --pepper-core-space-theme-spacing-content-pad-md: var(--pepper-core-dimension-scale-spacing-40);
+  --pepper-core-space-theme-spacing-content-pad-sm: var(--pepper-core-dimension-scale-spacing-32);
+  --pepper-core-space-theme-spacing-content-gap-lg: var(--pepper-core-dimension-scale-spacing-64);
+  --pepper-core-space-theme-spacing-content-gap-md: var(--pepper-core-dimension-scale-spacing-40);
+  --pepper-core-space-theme-spacing-content-gap-sm: var(--pepper-core-dimension-scale-spacing-32);
+  --pepper-core-space-theme-spacing-content-gap-xs: var(--pepper-core-dimension-scale-spacing-24);
 }

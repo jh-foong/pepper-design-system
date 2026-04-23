@@ -5,35 +5,35 @@
 
 :root {
   /* No border */
-  --pepper-border-width-stroke-width-none: 0px;
+  --pepper-core-border-width-stroke-width-none: 0px;
   /* Standard border */
-  --pepper-border-width-stroke-width-xs: 1px;
+  --pepper-core-border-width-stroke-width-xs: 1px;
   /* Accent. Use for "focus states" or to imply when something is being "selected" */
-  --pepper-border-width-stroke-width-sm: 2px;
+  --pepper-core-border-width-stroke-width-sm: 2px;
   /* Heavy. Use for decorative accents. */
-  --pepper-border-width-stroke-width-md: 4px;
+  --pepper-core-border-width-stroke-width-md: 4px;
   /* Very Heavy. Use for heavy branding or for decorative use. */
-  --pepper-border-width-stroke-width-lg: 8px;
+  --pepper-core-border-width-stroke-width-lg: 8px;
   /* Icon size=12px, Icon stroke=0.75px */
-  --pepper-border-width-stroke-icon-width-icon-12: 0.75px;
+  --pepper-core-border-width-stroke-icon-width-icon-12: 0.75px;
   /* Icon size=16px, Icon stroke=1px */
-  --pepper-border-width-stroke-icon-width-icon-16: 1px;
+  --pepper-core-border-width-stroke-icon-width-icon-16: 1px;
   /* Icon size=20px, Icon stroke=1.25px */
-  --pepper-border-width-stroke-icon-width-icon-20: 1.25px;
+  --pepper-core-border-width-stroke-icon-width-icon-20: 1.25px;
   /* Icon size=24px, Icon stroke=1.5px */
-  --pepper-border-width-stroke-icon-width-icon-24: 1.5px;
+  --pepper-core-border-width-stroke-icon-width-icon-24: 1.5px;
   /* Icon size=28px, Icon stroke=1.75px */
-  --pepper-border-width-stroke-icon-width-icon-28: 1.75px;
+  --pepper-core-border-width-stroke-icon-width-icon-28: 1.75px;
   /* Icon size=32px, Icon stroke=2px */
-  --pepper-border-width-stroke-icon-width-icon-32: 2px;
+  --pepper-core-border-width-stroke-icon-width-icon-32: 2px;
   /* Icon size=36px, Icon stroke=2.25px */
-  --pepper-border-width-stroke-icon-width-icon-36: 2.25px;
+  --pepper-core-border-width-stroke-icon-width-icon-36: 2.25px;
   /* Icon size=40px, Icon stroke=2.5px */
-  --pepper-border-width-stroke-icon-width-icon-40: 2.5px;
+  --pepper-core-border-width-stroke-icon-width-icon-40: 2.5px;
   /* Icon size=48px, Icon stroke=3px */
-  --pepper-border-width-stroke-icon-width-icon-48: 3px;
+  --pepper-core-border-width-stroke-icon-width-icon-48: 3px;
   /* Icon size=56px, Icon stroke=3.5px */
-  --pepper-border-width-stroke-icon-width-icon-56: 3.5px;
+  --pepper-core-border-width-stroke-icon-width-icon-56: 3.5px;
   /* Icon size=64px, Icon stroke=4px */
-  --pepper-border-width-stroke-icon-width-icon-64: 4px;
+  --pepper-core-border-width-stroke-icon-width-icon-64: 4px;
 }

@@ -4,9 +4,9 @@
  */
 
 :root {
-  --pepper-gradient-icon-glass-dark: linear-gradient(-146.4169415429261deg, rgba(var(--pepper-color-primitive-color-brand-primary-blue-400), 1) 0%, rgba(var(--pepper-color-primitive-color-brand-secondary-cyan-400), 1) 100%);
-  --pepper-gradient-bg-brand-gradient-blue: linear-gradient(136.48305457747506deg, rgba(var(--pepper-color-semantic-color-background-surface-brand-primary), 1) 0%, rgba(var(--pepper-color-semantic-color-background-surface-brand-secondary), 1) 100%);
-  --pepper-gradient-card-bg-gradient: linear-gradient(-138.02413545006647deg, rgba(var(--pepper-color-primitive-color-brand-primary-blue-400), 1) 0%, rgba(var(--pepper-color-primitive-color-brand-secondary-cyan-400), 1) 100%);
-  --pepper-gradient-bg-brand-gradient-light: linear-gradient(0deg, rgba(var(--pepper-color-semantic-color-background-surface-brand-subtle), 1) 0%, #ffffff 100%);
-  --pepper-gradient-educational-bg: radial-gradient(circle, rgba(var(--pepper-color-semantic-color-background-surface-brand-primary), 1) 0%, rgba(var(--pepper-color-semantic-color-background-surface-brand-secondary), 1) 100%);
+  --pepper-core-gradient-icon-glass-dark: linear-gradient(-146.4169415429261deg, rgba(var(--pepper-core-color-primitive-color-brand-primary-blue-400), 1) 0%, rgba(var(--pepper-core-color-primitive-color-brand-secondary-cyan-400), 1) 100%);
+  --pepper-core-gradient-bg-brand-gradient-blue: linear-gradient(136.48305457747506deg, rgba(var(--pepper-core-color-semantic-color-background-surface-brand-primary), 1) 0%, rgba(var(--pepper-core-color-semantic-color-background-surface-brand-secondary), 1) 100%);
+  --pepper-core-gradient-card-bg-gradient: linear-gradient(-138.02413545006647deg, rgba(var(--pepper-core-color-primitive-color-brand-primary-blue-400), 1) 0%, rgba(var(--pepper-core-color-primitive-color-brand-secondary-cyan-400), 1) 100%);
+  --pepper-core-gradient-bg-brand-gradient-light: linear-gradient(0deg, rgba(var(--pepper-core-color-semantic-color-background-surface-brand-subtle), 1) 0%, #ffffff 100%);
+  --pepper-core-gradient-educational-bg: radial-gradient(circle, rgba(var(--pepper-core-color-semantic-color-background-surface-brand-primary), 1) 0%, rgba(var(--pepper-core-color-semantic-color-background-surface-brand-secondary), 1) 100%);
 }
