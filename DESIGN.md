@@ -1,5 +1,14 @@
 # Pepper Design System — DESIGN.md
 
+> ⚠️ **Scope — pre-merge state**
+>
+> These tokens come from an in-progress Figma branch that hasn't been merged to the main Pepperstone library yet. Existing Pepperstone production designs still reference the original token set.
+>
+> - **Use this spec for:** new designs, concepts, and exploratory work
+> - **Do not use for:** extending existing production designs — they will visually mismatch until the Figma branch is merged (expected end of May 2026) and legacy designs are migrated
+>
+> When generating UI, prefer greenfield output. If a user asks you to extend or match an existing production design that references older tokens, flag the mismatch before proceeding.
+
 > **AI AGENT INSTRUCTIONS — READ FIRST, APPLY TO ALL OUTPUT**
 >
 > This file is the complete visual specification for **Pepper**, Pepperstone's design system.

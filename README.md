@@ -6,6 +6,16 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 
 ---
 
+> ⚠️ **Heads up — pre-merge state**
+>
+> These tokens come from an in-progress Figma branch that hasn't been merged to the main Pepperstone library yet. Most existing Pepperstone designs still reference the **original** token set.
+>
+> - ✅ **Use for:** new designs, concepts, and exploratory work
+> - ⚠️ **Don't use for:** extending existing production designs — they'll visually mismatch until the Figma branch is merged and legacy designs are migrated
+> - 📅 **Timeline:** full migration expected by end of May 2026
+
+---
+
 ## 🎨 Designers — start here
 
 **Option 1 — Claude Code (recommended)**
