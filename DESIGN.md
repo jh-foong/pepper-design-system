@@ -28,6 +28,48 @@
 You have the Pepper Design System in DESIGN.md. Follow it precisely for ALL visual decisions. No deviations.
 ```
 
+## What this file covers (and what it doesn't)
+
+**Covered — use tokens from this file, never invent:**
+
+- ✅ Colour (semantic tokens for text, stroke, surface, component-specific)
+- ✅ Typography (full type scale with weight, size, line-height)
+- ✅ Spacing (4px grid scale + semantic layout/content tokens)
+- ✅ Border radius (full radius scale)
+- ✅ Shadows and elevation (including focus rings — mandatory for accessibility)
+- ✅ Blur (backdrop filters)
+- ✅ Font weights
+
+**Not covered yet — ask the user before inventing:**
+
+- ❌ Full component specs (button padding, card anatomy, input states) — ask for specifics or use sensible defaults tied to tokens above
+- ❌ Usage patterns (when to use brand/primary vs brand/secondary, when to use shadow-md vs shadow-lg)
+- ❌ Motion / animation curves
+- ❌ Iconography library and sizes
+- ❌ Illustration / imagery guidelines
+- ❌ Responsive breakpoints beyond the 1440×1024 canvas
+
+If a visual decision falls into the "not covered" list, pick reasonable defaults that use tokens from this file and explicitly note the assumption to the user.
+
+## Example prompts
+
+Starter prompts that produce on-brand Pepper output. Assume `DESIGN.md` is loaded as context.
+
+| Intent | Prompt |
+|--------|--------|
+| Landing hero | *"Design a landing page hero for a trading platform. Headline: 'Trade smarter.' Supporting body paragraph, primary CTA, secondary text link. Use DESIGN.md."* |
+| Pricing card | *"Design a pricing card: plan name (label-lg), monthly price (heading-h3), four feature bullets (body-md), primary CTA. Radius lg, shadow sm. Use DESIGN.md tokens."* |
+| Form | *"Design a sign-up form: email input, password input, primary submit button, legal-xs disclaimer below. Input uses component/input tokens from DESIGN.md."* |
+| Buy/sell pair | *"Design a buy/sell button pair for a trading panel. Use component/buysell button tokens. Include hover states. Radius md."* |
+| Dark-mode card | *"Design a dark-mode dashboard card showing 'Daily P&L' — value heading-h4, positive/negative indicator using text/positive or text/negative, small sparkline placeholder. Use inverse surface tokens from DESIGN.md."* |
+| Notification banners | *"Design success, warning, and error notification banners. Use background/surface/system tokens, text/system tokens, border-radius md, icon on the left."* |
+
+### Prompt tips
+
+- **Always reference DESIGN.md explicitly.** Say *"follow DESIGN.md"* or *"use DESIGN.md tokens"* — this anchors the model.
+- **Name the token category** when you can (e.g. *"use component/buysell"* rather than *"green button"*).
+- **If the AI invents a spec**, reply with the specific tokens it should use (e.g. *"Use label-md, 12px vertical padding, 24px horizontal padding, radius md, shadow xs"*) and it will correct itself for the rest of the session.
+
 ---
 
 ## Overview
@@ -365,4 +407,5 @@ Everything summarised here is derived from the authoritative token files in this
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v1.1.0 | 2026-04-23 | Added "What this file covers" (known limitations) and "Example prompts" sections |
 | v1.0.0 | 2026-04-23 | Initial DESIGN.md — curated AI-ingestable spec for Pepper |
