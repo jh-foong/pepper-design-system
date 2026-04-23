@@ -1,6 +1,6 @@
 # Designer Quickstart — Vibe Coding with Pepper
 
-A 15-minute setup to go from "I just got handed this repo" to "I'm generating on-brand Pepper UI with my AI tool of choice."
+A 10-minute setup to go from "I just got handed this repo" to "I'm generating on-brand Pepper UI with my AI tool of choice."
 
 Made for designers. No coding required.
 
@@ -43,20 +43,7 @@ Download from Google Fonts and install the same way:
 
 ---
 
-## 2. Get Figma access (2 min)
-
-The Pepper Figma file is where all visual decisions originate.
-
-1. Ask your design system lead for access to: [Pepperstone DS (branch)](https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT)
-2. Once you have access, open Figma
-3. In your project file, go to **Assets → book icon (Libraries) → Add to file**
-4. Search **Pepper Design System** → click **Add to file**
-
-You now have the Pepper component library and styles available in your Figma files.
-
----
-
-## 3. Start designing — pick one option
+## 2. Start designing — pick one option
 
 ### Option 1 — Claude Design *(recommended, no install)*
 
@@ -80,7 +67,7 @@ Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-
 
 ---
 
-## 4. Your first prompt (3 min)
+## 3. Your first prompt (3 min)
 
 Try one of these starter prompts in your AI tool of choice. All of them assume `DESIGN.md` is loaded as context.
 
@@ -190,3 +177,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 | v1.1.0 | 2026-04-23 | Simplified AI tool setup — two clear options (Claude Code recommended, or quick-trial with any AI) |
 | v1.2.0 | 2026-04-23 | Swapped recommended option to Claude Design (web, no install). Added "Working with existing Figma designs" section with three retokenization methods |
 | v1.2.1 | 2026-04-23 | Expanded Dev Mode CSS and Figma MCP methods with concrete step-by-step instructions (enabling Dev Mode, installing Figma's MCP server, linking to official docs) |
+| v1.2.2 | 2026-04-23 | Removed "Get Figma access" step — all designers already have it. Renumbered remaining sections (now 3 steps instead of 4). Updated setup time estimate to 10 min |

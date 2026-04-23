@@ -53,7 +53,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 ## Documentation
 
 - [DESIGN.md](DESIGN.md) — Full AI-ready visual spec (colours, typography, spacing, shadows, rules)
-- [Designer Quickstart](docs/designer-quickstart.md) — 15-min setup to vibe code with Pepper Design System in Claude Design, Claude Code, Cursor, or any AI tool
+- [Designer Quickstart](docs/designer-quickstart.md) — 10-min setup to vibe code with Pepper Design System in Claude Design, Claude Code, Cursor, or any AI tool
 - [Getting Started](docs/getting-started.md) — How to use Pepper Design System as a designer or developer
 - [Resources](docs/resources.md) — Fonts, Figma, and all external sources
 - [Figma → Claude Sync](docs/figma-claude-sync.md) — How design tokens are synced from Figma to this repo
