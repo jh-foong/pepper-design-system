@@ -38,7 +38,8 @@ Examples:
 Colour tokens are layered:
 
 - **Primitive** — raw palette (e.g. `red-700`, `neutral-950`). Don't use directly.
-- **Semantic** — meaning-based (e.g. `surface-brand-primary`, `text/primary`). **Use these.**
+- **Semantic** — meaning-based (e.g. `surface-brand-primary`, `text/primary`). **Use these by default.** Automatically swap between light and dark themes.
+- **Static** — theme-agnostic (e.g. `static-color-surface-brand-primary`). Keep the same value in light and dark mode. Use only when you need a fixed colour that shouldn't flip with theme.
 
 Semantic colour groups:
 
@@ -52,6 +53,23 @@ Semantic colour groups:
 **Full reference:** [`tokens/css/base/color.css`](../tokens/css/base/color.css) — 860+ lines, searchable with Cmd+F
 
 > 💡 Ask Claude: *"What's the hex value of `--pepper-color-semantic-color-background-surface-primary` in light mode?"* — it can trace the alias chain for you.
+
+### Static colours (theme-agnostic)
+
+Static tokens **do not flip between light and dark mode** — they hold the same value regardless of theme. Use them when a colour must stay fixed (e.g. a brand-blue surface that should read as brand-blue in both light and dark mode, not invert).
+
+Common static groups:
+
+| Group | Use for | Example token |
+|-------|---------|---------------|
+| `static-color-surface-brand-*` | Brand fills that must not invert | `--pepper-color-static-color-surface-brand-primary` |
+| `static-color-surface-system-*` | System status fills (success, error, warning) that keep hue across themes | `--pepper-color-static-color-surface-system-error` |
+| `static-color-text-*` / `-icon-*` | Fixed text/icon colours (e.g. always-white on a brand fill) | `--pepper-color-static-color-text-inverse-primary` |
+| `static-color-stroke-inverse-*` | Borders on inverse surfaces | `--pepper-color-static-color-stroke-inverse-strong` |
+| `static-overlay-*` | Scrim / modal backdrops | `--pepper-color-static-overlay-medium` |
+| `static-effect-glass-*` | Frosted-glass effects | `--pepper-color-static-effect-glass-primary-low` |
+
+> ⚠️ **Rule of thumb:** reach for **semantic** first. Only use **static** when you've got a specific reason the colour shouldn't adapt to theme — otherwise dark-mode users will see a glaring light-mode colour (or vice versa).
 
 ---
 
@@ -269,3 +287,4 @@ Re-prompt: *"Rewrite using only `--pepper-*` tokens from DESIGN.md. Do not inlin
 | v1.0.0 | 2026-04-23 | Initial token reference — colour (semantic groups), typography (full scale), spacing (inset + gap), radius, shadows, focus rings. Interim + proper Figma workflows. Troubleshooting section |
 | v1.0.1 | 2026-04-23 | Split typography into Headings (responsive — size changes with screen via Figma modes) and Body / Label / Legal (fixed across screens) |
 | v1.0.2 | 2026-04-23 | Added Stroke (border width) section — general strokes (none → lg) and icon strokes that scale with icon size |
+| v1.0.3 | 2026-04-23 | Added Static colours subsection — theme-agnostic tokens that don't flip between light/dark mode (brand, system, overlay, glass) |
