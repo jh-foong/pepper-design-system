@@ -2,7 +2,7 @@
 
 Pepper is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
 
-**Current version:** [`v1.1.0`](https://github.com/jh-foong/pepper-ds/releases/tag/v1.1.0) · [See all releases →](https://github.com/jh-foong/pepper-ds/releases)
+**Current version:** [`v1.1.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
 ## What's in this repo
 
@@ -19,8 +19,8 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 |-|------|
 | Figma | [Pepperstone DS (branch)](https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT) |
 | Fonts | [Manrope fork](https://github.com/jh-foong/manrope) · [Noto Sans Arabic](https://fonts.google.com/noto/specimen/Noto+Sans+Arabic) · [Noto Sans TC](https://fonts.google.com/noto/specimen/Noto+Sans+TC) · [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP) |
-| GitHub | [jh-foong/pepper-ds](https://github.com/jh-foong/pepper-ds) _(test repo — will migrate to Pepperstone org)_ |
-| Releases | [All versions](https://github.com/jh-foong/pepper-ds/releases) |
+| GitHub | [jh-foong/pepper-design-system](https://github.com/jh-foong/pepper-design-system) _(public sandbox — official home will move to Pepperstone org once permissions are sorted)_ |
+| Releases | [All versions](https://github.com/jh-foong/pepper-design-system/releases) |
 
 ## Documentation
 
@@ -62,7 +62,7 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 
 | Version | Date | Summary |
 |---------|------|---------|
-| [v1.1.0](https://github.com/jh-foong/pepper-ds/releases/tag/v1.1.0) | 2026-04-23 | Added `DESIGN.md`, raw Figma source files, and legal text styles (+ body-2xs, label-xs/2xs). Fixed Flutter `labelLabelLg` weight bug |
+| [v1.1.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) | 2026-04-23 | Added `DESIGN.md`, raw Figma source files, and legal text styles (+ body-2xs, label-xs/2xs). Fixed Flutter `labelLabelLg` weight bug |
 | v1.0.4 | 2026-04-23 | Cleaned up docs — removed Supernova references, added changelogs |
 | v1.0.3 | 2026-04-23 | Removed Supernova scripts |
 | v1.0.2 | 2026-04-23 | Replaced Supernova sync doc with Figma + Claude workflow guide |

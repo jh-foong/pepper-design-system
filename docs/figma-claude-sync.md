@@ -69,4 +69,4 @@ Each sync updates two sets of token files:
 
 ## Questions?
 
-Ask in `#design-system` on Slack or open an issue in [GitHub](https://github.com/jh-foong/pepper-ds).
+Ask in `#design-system` on Slack or open an issue in [GitHub](https://github.com/jh-foong/pepper-design-system).

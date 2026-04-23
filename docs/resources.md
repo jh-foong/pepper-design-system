@@ -56,7 +56,7 @@ Token categories: Color, Typography, Font Family, Font Size, Font Weight, Line H
 
 | Resource | Link | Notes |
 |----------|------|-------|
-| GitHub repository | [jh-foong/pepper-ds](https://github.com/jh-foong/pepper-ds) | Test repo — will migrate to official Pepperstone org |
+| GitHub repository | [jh-foong/pepper-design-system](https://github.com/jh-foong/pepper-design-system) | Public sandbox — official home will move to Pepperstone org once permissions are sorted |
 
 ---
 

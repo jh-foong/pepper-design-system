@@ -70,7 +70,7 @@ double spacing = AppDimensions.scaleSpacing16;
 
 ### 4. Staying up to date
 
-Token updates are published as versioned GitHub Releases. Watch the repo or check [Releases](https://github.com/jh-foong/pepper-ds/releases) to see what changed in each version.
+Token updates are published as versioned GitHub Releases. Watch the repo or check [Releases](https://github.com/jh-foong/pepper-design-system/releases) to see what changed in each version.
 
 ---
 
@@ -78,7 +78,7 @@ Token updates are published as versioned GitHub Releases. Watch the repo or chec
 
 - **Slack** — Post in `#design-system` for questions or feedback
 - **Figma** — Comment directly on components in the library file
-- **GitHub** — Open an issue in the [Pepper repository](https://github.com/jh-foong/pepper-ds)
+- **GitHub** — Open an issue in the [Pepper repository](https://github.com/jh-foong/pepper-design-system)
 
 ---
 

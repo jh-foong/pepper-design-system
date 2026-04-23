@@ -56,7 +56,7 @@ You now have the Pepper component library and styles available in your Figma fil
 
 `DESIGN.md` is the single file that tells any AI tool how to generate Pepper UI. It lives at the root of this repo.
 
-1. Open: [DESIGN.md on GitHub](https://github.com/jh-foong/pepper-ds/blob/main/DESIGN.md)
+1. Open: [DESIGN.md on GitHub](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md)
 2. Click the **Download raw file** button (top right of the file view) — or click **Raw** and save the page as `DESIGN.md`
 3. Save it somewhere you can find it — e.g. `~/Desktop/DESIGN.md` or your project folder
 
@@ -128,7 +128,7 @@ Longer-term, Pepper will add component specs directly to `DESIGN.md` to reduce t
 
 Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 
-1. Check [Releases](https://github.com/jh-foong/pepper-ds/releases) every so often
+1. Check [Releases](https://github.com/jh-foong/pepper-design-system/releases) every so often
 2. Re-download `DESIGN.md` if the release notes mention it
 3. Re-import updated components in Figma when prompted
 
@@ -138,7 +138,7 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 
 - **Slack:** `#design-system`
 - **Figma:** comment directly on components in the library file
-- **GitHub:** open an issue at [jh-foong/pepper-ds/issues](https://github.com/jh-foong/pepper-ds/issues)
+- **GitHub:** open an issue at [jh-foong/pepper-design-system/issues](https://github.com/jh-foong/pepper-design-system/issues)
 
 ---
 

@@ -1,6 +1,6 @@
 # Pepper Design System — Claude Context
 
-Pepper is Pepperstone's design system. This repository holds documentation, scripts, and token exports for the system.
+Pepper is Pepperstone's design system. This repository holds the AI-ingestable spec (`DESIGN.md`), design tokens (CSS + Flutter), Figma source exports, and documentation.
 
 The person working in this repo is **Junhan Foong**, a Product Designer with no coding background. Keep all explanations non-technical. Prefer UI-based workflows over CLI or code where possible.
 
@@ -11,8 +11,7 @@ The person working in this repo is **Junhan Foong**, a Product Designer with no 
 | Resource | URL | Notes |
 |----------|-----|-------|
 | Figma | https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT | Branch of main file — read-only until merged |
-| Supernova | https://app.supernova.io/711966-pepperstone/764138-pepper-design-system-v-2/803332-shared-draft/810225-default/overview | Token and documentation management |
-| GitHub | https://github.com/jh-foong/pepper-ds | Test repo — will migrate to org repo later |
+| GitHub | https://github.com/jh-foong/pepper-design-system | Public sandbox — official home will move to Pepperstone org once permissions are sorted |
 
 ---
 
@@ -20,34 +19,33 @@ The person working in this repo is **Junhan Foong**, a Product Designer with no 
 
 | Font | Source | Use |
 |------|--------|-----|
-| Manrope (fork) | https://github.com/cssobral2013/manrope | Primary — headings, body, labels |
+| Manrope (Pepperstone fork) | https://github.com/jh-foong/manrope | Primary — headings, body, labels |
 | Noto Sans Arabic | Google Fonts | Arabic language support |
 | Noto Sans TC | Google Fonts | Traditional Chinese support |
 | Noto Sans JP | Google Fonts | Japanese support |
 
 ---
 
-## Design Token Categories (from Supernova)
+## Design Token Categories
 
-These are the live token groups in the Supernova project:
+Token groups exported from Figma via DesignBridge:
 
-- **Color** — semantic and palette tokens
-- **Typography** — composite type styles (Heading, Body, Label)
+- **Color** — semantic and primitive tokens
+- **Typography** — composite text styles (Heading, Body, Label, Legal)
 - **Font Family / Font Size / Font Weight / Line Height** — individual type primitives
-- **Space** — spacing scale
-- **Dimension** — global unit scale (4px base grid)
+- **Space** — spacing scale (4px base grid)
+- **Dimension** — global unit scale
 - **Size** — component sizing
 - **Border Radius / Border Width** — shape tokens
-- **Blur / Shadow / Opacity / Gradient** — effect tokens
+- **Blur / Shadow / Opacity / Gradient** — effect tokens (includes focus rings)
 
 ---
 
-## Project Status
+## Token Pipeline
 
-- **Figma**: Working in a branch — cannot push to main yet
-- **GitHub**: Using `jh-foong/pepper-ds` as a test space — will migrate to the official Pepperstone org repo
-- **Supernova**: Connected and live with tokens
-- **Token pipeline**: Supernova → GitHub sync not yet configured
+Figma Variables → DesignBridge plugin → `.md` export → Claude → CSS + Dart token files → GitHub PR → merge → GitHub Release tag.
+
+See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workflow.
 
 ---
 
@@ -55,11 +53,16 @@ These are the live token groups in the Supernova project:
 
 ```
 /
-├── CLAUDE.md              # This file — AI context
-├── README.md              # Project overview
+├── DESIGN.md                # AI-ingestable visual spec for Claude Design, Cursor, Copilot
+├── README.md                # Project overview
+├── CLAUDE.md                # This file — AI context
 ├── docs/
-│   ├── getting-started.md # Setup guide for designers and developers
-│   ├── resources.md       # All external source links
-│   └── supernova-github-sync.md  # How to sync tokens to GitHub
-└── supernova-scripts/     # Scripts for Supernova automation
+│   ├── designer-quickstart.md  # 15-min designer handoff guide
+│   ├── getting-started.md      # Designer + developer setup
+│   ├── resources.md            # External sources (fonts, Figma, GitHub)
+│   └── figma-claude-sync.md    # Token sync workflow
+├── tokens/
+│   ├── css/                 # CSS custom properties
+│   └── flutter/             # Flutter / Dart equivalents
+└── source/                  # Raw Figma DesignBridge exports (version history)
 ```
