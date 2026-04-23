@@ -83,11 +83,13 @@ Try one of these starter prompts in your AI tool of choice. All of them assume `
 
 ---
 
-## Working with existing Figma designs (old tokens)
+## Working with existing Figma designs (old tokens) 🥵🌶️🔥
 
 Got a Figma file that uses the **original** Pepper tokens and want to see what it'd look like in the new system? Claude can retokenize it for you.
 
-### Easiest — screenshot + Claude Design
+Each method below is rated by **spice level** — more chillis = more setup required.
+
+### 🌶️ Easiest — screenshot + Claude Design
 
 1. In Figma: frame the design → **Export → PNG** (or take a screenshot)
 2. In Claude Design (with `DESIGN.md` attached): drag the image into the chat
@@ -95,7 +97,7 @@ Got a Figma file that uses the **original** Pepper tokens and want to see what i
    > *"This is a current Figma design using old Pepper tokens. Redesign it using only DESIGN.md tokens — same layout and content, but swap every colour, typography, spacing, radius, and shadow to the closest equivalent. Flag any values you can't map 1:1."*
 4. You'll get a new version + a list of mismatches (e.g. *"old `brand-500` has no direct match, used `surface/brand/primary` as closest"*)
 
-### More accurate — paste CSS from Figma Dev Mode
+### 🌶️🌶️ More accurate — paste CSS from Figma Dev Mode
 
 Figma's **Dev Mode** exports exact CSS for any element (colours as hex, sizes in px, etc). Paste that into Claude and ask it to translate to Pepper tokens.
 
@@ -113,7 +115,7 @@ Figma's **Dev Mode** exports exact CSS for any element (colours as hex, sizes in
 
 **Best for:** single components (one button, one card). Tedious for whole screens — use the screenshot method for those.
 
-### Most accurate — Figma MCP *(semi-technical)*
+### 🌶️🌶️🌶️ Most accurate — Figma MCP *(semi-technical)*
 
 > 💡 Skip this method if you're using **Option 1 (Claude Design web)**. MCP only works with Claude Code or Cursor — go with the screenshot or Dev Mode CSS method instead.
 
@@ -163,7 +165,7 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 
 ## Where to go for help
 
-- **Slack:** `#design-system`
+- **Slack:** `#design-systems-dojo`
 - **Figma:** comment directly on components in the library file
 - **GitHub:** open an issue at [jh-foong/pepper-design-system/issues](https://github.com/jh-foong/pepper-design-system/issues)
 
@@ -178,3 +180,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 | v1.2.0 | 2026-04-23 | Swapped recommended option to Claude Design (web, no install). Added "Working with existing Figma designs" section with three retokenization methods |
 | v1.2.1 | 2026-04-23 | Expanded Dev Mode CSS and Figma MCP methods with concrete step-by-step instructions (enabling Dev Mode, installing Figma's MCP server, linking to official docs) |
 | v1.2.2 | 2026-04-23 | Removed "Get Figma access" step — all designers already have it. Renumbered remaining sections (now 3 steps instead of 4). Updated setup time estimate to 10 min |
+| v1.2.3 | 2026-04-23 | Updated Slack channel to `#design-systems-dojo`. Added 🌶️ spice-level ratings to the three retokenization methods (easiest → hardest) |
