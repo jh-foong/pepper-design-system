@@ -4,6 +4,24 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 
 **Current version:** [`v1.1.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
+---
+
+## 🎨 Designers — start here
+
+**Option 1 — Claude Code (recommended)**
+1. Open Claude Code → **File → Clone repository**
+2. Paste: `https://github.com/jh-foong/pepper-design-system`
+3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
+
+**Option 2 — Quick trial (any AI)**
+1. Download [DESIGN.md](DESIGN.md) → click **Raw** → **Cmd+S**
+2. Upload it to Claude Design / ChatGPT / Cursor
+3. Prompt: *"Follow DESIGN.md. Design a [thing]."*
+
+Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
+
+---
+
 ## What's in this repo
 
 - **[DESIGN.md](DESIGN.md)** — Curated AI-ingestable visual spec. Drop into Claude Design, Claude Code, Cursor, or Copilot to generate on-brand Pepper UI

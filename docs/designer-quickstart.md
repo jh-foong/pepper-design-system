@@ -52,53 +52,27 @@ You now have the Pepper component library and styles available in your Figma fil
 
 ---
 
-## 3. Get the AI spec — `DESIGN.md` (1 min)
+## 3. Start designing — pick one option
 
-`DESIGN.md` is the single file that tells any AI tool how to generate Pepper UI. It lives at the root of this repo.
+### Option 1 — Claude Code *(recommended)*
 
-1. Open: [DESIGN.md on GitHub](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md)
-2. Click the **Download raw file** button (top right of the file view) — or click **Raw** and save the page as `DESIGN.md`
-3. Save it somewhere you can find it — e.g. `~/Desktop/DESIGN.md` or your project folder
+1. Open Claude Code → **File → Clone repository**
+2. Paste: `https://github.com/jh-foong/pepper-design-system`
+3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
 
-> 💡 Bookmark the GitHub link — `DESIGN.md` updates with every Pepper release, so re-download whenever there's a new version.
+You're done. The AI now has the full Pepper spec loaded.
 
----
+### Option 2 — Quick trial *(any AI)*
 
-## 4. Set up your AI tool (5 min)
+1. Open [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md) → click **Raw** → **Cmd+S** to save
+2. Upload it to Claude Design / ChatGPT / Cursor (look for **+ Add assets** or similar)
+3. Prompt: *"Follow DESIGN.md. Design a [thing]."*
 
-Pick the tool you use. The setup is different for each, but the outcome is the same: the AI sees `DESIGN.md` as context and designs on-brand.
-
-### Claude Design *(design-focused chat)*
-
-1. Open a new design chat
-2. Click **+ Add assets** → upload `DESIGN.md`
-3. Start chatting — no special prompt needed
-
-### Claude Code *(terminal / IDE coding)*
-
-1. Place `DESIGN.md` in your project's root folder
-2. In Claude Code, reference it: `Follow @DESIGN.md for all visual decisions`
-
-### Cursor / Windsurf *(AI code editor)*
-
-1. Place `DESIGN.md` in your project root
-2. In the chat sidebar, attach `DESIGN.md` or mention `@DESIGN.md` in prompts
-3. Starter prompt: *"Follow @DESIGN.md for all visual decisions. No deviations."*
-
-### GitHub Copilot *(inline code completion)*
-
-1. Place `DESIGN.md` in your project root
-2. Copilot picks it up automatically for context
-
-### Any other LLM (ChatGPT, Gemini, etc.)
-
-Paste the contents of `DESIGN.md` at the start of your session as system context, then say:
-
-> "Use this as the design system spec for everything you generate."
+> 💡 Re-download `DESIGN.md` whenever there's a new release (see [Releases](https://github.com/jh-foong/pepper-design-system/releases)).
 
 ---
 
-## 5. Your first prompt (3 min)
+## 4. Your first prompt (3 min)
 
 Try one of these starter prompts in your AI tool of choice. All of them assume `DESIGN.md` is loaded as context.
 
@@ -147,3 +121,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 | Version | Date | Summary |
 |---------|------|---------|
 | v1.0.0 | 2026-04-23 | Initial designer quickstart — fonts, Figma, DESIGN.md, AI tool setup, starter prompts |
+| v1.1.0 | 2026-04-23 | Simplified AI tool setup — two clear options (Claude Code recommended, or quick-trial with any AI) |
