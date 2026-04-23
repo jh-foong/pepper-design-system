@@ -23,10 +23,13 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 2. Open [claude.ai](https://claude.ai) → attach `DESIGN.md` (or add it to a Claude Project so it persists across chats)
 3. Prompt: *"Follow DESIGN.md. Design a [thing]."*
 
-**Option 2 — Claude Code (for semi-technical users who want the full repo)**
-1. Clone this repo via GitHub Desktop or `git clone https://github.com/jh-foong/pepper-design-system`
-2. In Terminal, `cd` into the folder and run `claude`
-3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
+**Option 2 — Claude Code (for designers who want local prototype files)**
+
+> ⚠️ Don't clone *this* repo to prototype in — it's the source of truth for tokens. Use a separate scratch folder.
+
+1. Make a scratch folder (e.g. `~/Documents/Pepper Prototypes/`) and drop [DESIGN.md](DESIGN.md) into it
+2. In Terminal, `cd` into the scratch folder and run `claude`
+3. Prompt: *"Follow @DESIGN.md. Build a [thing] and save it to `[feature]/index.html`."*
 
 Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
