@@ -57,7 +57,11 @@ Semantic colour groups:
 
 ## Typography
 
-Composite text styles that bundle weight + size + line-height + font-family.
+Composite text styles that bundle weight + size + line-height + font-family. All use **Manrope** by default.
+
+### Headings — responsive (size changes with screen)
+
+Heading sizes **adapt automatically** to screen size. A `h1` on desktop is larger than a `h1` on mobile — same token, different rendered size.
 
 | Token | Weight | Use for |
 |-------|--------|---------|
@@ -67,6 +71,15 @@ Composite text styles that bundle weight + size + line-height + font-family.
 | `--pepper-typography-heading-h4` | 700 | Card titles, small headers |
 | `--pepper-typography-heading-h5` | 700 | Minor headings |
 | `--pepper-typography-heading-h6` | 700 | Smallest headings / eyebrows |
+
+> 💡 **In Figma:** switch **modes** on the heading style to preview each breakpoint (e.g. mobile / tablet / desktop). The text resizes itself — you don't need separate styles per screen size.
+
+### Body, Label, Legal — fixed (same size across screens)
+
+These styles render at the **same size on every screen**. Pick the token that fits the role; it won't scale with viewport.
+
+| Token | Weight | Use for |
+|-------|--------|---------|
 | `--pepper-typography-body-lg` | 400 (Regular) | Large body copy |
 | `--pepper-typography-body-md` | 400 | Default body copy |
 | `--pepper-typography-body-sm` | 400 | Secondary body copy |
@@ -80,7 +93,7 @@ Composite text styles that bundle weight + size + line-height + font-family.
 | `--pepper-typography-legal-md` | 400 | Legal / disclaimer default |
 | `--pepper-typography-legal-xs` | 400 | Legal / disclaimer small |
 
-Variants available: `-underlined`, `-dashed` (for link states). All use **Manrope** by default.
+Variants available: `-underlined`, `-dashed` (for link states).
 
 **Full reference:** [`tokens/css/base/typography.css`](../tokens/css/base/typography.css)
 
@@ -218,3 +231,4 @@ Re-prompt: *"Rewrite using only `--pepper-*` tokens from DESIGN.md. Do not inlin
 | Version | Date | Summary |
 |---------|------|---------|
 | v1.0.0 | 2026-04-23 | Initial token reference — colour (semantic groups), typography (full scale), spacing (inset + gap), radius, shadows, focus rings. Interim + proper Figma workflows. Troubleshooting section |
+| v1.0.1 | 2026-04-23 | Split typography into Headings (responsive — size changes with screen via Figma modes) and Body / Label / Legal (fixed across screens) |
