@@ -290,7 +290,7 @@ Plus focus-ring tokens (for accessibility):
 
 ## Applying tokens in Figma
 
-> ⚠️ **The new Pepper Figma library isn't merged yet** (pending AKQA handover). Until then, use the interim workflow below.
+> ⚠️ **The new Pepper Figma library isn't merged yet** (pending vendor A handover). Until then, use the interim workflow below.
 
 ### Interim workflow (now)
 
