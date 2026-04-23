@@ -38,7 +38,8 @@ Examples:
 Colour tokens are layered:
 
 - **Primitive** — raw palette (e.g. `red-700`, `neutral-950`). Don't use directly.
-- **Semantic** — meaning-based (e.g. `surface-brand-primary`, `text/primary`). **Use these.**
+- **Semantic** — meaning-based (e.g. `surface-brand-primary`, `text/primary`). **Use these by default.** Automatically swap between light and dark themes.
+- **Static** — theme-agnostic (e.g. `static-color-surface-brand-primary`). Keep the same value in light and dark mode. Use only when you need a fixed colour that shouldn't flip with theme.
 
 Semantic colour groups:
 
@@ -53,11 +54,34 @@ Semantic colour groups:
 
 > 💡 Ask Claude: *"What's the hex value of `--pepper-color-semantic-color-background-surface-primary` in light mode?"* — it can trace the alias chain for you.
 
+### Static colours (theme-agnostic)
+
+Static tokens **do not flip between light and dark mode** — they hold the same value regardless of theme. Use them when a colour must stay fixed (e.g. a brand-blue surface that should read as brand-blue in both light and dark mode, not invert).
+
+Common static groups:
+
+| Group | Use for | Example token |
+|-------|---------|---------------|
+| `static-color-surface-brand-*` | Brand fills that must not invert | `--pepper-color-static-color-surface-brand-primary` |
+| `static-color-surface-system-*` | System status fills (success, error, warning) that keep hue across themes | `--pepper-color-static-color-surface-system-error` |
+| `static-color-text-*` / `-icon-*` | Fixed text/icon colours (e.g. always-white on a brand fill) | `--pepper-color-static-color-text-inverse-primary` |
+| `static-color-stroke-inverse-*` | Borders on inverse surfaces | `--pepper-color-static-color-stroke-inverse-strong` |
+| `static-overlay-*` | Scrim / modal backdrops | `--pepper-color-static-overlay-medium` |
+| `static-effect-glass-*` | Frosted-glass effects | `--pepper-color-static-effect-glass-primary-low` |
+
+> ⚠️ **Rule of thumb:** reach for **semantic** first. Only use **static** when you've got a specific reason the colour shouldn't adapt to theme — otherwise dark-mode users will see a glaring light-mode colour (or vice versa).
+
+> 📝 **Coming from the old DS?** These were previously called **"fixed"** tokens. They've been renamed to **"static"** and split into their own layer to make theme-agnostic colours easier to manage and isolate from the semantic set.
+
 ---
 
 ## Typography
 
-Composite text styles that bundle weight + size + line-height + font-family.
+Composite text styles that bundle weight + size + line-height + font-family. All use **Manrope** by default.
+
+### Headings — responsive (size changes with screen)
+
+Heading sizes **adapt automatically** to screen size. A `h1` on desktop is larger than a `h1` on mobile — same token, different rendered size.
 
 | Token | Weight | Use for |
 |-------|--------|---------|
@@ -67,6 +91,15 @@ Composite text styles that bundle weight + size + line-height + font-family.
 | `--pepper-typography-heading-h4` | 700 | Card titles, small headers |
 | `--pepper-typography-heading-h5` | 700 | Minor headings |
 | `--pepper-typography-heading-h6` | 700 | Smallest headings / eyebrows |
+
+> 💡 **In Figma:** switch **modes** on the heading style to preview each breakpoint (e.g. mobile / tablet / desktop). The text resizes itself — you don't need separate styles per screen size.
+
+### Body, Label, Legal — fixed (same size across screens)
+
+These styles render at the **same size on every screen**. Pick the token that fits the role; it won't scale with viewport.
+
+| Token | Weight | Use for |
+|-------|--------|---------|
 | `--pepper-typography-body-lg` | 400 (Regular) | Large body copy |
 | `--pepper-typography-body-md` | 400 | Default body copy |
 | `--pepper-typography-body-sm` | 400 | Secondary body copy |
@@ -80,7 +113,7 @@ Composite text styles that bundle weight + size + line-height + font-family.
 | `--pepper-typography-legal-md` | 400 | Legal / disclaimer default |
 | `--pepper-typography-legal-xs` | 400 | Legal / disclaimer small |
 
-Variants available: `-underlined`, `-dashed` (for link states). All use **Manrope** by default.
+Variants available: `-underlined`, `-dashed` (for link states).
 
 **Full reference:** [`tokens/css/base/typography.css`](../tokens/css/base/typography.css)
 
@@ -120,6 +153,42 @@ Two flavours:
 > 💡 Everything is on a **4px grid**. If a value isn't a multiple of 4, it's probably wrong.
 
 **Full reference:** [`tokens/css/base/space.css`](../tokens/css/base/space.css)
+
+---
+
+## Stroke (border width)
+
+Line thickness for borders, dividers, and outlines. Pair with a `stroke/*` colour token (see [Colour](#colour)) to set both width and colour.
+
+### General strokes
+
+| Token | Value | Use for |
+|-------|-------|---------|
+| `--pepper-border-width-stroke-width-none` | 0 | No border |
+| `--pepper-border-width-stroke-width-xs` | 1px | Default — inputs, cards, dividers |
+| `--pepper-border-width-stroke-width-sm` | 2px | Emphasised borders, focus edges |
+| `--pepper-border-width-stroke-width-md` | 4px | Heavy borders, selected states |
+| `--pepper-border-width-stroke-width-lg` | 8px | Very heavy accents |
+
+### Icon strokes (scale with icon size)
+
+Icon line thickness scales proportionally to icon size — roughly **6.25% of the icon's pixel size**. Use the token that matches the icon you're drawing.
+
+| Token | Icon size | Stroke |
+|-------|-----------|--------|
+| `--pepper-border-width-stroke-icon-width-icon-12` | 12px | 0.75px |
+| `--pepper-border-width-stroke-icon-width-icon-16` | 16px | 1px |
+| `--pepper-border-width-stroke-icon-width-icon-20` | 20px | 1.25px |
+| `--pepper-border-width-stroke-icon-width-icon-24` | 24px | 1.5px |
+| `--pepper-border-width-stroke-icon-width-icon-28` | 28px | 1.75px |
+| `--pepper-border-width-stroke-icon-width-icon-32` | 32px | 2px |
+| `--pepper-border-width-stroke-icon-width-icon-36` | 36px | 2.25px |
+| `--pepper-border-width-stroke-icon-width-icon-40` | 40px | 2.5px |
+| `--pepper-border-width-stroke-icon-width-icon-48` | 48px | 3px |
+| `--pepper-border-width-stroke-icon-width-icon-56` | 56px | 3.5px |
+| `--pepper-border-width-stroke-icon-width-icon-64` | 64px | 4px |
+
+**Full reference:** [`tokens/css/base/border-width.css`](../tokens/css/base/border-width.css)
 
 ---
 
@@ -218,3 +287,7 @@ Re-prompt: *"Rewrite using only `--pepper-*` tokens from DESIGN.md. Do not inlin
 | Version | Date | Summary |
 |---------|------|---------|
 | v1.0.0 | 2026-04-23 | Initial token reference — colour (semantic groups), typography (full scale), spacing (inset + gap), radius, shadows, focus rings. Interim + proper Figma workflows. Troubleshooting section |
+| v1.0.1 | 2026-04-23 | Split typography into Headings (responsive — size changes with screen via Figma modes) and Body / Label / Legal (fixed across screens) |
+| v1.0.2 | 2026-04-23 | Added Stroke (border width) section — general strokes (none → lg) and icon strokes that scale with icon size |
+| v1.0.3 | 2026-04-23 | Added Static colours subsection — theme-agnostic tokens that don't flip between light/dark mode (brand, system, overlay, glass) |
+| v1.0.4 | 2026-04-23 | Added migration note for designers coming from the old DS — "fixed" tokens have been renamed to "static" and separated into their own layer |
