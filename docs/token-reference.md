@@ -136,6 +136,42 @@ Two flavours:
 
 ---
 
+## Stroke (border width)
+
+Line thickness for borders, dividers, and outlines. Pair with a `stroke/*` colour token (see [Colour](#colour)) to set both width and colour.
+
+### General strokes
+
+| Token | Value | Use for |
+|-------|-------|---------|
+| `--pepper-border-width-stroke-width-none` | 0 | No border |
+| `--pepper-border-width-stroke-width-xs` | 1px | Default — inputs, cards, dividers |
+| `--pepper-border-width-stroke-width-sm` | 2px | Emphasised borders, focus edges |
+| `--pepper-border-width-stroke-width-md` | 4px | Heavy borders, selected states |
+| `--pepper-border-width-stroke-width-lg` | 8px | Very heavy accents |
+
+### Icon strokes (scale with icon size)
+
+Icon line thickness scales proportionally to icon size — roughly **6.25% of the icon's pixel size**. Use the token that matches the icon you're drawing.
+
+| Token | Icon size | Stroke |
+|-------|-----------|--------|
+| `--pepper-border-width-stroke-icon-width-icon-12` | 12px | 0.75px |
+| `--pepper-border-width-stroke-icon-width-icon-16` | 16px | 1px |
+| `--pepper-border-width-stroke-icon-width-icon-20` | 20px | 1.25px |
+| `--pepper-border-width-stroke-icon-width-icon-24` | 24px | 1.5px |
+| `--pepper-border-width-stroke-icon-width-icon-28` | 28px | 1.75px |
+| `--pepper-border-width-stroke-icon-width-icon-32` | 32px | 2px |
+| `--pepper-border-width-stroke-icon-width-icon-36` | 36px | 2.25px |
+| `--pepper-border-width-stroke-icon-width-icon-40` | 40px | 2.5px |
+| `--pepper-border-width-stroke-icon-width-icon-48` | 48px | 3px |
+| `--pepper-border-width-stroke-icon-width-icon-56` | 56px | 3.5px |
+| `--pepper-border-width-stroke-icon-width-icon-64` | 64px | 4px |
+
+**Full reference:** [`tokens/css/base/border-width.css`](../tokens/css/base/border-width.css)
+
+---
+
 ## Border radius
 
 | Token | Value | Use for |
@@ -232,3 +268,4 @@ Re-prompt: *"Rewrite using only `--pepper-*` tokens from DESIGN.md. Do not inlin
 |---------|------|---------|
 | v1.0.0 | 2026-04-23 | Initial token reference — colour (semantic groups), typography (full scale), spacing (inset + gap), radius, shadows, focus rings. Interim + proper Figma workflows. Troubleshooting section |
 | v1.0.1 | 2026-04-23 | Split typography into Headings (responsive — size changes with screen via Figma modes) and Body / Label / Legal (fixed across screens) |
+| v1.0.2 | 2026-04-23 | Added Stroke (border width) section — general strokes (none → lg) and icon strokes that scale with icon size |
