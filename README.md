@@ -59,6 +59,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 - [Getting Started](docs/getting-started.md) — How to use Pepper Design System as a designer or developer
 - [Resources](docs/resources.md) — Fonts, Figma, and all external sources
 - [Figma → Claude Sync](docs/figma-claude-sync.md) — How design tokens are synced from Figma to this repo
+- [Supporting designers](docs/supporting-designers.md) — DS-team playbook: diagnosing stale or edited `DESIGN.md` copies
 
 ## Using with AI tools
 
