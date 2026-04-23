@@ -58,21 +58,25 @@ You now have the Pepper component library and styles available in your Figma fil
 
 ## 3. Start designing — pick one option
 
-### Option 1 — Claude Code *(recommended)*
+### Option 1 — Claude Design *(recommended, no install)*
 
-1. Open Claude Code → **File → Clone repository**
-2. Paste: `https://github.com/jh-foong/pepper-design-system`
-3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
-
-You're done. The AI now has the full Pepper spec loaded.
-
-### Option 2 — Quick trial *(any AI)*
-
-1. Open [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md) → click **Raw** → **Cmd+S** to save
-2. Upload it to Claude Design / ChatGPT / Cursor (look for **+ Add assets** or similar)
+1. Open [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md) → click **Raw** → **Cmd+S** to save it locally
+2. Open [claude.ai](https://claude.ai) → start a new chat → click **+** and attach `DESIGN.md`
 3. Prompt: *"Follow DESIGN.md. Design a [thing]."*
 
-> 💡 Re-download `DESIGN.md` whenever there's a new release (see [Releases](https://github.com/jh-foong/pepper-design-system/releases)).
+> 💡 **Pro tip — use a Claude Project:** go to [claude.ai/projects](https://claude.ai/projects), create a project called "Pepper Design," and upload `DESIGN.md` once into **Project knowledge**. Every chat inside that project automatically uses it — no re-uploading.
+
+### Option 2 — Claude Code *(for semi-technical users who want the full repo)*
+
+Best if you want Claude to have access to the full token files, not just `DESIGN.md`.
+
+1. Clone the repo via GitHub Desktop (**File → Clone** → paste URL), or run `git clone https://github.com/jh-foong/pepper-design-system` in Terminal
+2. Open Terminal → `cd` into the cloned folder → run `claude`
+3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
+
+Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-code).
+
+> 💡 Re-download `DESIGN.md` (or re-clone) whenever there's a new release (see [Releases](https://github.com/jh-foong/pepper-design-system/releases)).
 
 ---
 

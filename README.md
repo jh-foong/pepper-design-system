@@ -18,15 +18,15 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 
 ## 🎨 Designers — start here
 
-**Option 1 — Claude Code (recommended)**
-1. Open Claude Code → **File → Clone repository**
-2. Paste: `https://github.com/jh-foong/pepper-design-system`
-3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
-
-**Option 2 — Quick trial (any AI)**
+**Option 1 — Claude Design (recommended, no install)**
 1. Download [DESIGN.md](DESIGN.md) → click **Raw** → **Cmd+S**
-2. Upload it to Claude Design / ChatGPT / Cursor
+2. Open [claude.ai](https://claude.ai) → attach `DESIGN.md` (or add it to a Claude Project so it persists across chats)
 3. Prompt: *"Follow DESIGN.md. Design a [thing]."*
+
+**Option 2 — Claude Code (for semi-technical users who want the full repo)**
+1. Clone this repo via GitHub Desktop or `git clone https://github.com/jh-foong/pepper-design-system`
+2. In Terminal, `cd` into the folder and run `claude`
+3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
 
 Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
