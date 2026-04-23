@@ -69,4 +69,13 @@ Each sync updates two sets of token files:
 
 ## Questions?
 
-Ask in `#design-system` on Slack or open an issue in [GitHub](https://github.com/jh-foong/pepper-design-system).
+Ask in `#design-systems-dojo` on Slack or open an issue in [GitHub](https://github.com/jh-foong/pepper-design-system).
+
+---
+
+## Changelog
+
+| Version | Date | Summary |
+|---------|------|---------|
+| v1.0.0 | 2026-04-23 | Initial workflow doc — DesignBridge export → Claude → CSS + Dart token files → GitHub PR flow |
+| v1.0.1 | 2026-04-23 | Updated Slack channel reference to `#design-systems-dojo` |

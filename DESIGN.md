@@ -416,5 +416,6 @@ Everything summarised here is derived from the authoritative token files in this
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v1.2.0 | 2026-04-23 | Added pre-merge scope callout at top — flags this as for new/exploratory work only, instructs AI agents to surface mismatches when asked to extend existing designs |
 | v1.1.0 | 2026-04-23 | Added "What this file covers" (known limitations) and "Example prompts" sections |
 | v1.0.0 | 2026-04-23 | Initial DESIGN.md — curated AI-ingestable spec for Pepper |

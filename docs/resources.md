@@ -65,3 +65,4 @@ Token categories: Color, Typography, Font Family, Font Size, Font Weight, Line H
 | Version | Date | Summary |
 |---------|------|---------|
 | v1.0.4 | 2026-04-23 | Replaced Supernova token section with DesignBridge + Claude workflow. Removed broken link to deleted Supernova sync doc |
+| v1.0.5 | 2026-04-23 | Updated GitHub URL to new public sandbox (`jh-foong/pepper-design-system`) with updated note on its sandbox status |

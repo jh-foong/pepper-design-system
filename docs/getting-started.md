@@ -76,7 +76,7 @@ Token updates are published as versioned GitHub Releases. Watch the repo or chec
 
 ## Need help?
 
-- **Slack** — Post in `#design-system` for questions or feedback
+- **Slack** — Post in `#design-systems-dojo` for questions or feedback
 - **Figma** — Comment directly on components in the library file
 - **GitHub** — Open an issue in the [Pepper repository](https://github.com/jh-foong/pepper-design-system)
 
@@ -87,3 +87,4 @@ Token updates are published as versioned GitHub Releases. Watch the repo or chec
 | Version | Date | Summary |
 |---------|------|---------|
 | v1.0.4 | 2026-04-23 | Rewrote to reflect actual repo state — removed aspirational npm package references, updated token paths and usage examples |
+| v1.0.5 | 2026-04-23 | Updated GitHub URL to new public sandbox (`jh-foong/pepper-design-system`) and Slack channel to `#design-systems-dojo` |
