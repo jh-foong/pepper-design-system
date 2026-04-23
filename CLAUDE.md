@@ -6,6 +6,16 @@ The person working in this repo is **Junhan Foong**, a Product Designer with no 
 
 ---
 
+## Standing rule: after every push, always surface
+
+1. **The PR link** (create-PR URL if the PR doesn't exist yet, or the existing PR URL)
+2. **A copy-paste-ready PR title** (under 70 chars)
+3. **A copy-paste-ready PR description** in a fenced code block so Junhan can paste it into GitHub without formatting breaking
+
+Junhan doesn't want to hunt for URLs or write PR copy. Always give them ready-to-use text.
+
+---
+
 ## Key Resources
 
 | Resource | URL | Notes |
