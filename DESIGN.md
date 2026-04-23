@@ -1,4 +1,8 @@
+<!-- Pepper DESIGN.md · v1.2.0 · 2026-04-23 · compare against https://github.com/jh-foong/pepper-design-system/releases -->
+
 # Pepper Design System — DESIGN.md
+
+**Version:** `v1.2.0` · Released 2026-04-23 · [Check for newer](https://github.com/jh-foong/pepper-design-system/releases)
 
 > ⚠️ **Scope — pre-merge state**
 >

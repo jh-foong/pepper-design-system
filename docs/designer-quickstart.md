@@ -10,6 +10,15 @@ Made for designers. No coding required.
 
 ---
 
+## How this fits together (30-second mental model)
+
+- **`DESIGN.md`** is a single text file that tells any AI tool what "on-brand Pepper" looks like (colours, type, spacing, shadows). It's the only thing you *have* to keep fresh.
+- **This GitHub repo** is the source of truth — where `DESIGN.md` and the raw token files live. You don't work *inside* the repo; you just pull `DESIGN.md` out of it.
+- **Your AI tool** (Claude Design / Claude Code) reads `DESIGN.md` as context, then outputs real coded prototypes or design artifacts using Pepper tokens.
+- **Figma stays as-is for production work.** New Pepper tokens aren't merged into the main Figma library yet, so keep shipping production designs on the existing library. Use this flow for concepts, pitches, user tests, and anything not shipping to prod.
+
+---
+
 ## What you'll get
 
 By the end of this guide you'll be able to:
@@ -87,9 +96,19 @@ Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-
 
 ## 3. Your first prompt (3 min)
 
-Try one of these starter prompts in your AI tool of choice. All of them assume `DESIGN.md` is loaded as context.
+### Pre-session checklist ✅
+
+Before you prompt anything, take 30 seconds to check:
+
+- [ ] **Manrope** is installed on your Mac (Font Book → search "Manrope")
+- [ ] Your local `DESIGN.md` version matches the [latest release](https://github.com/jh-foong/pepper-design-system/releases) — check the version line at the top of the file
+- [ ] `DESIGN.md` is attached to your Claude Project / in your scratch folder / in the current Claude Code directory
+
+If all three are ✅, you're good. If `DESIGN.md` is out of date, grab the new one (see [Stay up to date](#stay-up-to-date) below).
 
 ### Starter prompts
+
+Try one of these in your AI tool of choice. All of them assume `DESIGN.md` is loaded as context.
 
 | Goal | Prompt |
 |------|--------|
@@ -173,13 +192,51 @@ Longer-term, Pepper will add component specs directly to `DESIGN.md` to reduce t
 
 ---
 
-## Updating to the latest Pepper version
+## Stay up to date
 
-Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
+`DESIGN.md` is the only thing you *must* keep fresh. Three ways to stay in sync — pick whichever fits your workflow:
 
-1. Check [Releases](https://github.com/jh-foong/pepper-design-system/releases) every so often
-2. Re-download `DESIGN.md` if the release notes mention it
-3. Re-import updated components in Figma when prompted
+### 1. Watch the repo on GitHub *(recommended — set up once)*
+
+1. Go to [jh-foong/pepper-design-system](https://github.com/jh-foong/pepper-design-system)
+2. Top-right: click **Watch** → **Custom** → check **Releases** → **Apply**
+
+You'll get an email every time a new release ships. 5-second setup, zero ongoing effort.
+
+### 2. Version-stamp self-check
+
+Every `DESIGN.md` has a version line at the top (e.g. `Version: v1.2.0`). Before a session, glance at it and compare against the [Releases page](https://github.com/jh-foong/pepper-design-system/releases). If they differ, re-download.
+
+### 3. Claude Code users — fetch the latest every session *(most foolproof)*
+
+Instead of keeping a local copy, prompt Claude Code to pull the live version straight from GitHub:
+
+> *"Fetch the latest DESIGN.md from `https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/DESIGN.md` and follow it. Build a [thing]."*
+
+No syncing, always current. Only works with Claude Code (which has web access) — not Claude Design.
+
+### When `DESIGN.md` changes
+
+1. Overwrite the old `DESIGN.md` in your scratch folder / Claude Project knowledge
+2. Skim the [release notes](https://github.com/jh-foong/pepper-design-system/releases) — if tokens were renamed, old prototypes may need a refresh
+3. Carry on
+
+---
+
+## Ping vs ship it yourself
+
+To save everyone time, here's when to reach out and when to just go.
+
+**Ship it yourself if:**
+- AI invented a token name → check [`docs/token-reference.md`](token-reference.md), pick the right one, and re-prompt
+- The output looks "off" → refine your prompt with specific token names (see [AI invents something](#what-happens-when-the-ai-invents-something))
+- You need to retokenize an old Figma design → use the [3 retokenization methods](#working-with-existing-figma-designs-old-tokens) above
+
+**Ping the DS team in `#design-systems-dojo` if:**
+- A token you need genuinely doesn't exist in `DESIGN.md` or the [cheatsheet](token-reference.md)
+- Something in `DESIGN.md` looks wrong or contradicts itself
+- You've found a bug in the tokens (e.g. a colour alias pointing at the wrong thing)
+- You want to propose a new component spec or token
 
 ---
 
@@ -203,3 +260,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 | v1.2.3 | 2026-04-23 | Updated Slack channel to `#design-systems-dojo`. Added 🌶️ spice-level ratings to the three retokenization methods (easiest → hardest) |
 | v1.2.4 | 2026-04-23 | Linked to the new `docs/token-reference.md` cheatsheet in the "AI invents something" section |
 | v1.2.5 | 2026-04-23 | Rewrote Option 2 (Claude Code) — designers now set up a separate scratch folder with `DESIGN.md` instead of cloning the DS repo. Keeps the source-of-truth repo clean and gives designers a dedicated prototype space. |
+| v1.2.6 | 2026-04-23 | Added mental-model intro, pre-session checklist, "Stay up to date" section (Watch releases / version-stamp self-check / Claude Code WebFetch pattern), and "Ping vs ship it yourself" box — to help designers work independently. |

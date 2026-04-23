@@ -41,7 +41,56 @@ Colour tokens are layered:
 - **Semantic** — meaning-based (e.g. `surface-brand-primary`, `text/primary`). **Use these by default.** Automatically swap between light and dark themes.
 - **Static** — theme-agnostic (e.g. `static-color-surface-brand-primary`). Keep the same value in light and dark mode. Use only when you need a fixed colour that shouldn't flip with theme.
 
-Semantic colour groups:
+### Understanding light vs dark (and inverse)
+
+Before picking a colour token, it helps to understand how Pepper handles themes and what "inverse" actually means.
+
+#### The mirror line
+
+Picture a neutral colour scale running from white to near-black. There's a "mirror line" roughly in the middle. Everything on one side is the **default family**; everything on the other is the **inverse family**.
+
+```
+Default  ←————————|————————→  Inverse
+ 0  100  200  300 | 900  1000  1100  1200
+```
+
+- In **light mode**, default = light end, inverse = dark end
+- In **dark mode**, the scale flips — default = dark end, inverse = light end
+
+**Same tokens. The values behind them swap when the theme changes.** Designers don't manually re-tag anything — picking `surface-primary` and `surface-inverse-primary` is enough.
+
+#### Default vs Inverse
+
+- **Default** — the colour you'd expect for this theme (e.g. a light surface in light mode)
+- **Inverse** — the *opposite end of the scale within the current theme*, used for emphasis
+
+> ⚠️ **"Inverse" is not a synonym for "dark."** A banner using `surface-inverse-primary` in **light** mode reads as dark-on-light. Flip to **dark** mode and that same banner becomes light-on-dark — because inverse means "the other end," and the other end has moved.
+
+**Example:** a hero banner inside a light-mode page. Use `surface-inverse-primary` + `text-inverse-primary` → banner reads dark. Toggle to dark mode → banner reads light. You didn't change tokens, the theme did.
+
+#### What flips, what doesn't
+
+| Token layer | Behaviour when theme switches |
+|---|---|
+| **Semantic — default** (e.g. `surface-primary`) | Flips — light-end ↔ dark-end |
+| **Semantic — inverse** (e.g. `surface-inverse-primary`) | Flips in sync — dark-end ↔ light-end |
+| **Static** (e.g. `static-color-surface-brand-primary`) | Does **not** flip — anchored to a specific value |
+
+#### How to choose (3-question flow)
+
+1. **Should this element feel "default" within whatever theme the user is on?** → use a **default semantic** token (`surface-primary`, `text-primary`, `stroke-default`)
+2. **Do I want high contrast emphasis within the theme?** (e.g. hero banner, inverse card) → use an **inverse semantic** token (`surface-inverse-primary`, `text-inverse-primary`)
+3. **Must this colour stay the same regardless of theme?** → use a **static** token (see [Static colours](#static-colours-theme-agnostic) below)
+
+Common static use cases: **brand identity** (logos, brand-blue buttons), **text over media** (image/video backgrounds that don't flip with theme), **system status** (success/error/warning — red shouldn't invert).
+
+#### 1:1 mirror is a concept, not a constraint
+
+Defaults and inverses don't have to be exact mathematical opposites. The DS team picks inverse values that respect **brand and accessibility** — so `surface-inverse-primary` might land on neutral-1200 while `surface-primary` is neutral-0, even if the "true" mirror would be neutral-1100. Think "opposite end of the scale," not "exact complement."
+
+---
+
+### Semantic colour groups
 
 | Group | Use for | Example token |
 |-------|---------|---------------|
@@ -57,6 +106,8 @@ Semantic colour groups:
 ### Static colours (theme-agnostic)
 
 Static tokens **do not flip between light and dark mode** — they hold the same value regardless of theme. Use them when a colour must stay fixed (e.g. a brand-blue surface that should read as brand-blue in both light and dark mode, not invert).
+
+See [Understanding light vs dark (and inverse)](#understanding-light-vs-dark-and-inverse) above for how static fits alongside default and inverse semantics.
 
 Common static groups:
 
@@ -291,3 +342,4 @@ Re-prompt: *"Rewrite using only `--pepper-*` tokens from DESIGN.md. Do not inlin
 | v1.0.2 | 2026-04-23 | Added Stroke (border width) section — general strokes (none → lg) and icon strokes that scale with icon size |
 | v1.0.3 | 2026-04-23 | Added Static colours subsection — theme-agnostic tokens that don't flip between light/dark mode (brand, system, overlay, glass) |
 | v1.0.4 | 2026-04-23 | Added migration note for designers coming from the old DS — "fixed" tokens have been renamed to "static" and separated into their own layer |
+| v1.0.5 | 2026-04-23 | Added "Understanding light vs dark (and inverse)" section — mirror-line mental model, default vs inverse clarified (inverse ≠ dark), flip-vs-static behaviour table, 3-question decision flow, and a 1:1 mirror caveat. Adapted from the old Figma explainer frames. |
