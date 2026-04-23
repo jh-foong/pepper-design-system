@@ -71,6 +71,8 @@ Common static groups:
 
 > ⚠️ **Rule of thumb:** reach for **semantic** first. Only use **static** when you've got a specific reason the colour shouldn't adapt to theme — otherwise dark-mode users will see a glaring light-mode colour (or vice versa).
 
+> 📝 **Coming from the old DS?** These were previously called **"fixed"** tokens. They've been renamed to **"static"** and split into their own layer to make theme-agnostic colours easier to manage and isolate from the semantic set.
+
 ---
 
 ## Typography
@@ -288,3 +290,4 @@ Re-prompt: *"Rewrite using only `--pepper-*` tokens from DESIGN.md. Do not inlin
 | v1.0.1 | 2026-04-23 | Split typography into Headings (responsive — size changes with screen via Figma modes) and Body / Label / Legal (fixed across screens) |
 | v1.0.2 | 2026-04-23 | Added Stroke (border width) section — general strokes (none → lg) and icon strokes that scale with icon size |
 | v1.0.3 | 2026-04-23 | Added Static colours subsection — theme-agnostic tokens that don't flip between light/dark mode (brand, system, overlay, glass) |
+| v1.0.4 | 2026-04-23 | Added migration note for designers coming from the old DS — "fixed" tokens have been renamed to "static" and separated into their own layer |
