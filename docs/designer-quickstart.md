@@ -6,7 +6,7 @@ Made for designers. No coding required.
 
 ---
 
-> ⚠️ **Pre-merge state:** These tokens are from an in-progress Figma branch. Use for **new/exploratory** design work only — not for extending existing production designs (they'll mismatch until the Figma branch merges by end of May 2026). See [README](../README.md#-pepper-design-system) for full scope.
+> ⚠️ **Pre-merge state:** These tokens are from an in-progress Figma branch. Use for **new/exploratory** design work only — not for extending existing production designs (they'll mismatch until after AKQA handover and component refactoring). See [README](../README.md#-pepper-design-system) for full scope.
 
 ---
 
