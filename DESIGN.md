@@ -9,7 +9,7 @@
 > These tokens come from an in-progress Figma branch that hasn't been merged to the main Pepperstone library yet. Existing Pepperstone production designs still reference the original token set.
 >
 > - **Use this spec for:** new designs, concepts, and exploratory work
-> - **Do not use for:** extending existing production designs — they will visually mismatch until the Figma branch is merged and legacy designs are migrated (pending AKQA handover and component refactoring)
+> - **Do not use for:** extending existing production designs — they will visually mismatch until the Figma branch is merged and legacy designs are migrated (pending vendor A handover and component refactoring)
 >
 > When generating UI, prefer greenfield output. If a user asks you to extend or match an existing production design that references older tokens, flag the mismatch before proceeding.
 

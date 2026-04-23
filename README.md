@@ -12,7 +12,7 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 >
 > - ✅ **Use for:** new designs, concepts, and exploratory work
 > - ⚠️ **Don't use for:** extending existing production designs — they'll visually mismatch until the Figma branch is merged and legacy designs are migrated
-> - 📅 **Timeline:** full migration pending AKQA handover and component refactoring
+> - 📅 **Timeline:** full migration pending vendor A handover and component refactoring
 
 ---
 
