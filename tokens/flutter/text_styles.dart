@@ -103,9 +103,31 @@ class AppTextStyles {
     leadingDistribution: TextLeadingDistribution.even,
   );
 
-  static const labelLabelLg = TextStyle(
+  static const bodyBody2xs = TextStyle(
     fontFamily: "Manrope",
     fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 10,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.4,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const bodyBody2xsUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 10,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.4,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelLg = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
     fontStyle: FontStyle.normal,
     fontSize: 18,
     decoration: TextDecoration.none,
@@ -166,6 +188,94 @@ class AppTextStyles {
     decoration: TextDecoration.underline,
     letterSpacing: 0,
     height: 1.4285714285714286,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelXs = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 12,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabelXsUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 12,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabel2xs = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 10,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.4,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const labelLabel2xsUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 10,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.4,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const legalLegalMd = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const legalLegalMdUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 16,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.5,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const legalLegalXs = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 12,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const legalLegalXsUnderlined = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 12,
+    decoration: TextDecoration.underline,
+    letterSpacing: 0,
+    height: 1.3333333333333333,
     leadingDistribution: TextLeadingDistribution.even,
   );
 
