@@ -1,11 +1,11 @@
 //
-// PepperTokens.swift
+// PepperCoreTokens.swift
 // Pepper Design System — EXPERIMENTAL (Tier 3, untested)
 // Generated from tokens/css/base/*.css
 //
 import UIKit
 
-public enum PepperColor {
+public enum PepperCoreColor {
     public static let iconGlassLight = UIColor(red: 0x99/255.0, green: 0xc1/255.0, blue: 0xfd/255.0, alpha: 0x80/255.0)
     public static let opacityColorBrandCryptoOrange600Opacity0 = UIColor(red: 0xff/255.0, green: 0x50/255.0, blue: 0x00/255.0, alpha: 0x00/255.0)
     public static let opacityColorBrandCryptoOrange600Opacity10 = UIColor(red: 0xff/255.0, green: 0x50/255.0, blue: 0x00/255.0, alpha: 0x1a/255.0)
@@ -780,7 +780,7 @@ public enum PepperColor {
     public static let staticOverlayMedium = UIColor(red: 0x00/255.0, green: 0x00/255.0, blue: 0x00/255.0, alpha: 0x73/255.0)
 }
 
-public enum PepperSpacing {
+public enum PepperCoreSpacing {
     public static let gapLg: CGFloat = 24
     public static let gapMd: CGFloat = 16
     public static let gapNone: CGFloat = 0
@@ -812,7 +812,7 @@ public enum PepperSpacing {
     public static let themeSpacingLayoutPad: CGFloat = 80
 }
 
-public enum PepperDimension {
+public enum PepperCoreDimension {
     public static let blur2xl: CGFloat = 40
     public static let blur3xl: CGFloat = 64
     public static let blurLg: CGFloat = 16
@@ -996,7 +996,7 @@ public enum PepperDimension {
     public static let shadowXsSpreadRadius: CGFloat = 0
 }
 
-public enum PepperSize {
+public enum PepperCoreSize {
     public static let canvasViewportHeight: CGFloat = 1024
     public static let canvasViewportWidth: CGFloat = 1440
     public static let instrumentIconSizeIcon12: CGFloat = 12
@@ -1036,7 +1036,7 @@ public enum PepperSize {
     public static let utilityIconSizeIcon40: CGFloat = 40
 }
 
-public enum PepperRadius {
+public enum PepperCoreRadius {
     public static let _2xl: CGFloat = 24
     public static let _3xl: CGFloat = 32
     public static let full: CGFloat = 9999
@@ -1048,7 +1048,7 @@ public enum PepperRadius {
     public static let xs: CGFloat = 2
 }
 
-public enum PepperBorderWidth {
+public enum PepperCoreBorderWidth {
     public static let strokeIconWidthIcon12: CGFloat = 0.75
     public static let strokeIconWidthIcon16: CGFloat = 1
     public static let strokeIconWidthIcon20: CGFloat = 1.25
@@ -1067,7 +1067,7 @@ public enum PepperBorderWidth {
     public static let strokeWidthXs: CGFloat = 1
 }
 
-public enum PepperFontSize {
+public enum PepperCoreFontSize {
     public static let body2xsFontSize: CGFloat = 10
     public static let bodyLgFontSize: CGFloat = 18
     public static let bodyMdFontSize: CGFloat = 16
@@ -1102,7 +1102,7 @@ public enum PepperFontSize {
     public static let legalXsFontSize: CGFloat = 12
 }
 
-public enum PepperLineHeight {
+public enum PepperCoreLineHeight {
     public static let body2xsLineHeight: CGFloat = 14
     public static let bodyLgLineHeight: CGFloat = 28
     public static let bodyMdLineHeight: CGFloat = 24
@@ -1134,7 +1134,7 @@ public enum PepperLineHeight {
     public static let labelXsLineHeight: CGFloat = 16
 }
 
-public enum PepperOpacity {
+public enum PepperCoreOpacity {
     public static let stateOpacityDisabled: CGFloat = 0.1
     public static let stateOpacityInverseDisabled: CGFloat = 0.2
     public static let stateOpacityInverseLoading: CGFloat = 0.1
@@ -1162,13 +1162,13 @@ public enum PepperOpacity {
     public static let valuesOpacity95: CGFloat = 0.95
 }
 
-public enum PepperFontWeight {
+public enum PepperCoreFontWeight {
     public static let fontWeightBold: CGFloat = 700
     public static let fontWeightRegular: CGFloat = 400
     public static let fontWeightSemiBold: CGFloat = 600
 }
 
-public enum PepperFontFamily {
+public enum PepperCoreFontFamily {
     public static let body2xsFontFamily: String = "Manrope"
     public static let bodyLgFontFamily: String = "Manrope"
     public static let bodyMdFontFamily: String = "Manrope"

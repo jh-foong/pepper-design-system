@@ -184,7 +184,7 @@ Figma's official **Dev Mode MCP server** lets Claude read your selected Figma fr
 
 `DESIGN.md` covers **tokens** (colours, typography, spacing, shadows, radii) but does **not** yet cover full component specs. If the AI generates a button that looks off, it's probably inventing the spec.
 
-**Fix:** refine the prompt. E.g. *"Button should use `--pepper-typography-label-md`, 12px vertical padding, 24px horizontal, radius `md`, shadow `xs`."*
+**Fix:** refine the prompt. E.g. *"Button should use `--pepper-core-typography-label-md`, 12px vertical padding, 24px horizontal, radius `md`, shadow `xs`."*
 
 Longer-term, Pepper will add component specs directly to `DESIGN.md` to reduce this.
 

@@ -4,33 +4,33 @@
  */
 
 :root {
-  --pepper-opacity-values-opacity-0: 0;
-  --pepper-opacity-values-opacity-5: 0.05;
-  --pepper-opacity-values-opacity-10: 0.1;
-  --pepper-opacity-values-opacity-15: 0.15;
-  --pepper-opacity-values-opacity-20: 0.2;
-  --pepper-opacity-values-opacity-25: 0.25;
-  --pepper-opacity-values-opacity-30: 0.3;
-  --pepper-opacity-values-opacity-35: 0.35;
-  --pepper-opacity-values-opacity-40: 0.4;
-  --pepper-opacity-values-opacity-45: 0.45;
-  --pepper-opacity-values-opacity-50: 0.5;
-  --pepper-opacity-values-opacity-55: 0.55;
-  --pepper-opacity-values-opacity-60: 0.6;
-  --pepper-opacity-values-opacity-65: 0.65;
-  --pepper-opacity-values-opacity-70: 0.7;
-  --pepper-opacity-values-opacity-75: 0.75;
-  --pepper-opacity-values-opacity-80: 0.8;
-  --pepper-opacity-values-opacity-85: 0.85;
-  --pepper-opacity-values-opacity-90: 0.9;
-  --pepper-opacity-values-opacity-95: 0.95;
-  --pepper-opacity-values-opacity-100: 1;
+  --pepper-core-opacity-values-opacity-0: 0;
+  --pepper-core-opacity-values-opacity-5: 0.05;
+  --pepper-core-opacity-values-opacity-10: 0.1;
+  --pepper-core-opacity-values-opacity-15: 0.15;
+  --pepper-core-opacity-values-opacity-20: 0.2;
+  --pepper-core-opacity-values-opacity-25: 0.25;
+  --pepper-core-opacity-values-opacity-30: 0.3;
+  --pepper-core-opacity-values-opacity-35: 0.35;
+  --pepper-core-opacity-values-opacity-40: 0.4;
+  --pepper-core-opacity-values-opacity-45: 0.45;
+  --pepper-core-opacity-values-opacity-50: 0.5;
+  --pepper-core-opacity-values-opacity-55: 0.55;
+  --pepper-core-opacity-values-opacity-60: 0.6;
+  --pepper-core-opacity-values-opacity-65: 0.65;
+  --pepper-core-opacity-values-opacity-70: 0.7;
+  --pepper-core-opacity-values-opacity-75: 0.75;
+  --pepper-core-opacity-values-opacity-80: 0.8;
+  --pepper-core-opacity-values-opacity-85: 0.85;
+  --pepper-core-opacity-values-opacity-90: 0.9;
+  --pepper-core-opacity-values-opacity-95: 0.95;
+  --pepper-core-opacity-values-opacity-100: 1;
   /* *Only use as a layer opacity to describe loading where loading colour token is not appropriate. */
-  --pepper-opacity-state-opacity-loading: var(--pepper-opacity-values-opacity-5);
+  --pepper-core-opacity-state-opacity-loading: var(--pepper-core-opacity-values-opacity-5);
   /* *Only use as a layer opacity to describe loading where loading colour token is not appropriate. */
-  --pepper-opacity-state-opacity-disabled: var(--pepper-opacity-values-opacity-10);
+  --pepper-core-opacity-state-opacity-disabled: var(--pepper-core-opacity-values-opacity-10);
   /* *Only use as a layer opacity to describe loading where loading colour token is not appropriate. */
-  --pepper-opacity-state-opacity-inverse-loading: var(--pepper-opacity-values-opacity-10);
+  --pepper-core-opacity-state-opacity-inverse-loading: var(--pepper-core-opacity-values-opacity-10);
   /* *Only use as a layer opacity to describe loading where loading colour token is not appropriate. */
-  --pepper-opacity-state-opacity-inverse-disabled: var(--pepper-opacity-values-opacity-20);
+  --pepper-core-opacity-state-opacity-inverse-disabled: var(--pepper-core-opacity-values-opacity-20);
 }

@@ -49,9 +49,9 @@ Reference tokens as CSS custom properties:
 
 ```css
 .my-element {
-  color: var(--pepper-color-semantic-color-foreground-text-primary);
-  padding: var(--pepper-dimension-scale-spacing-16);
-  border-radius: var(--pepper-border-radius-md);
+  color: var(--pepper-core-color-semantic-color-foreground-text-primary);
+  padding: var(--pepper-core-dimension-scale-spacing-16);
+  border-radius: var(--pepper-core-border-radius-md);
 }
 ```
 

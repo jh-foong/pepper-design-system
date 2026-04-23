@@ -51,6 +51,25 @@ The CSS files in `tokens/css/base/` are the source of truth. Every other format 
 
 See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workflow.
 
+### ⚠️ Standing rule: rename `pepper-` → `pepper-core-` on every sync
+
+DesignBridge emits tokens with the `pepper-` prefix and has no setting to change it. Junhan has decided the canonical prefix should be `pepper-core-` instead.
+
+**Every time a DesignBridge export is processed, Claude MUST rename the prefix before regenerating any output files.** Apply across all formats:
+
+| Format | Rename |
+|---|---|
+| CSS custom properties | `--pepper-*` → `--pepper-core-*` |
+| Flutter / Dart | `pepper*` identifiers → `pepperCore*` |
+| JSON (DTCG) | Top-level group keys stay semantic; any prefixed names become `pepper-core-*` |
+| iOS Swift | `Pepper*` enums → `PepperCore*` |
+| Android XML | `pepper_*` names → `pepper_core_*` |
+| React Native TS | `pepper*` exports → `pepperCore*` |
+| Tailwind config | `pepper-*` keys → `pepper-core-*` |
+| DESIGN.md · docs | Every visible `--pepper-*` reference → `--pepper-core-*` |
+
+If the incoming DesignBridge export still uses the raw `pepper-` prefix, treat that as expected — just rename on the way through. Do NOT commit files with the raw `pepper-` prefix to `tokens/` after a sync.
+
 ---
 
 ## Repo Structure

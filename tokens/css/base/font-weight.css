@@ -4,7 +4,7 @@
  */
 
 :root {
-  --pepper-font-weight-font-weight-regular: 400;
-  --pepper-font-weight-font-weight-semi-bold: 600;
-  --pepper-font-weight-font-weight-bold: 700;
+  --pepper-core-font-weight-font-weight-regular: 400;
+  --pepper-core-font-weight-font-weight-semi-bold: 600;
+  --pepper-core-font-weight-font-weight-bold: 700;
 }

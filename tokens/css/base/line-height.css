@@ -5,37 +5,37 @@
 
 :root {
   /* *This is a NON-Tailwind Global Class. Please extend the scale to include this. */
-  --pepper-line-height-font-line-height-leading-14: 14px;
-  --pepper-line-height-font-line-height-leading-16: 16px;
-  --pepper-line-height-font-line-height-leading-20: 20px;
-  --pepper-line-height-font-line-height-leading-24: 24px;
-  --pepper-line-height-font-line-height-leading-28: 28px;
-  --pepper-line-height-font-line-height-leading-32: 32px;
-  --pepper-line-height-font-line-height-leading-36: 36px;
-  --pepper-line-height-font-line-height-leading-40: 40px;
+  --pepper-core-line-height-font-line-height-leading-14: 14px;
+  --pepper-core-line-height-font-line-height-leading-16: 16px;
+  --pepper-core-line-height-font-line-height-leading-20: 20px;
+  --pepper-core-line-height-font-line-height-leading-24: 24px;
+  --pepper-core-line-height-font-line-height-leading-28: 28px;
+  --pepper-core-line-height-font-line-height-leading-32: 32px;
+  --pepper-core-line-height-font-line-height-leading-36: 36px;
+  --pepper-core-line-height-font-line-height-leading-40: 40px;
   /* *This is a NON-Tailwind Global Class. Please extend the scale to include this. */
-  --pepper-line-height-font-line-height-leading-52: 52px;
-  --pepper-line-height-font-line-height-leading-64: 64px;
+  --pepper-core-line-height-font-line-height-leading-52: 52px;
+  --pepper-core-line-height-font-line-height-leading-64: 64px;
   /* *This is a NON-Tailwind Global Class. Please extend the scale to include this. */
-  --pepper-line-height-font-line-height-leading-76: 76px;
+  --pepper-core-line-height-font-line-height-leading-76: 76px;
   /* *This is a NON-Tailwind Global Class. Please extend the scale to include this. */
-  --pepper-line-height-font-line-height-leading-100: 100px;
+  --pepper-core-line-height-font-line-height-leading-100: 100px;
   /* *This is a NON-Tailwind Global Class. Please extend the scale to include this. */
-  --pepper-line-height-font-line-height-leading-132: 132px;
-  --pepper-line-height-heading-h2-line-height: var(--pepper-line-height-font-line-height-leading-76);
-  --pepper-line-height-heading-h3-line-height: var(--pepper-line-height-font-line-height-leading-52);
-  --pepper-line-height-heading-h4-line-height: var(--pepper-line-height-font-line-height-leading-36);
-  --pepper-line-height-heading-h5-line-height: var(--pepper-line-height-font-line-height-leading-32);
-  --pepper-line-height-heading-h6-line-height: var(--pepper-line-height-font-line-height-leading-28);
-  --pepper-line-height-heading-h1-line-height: var(--pepper-line-height-font-line-height-leading-100);
-  --pepper-line-height-body-sm-line-height: var(--pepper-line-height-font-line-height-leading-20);
-  --pepper-line-height-body-xs-line-height: var(--pepper-line-height-font-line-height-leading-16);
-  --pepper-line-height-body-md-line-height: var(--pepper-line-height-font-line-height-leading-24);
-  --pepper-line-height-body-lg-line-height: var(--pepper-line-height-font-line-height-leading-28);
-  --pepper-line-height-label-md-line-height: var(--pepper-line-height-font-line-height-leading-24);
-  --pepper-line-height-label-sm-line-height: var(--pepper-line-height-font-line-height-leading-20);
-  --pepper-line-height-label-lg-line-height: var(--pepper-line-height-font-line-height-leading-28);
-  --pepper-line-height-body-2xs-line-height: var(--pepper-line-height-font-line-height-leading-14);
-  --pepper-line-height-label-xs-line-height: var(--pepper-line-height-font-line-height-leading-16);
-  --pepper-line-height-label-2xs-line-height: var(--pepper-line-height-font-line-height-leading-14);
+  --pepper-core-line-height-font-line-height-leading-132: 132px;
+  --pepper-core-line-height-heading-h2-line-height: var(--pepper-core-line-height-font-line-height-leading-76);
+  --pepper-core-line-height-heading-h3-line-height: var(--pepper-core-line-height-font-line-height-leading-52);
+  --pepper-core-line-height-heading-h4-line-height: var(--pepper-core-line-height-font-line-height-leading-36);
+  --pepper-core-line-height-heading-h5-line-height: var(--pepper-core-line-height-font-line-height-leading-32);
+  --pepper-core-line-height-heading-h6-line-height: var(--pepper-core-line-height-font-line-height-leading-28);
+  --pepper-core-line-height-heading-h1-line-height: var(--pepper-core-line-height-font-line-height-leading-100);
+  --pepper-core-line-height-body-sm-line-height: var(--pepper-core-line-height-font-line-height-leading-20);
+  --pepper-core-line-height-body-xs-line-height: var(--pepper-core-line-height-font-line-height-leading-16);
+  --pepper-core-line-height-body-md-line-height: var(--pepper-core-line-height-font-line-height-leading-24);
+  --pepper-core-line-height-body-lg-line-height: var(--pepper-core-line-height-font-line-height-leading-28);
+  --pepper-core-line-height-label-md-line-height: var(--pepper-core-line-height-font-line-height-leading-24);
+  --pepper-core-line-height-label-sm-line-height: var(--pepper-core-line-height-font-line-height-leading-20);
+  --pepper-core-line-height-label-lg-line-height: var(--pepper-core-line-height-font-line-height-leading-28);
+  --pepper-core-line-height-body-2xs-line-height: var(--pepper-core-line-height-font-line-height-leading-14);
+  --pepper-core-line-height-label-xs-line-height: var(--pepper-core-line-height-font-line-height-leading-16);
+  --pepper-core-line-height-label-2xs-line-height: var(--pepper-core-line-height-font-line-height-leading-14);
 }

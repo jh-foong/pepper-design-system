@@ -2,116 +2,116 @@
 <!-- Pepper Design System — EXPERIMENTAL (Tier 3, untested) -->
 <!-- Typography styles. fontFamily is left as 'sans-serif' — replace with your loaded font. -->
 <resources>
-    <style name="pepper_typography_body_2xs">
+    <style name="pepper_core_typography_body_2xs">
         <item name="android:textSize">10sp</item>
         <item name="android:lineHeight">14sp</item>
         <item name="android:textFontWeight">400</item>
     </style>
-    <style name="pepper_typography_body_2xs_underlined">
+    <style name="pepper_core_typography_body_2xs_underlined">
     </style>
-    <style name="pepper_typography_body_lg">
+    <style name="pepper_core_typography_body_lg">
         <item name="android:textSize">18sp</item>
         <item name="android:lineHeight">28sp</item>
         <item name="android:textFontWeight">400</item>
     </style>
-    <style name="pepper_typography_body_lg_underlined">
+    <style name="pepper_core_typography_body_lg_underlined">
     </style>
-    <style name="pepper_typography_body_md">
+    <style name="pepper_core_typography_body_md">
         <item name="android:textSize">16sp</item>
         <item name="android:lineHeight">24sp</item>
         <item name="android:textFontWeight">400</item>
     </style>
-    <style name="pepper_typography_body_md_dashed">
+    <style name="pepper_core_typography_body_md_dashed">
     </style>
-    <style name="pepper_typography_body_md_underlined">
+    <style name="pepper_core_typography_body_md_underlined">
     </style>
-    <style name="pepper_typography_body_sm">
+    <style name="pepper_core_typography_body_sm">
         <item name="android:textSize">14sp</item>
         <item name="android:lineHeight">20sp</item>
         <item name="android:textFontWeight">400</item>
     </style>
-    <style name="pepper_typography_body_sm_underlined">
+    <style name="pepper_core_typography_body_sm_underlined">
     </style>
-    <style name="pepper_typography_body_xs">
+    <style name="pepper_core_typography_body_xs">
         <item name="android:textSize">12sp</item>
         <item name="android:lineHeight">16sp</item>
         <item name="android:textFontWeight">400</item>
     </style>
-    <style name="pepper_typography_body_xs_underlined">
+    <style name="pepper_core_typography_body_xs_underlined">
     </style>
-    <style name="pepper_typography_heading_h1">
+    <style name="pepper_core_typography_heading_h1">
         <item name="android:textSize">96sp</item>
         <item name="android:lineHeight">100sp</item>
         <item name="android:textFontWeight">700</item>
     </style>
-    <style name="pepper_typography_heading_h2">
+    <style name="pepper_core_typography_heading_h2">
         <item name="android:textSize">72sp</item>
         <item name="android:lineHeight">76sp</item>
         <item name="android:textFontWeight">700</item>
     </style>
-    <style name="pepper_typography_heading_h3">
+    <style name="pepper_core_typography_heading_h3">
         <item name="android:textSize">48sp</item>
         <item name="android:lineHeight">52sp</item>
         <item name="android:textFontWeight">700</item>
     </style>
-    <style name="pepper_typography_heading_h4">
+    <style name="pepper_core_typography_heading_h4">
         <item name="android:textSize">30sp</item>
         <item name="android:lineHeight">36sp</item>
         <item name="android:textFontWeight">700</item>
     </style>
-    <style name="pepper_typography_heading_h5">
+    <style name="pepper_core_typography_heading_h5">
         <item name="android:textSize">24sp</item>
         <item name="android:lineHeight">32sp</item>
         <item name="android:textFontWeight">700</item>
     </style>
-    <style name="pepper_typography_heading_h6">
+    <style name="pepper_core_typography_heading_h6">
         <item name="android:textSize">20sp</item>
         <item name="android:lineHeight">28sp</item>
         <item name="android:textFontWeight">700</item>
     </style>
-    <style name="pepper_typography_label_2xs">
+    <style name="pepper_core_typography_label_2xs">
         <item name="android:textSize">10sp</item>
         <item name="android:lineHeight">14sp</item>
         <item name="android:textFontWeight">600</item>
     </style>
-    <style name="pepper_typography_label_2xs_underlined">
+    <style name="pepper_core_typography_label_2xs_underlined">
     </style>
-    <style name="pepper_typography_label_lg">
+    <style name="pepper_core_typography_label_lg">
         <item name="android:textSize">18sp</item>
         <item name="android:lineHeight">28sp</item>
         <item name="android:textFontWeight">600</item>
     </style>
-    <style name="pepper_typography_label_md">
+    <style name="pepper_core_typography_label_md">
         <item name="android:textSize">16sp</item>
         <item name="android:lineHeight">24sp</item>
         <item name="android:textFontWeight">600</item>
     </style>
-    <style name="pepper_typography_label_md_dashed">
+    <style name="pepper_core_typography_label_md_dashed">
     </style>
-    <style name="pepper_typography_label_md_underlined">
+    <style name="pepper_core_typography_label_md_underlined">
     </style>
-    <style name="pepper_typography_label_sm">
+    <style name="pepper_core_typography_label_sm">
         <item name="android:textSize">14sp</item>
         <item name="android:lineHeight">20sp</item>
         <item name="android:textFontWeight">600</item>
     </style>
-    <style name="pepper_typography_label_sm_underlined">
+    <style name="pepper_core_typography_label_sm_underlined">
     </style>
-    <style name="pepper_typography_label_xs">
+    <style name="pepper_core_typography_label_xs">
         <item name="android:textSize">12sp</item>
         <item name="android:lineHeight">16sp</item>
         <item name="android:textFontWeight">600</item>
     </style>
-    <style name="pepper_typography_label_xs_underlined">
+    <style name="pepper_core_typography_label_xs_underlined">
     </style>
-    <style name="pepper_typography_legal_md">
+    <style name="pepper_core_typography_legal_md">
         <item name="android:textSize">16sp</item>
     </style>
-    <style name="pepper_typography_legal_md_underlined">
+    <style name="pepper_core_typography_legal_md_underlined">
     </style>
-    <style name="pepper_typography_legal_xs">
+    <style name="pepper_core_typography_legal_xs">
         <item name="android:textSize">12sp</item>
     </style>
-    <style name="pepper_typography_legal_xs_underlined">
+    <style name="pepper_core_typography_legal_xs_underlined">
     </style>
 </resources>

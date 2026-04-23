@@ -5,14 +5,14 @@
 
 :root {
   /* Straight edges */
-  --pepper-border-radius-none: 0px;
-  --pepper-border-radius-xs: 2px;
-  --pepper-border-radius-sm: 4px;
-  --pepper-border-radius-md: 8px;
-  --pepper-border-radius-lg: 12px;
-  --pepper-border-radius-xl: 16px;
-  --pepper-border-radius-2xl: 24px;
-  --pepper-border-radius-3xl: 32px;
+  --pepper-core-border-radius-none: 0px;
+  --pepper-core-border-radius-xs: 2px;
+  --pepper-core-border-radius-sm: 4px;
+  --pepper-core-border-radius-md: 8px;
+  --pepper-core-border-radius-lg: 12px;
+  --pepper-core-border-radius-xl: 16px;
+  --pepper-core-border-radius-2xl: 24px;
+  --pepper-core-border-radius-3xl: 32px;
   /* Creates a "pill" shape */
-  --pepper-border-radius-full: 9999px;
+  --pepper-core-border-radius-full: 9999px;
 }
