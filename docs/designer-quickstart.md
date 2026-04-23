@@ -110,14 +110,43 @@ Got a Figma file that uses the **original** Pepper tokens and want to see what i
 
 ### More accurate — paste CSS from Figma Dev Mode
 
-1. In Figma: turn on **Dev Mode** (top-right toggle) → select an element
-2. Copy the CSS from the right panel
-3. Paste into Claude:
-   > *"Here's CSS from a current Figma design. Rewrite it using only the tokens in DESIGN.md. For each old value, map it to the closest Pepper token or flag it as no-match."*
+Figma's **Dev Mode** exports exact CSS for any element (colours as hex, sizes in px, etc). Paste that into Claude and ask it to translate to Pepper tokens.
+
+**Setup (one-time):**
+- Dev Mode is included on all paid Figma seats. If you don't see the toggle, your Figma role is likely Viewer/Edit-only — ask your Figma admin for Dev Mode access.
+
+**Per element:**
+1. In your Figma file, click the **</> toggle** in the top-right toolbar to switch to **Dev Mode** (or press **Shift+D**)
+2. Click the element you want to translate (a button, card, text, whatever)
+3. On the right panel, find the **Code** section → the CSS is shown there. Click the **copy** icon in the top-right of that block
+4. Open Claude Design (with `DESIGN.md` attached) and paste the CSS into a new chat
+5. Prompt:
+   > *"Here's CSS from a current Figma design using old Pepper tokens. Rewrite it using only the tokens in DESIGN.md. For each old value (hex, px, shadow, radius), map it to the closest Pepper token or flag as no-match. Output as a table: old value → new token → notes."*
+6. You'll get a clean mapping you can apply back in Figma manually
+
+**Best for:** single components (one button, one card). Tedious for whole screens — use the screenshot method for those.
 
 ### Most accurate — Figma MCP *(semi-technical)*
 
-Figma has an official [MCP server](https://www.figma.com/blog/introducing-figmas-dev-mode-mcp-server/) that lets Claude Code or Cursor read your Figma file directly — no export. Select a frame in Figma → ask Claude to redesign it using DESIGN.md tokens → get a precise translation.
+Figma's official **Dev Mode MCP server** lets Claude read your selected Figma frame directly — no exporting or pasting. Claude sees the real structure (layers, auto-layout, variants) and can translate it to DESIGN.md tokens precisely.
+
+**Requirements:**
+- [Figma desktop app](https://www.figma.com/downloads/) (not the browser version)
+- A Figma seat with **Dev Mode** enabled
+- [Claude Code](https://docs.anthropic.com/claude/docs/claude-code) or [Cursor](https://cursor.sh) installed
+
+**Setup (one-time):**
+1. Open Figma desktop → menu bar → **Figma → Preferences → Enable local MCP Server**
+2. In Claude Code, open your config (or ask Claude Code: *"Add the Figma MCP server to my config"*)
+3. Detailed guide: [Figma's Dev Mode MCP docs](https://help.figma.com/hc/en-us/articles/32132100833559)
+
+**Using it:**
+1. In Figma desktop, select the frame you want translated
+2. In Claude Code (inside your cloned Pepper repo folder), prompt:
+   > *"Using the Figma MCP, read my current selection. Then rewrite it using only the tokens in `@DESIGN.md`. Output the translation as CSS/JSX plus a table of which old values mapped to which new Pepper tokens."*
+3. Claude pulls the Figma data live, applies DESIGN.md, and returns code + mapping
+
+**Best for:** full-screen translations, working at scale, or when you want Claude to understand layout structure (not just visual output).
 
 > ⚠️ These methods help you **visualise** what old designs would look like in the new system. They don't update your actual Figma file — treat the output as a reference while manually re-tokenizing, or as a starting point for concept work.
 
@@ -158,3 +187,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 | v1.0.0 | 2026-04-23 | Initial designer quickstart — fonts, Figma, DESIGN.md, AI tool setup, starter prompts |
 | v1.1.0 | 2026-04-23 | Simplified AI tool setup — two clear options (Claude Code recommended, or quick-trial with any AI) |
 | v1.2.0 | 2026-04-23 | Swapped recommended option to Claude Design (web, no install). Added "Working with existing Figma designs" section with three retokenization methods |
+| v1.2.1 | 2026-04-23 | Expanded Dev Mode CSS and Figma MCP methods with concrete step-by-step instructions (enabling Dev Mode, installing Figma's MCP server, linking to official docs) |
