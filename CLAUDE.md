@@ -58,6 +58,7 @@ See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workfl
 ├── CLAUDE.md                # This file — AI context
 ├── docs/
 │   ├── designer-quickstart.md  # 10-min designer handoff guide
+│   ├── token-reference.md      # Token cheatsheet + how to apply in Figma
 │   ├── getting-started.md      # Designer + developer setup
 │   ├── resources.md            # External sources (fonts, Figma, GitHub)
 │   └── figma-claude-sync.md    # Token sync workflow

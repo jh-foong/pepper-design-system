@@ -54,6 +54,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 - [DESIGN.md](DESIGN.md) — Full AI-ready visual spec (colours, typography, spacing, shadows, rules)
 - [Designer Quickstart](docs/designer-quickstart.md) — 10-min setup to vibe code with Pepper Design System in Claude Design, Claude Code, Cursor, or any AI tool
+- [Token Reference & Cheatsheet](docs/token-reference.md) — Look up any token Claude suggests, plus how to apply it in Figma
 - [Getting Started](docs/getting-started.md) — How to use Pepper Design System as a designer or developer
 - [Resources](docs/resources.md) — Fonts, Figma, and all external sources
 - [Figma → Claude Sync](docs/figma-claude-sync.md) — How design tokens are synced from Figma to this repo
@@ -90,7 +91,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 | Version | Date | Summary |
 |---------|------|---------|
-| [v1.2.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.2.0) | 2026-04-23 | Designer onboarding release: moved repo to public personal sandbox, added pre-merge scope callout, swapped recommended AI tool to Claude Design (web), added three retokenization methods for legacy Figma designs (screenshot, Dev Mode CSS, Figma MCP) with spice-level ratings, trimmed quickstart to 3 steps (10 min), updated Slack channel to `#design-systems-dojo` |
+| [v1.2.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.2.0) | 2026-04-23 | Designer onboarding release: moved repo to public personal sandbox, added pre-merge scope callout, swapped recommended AI tool to Claude Design (web), added three retokenization methods for legacy Figma designs (screenshot, Dev Mode CSS, Figma MCP) with spice-level ratings, trimmed quickstart to 3 steps (10 min), updated Slack channel to `#design-systems-dojo`, added `docs/token-reference.md` cheatsheet for looking up tokens + applying them in Figma |
 | [v1.1.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) | 2026-04-23 | Added `DESIGN.md`, raw Figma source files, and legal text styles (+ body-2xs, label-xs/2xs). Fixed Flutter `labelLabelLg` weight bug |
 | v1.0.4 | 2026-04-23 | Cleaned up docs — removed Supernova references, added changelogs |
 | v1.0.3 | 2026-04-23 | Removed Supernova scripts |

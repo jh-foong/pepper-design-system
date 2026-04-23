@@ -151,6 +151,8 @@ Figma's official **Dev Mode MCP server** lets Claude read your selected Figma fr
 
 Longer-term, Pepper will add component specs directly to `DESIGN.md` to reduce this.
 
+> 💡 Need to look up a token Claude suggested? See the [Token Reference & Cheatsheet](token-reference.md) — values for every category plus how to apply them in Figma.
+
 ---
 
 ## Updating to the latest Pepper version
@@ -181,3 +183,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 | v1.2.1 | 2026-04-23 | Expanded Dev Mode CSS and Figma MCP methods with concrete step-by-step instructions (enabling Dev Mode, installing Figma's MCP server, linking to official docs) |
 | v1.2.2 | 2026-04-23 | Removed "Get Figma access" step — all designers already have it. Renumbered remaining sections (now 3 steps instead of 4). Updated setup time estimate to 10 min |
 | v1.2.3 | 2026-04-23 | Updated Slack channel to `#design-systems-dojo`. Added 🌶️ spice-level ratings to the three retokenization methods (easiest → hardest) |
+| v1.2.4 | 2026-04-23 | Linked to the new `docs/token-reference.md` cheatsheet in the "AI invents something" section |
