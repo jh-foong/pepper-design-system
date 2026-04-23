@@ -2,7 +2,7 @@
 
 Pepper is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
 
-**Current version:** [`v1.2.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.2.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
+**Current version:** [`v1.3.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.3.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
 ---
 
@@ -38,9 +38,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 ## What's in this repo
 
 - **[DESIGN.md](DESIGN.md)** — Curated AI-ingestable visual spec. Drop into Claude Design, Claude Code, Cursor, or Copilot to generate on-brand Pepper UI
-- **Design tokens** — Colour, typography, spacing, shadows, and more:
-  - CSS variables → [`tokens/css/`](tokens/css/)
-  - Flutter / Dart → [`tokens/flutter/`](tokens/flutter/)
+- **Design tokens** — Colour, typography, spacing, shadows, and more. See the [Token formats](#token-formats) table below for all available exports.
 - **Figma source files** — Raw DesignBridge exports in [`source/`](source/) for version history and diffing
 - **Documentation** — Guides for designers and developers on how to use the system
 
@@ -83,10 +81,28 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 ├── CLAUDE.md                # Project context for Claude
 ├── docs/                    # Designer and developer guides
 ├── tokens/
-│   ├── css/                 # CSS custom properties
-│   └── flutter/             # Flutter / Dart equivalents
+│   ├── css/                 # CSS custom properties (canonical)
+│   ├── flutter/             # Flutter / Dart equivalents (canonical)
+│   ├── json/                # W3C DTCG JSON (interop — Style Dictionary, Token Studio)
+│   └── experimental/        # Tier 3 untested: iOS, Android, React Native, Tailwind
 └── source/                  # Raw Figma DesignBridge exports
 ```
+
+---
+
+## Token formats
+
+| Tier | Format | Path | Status |
+|------|--------|------|--------|
+| 1 | CSS custom properties | [`tokens/css/`](tokens/css/) | Canonical — used in production |
+| 1 | Flutter / Dart | [`tokens/flutter/`](tokens/flutter/) | Canonical — used in production |
+| 2 | JSON (W3C DTCG) | [`tokens/json/tokens.json`](tokens/json/tokens.json) | Interop — feed into Style Dictionary, Token Studio, etc. |
+| 3 | iOS Swift | [`tokens/experimental/ios/`](tokens/experimental/ios/) | **Experimental, untested** |
+| 3 | Android XML | [`tokens/experimental/android/`](tokens/experimental/android/) | **Experimental, untested** |
+| 3 | React Native (TypeScript) | [`tokens/experimental/react-native/`](tokens/experimental/react-native/) | **Experimental, untested** |
+| 3 | Tailwind config | [`tokens/experimental/tailwind/`](tokens/experimental/tailwind/) | **Experimental, untested** |
+
+See [`tokens/experimental/README.md`](tokens/experimental/README.md) for how Tier 3 files graduate to Tier 1.
 
 ---
 
@@ -94,6 +110,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 | Version | Date | Summary |
 |---------|------|---------|
+| [v1.3.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.3.0) | 2026-04-23 | Added JSON (W3C DTCG) canonical export at `tokens/json/tokens.json` for Style Dictionary / Token Studio interop. Added experimental Tier 3 exports for iOS (Swift), Android (XML), React Native (TS), and Tailwind — all untested, see `tokens/experimental/README.md` |
 | [v1.2.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.2.0) | 2026-04-23 | Designer onboarding release: moved repo to public personal sandbox, added pre-merge scope callout, swapped recommended AI tool to Claude Design (web), added three retokenization methods for legacy Figma designs (screenshot, Dev Mode CSS, Figma MCP) with spice-level ratings, trimmed quickstart to 3 steps (10 min), updated Slack channel to `#design-systems-dojo`, added `docs/token-reference.md` cheatsheet for looking up tokens + applying them in Figma |
 | [v1.1.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) | 2026-04-23 | Added `DESIGN.md`, raw Figma source files, and legal text styles (+ body-2xs, label-xs/2xs). Fixed Flutter `labelLabelLg` weight bug |
 | v1.0.4 | 2026-04-23 | Cleaned up docs — removed Supernova references, added changelogs |

@@ -43,7 +43,11 @@ Token groups exported from Figma via DesignBridge:
 
 ## Token Pipeline
 
-Figma Variables → DesignBridge plugin → `.md` export → Claude → CSS + Dart token files → GitHub PR → merge → GitHub Release tag.
+Figma Variables → DesignBridge plugin → `.md` export → Claude → CSS + Dart token files → downstream formats (`tokens/json/` DTCG, `tokens/experimental/*`) → GitHub PR → merge → GitHub Release tag.
+
+The CSS files in `tokens/css/base/` are the source of truth. Every other format is derived from them:
+- `tokens/json/tokens.json` — Tier 2, W3C DTCG, semantic aliases preserved
+- `tokens/experimental/` — Tier 3, untested platform exports (iOS Swift, Android XML, React Native TS, Tailwind), semantic tokens resolved to final values
 
 See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workflow.
 
@@ -63,7 +67,9 @@ See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workfl
 │   ├── resources.md            # External sources (fonts, Figma, GitHub)
 │   └── figma-claude-sync.md    # Token sync workflow
 ├── tokens/
-│   ├── css/                 # CSS custom properties
-│   └── flutter/             # Flutter / Dart equivalents
+│   ├── css/                 # Tier 1: CSS custom properties (canonical)
+│   ├── flutter/             # Tier 1: Flutter / Dart equivalents (canonical)
+│   ├── json/                # Tier 2: W3C DTCG JSON (interop)
+│   └── experimental/        # Tier 3: untested iOS/Android/RN/Tailwind exports
 └── source/                  # Raw Figma DesignBridge exports (version history)
 ```
