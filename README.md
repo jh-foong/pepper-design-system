@@ -2,27 +2,32 @@
 
 Pepper is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
 
-## What's in this system
+## What's in this repo
 
-- **Design tokens** — Color, typography, spacing, elevation, and motion values defined as variables
-- **Components** — Reusable UI building blocks with documented usage and variants
-- **Patterns** — Common interaction and layout patterns used across Pepperstone products
-- **Guidelines** — Writing, accessibility, and visual design guidance
-
-## Documentation
-
-- [Getting Started](docs/getting-started.md) — Set up and start using Pepper
-- [Resources](docs/resources.md) — Fonts, Figma, Supernova, and all external sources
+- **Design tokens** — Color, typography, spacing, elevation, and more, exported as CSS variables and Dart files
+- **Documentation** — Guides for designers and developers on how to use the system
 
 ## Key Links
 
 | | Link |
 |-|------|
 | Figma | [Pepperstone DS (branch)](https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT) |
-| Supernova | [Pepper Design System v2](https://app.supernova.io/711966-pepperstone/764138-pepper-design-system-v-2/803332-shared-draft/810225-default/overview) |
 | Fonts | [Manrope fork](https://github.com/jh-foong/manrope) · Noto Sans Arabic · Noto Sans TC · Noto Sans JP |
-| GitHub | [jh-foong/pepper-ds](https://github.com/jh-foong/pepper-ds) _(test repo)_ |
+| GitHub | [jh-foong/pepper-ds](https://github.com/jh-foong/pepper-ds) _(test repo — will migrate to Pepperstone org)_ |
 
-## Contributing
+## Documentation
 
-See [Contributing](docs/contributing.md) for how to propose or add to the system.
+- [Getting Started](docs/getting-started.md) — How to use Pepper as a designer or developer
+- [Resources](docs/resources.md) — Fonts, Figma, and all external sources
+- [Figma → Claude Sync](docs/figma-claude-sync.md) — How design tokens are synced from Figma to this repo
+
+---
+
+## Changelog
+
+| Version | Date | Summary |
+|---------|------|---------|
+| v1.0.3 | 2026-04-23 | Removed Supernova scripts |
+| v1.0.2 | 2026-04-23 | Replaced Supernova sync doc with Figma + Claude workflow guide |
+| v1.0.1 | 2026-04-23 | Migrated pipeline attribution from Supernova to Claude + Figma across all token files |
+| v1.0.0 | 2026-04-23 | Initial release — baseline Pepper token set (CSS + Dart) |

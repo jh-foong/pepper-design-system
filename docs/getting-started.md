@@ -18,11 +18,11 @@ Once added, all Pepper components and styles will be available in the Assets pan
 
 ### 2. Use design tokens
 
-Colors, typography, spacing, and other values are published as Figma variables. Always use these tokens rather than hardcoded values to ensure your designs stay in sync with the codebase.
+Colors, typography, spacing, and other values are published as Figma Variables. Always use these tokens rather than hardcoded values to ensure your designs stay in sync with the codebase.
 
-- **Color** — Use semantic tokens (e.g. `color/text/primary`) rather than raw palette values
+- **Color** — Use semantic tokens (e.g. `semantic/color/foreground/text/primary`) rather than raw palette values
 - **Typography** — Apply text styles from the Pepper type scale
-- **Spacing** — Use the 4px grid. Spacing tokens follow a `space-{n}` naming convention
+- **Spacing** — Use the 4px grid. Spacing tokens follow a `scale/spacing-{n}` naming convention
 
 ### 3. Stay in sync
 
@@ -32,72 +32,45 @@ When the Figma library is updated, Figma will prompt you to **Review and update*
 
 ## For Developers
 
-### 1. Install the package
+### 1. Access token files
 
-```bash
-npm install @pepperstone/pepper-ds
-# or
-yarn add @pepperstone/pepper-ds
-```
+Token files live in this repo under `tokens/`:
 
-### 2. Import styles
+| Folder | Format | Use |
+|--------|--------|-----|
+| `tokens/css/` | CSS Variables | Web projects |
+| `tokens/flutter/` | Dart | Flutter projects |
 
-Import the base stylesheet in your app's entry point:
+Pull the latest from `main` to get the most recent token values.
 
-```js
-import '@pepperstone/pepper-ds/styles/index.css';
-```
+### 2. Use tokens in CSS
 
-This loads design tokens as CSS custom properties and base global styles.
-
-### 3. Use components
-
-Import components directly from the package:
-
-```jsx
-import { Button, Input, Badge } from '@pepperstone/pepper-ds';
-
-function Example() {
-  return (
-    <Button variant="primary" size="md">
-      Get started
-    </Button>
-  );
-}
-```
-
-### 4. Use design tokens in custom code
-
-If you need to reference tokens outside of components, use the CSS custom properties:
+Reference tokens as CSS custom properties:
 
 ```css
 .my-element {
-  color: var(--color-text-primary);
-  padding: var(--space-4);
-  border-radius: var(--radius-md);
+  color: var(--pepper-color-semantic-color-foreground-text-primary);
+  padding: var(--pepper-dimension-scale-spacing-16);
+  border-radius: var(--pepper-border-radius-md);
 }
 ```
 
-Or import token values in JS/TS:
+### 3. Use tokens in Flutter
 
-```js
-import tokens from '@pepperstone/pepper-ds/tokens';
+Import the relevant Dart class from `tokens/flutter/`:
 
-const primaryColor = tokens.color.text.primary;
+```dart
+import 'tokens/flutter/colors.dart';
+import 'tokens/flutter/dimensions.dart';
+
+// Usage
+Color bg = AppColors.semanticColorBackgroundSurfacePrimary;
+double spacing = AppDimensions.scaleSpacing16;
 ```
 
----
+### 4. Staying up to date
 
-## Browser support
-
-Pepper supports the same browsers as Pepperstone's production applications:
-
-| Browser | Version |
-|---------|---------|
-| Chrome | Last 2 versions |
-| Firefox | Last 2 versions |
-| Safari | Last 2 versions |
-| Edge | Last 2 versions |
+Token updates are published as versioned GitHub Releases. Watch the repo or check [Releases](https://github.com/jh-foong/pepper-ds/releases) to see what changed in each version.
 
 ---
 
@@ -105,4 +78,12 @@ Pepper supports the same browsers as Pepperstone's production applications:
 
 - **Slack** — Post in `#design-system` for questions or feedback
 - **Figma** — Comment directly on components in the library file
-- **GitHub** — Open an issue or discussion in the Pepper repository
+- **GitHub** — Open an issue in the [Pepper repository](https://github.com/jh-foong/pepper-ds)
+
+---
+
+## Changelog
+
+| Version | Date | Summary |
+|---------|------|---------|
+| v1.0.4 | 2026-04-23 | Rewrote to reflect actual repo state — removed aspirational npm package references, updated token paths and usage examples |

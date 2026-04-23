@@ -14,11 +14,14 @@ All external sources used in the Pepper Design System.
 
 ## Tokens
 
+Design tokens are authored in Figma as Variables and synced to this repo using the **DesignBridge** Figma plugin and Claude.
+
 | Resource | Link | Notes |
 |----------|------|-------|
-| Supernova workspace | [Open Supernova](https://app.supernova.io/711966-pepperstone/764138-pepper-design-system-v-2/803332-shared-draft/810225-default/overview) | Source of truth for all design tokens |
+| Token files | [`tokens/`](../tokens/) | CSS and Dart outputs, updated on each sync |
+| Sync guide | [Figma → Claude Sync](./figma-claude-sync.md) | How to export and sync tokens |
 
-Token categories currently in Supernova: Color, Typography, Font Family, Font Size, Font Weight, Line Height, Space, Dimension, Size, Border Radius, Border Width, Blur, Shadow, Opacity, Gradient.
+Token categories: Color, Typography, Font Family, Font Size, Font Weight, Line Height, Space, Dimension, Size, Border Radius, Border Width, Blur, Shadow, Opacity, Gradient.
 
 ---
 
@@ -57,6 +60,8 @@ Token categories currently in Supernova: Color, Typography, Font Family, Font Si
 
 ---
 
-## Sync
+## Changelog
 
-Tokens are synced from Supernova to GitHub automatically when configured. See [Supernova → GitHub Sync](./supernova-github-sync.md) for setup instructions.
+| Version | Date | Summary |
+|---------|------|---------|
+| v1.0.4 | 2026-04-23 | Replaced Supernova token section with DesignBridge + Claude workflow. Removed broken link to deleted Supernova sync doc |
