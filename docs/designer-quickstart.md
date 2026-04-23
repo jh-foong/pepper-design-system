@@ -96,6 +96,33 @@ Try one of these starter prompts in your AI tool of choice. All of them assume `
 
 ---
 
+## Working with existing Figma designs (old tokens)
+
+Got a Figma file that uses the **original** Pepper tokens and want to see what it'd look like in the new system? Claude can retokenize it for you.
+
+### Easiest — screenshot + Claude Design
+
+1. In Figma: frame the design → **Export → PNG** (or take a screenshot)
+2. In Claude Design (with `DESIGN.md` attached): drag the image into the chat
+3. Prompt:
+   > *"This is a current Figma design using old Pepper tokens. Redesign it using only DESIGN.md tokens — same layout and content, but swap every colour, typography, spacing, radius, and shadow to the closest equivalent. Flag any values you can't map 1:1."*
+4. You'll get a new version + a list of mismatches (e.g. *"old `brand-500` has no direct match, used `surface/brand/primary` as closest"*)
+
+### More accurate — paste CSS from Figma Dev Mode
+
+1. In Figma: turn on **Dev Mode** (top-right toggle) → select an element
+2. Copy the CSS from the right panel
+3. Paste into Claude:
+   > *"Here's CSS from a current Figma design. Rewrite it using only the tokens in DESIGN.md. For each old value, map it to the closest Pepper token or flag it as no-match."*
+
+### Most accurate — Figma MCP *(semi-technical)*
+
+Figma has an official [MCP server](https://www.figma.com/blog/introducing-figmas-dev-mode-mcp-server/) that lets Claude Code or Cursor read your Figma file directly — no export. Select a frame in Figma → ask Claude to redesign it using DESIGN.md tokens → get a precise translation.
+
+> ⚠️ These methods help you **visualise** what old designs would look like in the new system. They don't update your actual Figma file — treat the output as a reference while manually re-tokenizing, or as a starting point for concept work.
+
+---
+
 ## What happens when the AI invents something
 
 `DESIGN.md` covers **tokens** (colours, typography, spacing, shadows, radii) but does **not** yet cover full component specs. If the AI generates a button that looks off, it's probably inventing the spec.
@@ -130,3 +157,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 |---------|------|---------|
 | v1.0.0 | 2026-04-23 | Initial designer quickstart — fonts, Figma, DESIGN.md, AI tool setup, starter prompts |
 | v1.1.0 | 2026-04-23 | Simplified AI tool setup — two clear options (Claude Code recommended, or quick-trial with any AI) |
+| v1.2.0 | 2026-04-23 | Swapped recommended option to Claude Design (web, no install). Added "Working with existing Figma designs" section with three retokenization methods |
