@@ -53,17 +53,35 @@ Download from Google Fonts and install the same way:
 
 > 💡 **Pro tip — use a Claude Project:** go to [claude.ai/projects](https://claude.ai/projects), create a project called "Pepper Design," and upload `DESIGN.md` once into **Project knowledge**. Every chat inside that project automatically uses it — no re-uploading.
 
-### Option 2 — Claude Code *(for semi-technical users who want the full repo)*
+### Option 2 — Claude Code *(for designers who want local prototype files)*
 
-Best if you want Claude to have access to the full token files, not just `DESIGN.md`.
+Best if you want Claude to save prototypes as real files you can open in a browser, share, or screenshot.
 
-1. Clone the repo via GitHub Desktop (**File → Clone** → paste URL), or run `git clone https://github.com/jh-foong/pepper-design-system` in Terminal
-2. Open Terminal → `cd` into the cloned folder → run `claude`
-3. Prompt: *"Follow @DESIGN.md. Design a [thing]."*
+> ⚠️ **Don't clone the Pepper Design System repo to prototype in.** That repo is the source of truth for tokens — keep it clean. Make a **separate scratch folder** on your Mac and just drop `DESIGN.md` into it.
+
+**Setup (one-time, ~5 min):**
+
+1. Make a folder anywhere on your Mac — e.g. `~/Documents/Pepper Prototypes/`
+2. Download [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md) → click **Raw** → Cmd+S → save into that folder
+3. *(Optional but recommended)* also download [docs/token-reference.md](https://github.com/jh-foong/pepper-design-system/blob/main/docs/token-reference.md) into the same folder for the cheatsheet
+4. Open Terminal → `cd` into the folder → run `claude`
+5. Prompt: *"Follow `@DESIGN.md`. Build a [thing] and save it to `[feature-name]/index.html`."*
+
+Your folder ends up looking like:
+```
+Pepper Prototypes/
+├── DESIGN.md
+├── token-reference.md
+├── login-flow/
+├── trade-ticket/
+└── pricing-page/
+```
+
+The DS repo stays untouched. Reorganise or delete prototypes however you like — they're yours.
 
 Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-code).
 
-> 💡 Re-download `DESIGN.md` (or re-clone) whenever there's a new release (see [Releases](https://github.com/jh-foong/pepper-design-system/releases)).
+> 💡 **Updating tokens:** when a new Pepper release lands ([see Releases](https://github.com/jh-foong/pepper-design-system/releases)), re-download `DESIGN.md` and overwrite the old copy in your scratch folder.
 
 ---
 
@@ -184,3 +202,4 @@ Every new release bumps the tokens and (sometimes) `DESIGN.md`. To stay current:
 | v1.2.2 | 2026-04-23 | Removed "Get Figma access" step — all designers already have it. Renumbered remaining sections (now 3 steps instead of 4). Updated setup time estimate to 10 min |
 | v1.2.3 | 2026-04-23 | Updated Slack channel to `#design-systems-dojo`. Added 🌶️ spice-level ratings to the three retokenization methods (easiest → hardest) |
 | v1.2.4 | 2026-04-23 | Linked to the new `docs/token-reference.md` cheatsheet in the "AI invents something" section |
+| v1.2.5 | 2026-04-23 | Rewrote Option 2 (Claude Code) — designers now set up a separate scratch folder with `DESIGN.md` instead of cloning the DS repo. Keeps the source-of-truth repo clean and gives designers a dedicated prototype space. |
