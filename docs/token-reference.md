@@ -25,9 +25,9 @@ Pepper Design System tokens follow this pattern:
 
 Examples:
 - `--pepper-core-color-semantic-surface-brand-primary` — a colour, semantic layer, used for brand surfaces
-- `--pepper-core-typography-heading-h1` — a composite text style for H1
-- `--pepper-core-space-inset-md` — medium inset (internal padding)
-- `--pepper-core-border-radius-lg` — large border radius
+- `--pepper-typography-heading-h1` — a composite text style for H1
+- `--pepper-space-inset-md` — medium inset (internal padding)
+- `--pepper-border-radius-lg` — large border radius
 
 > 💡 Prefer **semantic tokens** (e.g. `surface-brand-primary`) over **primitive tokens** (e.g. `red-700`). Semantic tokens adapt to light/dark themes automatically.
 
@@ -94,14 +94,14 @@ Defaults and inverses don't have to be exact mathematical opposites. The DS team
 
 | Group | Use for | Example token |
 |-------|---------|---------------|
-| `text/*` | Body text, headings, labels | `--pepper-core-color-semantic-color-foreground-text-primary` |
-| `stroke/*` | Borders, dividers, outlines | `--pepper-core-color-semantic-color-foreground-stroke-default` |
-| `surface/*` | Backgrounds, fills, cards | `--pepper-core-color-semantic-color-background-surface-primary` |
-| `brand/*` | Brand-specific fills and accents | `--pepper-core-color-semantic-color-foreground-stroke-brand-default` |
+| `text/*` | Body text, headings, labels | `--pepper-color-fg-text-primary` |
+| `stroke/*` | Borders, dividers, outlines | `--pepper-color-fg-stroke-default` |
+| `surface/*` | Backgrounds, fills, cards | `--pepper-color-bg-surface-primary` |
+| `brand/*` | Brand-specific fills and accents | `--pepper-color-fg-stroke-brand-default` |
 
 **Full reference:** [`tokens/css/base/color.css`](../tokens/css/base/color.css) — 860+ lines, searchable with Cmd+F
 
-> 💡 Ask Claude: *"What's the hex value of `--pepper-core-color-semantic-color-background-surface-primary` in light mode?"* — it can trace the alias chain for you.
+> 💡 Ask Claude: *"What's the hex value of `--pepper-color-bg-surface-primary` in light mode?"* — it can trace the alias chain for you.
 
 ### Static colours (theme-agnostic)
 
@@ -113,10 +113,10 @@ Common static groups:
 
 | Group | Use for | Example token |
 |-------|---------|---------------|
-| `static-color-surface-brand-*` | Brand fills that must not invert | `--pepper-core-color-static-color-surface-brand-primary` |
-| `static-color-surface-system-*` | System status fills (success, error, warning) that keep hue across themes | `--pepper-core-color-static-color-surface-system-error` |
-| `static-color-text-*` / `-icon-*` | Fixed text/icon colours (e.g. always-white on a brand fill) | `--pepper-core-color-static-color-text-inverse-primary` |
-| `static-color-stroke-inverse-*` | Borders on inverse surfaces | `--pepper-core-color-static-color-stroke-inverse-strong` |
+| `static-color-surface-brand-*` | Brand fills that must not invert | `--pepper-color-static-surface-brand-primary` |
+| `static-color-surface-system-*` | System status fills (success, error, warning) that keep hue across themes | `--pepper-color-static-surface-system-error` |
+| `static-color-text-*` / `-icon-*` | Fixed text/icon colours (e.g. always-white on a brand fill) | `--pepper-color-static-text-inverse-primary` |
+| `static-color-stroke-inverse-*` | Borders on inverse surfaces | `--pepper-color-static-stroke-inverse-strong` |
 | `static-overlay-*` | Scrim / modal backdrops | `--pepper-core-color-static-overlay-medium` |
 | `static-effect-glass-*` | Frosted-glass effects | `--pepper-core-color-static-effect-glass-primary-low` |
 
@@ -136,12 +136,12 @@ Heading sizes **adapt automatically** to screen size. A `h1` on desktop is large
 
 | Token | Weight | Use for |
 |-------|--------|---------|
-| `--pepper-core-typography-heading-h1` | 700 (Bold) | Page titles, hero headlines |
-| `--pepper-core-typography-heading-h2` | 700 | Section titles |
-| `--pepper-core-typography-heading-h3` | 700 | Subsection titles |
-| `--pepper-core-typography-heading-h4` | 700 | Card titles, small headers |
-| `--pepper-core-typography-heading-h5` | 700 | Minor headings |
-| `--pepper-core-typography-heading-h6` | 700 | Smallest headings / eyebrows |
+| `--pepper-typography-heading-h1` | 700 (Bold) | Page titles, hero headlines |
+| `--pepper-typography-heading-h2` | 700 | Section titles |
+| `--pepper-typography-heading-h3` | 700 | Subsection titles |
+| `--pepper-typography-heading-h4` | 700 | Card titles, small headers |
+| `--pepper-typography-heading-h5` | 700 | Minor headings |
+| `--pepper-typography-heading-h6` | 700 | Smallest headings / eyebrows |
 
 > 💡 **In Figma:** switch **modes** on the heading style to preview each breakpoint (e.g. mobile / tablet / desktop). The text resizes itself — you don't need separate styles per screen size.
 
@@ -151,18 +151,18 @@ These styles render at the **same size on every screen**. Pick the token that fi
 
 | Token | Weight | Use for |
 |-------|--------|---------|
-| `--pepper-core-typography-body-lg` | 400 (Regular) | Large body copy |
-| `--pepper-core-typography-body-md` | 400 | Default body copy |
-| `--pepper-core-typography-body-sm` | 400 | Secondary body copy |
-| `--pepper-core-typography-body-xs` | 400 | Metadata, captions |
-| `--pepper-core-typography-body-2xs` | 400 | Very small body (legal footnotes, timestamps) |
-| `--pepper-core-typography-label-lg` | 600 (Semibold) | Large UI labels |
-| `--pepper-core-typography-label-md` | 600 | Default UI labels, button text |
-| `--pepper-core-typography-label-sm` | 600 | Small UI labels |
-| `--pepper-core-typography-label-xs` | 600 | Form labels, tags |
-| `--pepper-core-typography-label-2xs` | 600 | Smallest UI labels |
-| `--pepper-core-typography-legal-md` | 400 | Legal / disclaimer default |
-| `--pepper-core-typography-legal-xs` | 400 | Legal / disclaimer small |
+| `--pepper-typography-body-lg` | 400 (Regular) | Large body copy |
+| `--pepper-typography-body-md` | 400 | Default body copy |
+| `--pepper-typography-body-sm` | 400 | Secondary body copy |
+| `--pepper-typography-body-xs` | 400 | Metadata, captions |
+| `--pepper-typography-body-2xs` | 400 | Very small body (legal footnotes, timestamps) |
+| `--pepper-typography-label-lg` | 600 (Semibold) | Large UI labels |
+| `--pepper-typography-label-md` | 600 | Default UI labels, button text |
+| `--pepper-typography-label-sm` | 600 | Small UI labels |
+| `--pepper-typography-label-xs` | 600 | Form labels, tags |
+| `--pepper-typography-label-2xs` | 600 | Smallest UI labels |
+| `--pepper-typography-legal-md` | 400 | Legal / disclaimer default |
+| `--pepper-typography-legal-xs` | 400 | Legal / disclaimer small |
 
 Variants available: `-underlined`, `-dashed` (for link states).
 
@@ -181,25 +181,25 @@ Two flavours:
 
 | Token | Value |
 |-------|-------|
-| `--pepper-core-space-inset-none` | 0 |
-| `--pepper-core-space-inset-3xs` | 2px |
-| `--pepper-core-space-inset-2xs` | 4px |
-| `--pepper-core-space-inset-xs` | 8px |
-| `--pepper-core-space-inset-sm` | 12px |
-| `--pepper-core-space-inset-md` | 16px |
-| `--pepper-core-space-inset-lg` | 24px |
-| `--pepper-core-space-inset-xl` | 32px |
+| `--pepper-space-inset-none` | 0 |
+| `--pepper-space-inset-3xs` | 2px |
+| `--pepper-space-inset-2xs` | 4px |
+| `--pepper-space-inset-xs` | 8px |
+| `--pepper-space-inset-sm` | 12px |
+| `--pepper-space-inset-md` | 16px |
+| `--pepper-space-inset-lg` | 24px |
+| `--pepper-space-inset-xl` | 32px |
 
 ### Gap (between elements)
 
 | Token | Value |
 |-------|-------|
-| `--pepper-core-space-gap-none` | 0 |
-| `--pepper-core-space-gap-xs` | 4px |
-| `--pepper-core-space-gap-sm` | 8px |
-| `--pepper-core-space-gap-md` | 16px |
-| `--pepper-core-space-gap-lg` | 24px |
-| `--pepper-core-space-gap-xl` | 48px |
+| `--pepper-space-gap-none` | 0 |
+| `--pepper-space-gap-xs` | 4px |
+| `--pepper-space-gap-sm` | 8px |
+| `--pepper-space-gap-md` | 16px |
+| `--pepper-space-gap-lg` | 24px |
+| `--pepper-space-gap-xl` | 48px |
 
 > 💡 Everything is on a **4px grid**. If a value isn't a multiple of 4, it's probably wrong.
 
@@ -215,11 +215,11 @@ Line thickness for borders, dividers, and outlines. Pair with a `stroke/*` colou
 
 | Token | Value | Use for |
 |-------|-------|---------|
-| `--pepper-core-border-width-stroke-width-none` | 0 | No border |
-| `--pepper-core-border-width-stroke-width-xs` | 1px | Default — inputs, cards, dividers |
-| `--pepper-core-border-width-stroke-width-sm` | 2px | Emphasised borders, focus edges |
-| `--pepper-core-border-width-stroke-width-md` | 4px | Heavy borders, selected states |
-| `--pepper-core-border-width-stroke-width-lg` | 8px | Very heavy accents |
+| `--pepper-border-width-stroke-width-none` | 0 | No border |
+| `--pepper-border-width-stroke-width-xs` | 1px | Default — inputs, cards, dividers |
+| `--pepper-border-width-stroke-width-sm` | 2px | Emphasised borders, focus edges |
+| `--pepper-border-width-stroke-width-md` | 4px | Heavy borders, selected states |
+| `--pepper-border-width-stroke-width-lg` | 8px | Very heavy accents |
 
 ### Icon strokes (scale with icon size)
 
@@ -227,17 +227,17 @@ Icon line thickness scales proportionally to icon size — roughly **6.25% of th
 
 | Token | Icon size | Stroke |
 |-------|-----------|--------|
-| `--pepper-core-border-width-stroke-icon-width-icon-12` | 12px | 0.75px |
-| `--pepper-core-border-width-stroke-icon-width-icon-16` | 16px | 1px |
-| `--pepper-core-border-width-stroke-icon-width-icon-20` | 20px | 1.25px |
-| `--pepper-core-border-width-stroke-icon-width-icon-24` | 24px | 1.5px |
-| `--pepper-core-border-width-stroke-icon-width-icon-28` | 28px | 1.75px |
-| `--pepper-core-border-width-stroke-icon-width-icon-32` | 32px | 2px |
-| `--pepper-core-border-width-stroke-icon-width-icon-36` | 36px | 2.25px |
-| `--pepper-core-border-width-stroke-icon-width-icon-40` | 40px | 2.5px |
-| `--pepper-core-border-width-stroke-icon-width-icon-48` | 48px | 3px |
-| `--pepper-core-border-width-stroke-icon-width-icon-56` | 56px | 3.5px |
-| `--pepper-core-border-width-stroke-icon-width-icon-64` | 64px | 4px |
+| `--pepper-border-width-stroke-icon-width-icon-12` | 12px | 0.75px |
+| `--pepper-border-width-stroke-icon-width-icon-16` | 16px | 1px |
+| `--pepper-border-width-stroke-icon-width-icon-20` | 20px | 1.25px |
+| `--pepper-border-width-stroke-icon-width-icon-24` | 24px | 1.5px |
+| `--pepper-border-width-stroke-icon-width-icon-28` | 28px | 1.75px |
+| `--pepper-border-width-stroke-icon-width-icon-32` | 32px | 2px |
+| `--pepper-border-width-stroke-icon-width-icon-36` | 36px | 2.25px |
+| `--pepper-border-width-stroke-icon-width-icon-40` | 40px | 2.5px |
+| `--pepper-border-width-stroke-icon-width-icon-48` | 48px | 3px |
+| `--pepper-border-width-stroke-icon-width-icon-56` | 56px | 3.5px |
+| `--pepper-border-width-stroke-icon-width-icon-64` | 64px | 4px |
 
 **Full reference:** [`tokens/css/base/border-width.css`](../tokens/css/base/border-width.css)
 
@@ -247,15 +247,15 @@ Icon line thickness scales proportionally to icon size — roughly **6.25% of th
 
 | Token | Value | Use for |
 |-------|-------|---------|
-| `--pepper-core-border-radius-none` | 0 | Sharp corners, tabs |
-| `--pepper-core-border-radius-xs` | 2px | Subtle rounding |
-| `--pepper-core-border-radius-sm` | 4px | Small elements, inputs |
-| `--pepper-core-border-radius-md` | 8px | Default — buttons, cards |
-| `--pepper-core-border-radius-lg` | 12px | Larger cards, modals |
-| `--pepper-core-border-radius-xl` | 16px | Hero cards, prominent surfaces |
-| `--pepper-core-border-radius-2xl` | 24px | Large containers |
-| `--pepper-core-border-radius-3xl` | 32px | Very large surfaces |
-| `--pepper-core-border-radius-full` | 9999px | Pills, circles, avatars |
+| `--pepper-border-radius-none` | 0 | Sharp corners, tabs |
+| `--pepper-border-radius-xs` | 2px | Subtle rounding |
+| `--pepper-border-radius-sm` | 4px | Small elements, inputs |
+| `--pepper-border-radius-md` | 8px | Default — buttons, cards |
+| `--pepper-border-radius-lg` | 12px | Larger cards, modals |
+| `--pepper-border-radius-xl` | 16px | Hero cards, prominent surfaces |
+| `--pepper-border-radius-2xl` | 24px | Large containers |
+| `--pepper-border-radius-3xl` | 32px | Very large surfaces |
+| `--pepper-border-radius-full` | 9999px | Pills, circles, avatars |
 
 **Full reference:** [`tokens/css/base/border-radius.css`](../tokens/css/base/border-radius.css)
 
@@ -267,22 +267,22 @@ Elevation shadows — from subtle to prominent.
 
 | Token | Use for |
 |-------|---------|
-| `--pepper-core-shadow-2xs` | Subtle separation |
-| `--pepper-core-shadow-xs` | Default resting state for cards |
-| `--pepper-core-shadow-sm` | Slight lift (hover states) |
-| `--pepper-core-shadow-md` | Medium elevation (popovers, dropdowns) |
-| `--pepper-core-shadow-lg` | High elevation (sticky panels) |
-| `--pepper-core-shadow-xl` | Very high elevation (modals) |
-| `--pepper-core-shadow-2xl` | Maximum elevation (dialogs over modals) |
+| `--pepper-shadow-2xs` | Subtle separation |
+| `--pepper-shadow-xs` | Default resting state for cards |
+| `--pepper-shadow-sm` | Slight lift (hover states) |
+| `--pepper-shadow-md` | Medium elevation (popovers, dropdowns) |
+| `--pepper-shadow-lg` | High elevation (sticky panels) |
+| `--pepper-shadow-xl` | Very high elevation (modals) |
+| `--pepper-shadow-2xl` | Maximum elevation (dialogs over modals) |
 
 Plus focus-ring tokens (for accessibility):
 
 | Token | Use for |
 |-------|---------|
-| `--pepper-core-shadow-focus-rings-default` | Default focus indicator |
-| `--pepper-core-shadow-focus-rings-inverse` | Focus on dark surfaces |
-| `--pepper-core-shadow-focus-rings-error` | Focus on error states |
-| `--pepper-core-shadow-focus-rings-subtle` | Subtle focus (e.g. icon buttons) |
+| `--pepper-shadow-focus-rings-default` | Default focus indicator |
+| `--pepper-shadow-focus-rings-inverse` | Focus on dark surfaces |
+| `--pepper-shadow-focus-rings-error` | Focus on error states |
+| `--pepper-shadow-focus-rings-subtle` | Subtle focus (e.g. icon buttons) |
 
 **Full reference:** [`tokens/css/base/shadow.css`](../tokens/css/base/shadow.css)
 
