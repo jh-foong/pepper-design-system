@@ -1,0 +1,11 @@
+{
+  "skills": [
+    {
+      "skillId": "pepper-ds-core-git-commit",
+      "name": "pepper-ds-core-git-commit",
+      "description": "Safe git commit workflow for designers working on design system changes. Use this skill whenever the user wants to commit, stage, or push changes to git — even if they just say 'commit my changes', 'push this', 'save to git', or 'stage my files'. Always use this skill before any git commit or push action to prevent accidentally committing unrelated files.",
+      "creatorType": "custom",
+      "enabled": true
+    }
+  ]
+}
