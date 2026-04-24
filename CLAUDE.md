@@ -38,6 +38,7 @@ Do NOT remove these in future edits. If you're restructuring the README, move th
 
 | Resource | URL | Notes |
 |----------|-----|-------|
+| Docs site | https://jh-foong.github.io/pepper-design-system/ | Front door — hosted docs for designers, PMs, devs |
 | Figma | https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT | Branch of main file — read-only until merged |
 | GitHub | https://github.com/jh-foong/pepper-design-system | Public sandbox — official home will move to Pepperstone org once permissions are sorted |
 
