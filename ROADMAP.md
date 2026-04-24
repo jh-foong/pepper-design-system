@@ -40,19 +40,19 @@ Figma + Storybook together cover ~95% of Supernova's "Browse design system" feat
 
 ---
 
-### 🔄 Phase 1 — Docs site (this week, ~2 hrs)
+### ✅ Phase 1 — Docs site (done 2026-04-24)
 
 **Goal:** Replace Supernova's Documentation destination with a hosted docs site.
 
-- [ ] Set up **MkDocs Material** in the repo
-- [ ] Point it at existing markdown — no new content needed
-- [ ] Configure Pepper Design System brand colours + Manrope font
-- [ ] Deploy to **GitHub Pages** (`jh-foong.github.io/pepper-design-system`)
-- [ ] Add site URL to README as the "front door"
+- [x] Set up **MkDocs Material** in the repo
+- [x] Point it at existing markdown — no new content needed
+- [x] Configure Pepper Design System brand colours + Manrope font
+- [x] Deploy to **GitHub Pages** (`jh-foong.github.io/pepper-design-system`)
+- [x] Add site URL to README as the "front door"
 
-**What this unlocks:** A single URL to send anyone (designers, PMs, devs) that's friendlier than raw GitHub markdown. Built-in search across all docs.
+**Live at:** https://jh-foong.github.io/pepper-design-system/
 
-**Decision needed:** Custom domain (`pepper.pepperstone.com`?) or GitHub Pages subdomain?
+**Open decision:** Custom domain (`pepper.pepperstone.com`?) — not blocking anything, revisit when Pepperstone org access is sorted.
 
 ---
 
@@ -191,4 +191,4 @@ Figma + Storybook together cover ~95% of Supernova's "Browse design system" feat
 
 ---
 
-_Last updated: 2026-04-24. Next review: Phase 1 completion._
+_Last updated: 2026-04-24. Next review: Phase 2 completion._
