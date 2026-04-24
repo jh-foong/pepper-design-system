@@ -22,6 +22,16 @@ Junhan doesn't want to hunt for URLs or write PR copy. Always give them ready-to
 - **`pepper-core-*`** / **`PepperCore*`** — token identifiers
 - **Never "Pepper" alone in prose** — ambiguous; always qualify
 
+## Standing rule: preserve the README headline + humour
+
+The `README.md` top-of-page must always keep:
+
+1. **Heading:** `# 🥵 🌶️ 🔥 Pepper Design System` — emojis in front
+2. **Intro line:** `Pepper DS Core is Pepperstone's design system — ...`
+3. **Spicy tagline** (below the version line): `> 🌶️ **Heads up — things are about to get spicy.** 🎵 [Press play first](https://www.youtube.com/watch?v=rbc_LxfhSoY)`
+
+Do NOT remove these in future edits. If you're restructuring the README, move them together as a unit but keep them. The spice is part of the brand voice.
+
 ---
 
 ## Key Resources
