@@ -80,6 +80,25 @@ The CSS files in `tokens/css/base/` are the source of truth. Every other format 
 
 See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workflow.
 
+### Standing flow: "I just updated some tokens — what do I do now?"
+
+When Junhan says this (or any variant like "new token export", "I updated Figma tokens", "synced from Figma"), run this flow without re-asking the steps:
+
+1. **Locate the new DesignBridge export** — ask for the path if not obvious (usually `source/designbridge-YYYY-MM-DD.md`)
+2. **Rename `pepper-` → `pepper-core-`** across every format per the rename table below (DesignBridge has no prefix setting — always rename)
+3. **Regenerate** `tokens/css/`, `tokens/flutter/`, `tokens/json/`, `tokens/experimental/*`
+4. **Update** `DESIGN.md` version stamp + any affected token references
+5. **Diff summary** — tell Junhan in plain English what actually changed (colours renamed, new tokens added, removed tokens). No jargon.
+6. **Branch + commit + push** on a new branch named `tokens/sync-YYYY-MM-DD`
+7. **Surface** (per the "after every push" standing rule): PR link + copy-paste title + copy-paste description in a fenced code block
+8. **After PR is merged**, proactively give Junhan:
+   - GitHub release draft — tag (bump per semver: new tokens = minor, fix = patch), title, description — link: https://github.com/jh-foong/pepper-design-system/releases/new
+   - Slack post copy for `#design-systems-dojo` including: what changed, what designers need to do (re-download `DESIGN.md` from Raw), release link
+
+Junhan's trigger phrase is typically *"I just updated some tokens — what do I do now?"*. Treat any similar phrasing the same way.
+
+---
+
 ### ⚠️ Standing rule: rename `pepper-` → `pepper-core-` on every sync
 
 DesignBridge emits tokens with the `pepper-` prefix and has no setting to change it. Junhan has decided the canonical prefix should be `pepper-core-` instead.
