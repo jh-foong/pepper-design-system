@@ -1,6 +1,6 @@
-# Designer Quickstart — Vibe Coding with Pepper
+# Designer Quickstart — Vibe Coding with Pepper Design System
 
-A 10-minute setup to go from "I just got handed this repo" to "I'm generating on-brand Pepper UI with my AI tool of choice."
+A 10-minute setup to go from "I just got handed this repo" to "I'm generating on-brand UI with Pepper Design System in my AI tool of choice."
 
 Made for designers. No coding required.
 
@@ -12,10 +12,10 @@ Made for designers. No coding required.
 
 ## How this fits together (30-second mental model)
 
-- **`DESIGN.md`** is a single text file that tells any AI tool what "on-brand Pepper" looks like (colours, type, spacing, shadows). It's the only thing you *have* to keep fresh.
+- **`DESIGN.md`** is a single text file that tells any AI tool what on-brand Pepper Design System looks like (colours, type, spacing, shadows). It's the only thing you *have* to keep fresh.
 - **This GitHub repo** is the source of truth — where `DESIGN.md` and the raw token files live. You don't work *inside* the repo; you just pull `DESIGN.md` out of it.
-- **Your AI tool** (Claude Design / Claude Code) reads `DESIGN.md` as context, then outputs real coded prototypes or design artifacts using Pepper tokens.
-- **Figma stays as-is for production work.** New Pepper tokens aren't merged into the main Figma library yet, so keep shipping production designs on the existing library. Use this flow for concepts, pitches, user tests, and anything not shipping to prod.
+- **Your AI tool** (Claude Design / Claude Code) reads `DESIGN.md` as context, then outputs real coded prototypes or design artifacts using Pepper Design System tokens.
+- **Figma stays as-is for production work.** New Pepper Design System tokens aren't merged into the main Figma library yet, so keep shipping production designs on the existing library. Use this flow for concepts, pitches, user tests, and anything not shipping to prod.
 
 ---
 
@@ -23,15 +23,15 @@ Made for designers. No coding required.
 
 By the end of this guide you'll be able to:
 
-- Sketch UI in your AI tool (Claude Design, Claude Code, Cursor, v0, Lovable, etc.) and have it output **real Pepper designs** — correct colours, typography, spacing, shadows, no guessing
-- Download or reference the Pepper design tokens for any project
+- Sketch UI in your AI tool (Claude Design, Claude Code, Cursor, v0, Lovable, etc.) and have it output **real Pepper Design System designs** — correct colours, typography, spacing, shadows, no guessing
+- Download or reference the Pepper Design System tokens for any project
 - Know where to go when you need to update something
 
 ---
 
 ## 1. Install the fonts (2 min)
 
-Pepper uses **Manrope** as its primary typeface, plus Noto fonts for Arabic, Traditional Chinese, and Japanese.
+Pepper Design System uses **Manrope** as its primary typeface, plus Noto fonts for Arabic, Traditional Chinese, and Japanese.
 
 ### Manrope (required)
 
@@ -90,7 +90,7 @@ The DS repo stays untouched. Reorganise or delete prototypes however you like �
 
 Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-code).
 
-> 💡 **Updating tokens:** when a new Pepper release lands ([see Releases](https://github.com/jh-foong/pepper-design-system/releases)), re-download `DESIGN.md` and overwrite the old copy in your scratch folder.
+> 💡 **Updating tokens:** when a new Pepper Design System release lands ([see Releases](https://github.com/jh-foong/pepper-design-system/releases)), re-download `DESIGN.md` and overwrite the old copy in your scratch folder.
 
 ---
 
@@ -122,7 +122,7 @@ Try one of these in your AI tool of choice. All of them assume `DESIGN.md` is lo
 
 ## Working with existing Figma designs (old tokens) 🥵🌶️🔥
 
-Got a Figma file that uses the **original** Pepper tokens and want to see what it'd look like in the new system? Claude can retokenize it for you.
+Got a Figma file that uses the **original** Pepper Design System tokens and want to see what it'd look like in the new system? Claude can retokenize it for you.
 
 Each method below is rated by **spice level** — more chillis = more setup required.
 
@@ -136,7 +136,7 @@ Each method below is rated by **spice level** — more chillis = more setup requ
 
 ### 🌶️🌶️ More accurate — paste CSS from Figma Dev Mode
 
-Figma's **Dev Mode** exports exact CSS for any element (colours as hex, sizes in px, etc). Paste that into Claude and ask it to translate to Pepper tokens.
+Figma's **Dev Mode** exports exact CSS for any element (colours as hex, sizes in px, etc). Paste that into Claude and ask it to translate to Pepper Design System tokens.
 
 **Setup (one-time):**
 - Dev Mode is included on all paid Figma seats. If you don't see the toggle, your Figma role is likely Viewer/Edit-only — ask your Figma admin for Dev Mode access.
@@ -170,7 +170,7 @@ Figma's official **Dev Mode MCP server** lets Claude read your selected Figma fr
 
 **Using it:**
 1. In Figma desktop, select the frame you want translated
-2. In Claude Code (inside your cloned Pepper repo folder), prompt:
+2. In Claude Code (inside your cloned Pepper Design System repo folder), prompt:
    > *"Using the Figma MCP, read my current selection. Then rewrite it using only the tokens in `@DESIGN.md`. Output the translation as CSS/JSX plus a table of which old values mapped to which new Pepper tokens."*
 3. Claude pulls the Figma data live, applies DESIGN.md, and returns code + mapping
 
@@ -186,7 +186,7 @@ Figma's official **Dev Mode MCP server** lets Claude read your selected Figma fr
 
 **Fix:** refine the prompt. E.g. *"Button should use `--pepper-core-typography-label-md`, 12px vertical padding, 24px horizontal, radius `md`, shadow `xs`."*
 
-Longer-term, Pepper will add component specs directly to `DESIGN.md` to reduce this.
+Longer-term, Pepper Design System will add component specs directly to `DESIGN.md` to reduce this.
 
 > 💡 Need to look up a token Claude suggested? See the [Token Reference & Cheatsheet](token-reference.md) — values for every category plus how to apply them in Figma.
 

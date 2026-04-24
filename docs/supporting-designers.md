@@ -1,4 +1,4 @@
-# Supporting designers using Pepper
+# Supporting designers using Pepper Design System
 
 For the DS team (currently Junhan). A quick playbook for when a designer says *"Pepper isn't working for me"* or *"Claude is generating something weird."*
 
@@ -36,7 +36,7 @@ Three quick signals, in order of severity:
 ### Step 3 — Fix it
 
 - **If stale** → tell them to re-download from the canonical URL.
-- **If edited** → tell them (a) their edits are now lost by re-downloading, and (b) if the change is something Pepper should adopt, they need to raise an issue on GitHub so it goes into the next release.
+- **If edited** → tell them (a) their edits are now lost by re-downloading, and (b) if the change is something Pepper Design System should adopt, they need to raise an issue on GitHub so it goes into the next release.
 - **If the diff is small and cosmetic** (e.g. they added a personal note, changed a heading) → harmless, but explain that any future re-download will wipe it.
 
 ---

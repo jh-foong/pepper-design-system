@@ -17,7 +17,7 @@ All token values are sourced from [`tokens/css/base/`](../tokens/css/). If a tok
 
 ## Naming convention
 
-Pepper tokens follow this pattern:
+Pepper Design System tokens follow this pattern:
 
 ```
 --pepper-core-[category]-[group]-[variant]
@@ -43,7 +43,7 @@ Colour tokens are layered:
 
 ### Understanding light vs dark (and inverse)
 
-Before picking a colour token, it helps to understand how Pepper handles themes and what "inverse" actually means.
+Before picking a colour token, it helps to understand how Pepper Design System handles themes and what "inverse" actually means.
 
 #### The mirror line
 
@@ -290,7 +290,7 @@ Plus focus-ring tokens (for accessibility):
 
 ## Applying tokens in Figma
 
-> ⚠️ **The new Pepper Figma library isn't merged yet** (pending vendor A handover). Until then, use the interim workflow below.
+> ⚠️ **The new Pepper Design System Figma library isn't merged yet** (pending vendor A handover). Until then, use the interim workflow below.
 
 ### Interim workflow (now)
 
@@ -311,7 +311,7 @@ For any token Claude suggests:
 Once the Figma branch is merged:
 
 1. Open **Variables** panel (right side, in design mode)
-2. Find the Pepper collection → search for the token name
+2. Find the Pepper Design System collection → search for the token name
 3. Right-click an element → **Apply variable**
 4. Or use **Styles** for composite tokens (typography, effects)
 
