@@ -19,7 +19,8 @@ Junhan doesn't want to hunt for URLs or write PR copy. Always give them ready-to
 - **"Pepper Design System"** — use in headings and body copy when referring to the product/brand
 - **"Pepper DS"** — acceptable shorthand in tight spaces (tables, short headings)
 - **"Pepperstone"** — company name, untouched
-- **`pepper-core-*`** / **`PepperCore*`** — token identifiers
+- **`pepper-core-*`** / **`PepperCore*`** — primitive token identifiers (raw scale values)
+- **`pepper-*`** / **`Pepper*`** — semantic/component/state/overlay token identifiers (use these in UI)
 - **Never "Pepper" alone in prose** — ambiguous; always qualify
 
 ## Standing rule: preserve the README headline + humour
@@ -85,7 +86,7 @@ See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workfl
 When Junhan says this (or any variant like "new token export", "I updated Figma tokens", "synced from Figma"), run this flow without re-asking the steps:
 
 1. **Locate the new DesignBridge export** — ask for the path if not obvious (usually `source/designbridge-YYYY-MM-DD.md`)
-2. **Rename `pepper-` → `pepper-core-`** across every format per the rename table below (DesignBridge has no prefix setting — always rename)
+2. **Apply the two-prefix split** (primitives → `pepper-core-*`, semantics → `pepper-*`) per the rename table below
 3. **Regenerate** `tokens/css/`, `tokens/flutter/`, `tokens/json/`, `tokens/experimental/*`
 4. **Update** `DESIGN.md` version stamp + any affected token references
 5. **Diff summary** — tell Junhan in plain English what actually changed (colours renamed, new tokens added, removed tokens). No jargon.
@@ -99,24 +100,36 @@ Junhan's trigger phrase is typically *"I just updated some tokens — what do I 
 
 ---
 
-### ⚠️ Standing rule: rename `pepper-` → `pepper-core-` on every sync
+### ⚠️ Standing rule: two-prefix model on every sync
 
-DesignBridge emits tokens with the `pepper-` prefix and has no setting to change it. Junhan has decided the canonical prefix should be `pepper-core-` instead.
+As of v2.0.0, Pepper Design System uses a **two-prefix token model**:
 
-**Every time a DesignBridge export is processed, Claude MUST rename the prefix before regenerating any output files.** Apply across all formats:
+- **`--pepper-core-*`** = **primitive** tokens. Raw scale values with no UI meaning (e.g. `color-red-500`, `space-4`, `radius-md` as raw `8px`). Building blocks. Don't use directly in product.
+- **`--pepper-*`** = **semantic, component, static, state, and overlay** tokens. These reference primitives and carry UI meaning (e.g. `bg-primary`, `text-error`, `surface-brand-primary`). Use these in product.
 
-| Format | Rename |
-|---|---|
-| CSS custom properties | `--pepper-*` → `--pepper-core-*` |
-| Flutter / Dart | `pepper*` identifiers → `pepperCore*` |
-| JSON (DTCG) | Top-level group keys stay semantic; any prefixed names become `pepper-core-*` |
-| iOS Swift | `Pepper*` enums → `PepperCore*` |
-| Android XML | `pepper_*` names → `pepper_core_*` |
-| React Native TS | `pepper*` exports → `pepperCore*` |
-| Tailwind config | `pepper-*` keys → `pepper-core-*` |
-| DESIGN.md · docs | Every visible `--pepper-*` reference → `--pepper-core-*` |
+DesignBridge exports **everything** with the raw `pepper-` prefix. Claude MUST split on processing: primitives get renamed to `--pepper-core-*`, semantics stay as `--pepper-*`.
 
-If the incoming DesignBridge export still uses the raw `pepper-` prefix, treat that as expected — just rename on the way through. Do NOT commit files with the raw `pepper-` prefix to `tokens/` after a sync.
+**How to tell primitive vs semantic (heuristic):**
+
+- **Primitive** — raw scale value, no UI meaning. Name looks like a palette entry or a step on a scale: `color-red-500`, `color-neutral-900`, `space-4`, `radius-md`, `font-size-16`, `line-height-24`.
+- **Semantic / component / state / overlay** — references a primitive and names a UI role: `bg-primary`, `text-error`, `surface-brand-primary`, `stroke-default`, `overlay-medium`, `color-static-surface-system-error`. If the name tells you *where it goes in the UI*, it's semantic.
+
+When in doubt, check `tokens/css/base/` — the canonical files already reflect the split.
+
+**Per-format rename table:**
+
+| Format | Primitives (→ Core) | Semantics (stay) |
+|---|---|---|
+| CSS custom properties | raw-scale `--pepper-*` → `--pepper-core-*` | semantic `--pepper-*` stays as-is |
+| Flutter / Dart | primitive `pepper*` identifiers → `pepperCore*` | semantic `pepper*` stays as `pepper*` |
+| JSON (DTCG) | primitive prefixed names → `pepper-core-*` | semantic group keys stay as-is |
+| iOS Swift | primitive `Pepper*` enums → `PepperCore*` | semantic `Pepper*` stays as `Pepper*` |
+| Android XML | primitive `pepper_*` names → `pepper_core_*` | semantic `pepper_*` stays as `pepper_*` |
+| React Native TS | primitive `pepper*` exports → `pepperCore*` | semantic `pepper*` stays as `pepper*` |
+| Tailwind config | primitive `pepper-*` keys → `pepper-core-*` | semantic `pepper-*` stays as `pepper-*` |
+| DESIGN.md · docs | primitive refs → `--pepper-core-*` | semantic refs → `--pepper-*` |
+
+Do NOT commit files with the raw DesignBridge `pepper-` prefix on primitives. Do NOT rename semantic `pepper-*` tokens to `pepper-core-*` — that was the v1.3.0 rule and is no longer correct.
 
 ---
 

@@ -2,7 +2,7 @@
 
 Pepper DS Core is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
 
-**Current version:** [`v1.3.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.3.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
+**Current version:** [`v2.0.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v2.0.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
 **Docs site:** [jh-foong.github.io/pepper-design-system](https://jh-foong.github.io/pepper-design-system/)
 
@@ -120,6 +120,7 @@ See [`tokens/experimental/README.md`](tokens/experimental/README.md) for how Tie
 
 | Version | Date | Summary |
 |---------|------|---------|
+| [v2.0.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v2.0.0) | 2026-04-24 | **Breaking:** two-prefix token model — primitives now `--pepper-core-*`, semantic/component/state/overlay tokens now `--pepper-*`. Added dark mode via `[data-theme="dark"]`. New composite typography tokens `--pepper-typography-*` using CSS `font:` shorthand. Fixed shadow `--rgb-pepper-*` bug (colour vars consumed directly). Dark shadow palette deferred to v2.1. |
 | [v1.3.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.3.0) | 2026-04-23 | **Breaking rename:** token prefix changed from `pepper-` to `pepper-core-` across all formats (CSS vars, Swift enums, Android XML, React Native, Tailwind, docs). Added JSON (W3C DTCG) canonical export at `tokens/json/tokens.json` for Style Dictionary / Token Studio interop. Added experimental Tier 3 exports for iOS (Swift), Android (XML), React Native (TS), and Tailwind — all untested, see `tokens/experimental/README.md` |
 | [v1.2.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.2.0) | 2026-04-23 | Designer onboarding release: moved repo to public personal sandbox, added pre-merge scope callout, swapped recommended AI tool to Claude Design (web), added three retokenization methods for legacy Figma designs (screenshot, Dev Mode CSS, Figma MCP) with spice-level ratings, trimmed quickstart to 3 steps (10 min), updated Slack channel to `#design-systems-dojo`, added `docs/token-reference.md` cheatsheet for looking up tokens + applying them in Figma |
 | [v1.1.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.1.0) | 2026-04-23 | Added `DESIGN.md`, raw Figma source files, and legal text styles (+ body-2xs, label-xs/2xs). Fixed Flutter `labelLabelLg` weight bug |
