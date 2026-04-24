@@ -6,7 +6,7 @@ A lookup guide for when Claude suggests a token and you need to know what it is 
 
 ## How to use this doc
 
-1. Claude suggests something like *"use `--pepper-core-surface-brand-primary`"*
+1. Claude suggests something like *"use `--pepper-color-bg-surface-brand-primary`"*
 2. Find the token category below (colour, typography, spacing, etc.)
 3. Look up the value or its linked source file
 4. Apply it in Figma — see [Applying tokens in Figma](#applying-tokens-in-figma) at the bottom
@@ -17,19 +17,26 @@ All token values are sourced from [`tokens/css/base/`](../tokens/css/). If a tok
 
 ## Naming convention
 
-Pepper Design System tokens follow this pattern:
+Pepper Design System uses a **two-prefix model** (v2.0.0+):
 
 ```
---pepper-core-[category]-[group]-[variant]
+--pepper-core-[category]-[scale]   ← primitives (raw values, building blocks)
+--pepper-[category]-[group]-[variant]   ← semantic / component / static / state / overlay (use these)
 ```
 
 Examples:
-- `--pepper-core-color-semantic-surface-brand-primary` — a colour, semantic layer, used for brand surfaces
-- `--pepper-typography-heading-h1` — a composite text style for H1
+
+**Primitives (`--pepper-core-*`) — raw ingredients, don't use directly:**
+- `--pepper-core-color-brand-primary-blue-500` — a specific blue on the palette
+- `--pepper-core-color-neutral-950` — a specific neutral step
+
+**Semantic (`--pepper-*`) — use these in UI work:**
+- `--pepper-color-bg-surface-brand-primary` — a brand surface background
+- `--pepper-typography-heading-h1` — composite text style for H1
 - `--pepper-space-inset-md` — medium inset (internal padding)
 - `--pepper-border-radius-lg` — large border radius
 
-> 💡 Prefer **semantic tokens** (e.g. `surface-brand-primary`) over **primitive tokens** (e.g. `red-700`). Semantic tokens adapt to light/dark themes automatically.
+> 💡 Prefer **semantic tokens** (`--pepper-*`, e.g. `surface-brand-primary`) over **primitive tokens** (`--pepper-core-*`, e.g. `red-700`). Semantic tokens adapt to light/dark themes automatically.
 
 ---
 
@@ -117,8 +124,8 @@ Common static groups:
 | `static-color-surface-system-*` | System status fills (success, error, warning) that keep hue across themes | `--pepper-color-static-surface-system-error` |
 | `static-color-text-*` / `-icon-*` | Fixed text/icon colours (e.g. always-white on a brand fill) | `--pepper-color-static-text-inverse-primary` |
 | `static-color-stroke-inverse-*` | Borders on inverse surfaces | `--pepper-color-static-stroke-inverse-strong` |
-| `static-overlay-*` | Scrim / modal backdrops | `--pepper-core-color-static-overlay-medium` |
-| `static-effect-glass-*` | Frosted-glass effects | `--pepper-core-color-static-effect-glass-primary-low` |
+| `static-overlay-*` | Scrim / modal backdrops | `--pepper-color-static-overlay-medium` |
+| `static-effect-glass-*` | Frosted-glass effects | `--pepper-color-static-effect-glass-primary-low` |
 
 > ⚠️ **Rule of thumb:** reach for **semantic** first. Only use **static** when you've got a specific reason the colour shouldn't adapt to theme — otherwise dark-mode users will see a glaring light-mode colour (or vice versa).
 
@@ -304,7 +311,7 @@ For any token Claude suggests:
    - **Border radius:** paste the px value into corner radius
    - **Shadow:** copy values into Figma's effect panel
 3. **Leave a comment** noting the token name so future designers know what to swap in once the library merges:
-   > *"Using `--pepper-core-surface-brand-primary` (#XYZ) — swap to variable once library merges."*
+   > *"Using `--pepper-color-bg-surface-brand-primary` (#XYZ) — swap to variable once library merges."*
 
 ### Proper workflow (post-merge)
 
@@ -329,7 +336,7 @@ Three possibilities:
 Check primitives in `color.css`. If still nothing fits, the design may need a new token — flag it in `#design-systems-dojo`.
 
 ### Claude keeps using inline hex values instead of tokens
-Re-prompt: *"Rewrite using only `--pepper-core-*` tokens from DESIGN.md. Do not inline any values."*
+Re-prompt: *"Rewrite using only `--pepper-*` semantic tokens from DESIGN.md (or `--pepper-core-*` primitives where genuinely needed). Do not inline any values."*
 
 ---
 
@@ -343,3 +350,4 @@ Re-prompt: *"Rewrite using only `--pepper-core-*` tokens from DESIGN.md. Do not 
 | v1.0.3 | 2026-04-23 | Added Static colours subsection — theme-agnostic tokens that don't flip between light/dark mode (brand, system, overlay, glass) |
 | v1.0.4 | 2026-04-23 | Added migration note for designers coming from the old DS — "fixed" tokens have been renamed to "static" and separated into their own layer |
 | v1.0.5 | 2026-04-23 | Added "Understanding light vs dark (and inverse)" section — mirror-line mental model, default vs inverse clarified (inverse ≠ dark), flip-vs-static behaviour table, 3-question decision flow, and a 1:1 mirror caveat. Adapted from the old Figma explainer frames. |
+| v1.1.0 | 2026-04-24 | v2.0.0 sweep — rewrote naming-convention section for two-prefix model (`--pepper-core-*` primitives vs `--pepper-*` semantic/static/etc), fixed semantic-example tokens that were still prefixed `--pepper-core-*` (static overlay, static glass, brand-primary mentions, typography in troubleshooting prompt). |

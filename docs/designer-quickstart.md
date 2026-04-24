@@ -184,7 +184,7 @@ Figma's official **Dev Mode MCP server** lets Claude read your selected Figma fr
 
 `DESIGN.md` covers **tokens** (colours, typography, spacing, shadows, radii) but does **not** yet cover full component specs. If the AI generates a button that looks off, it's probably inventing the spec.
 
-**Fix:** refine the prompt. E.g. *"Button should use `--pepper-core-typography-label-md`, 12px vertical padding, 24px horizontal, radius `md`, shadow `xs`."*
+**Fix:** refine the prompt. E.g. *"Button should use `--pepper-typography-label-md`, 12px vertical padding, 24px horizontal, radius `md`, shadow `xs`."*
 
 Longer-term, Pepper Design System will add component specs directly to `DESIGN.md` to reduce this.
 
@@ -261,3 +261,4 @@ To save everyone time, here's when to reach out and when to just go.
 | v1.2.4 | 2026-04-23 | Linked to the new `docs/token-reference.md` cheatsheet in the "AI invents something" section |
 | v1.2.5 | 2026-04-23 | Rewrote Option 2 (Claude Code) — designers now set up a separate scratch folder with `DESIGN.md` instead of cloning the DS repo. Keeps the source-of-truth repo clean and gives designers a dedicated prototype space. |
 | v1.2.6 | 2026-04-23 | Added mental-model intro, pre-session checklist, "Stay up to date" section (Watch releases / version-stamp self-check / Claude Code WebFetch pattern), and "Ping vs ship it yourself" box — to help designers work independently. |
+| v1.2.7 | 2026-04-24 | v2.0.0 sweep — corrected `--pepper-core-typography-label-md` example to `--pepper-typography-label-md` (typography is semantic, stays `--pepper-*`). |
