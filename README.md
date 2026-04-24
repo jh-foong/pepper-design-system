@@ -4,7 +4,7 @@ Pepper DS Core is Pepperstone's design system — a shared library of design dec
 
 **Current version:** [`v1.3.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.3.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
-> 🌶️ **Heads up — things are about to get spicy.**
+> 🌶️ **Heads up — things are about to get spicy.** 🎵 [Press play first](https://www.youtube.com/watch?v=rbc_LxfhSoY)
 
 ---
 
