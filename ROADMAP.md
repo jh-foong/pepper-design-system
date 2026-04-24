@@ -183,6 +183,43 @@ Figma + Storybook together cover ~95% of Supernova's "Browse design system" feat
 
 ---
 
+## Starting a new chat (carrying this roadmap forward)
+
+Context doesn't survive across Claude chats by default. Use one of these three patterns so you don't have to re-explain Pepper Design System every time.
+
+### 1. Claude Code in this repo (best for real work)
+
+Open Claude Code in the repo folder. `CLAUDE.md` loads automatically. Then say:
+
+> *"Read ROADMAP.md. We're working on Phase [N]. Let's start."*
+
+Use this for: token work, PRs, doc edits, anything that touches files.
+
+### 2. Claude Project (best for planning / strategy chats)
+
+Create a Claude Project called **"Pepper Design System — Roadmap"** and attach:
+
+- `ROADMAP.md`
+- `CLAUDE.md`
+- `DESIGN.md`
+- `README.md`
+
+Every chat inside that project already "knows" everything. No re-uploading.
+
+Use this for: brainstorming phases, stakeholder talking points, decision-making away from the repo.
+
+### 3. One-shot handoff prompt (for any fresh chat)
+
+Paste this into any new Claude chat:
+
+> *"I'm Junhan, Product Designer at Pepperstone, no coding background. I maintain Pepper Design System. Read these three files from https://github.com/jh-foong/pepper-design-system: CLAUDE.md (standing rules), ROADMAP.md (Supernova replacement plan), DESIGN.md (token spec). Then help me with [X]."*
+
+Claude will fetch them and be caught up in ~30 seconds.
+
+**Golden rule:** as long as `CLAUDE.md` + `ROADMAP.md` stay in the repo and stay current, the plan survives any chat reset.
+
+---
+
 ## How to contribute
 
 - **Raise an issue** → https://github.com/jh-foong/pepper-design-system/issues
