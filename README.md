@@ -1,8 +1,10 @@
-# Pepper Design System
+# 🥵 🌶️ 🔥 Pepper Design System
 
-Pepper Design System is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
+Pepper DS Core is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
 
 **Current version:** [`v1.3.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.3.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
+
+> 🌶️ **Heads up — things are about to get spicy.**
 
 ---
 
