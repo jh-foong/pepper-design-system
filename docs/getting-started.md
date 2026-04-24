@@ -8,20 +8,20 @@ This guide helps designers and developers get up and running with the Pepper Des
 
 ### 1. Access the Figma library
 
-Pepper's component library lives in Figma. To use it:
+Pepper Design System's component library lives in Figma. To use it:
 
 1. Open Figma and navigate to your project file
 2. Go to **Assets** (left panel) → click the **book icon** to open Libraries
 3. Search for **Pepper Design System** and click **Add to file**
 
-Once added, all Pepper components and styles will be available in the Assets panel.
+Once added, all Pepper Design System components and styles will be available in the Assets panel.
 
 ### 2. Use design tokens
 
 Colors, typography, spacing, and other values are published as Figma Variables. Always use these tokens rather than hardcoded values to ensure your designs stay in sync with the codebase.
 
 - **Color** — Use semantic tokens (e.g. `semantic/color/foreground/text/primary`) rather than raw palette values
-- **Typography** — Apply text styles from the Pepper type scale
+- **Typography** — Apply text styles from the Pepper Design System type scale
 - **Spacing** — Use the 4px grid. Spacing tokens follow a `scale/spacing-{n}` naming convention
 
 ### 3. Stay in sync
@@ -78,7 +78,7 @@ Token updates are published as versioned GitHub Releases. Watch the repo or chec
 
 - **Slack** — Post in `#design-systems-dojo` for questions or feedback
 - **Figma** — Comment directly on components in the library file
-- **GitHub** — Open an issue in the [Pepper repository](https://github.com/jh-foong/pepper-design-system)
+- **GitHub** — Open an issue in the [Pepper Design System repository](https://github.com/jh-foong/pepper-design-system)
 
 ---
 

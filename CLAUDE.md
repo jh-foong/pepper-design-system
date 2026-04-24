@@ -1,6 +1,6 @@
 # Pepper Design System — Claude Context
 
-Pepper is Pepperstone's design system. This repository holds the AI-ingestable spec (`DESIGN.md`), design tokens (CSS + Flutter), Figma source exports, and documentation.
+Pepper Design System is Pepperstone's design system. This repository holds the AI-ingestable spec (`DESIGN.md`), design tokens (CSS + Flutter), Figma source exports, and documentation.
 
 The person working in this repo is **Junhan Foong**, a Product Designer with no coding background. Keep all explanations non-technical. Prefer UI-based workflows over CLI or code where possible.
 
@@ -13,6 +13,14 @@ The person working in this repo is **Junhan Foong**, a Product Designer with no 
 3. **A copy-paste-ready PR description** in a fenced code block so Junhan can paste it into GitHub without formatting breaking
 
 Junhan doesn't want to hunt for URLs or write PR copy. Always give them ready-to-use text.
+
+## Naming convention in prose
+
+- **"Pepper Design System"** — use in headings and body copy when referring to the product/brand
+- **"Pepper DS"** — acceptable shorthand in tight spaces (tables, short headings)
+- **"Pepperstone"** — company name, untouched
+- **`pepper-core-*`** / **`PepperCore*`** — token identifiers
+- **Never "Pepper" alone in prose** — ambiguous; always qualify
 
 ---
 

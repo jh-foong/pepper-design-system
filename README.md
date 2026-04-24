@@ -1,18 +1,17 @@
 # Pepper Design System
 
-Pepper is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
+Pepper Design System is Pepperstone's design system — a shared library of design decisions, UI components, and guidelines that helps teams build consistent, high-quality digital experiences.
 
 **Current version:** [`v1.3.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v1.3.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
 ---
 
-> ⚠️ **Heads up — pre-merge state**
+> ### Quick scope
 >
-> These tokens come from an in-progress Figma branch that hasn't been merged to the main Pepperstone library yet. Most existing Pepperstone designs still reference the **original** token set.
->
-> - ✅ **Use for:** new designs, concepts, and exploratory work
-> - ⚠️ **Don't use for:** extending existing production designs — they'll visually mismatch until the Figma branch is merged and legacy designs are migrated
-> - 📅 **Timeline:** full migration pending vendor A handover and component refactoring
+> - ✅ **Use Pepper Design System for:** new features, concepts, prototypes, pitches
+> - ⚠️ **Don't use for:** extending existing production designs (they'll mismatch until Figma library merges — pending vendor A handover)
+> - 🎨 **Where to start:** see "Designers — start here" below
+> - 🆘 **Stuck?** → [Designer FAQ](docs/designer-faq.md)
 
 ---
 
@@ -37,7 +36,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 ## What's in this repo
 
-- **[DESIGN.md](DESIGN.md)** — Curated AI-ingestable visual spec. Drop into Claude Design, Claude Code, Cursor, or Copilot to generate on-brand Pepper UI
+- **[DESIGN.md](DESIGN.md)** — Curated AI-ingestable visual spec. Drop into Claude Design, Claude Code, Cursor, or Copilot to generate on-brand UI with Pepper Design System
 - **Design tokens** — Colour, typography, spacing, shadows, and more. See the [Token formats](#token-formats) table below for all available exports.
 - **Figma source files** — Raw DesignBridge exports in [`source/`](source/) for version history and diffing
 - **Documentation** — Guides for designers and developers on how to use the system
@@ -53,17 +52,23 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 ## Documentation
 
-- [DESIGN.md](DESIGN.md) — Full AI-ready visual spec (colours, typography, spacing, shadows, rules)
-- [Designer Quickstart](docs/designer-quickstart.md) — 10-min setup to vibe code with Pepper Design System in Claude Design, Claude Code, Cursor, or any AI tool
-- [Token Reference & Cheatsheet](docs/token-reference.md) — Look up any token Claude suggests, plus how to apply it in Figma
-- [Getting Started](docs/getting-started.md) — How to use Pepper Design System as a designer or developer
-- [Resources](docs/resources.md) — Fonts, Figma, and all external sources
-- [Figma → Claude Sync](docs/figma-claude-sync.md) — How design tokens are synced from Figma to this repo
-- [Supporting designers](docs/supporting-designers.md) — DS-team playbook: diagnosing stale or edited `DESIGN.md` copies
+**Designers — start here:**
+- [Designer Quickstart](docs/designer-quickstart.md) — 10-min setup, attach DESIGN.md to your AI tool
+- [Designer FAQ](docs/designer-faq.md) — troubleshooting and common gotchas
+
+**Reference (when you need it):**
+- [DESIGN.md](DESIGN.md) — AI-ingestable visual spec
+- [Token Reference](docs/token-reference.md) — look up any token + how to apply in Figma
+- [Resources](docs/resources.md) — fonts, Figma, external sources
+- [Getting Started](docs/getting-started.md) — general intro for designers and developers
+
+**For maintainers:**
+- [Figma → Claude Sync](docs/figma-claude-sync.md) — how tokens are synced from Figma
+- [Supporting designers](docs/supporting-designers.md) — DS-team playbook for diagnosing stale or edited DESIGN.md copies
 
 ## Using with AI tools
 
-[`DESIGN.md`](DESIGN.md) is the single source of truth for AI tools generating Pepper UI.
+[`DESIGN.md`](DESIGN.md) is the single source of truth for AI tools generating UI with Pepper Design System.
 
 | Tool | How to use |
 |------|-----------|
@@ -118,4 +123,4 @@ See [`tokens/experimental/README.md`](tokens/experimental/README.md) for how Tie
 | v1.0.3 | 2026-04-23 | Removed Supernova scripts |
 | v1.0.2 | 2026-04-23 | Replaced Supernova sync doc with Figma + Claude workflow guide |
 | v1.0.1 | 2026-04-23 | Migrated pipeline attribution from Supernova to Claude + Figma across all token files |
-| v1.0.0 | 2026-04-23 | Initial release — baseline Pepper token set (CSS + Dart) |
+| v1.0.0 | 2026-04-23 | Initial release — baseline Pepper Design System token set (CSS + Dart) |
