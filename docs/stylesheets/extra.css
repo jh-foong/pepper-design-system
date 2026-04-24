@@ -1,0 +1,18 @@
+/* Pepper Design System — MkDocs brand overrides */
+
+/* Pepperstone Blue as primary */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0165fa;
+  --md-primary-fg-color--light: #3484fb;
+  --md-primary-fg-color--dark: #0032c7;
+  --md-accent-fg-color: #00d3f3;
+  --md-accent-fg-color--transparent: #00d3f31a;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #3484fb;
+  --md-primary-fg-color--light: #67a3fc;
+  --md-primary-fg-color--dark: #0165fa;
+  --md-accent-fg-color: #00d3f3;
+  --md-accent-fg-color--transparent: #00d3f31a;
+}
