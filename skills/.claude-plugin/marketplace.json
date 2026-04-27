@@ -1,0 +1,12 @@
+{
+  "name": "pepper-ds-skills",
+  "owner": {
+    "name": "Pepperstone Design System"
+  },
+  "plugins": [
+    {
+      "name": "pepper-ds-skills",
+      "source": "./"
+    }
+  ]
+}

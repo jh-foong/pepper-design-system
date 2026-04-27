@@ -56,6 +56,7 @@ Token categories: Color, Typography, Font Family, Font Size, Font Weight, Line H
 
 | Resource | Link | Notes |
 |----------|------|-------|
+| Docs site | [jh-foong.github.io/pepper-design-system](https://jh-foong.github.io/pepper-design-system/) | Hosted docs — the front door for designers, PMs, and devs |
 | GitHub repository | [jh-foong/pepper-design-system](https://github.com/jh-foong/pepper-design-system) | Public sandbox — official home will move to Pepperstone org once permissions are sorted |
 
 ---

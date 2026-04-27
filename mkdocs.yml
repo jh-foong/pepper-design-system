@@ -1,0 +1,57 @@
+site_name: Pepper Design System
+site_url: https://jh-foong.github.io/pepper-design-system/
+repo_url: https://github.com/jh-foong/pepper-design-system
+repo_name: jh-foong/pepper-design-system
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  font:
+    text: Manrope
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started.md
+    - Designer Quickstart: designer-quickstart.md
+    - Designer FAQ: designer-faq.md
+  - Token Reference: token-reference.md
+  - Workflows:
+    - Figma → GitHub Sync: figma-claude-sync.md
+    - Supporting Designers: supporting-designers.md
+  - Resources: resources.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
