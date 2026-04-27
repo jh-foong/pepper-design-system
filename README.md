@@ -36,6 +36,8 @@ Pepper DS Core is Pepperstone's design system — a shared library of design dec
 
 Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
+📋 **Need just the prompts?** [Designer Cheat Sheet →](docs/designer-cheat-sheet.md) — the two key prompts (Design → HTML → React) on one page.
+
 ---
 
 ## What's in this repo
@@ -58,6 +60,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 **Designers — start here:**
 - [Designer Quickstart](docs/designer-quickstart.md) — 10-min setup, attach DESIGN.md to your AI tool
+- [Designer Cheat Sheet](docs/designer-cheat-sheet.md) — the two key prompts (Design → HTML → React) on one page
 - [Designer FAQ](docs/designer-faq.md) — troubleshooting and common gotchas
 
 **Reference (when you need it):**

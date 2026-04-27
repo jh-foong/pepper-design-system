@@ -96,6 +96,8 @@ Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-
 
 ## 3. Your first prompt (3 min)
 
+> 📋 **In a hurry?** The [Designer Cheat Sheet](designer-cheat-sheet.md) has the two key prompts (Design → HTML → React) on one page — the fastest path from screenshot to production-ready code.
+
 ### Pre-session checklist ✅
 
 Before you prompt anything, take 30 seconds to check:
