@@ -111,6 +111,29 @@ Figma + Storybook together cover ~95% of Supernova's "Browse design system" feat
 
 **What this unlocks:** Designers get component behaviour spec for free (Figma → Storybook round-trip). Devs get a QA surface. Pepper Design System goes from "tokens-only" to "full DS."
 
+### Why Figma Code Connect matters
+
+Right now, when a designer hands a Figma file to an AI tool (Claude, Cursor, Copilot), the AI *guesses* what the code looks like. It approximates a Pepper button as generic CSS/JSX.
+
+Figma Code Connect fixes this by creating a direct link between a Figma component and its real code implementation:
+
+```
+Figma "Button" component  ←── Code Connect ──→  <PepperButton> in Storybook/repo
+```
+
+**What changes when Code Connect is live:**
+
+| Without Code Connect | With Code Connect |
+|---|---|
+| AI guesses button code from visual appearance | AI pulls the exact `<PepperButton>` code from the repo |
+| Design and code drift silently | Drift is explicit and visible |
+| Dev manually translates Figma → code | Dev copies the registered snippet — no translation |
+| Figma and Storybook are disconnected tools | Figma links directly to live Storybook story for each component |
+
+**Important: Code Connect needs both ends to exist first.** There has to be a Figma component AND a code component to connect. Pepper Design System is tokens-only right now — no components on either side yet. Code Connect is the final step in Phase 4, not an early shortcut.
+
+**The destination:** once Phase 4 is done, an AI looking at a Pepper Design System Figma file won't be guessing — it will pull real, production-quality Pepper code. That's the "AI knows your whole design system" moment.
+
 **Decisions needed:**
 - Language priority (Flutter confirmed; React? Web Components for framework-agnostic?)
 - Private vs public Storybook (auth cost if private)
