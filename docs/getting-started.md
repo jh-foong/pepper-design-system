@@ -24,7 +24,11 @@ Colors, typography, spacing, and other values are published as Figma Variables. 
 - **Typography** — Apply text styles from the Pepper type scale
 - **Spacing** — Use the 4px grid. Spacing tokens follow a `scale/spacing-{n}` naming convention
 
-### 3. Stay in sync
+### 3. Vibe code with AI
+
+Want to skip Figma and design directly with AI tools? See the [Designer Cheat Sheet](designer-cheat-sheet.md) — two prompts to go from screenshot to React component.
+
+### 4. Stay in sync
 
 When the Figma library is updated, Figma will prompt you to **Review and update** components in your file. Accept updates regularly to stay on the latest version.
 

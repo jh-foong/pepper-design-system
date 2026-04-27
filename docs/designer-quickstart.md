@@ -69,6 +69,9 @@ Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-
 
 ## 3. Your first prompt (3 min)
 
+> 📋 **In a hurry?** The [Designer Cheat Sheet](designer-cheat-sheet.md) has the two key prompts (Design → HTML → React) on one page — the fastest path from screenshot to production-ready code.
+
+
 Try one of these starter prompts in your AI tool of choice. All of them assume `DESIGN.md` is loaded as context.
 
 ### Starter prompts

@@ -30,6 +30,8 @@ Pepper is Pepperstone's design system — a shared library of design decisions, 
 
 Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
+📋 **Need just the prompts?** [Designer Cheat Sheet →](docs/designer-cheat-sheet.md) — the two key prompts (Design → HTML → React) on one page.
+
 ---
 
 ## What's in this repo
@@ -54,6 +56,7 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 - [DESIGN.md](DESIGN.md) — Full AI-ready visual spec (colours, typography, spacing, shadows, rules)
 - [Designer Quickstart](docs/designer-quickstart.md) — 10-min setup to vibe code with Pepper Design System in Claude Design, Claude Code, Cursor, or any AI tool
+- [Designer Cheat Sheet](docs/designer-cheat-sheet.md) — The two key prompts (Design → HTML → React) on one page
 - [Token Reference & Cheatsheet](docs/token-reference.md) — Look up any token Claude suggests, plus how to apply it in Figma
 - [Getting Started](docs/getting-started.md) — How to use Pepper Design System as a designer or developer
 - [Resources](docs/resources.md) — Fonts, Figma, and all external sources
