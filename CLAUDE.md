@@ -14,6 +14,24 @@ The person working in this repo is **Junhan Foong**, a Product Designer with no 
 
 Junhan doesn't want to hunt for URLs or write PR copy. Always give them ready-to-use text.
 
+## Standing rule: always add a plain-English recap
+
+For anything significant — a PR, a new doc section, a strategic decision, a multi-step change, or anything Junhan needs to review before merging — finish with a **"Plain-English recap"** section.
+
+**Why:** Junhan has no coding background. PR titles + technical bullet points alone aren't enough to make a confident decision. The recap fills that gap.
+
+**Format:** numbered list, 1-3 sentences per point, zero jargon. Translate "we added a CDN `<link>` for token loading" into "if a designer drops DESIGN.md into an empty folder and asks Claude to build something, the result will now actually look like Pepper." Lead with the *user-visible outcome*, not the implementation.
+
+**Always include after:**
+- Pushing a PR (alongside the copy-paste title + description)
+- Completing a multi-file change
+- Drafting a release plan, migration plan, or roadmap update
+- Anything where Junhan said "explain this" or "review this"
+
+**Skip for:** trivial one-liners, follow-up clarifications mid-thread, quick status checks ("merged it", "pushed").
+
+---
+
 ## Naming convention in prose
 
 - **"Pepper Design System"** — use in headings and body copy when referring to the product/brand
