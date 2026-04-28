@@ -44,16 +44,6 @@ Claude should almost always suggest semantic `--pepper-*` tokens in UI work. If 
 
 ---
 
-## How to prompt well
-
-Three things turn weak AI output into on-brand Pepper Design System output:
-
-- **Always say "follow DESIGN.md"** in every prompt — it anchors the model to the tokens.
-- **Specify the surface** — web, app, email. Different surfaces use different density and type scales.
-- **Describe what, not how** — *"a pricing card with 4 features and a primary CTA"* beats *"a card with 16px padding, brand-blue button, and…"*. Let the AI pick tokens; you review.
-
----
-
 ## Still stuck?
 
 Raise an issue on GitHub: [pepper-design-system/issues](https://github.com/jh-foong/pepper-design-system/issues).
