@@ -1,6 +1,6 @@
 # Supporting designers using Pepper Design System
 
-For the DS team (currently Junhan). A quick playbook for when a designer says *"Pepper isn't working for me"* or *"Claude is generating something weird."*
+For the DS team. A quick playbook for when a designer says *"Pepper isn't working for me"* or *"Claude is generating something weird."*
 
 ---
 
