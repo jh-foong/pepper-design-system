@@ -64,3 +64,38 @@ Before moving to Step B, **rename `index.html`** to something descriptive — e.
 - Wrong colours / fonts? → `DESIGN.md` probably wasn't attached. Re-attach and re-prompt.
 - Buttons/cards look off? → Add component PNG references and re-run Step A.
 - Need help? → `#design-systems-dojo` on Slack.
+
+---
+
+## 🎁 Bonus — Token-annotated screenshots
+
+For documentation, design reviews, or "show your working" decks: turn an `index.html` from Step A into an annotated version where each component is labelled with the Pepper tokens it uses.
+
+**You'll need open in Claude Design:**
+- 📄 `DESIGN.md`
+- 📄 The `index.html` from Step A
+
+**Drag both in, then paste:**
+
+> Take the attached `index.html` and produce a **token-annotated version** for documentation screenshots.
+>
+> **Rules:**
+> - Keep the original components rendering exactly as they are — don't restyle them.
+> - Wrap each distinct component (button, card, input, heading, hero, etc.) in a labelled annotation block.
+> - For each component, list every Pepper token it uses, grouped by category:
+>   - 🎨 **Colour** — every `--pepper-color-*` referenced
+>   - 🔠 **Typography** — `--pepper-typography-*`, `--pepper-font-*`, `--pepper-line-height-*`
+>   - 📐 **Spacing** — `--pepper-space-*`
+>   - 🔳 **Radius** — `--pepper-border-radius-*`
+>   - 🌫️ **Shadow** — `--pepper-shadow-*`
+>   - 💪 **Border** — `--pepper-border-width-*`
+> - Annotations should sit **beside or beneath** each component (whichever fits), in a small monospace pill or card with subtle border. Use neutral greys (`--pepper-color-bg-surface-muted`, `--pepper-color-fg-text-secondary`) so the annotations don't compete with the component visuals.
+> - Add a **numbered marker** (① ② ③…) on the component and the matching annotation, so they pair up cleanly when screenshotted.
+> - Page layout: a single static page, generous whitespace, white background, components stacked vertically. Optimised for clean Figma screenshots — no scrolling tricks, no JS interactions.
+> - Output a single self-contained `index-annotated.html`.
+>
+> **Skip:** any token not actually used. Don't invent tokens. If a value in the original isn't a Pepper token (e.g. hard-coded colour), flag it as `⚠️ NON-TOKEN: <value>` in the annotation.
+
+**You get:** an `index-annotated.html` ready to screenshot section-by-section into Figma.
+
+> 💡 This is a **documentation artefact**, not a shipping component. Use it for design reviews, audit decks, and "explain my thinking" moments.

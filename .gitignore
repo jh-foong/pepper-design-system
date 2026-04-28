@@ -1,3 +1,6 @@
 node_modules/
 .claude/
 .DS_Store
+
+# Personal Claude context — loaded by Claude locally, never synced to other repos
+CLAUDE.local.md

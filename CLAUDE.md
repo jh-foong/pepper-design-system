@@ -2,23 +2,25 @@
 
 Pepper Design System is Pepperstone's design system. This repository holds the AI-ingestable spec (`DESIGN.md`), design tokens (CSS + Flutter), Figma source exports, and documentation.
 
-The person working in this repo is **Junhan Foong**, a Product Designer with no coding background. Keep all explanations non-technical. Prefer UI-based workflows over CLI or code where possible.
+**Audience for this file:** anyone using Claude (Claude Code, Claude Design, etc.) to work on this repo. For personal preferences and individual workflow notes, see `CLAUDE.local.md` (gitignored, optional).
 
 ---
 
-## Standing rule: after every push, always surface
+## Standing rule: surface ready-to-use PR text after every push
+
+After pushing changes, always surface:
 
 1. **The PR link** (create-PR URL if the PR doesn't exist yet, or the existing PR URL)
 2. **A copy-paste-ready PR title** (under 70 chars)
-3. **A copy-paste-ready PR description** in a fenced code block so Junhan can paste it into GitHub without formatting breaking
+3. **A copy-paste-ready PR description** in a fenced code block so it can be pasted into GitHub without formatting breaking
 
-Junhan doesn't want to hunt for URLs or write PR copy. Always give them ready-to-use text.
+Designers and PMs reviewing the PR shouldn't have to hunt for URLs or write PR copy from scratch.
 
 ## Standing rule: always add a plain-English recap
 
-For anything significant — a PR, a new doc section, a strategic decision, a multi-step change, or anything Junhan needs to review before merging — finish with a **"Plain-English recap"** section.
+For anything significant — a PR, a new doc section, a strategic decision, a multi-step change, or anything a non-technical reviewer needs to evaluate — finish with a **"Plain-English recap"** section.
 
-**Why:** Junhan has no coding background. PR titles + technical bullet points alone aren't enough to make a confident decision. The recap fills that gap.
+**Why:** this repo is owned and maintained primarily by designers and PMs, many without coding backgrounds. PR titles and technical bullet points alone aren't enough to make a confident review decision.
 
 **Format:** numbered list, 1-3 sentences per point, zero jargon. Translate "we added a CDN `<link>` for token loading" into "if a designer drops DESIGN.md into an empty folder and asks Claude to build something, the result will now actually look like Pepper." Lead with the *user-visible outcome*, not the implementation.
 
@@ -26,7 +28,7 @@ For anything significant — a PR, a new doc section, a strategic decision, a mu
 - Pushing a PR (alongside the copy-paste title + description)
 - Completing a multi-file change
 - Drafting a release plan, migration plan, or roadmap update
-- Anything where Junhan said "explain this" or "review this"
+- Anything where the user said "explain this" or "review this"
 
 **Skip for:** trivial one-liners, follow-up clarifications mid-thread, quick status checks ("merged it", "pushed").
 
@@ -99,22 +101,22 @@ The CSS files in `tokens/css/base/` are the source of truth. Every other format 
 
 See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workflow.
 
-### Standing flow: "I just updated some tokens — what do I do now?"
+### Standing flow: token sync
 
-When Junhan says this (or any variant like "new token export", "I updated Figma tokens", "synced from Figma"), run this flow without re-asking the steps:
+When the user says "I just updated some tokens — what do I do now?" (or any variant like "new token export", "I updated Figma tokens", "synced from Figma"), run this flow without re-asking the steps:
 
 1. **Locate the new DesignBridge export** — ask for the path if not obvious (usually `source/designbridge-YYYY-MM-DD.md`)
 2. **Apply the two-prefix split** (primitives → `pepper-core-*`, semantics → `pepper-*`) per the rename table below
 3. **Regenerate** `tokens/css/`, `tokens/flutter/`, `tokens/json/`, `tokens/experimental/*`
 4. **Update** `DESIGN.md` version stamp + any affected token references
-5. **Diff summary** — tell Junhan in plain English what actually changed (colours renamed, new tokens added, removed tokens). No jargon.
+5. **Diff summary** — explain in plain English what actually changed (colours renamed, new tokens added, removed tokens). No jargon.
 6. **Branch + commit + push** on a new branch named `tokens/sync-YYYY-MM-DD`
 7. **Surface** (per the "after every push" standing rule): PR link + copy-paste title + copy-paste description in a fenced code block
-8. **After PR is merged**, proactively give Junhan:
+8. **After PR is merged**, proactively offer:
    - GitHub release draft — tag (bump per semver: new tokens = minor, fix = patch), title, description — link: https://github.com/jh-foong/pepper-design-system/releases/new
    - Slack post copy for `#design-systems-dojo` including: what changed, what designers need to do (re-download `DESIGN.md` from Raw), release link
 
-Junhan's trigger phrase is typically *"I just updated some tokens — what do I do now?"*. Treat any similar phrasing the same way.
+Treat any similar phrasing the same way.
 
 ---
 
@@ -157,9 +159,11 @@ Do NOT commit files with the raw DesignBridge `pepper-` prefix on primitives. Do
 /
 ├── DESIGN.md                # AI-ingestable visual spec for Claude Design, Cursor, Copilot
 ├── README.md                # Project overview
-├── CLAUDE.md                # This file — AI context
+├── CLAUDE.md                # This file — universal AI context (committed)
+├── CLAUDE.local.md          # Personal AI context (gitignored, optional)
 ├── docs/
 │   ├── designer-quickstart.md  # 10-min designer handoff guide
+│   ├── designer-cheat-sheet.md # Two-prompt vibe-coding workflow
 │   ├── token-reference.md      # Token cheatsheet + how to apply in Figma
 │   ├── getting-started.md      # Designer + developer setup
 │   ├── resources.md            # External sources (fonts, Figma, GitHub)
