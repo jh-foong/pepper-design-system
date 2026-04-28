@@ -124,61 +124,9 @@ Try one of these in your AI tool of choice. All of them assume `DESIGN.md` is lo
 
 ## Working with existing Figma designs (old tokens) 🥵🌶️🔥
 
-Got a Figma file that uses the **original** Pepper Design System tokens and want to see what it'd look like in the new system? Claude can retokenize it for you.
+Got a Figma file that uses the **original** Pepper Design System tokens and want to see what it'd look like in the new system?
 
-Each method below is rated by **spice level** — more chillis = more setup required.
-
-### 🌶️ Easiest — screenshot + Claude Design
-
-1. In Figma: frame the design → **Export → PNG** (or take a screenshot)
-2. In Claude Design (with `DESIGN.md` attached): drag the image into the chat
-3. Prompt:
-   > *"This is a current Figma design using old Pepper tokens. Redesign it using only DESIGN.md tokens — same layout and content, but swap every colour, typography, spacing, radius, and shadow to the closest equivalent. Flag any values you can't map 1:1."*
-4. You'll get a new version + a list of mismatches (e.g. *"old `brand-500` has no direct match, used `surface/brand/primary` as closest"*)
-
-### 🌶️🌶️ More accurate — paste CSS from Figma Dev Mode
-
-Figma's **Dev Mode** exports exact CSS for any element (colours as hex, sizes in px, etc). Paste that into Claude and ask it to translate to Pepper Design System tokens.
-
-**Setup (one-time):**
-- Dev Mode is included on all paid Figma seats. If you don't see the toggle, your Figma role is likely Viewer/Edit-only — ask your Figma admin for Dev Mode access.
-
-**Per element:**
-1. In your Figma file, click the **</> toggle** in the top-right toolbar to switch to **Dev Mode** (or press **Shift+D**)
-2. Click the element you want to translate (a button, card, text, whatever)
-3. On the right panel, find the **Code** section → the CSS is shown there. Click the **copy** icon in the top-right of that block
-4. Open Claude Design (with `DESIGN.md` attached) and paste the CSS into a new chat
-5. Prompt:
-   > *"Here's CSS from a current Figma design using old Pepper tokens. Rewrite it using only the tokens in DESIGN.md. For each old value (hex, px, shadow, radius), map it to the closest Pepper token or flag as no-match. Output as a table: old value → new token → notes."*
-6. You'll get a clean mapping you can apply back in Figma manually
-
-**Best for:** single components (one button, one card). Tedious for whole screens — use the screenshot method for those.
-
-### 🌶️🌶️🌶️ Most accurate — Figma MCP *(semi-technical)*
-
-> 💡 Skip this method if you're using **Option 1 (Claude Design web)**. MCP only works with Claude Code or Cursor — go with the screenshot or Dev Mode CSS method instead.
-
-Figma's official **Dev Mode MCP server** lets Claude read your selected Figma frame directly — no exporting or pasting. Claude sees the real structure (layers, auto-layout, variants) and can translate it to DESIGN.md tokens precisely.
-
-**Requirements:**
-- [Figma desktop app](https://www.figma.com/downloads/) (not the browser version)
-- A Figma seat with **Dev Mode** enabled
-- [Claude Code](https://docs.anthropic.com/claude/docs/claude-code) or [Cursor](https://cursor.sh) installed
-
-**Setup (one-time):**
-1. Open Figma desktop → menu bar → **Figma → Preferences → Enable local MCP Server**
-2. In Claude Code, open your config (or ask Claude Code: *"Add the Figma MCP server to my config"*)
-3. Detailed guide: [Figma's Dev Mode MCP docs](https://help.figma.com/hc/en-us/articles/32132100833559)
-
-**Using it:**
-1. In Figma desktop, select the frame you want translated
-2. In Claude Code (inside your cloned Pepper Design System repo folder), prompt:
-   > *"Using the Figma MCP, read my current selection. Then rewrite it using only the tokens in `@DESIGN.md`. Output the translation as CSS/JSX plus a table of which old values mapped to which new Pepper tokens."*
-3. Claude pulls the Figma data live, applies DESIGN.md, and returns code + mapping
-
-**Best for:** full-screen translations, working at scale, or when you want Claude to understand layout structure (not just visual output).
-
-> ⚠️ These methods help you **visualise** what old designs would look like in the new system. They don't update your actual Figma file — treat the output as a reference while manually re-tokenizing, or as a starting point for concept work.
+→ **[Apply Tokens Guide](apply-tokens-guide.md)** — three methods (screenshot, Dev Mode CSS, Figma MCP) with spice-level ratings so you can pick the right one for your situation.
 
 ---
 
