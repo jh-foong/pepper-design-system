@@ -1,0 +1,1615 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jh-foong.github.io/pepper-design-system/designer-quickstart/">
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../designer-faq/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Designer Quickstart - Pepper Design System</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#designer-quickstart-vibe-coding-with-pepper-design-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Pepper Design System" class="md-header__button md-logo" aria-label="Pepper Design System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pepper Design System
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Designer Quickstart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jh-foong/pepper-design-system" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jh-foong/pepper-design-system
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../token-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Token Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../figma-claude-sync/" class="md-tabs__link">
+          
+  
+  
+  Workflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pepper Design System" class="md-nav__button md-logo" aria-label="Pepper Design System" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pepper Design System
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jh-foong/pepper-design-system" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jh-foong/pepper-design-system
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Designer Quickstart
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Designer Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-this-fits-together-30-second-mental-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this fits together (30-second mental model)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you'll get
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-install-the-fonts-2-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install the fonts (2 min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Install the fonts (2 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manrope-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manrope (required)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noto-fonts-required-if-you-work-on-ar-tc-jp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noto fonts (required if you work on AR / TC / JP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-start-designing-pick-one-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Start designing — pick one option
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Start designing — pick one option">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-claude-design-recommended-no-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 — Claude Design (recommended, no install)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-claude-code-for-designers-who-want-local-prototype-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 — Claude Code (for designers who want local prototype files)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-your-first-prompt-3-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Your first prompt (3 min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Your first prompt (3 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-session-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-session checklist ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starter-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter prompts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-existing-figma-designs-old-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with existing Figma designs (old tokens) 🥵🌶️🔥
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-the-ai-invents-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when the AI invents something
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stay-up-to-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stay up to date
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stay up to date">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-watch-the-repo-on-github-recommended-set-up-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Watch the repo on GitHub (recommended — set up once)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-version-stamp-self-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Version-stamp self-check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-claude-code-users-fetch-the-latest-every-session-most-foolproof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Claude Code users — fetch the latest every session (most foolproof)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-designmd-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When DESIGN.md changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ping-vs-ship-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ping vs ship it yourself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-for-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to go for help
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../designer-faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Designer FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../token-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Token Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../figma-claude-sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Figma → GitHub Sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supporting-designers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supporting Designers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-this-fits-together-30-second-mental-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this fits together (30-second mental model)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youll-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you'll get
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-install-the-fonts-2-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install the fonts (2 min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Install the fonts (2 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manrope-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manrope (required)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noto-fonts-required-if-you-work-on-ar-tc-jp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noto fonts (required if you work on AR / TC / JP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-start-designing-pick-one-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Start designing — pick one option
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Start designing — pick one option">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-claude-design-recommended-no-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1 — Claude Design (recommended, no install)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-claude-code-for-designers-who-want-local-prototype-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2 — Claude Code (for designers who want local prototype files)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-your-first-prompt-3-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Your first prompt (3 min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Your first prompt (3 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-session-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-session checklist ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starter-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter prompts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-existing-figma-designs-old-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with existing Figma designs (old tokens) 🥵🌶️🔥
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-the-ai-invents-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when the AI invents something
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stay-up-to-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stay up to date
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stay up to date">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-watch-the-repo-on-github-recommended-set-up-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Watch the repo on GitHub (recommended — set up once)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-version-stamp-self-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Version-stamp self-check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-claude-code-users-fetch-the-latest-every-session-most-foolproof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Claude Code users — fetch the latest every session (most foolproof)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-designmd-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When DESIGN.md changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ping-vs-ship-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ping vs ship it yourself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-for-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to go for help
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="designer-quickstart-vibe-coding-with-pepper-design-system">Designer Quickstart — Vibe Coding with Pepper Design System<a class="headerlink" href="#designer-quickstart-vibe-coding-with-pepper-design-system" title="Permanent link">&para;</a></h1>
+<p>A 10-minute setup to go from "I just got handed this repo" to "I'm generating on-brand UI with Pepper Design System in my AI tool of choice."</p>
+<p>Made for designers. No coding required.</p>
+<hr />
+<blockquote>
+<p>⚠️ <strong>Pre-merge state:</strong> These tokens are from an in-progress Figma branch. Use for <strong>new/exploratory</strong> design work only — not for extending existing production designs (they'll mismatch until after vendor A handover and component refactoring). See <a href="../README.md#-pepper-design-system">README</a> for full scope.</p>
+</blockquote>
+<hr />
+<h2 id="how-this-fits-together-30-second-mental-model">How this fits together (30-second mental model)<a class="headerlink" href="#how-this-fits-together-30-second-mental-model" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><code>DESIGN.md</code></strong> is a single text file that tells any AI tool what on-brand Pepper Design System looks like (colours, type, spacing, shadows). It's the only thing you <em>have</em> to keep fresh.</li>
+<li><strong>This GitHub repo</strong> is the source of truth — where <code>DESIGN.md</code> and the raw token files live. You don't work <em>inside</em> the repo; you just pull <code>DESIGN.md</code> out of it.</li>
+<li><strong>Your AI tool</strong> (Claude Design / Claude Code) reads <code>DESIGN.md</code> as context, then outputs real coded prototypes or design artifacts using Pepper Design System tokens.</li>
+<li><strong>Figma stays as-is for production work.</strong> New Pepper Design System tokens aren't merged into the main Figma library yet, so keep shipping production designs on the existing library. Use this flow for concepts, pitches, user tests, and anything not shipping to prod.</li>
+</ul>
+<hr />
+<h2 id="what-youll-get">What you'll get<a class="headerlink" href="#what-youll-get" title="Permanent link">&para;</a></h2>
+<p>By the end of this guide you'll be able to:</p>
+<ul>
+<li>Sketch UI in your AI tool (Claude Design, Claude Code, Cursor, v0, Lovable, etc.) and have it output <strong>real Pepper Design System designs</strong> — correct colours, typography, spacing, shadows, no guessing</li>
+<li>Download or reference the Pepper Design System tokens for any project</li>
+<li>Know where to go when you need to update something</li>
+</ul>
+<hr />
+<h2 id="1-install-the-fonts-2-min">1. Install the fonts (2 min)<a class="headerlink" href="#1-install-the-fonts-2-min" title="Permanent link">&para;</a></h2>
+<p>Pepper Design System uses <strong>Manrope</strong> as its primary typeface, plus Noto fonts for Arabic, Traditional Chinese, and Japanese.</p>
+<h3 id="manrope-required">Manrope (required)<a class="headerlink" href="#manrope-required" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>⚠️ Use the <strong>Pepperstone fork</strong> — not the version on Google Fonts.</p>
+</blockquote>
+<ol>
+<li>Go to <a href="https://github.com/jh-foong/manrope">github.com/jh-foong/manrope</a></li>
+<li>Click the green <strong>Code</strong> button → <strong>Download ZIP</strong></li>
+<li>Unzip → open the <code>fonts/</code> folder</li>
+<li>Double-click each <code>.ttf</code> file → <strong>Install Font</strong></li>
+</ol>
+<h3 id="noto-fonts-required-if-you-work-on-ar-tc-jp">Noto fonts (required if you work on AR / TC / JP)<a class="headerlink" href="#noto-fonts-required-if-you-work-on-ar-tc-jp" title="Permanent link">&para;</a></h3>
+<p>Download from Google Fonts and install the same way:</p>
+<ul>
+<li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+Arabic">Noto Sans Arabic</a></li>
+<li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+TC">Noto Sans TC</a></li>
+<li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP">Noto Sans JP</a></li>
+</ul>
+<hr />
+<h2 id="2-start-designing-pick-one-option">2. Start designing — pick one option<a class="headerlink" href="#2-start-designing-pick-one-option" title="Permanent link">&para;</a></h2>
+<h3 id="option-1-claude-design-recommended-no-install">Option 1 — Claude Design <em>(recommended, no install)</em><a class="headerlink" href="#option-1-claude-design-recommended-no-install" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open <a href="https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md">DESIGN.md</a> → click <strong>Raw</strong> → <strong>Cmd+S</strong> to save it locally</li>
+<li>Open <a href="https://claude.ai">claude.ai</a> → start a new chat → click <strong>+</strong> and attach <code>DESIGN.md</code></li>
+<li>Prompt: <em>"Follow DESIGN.md. Design a [thing]."</em></li>
+</ol>
+<blockquote>
+<p>💡 <strong>Pro tip — use a Claude Project:</strong> go to <a href="https://claude.ai/projects">claude.ai/projects</a>, create a project called "Pepper Design," and upload <code>DESIGN.md</code> once into <strong>Project knowledge</strong>. Every chat inside that project automatically uses it — no re-uploading.</p>
+</blockquote>
+<h3 id="option-2-claude-code-for-designers-who-want-local-prototype-files">Option 2 — Claude Code <em>(for designers who want local prototype files)</em><a class="headerlink" href="#option-2-claude-code-for-designers-who-want-local-prototype-files" title="Permanent link">&para;</a></h3>
+<p>Best if you want Claude to save prototypes as real files you can open in a browser, share, or screenshot.</p>
+<blockquote>
+<p>⚠️ <strong>Don't clone the Pepper Design System repo to prototype in.</strong> That repo is the source of truth for tokens — keep it clean. Make a <strong>separate scratch folder</strong> on your Mac and just drop <code>DESIGN.md</code> into it.</p>
+</blockquote>
+<p><strong>Setup (one-time, ~5 min):</strong></p>
+<ol>
+<li>Make a folder anywhere on your Mac — e.g. <code>~/Documents/Pepper Prototypes/</code></li>
+<li>Download <a href="https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md">DESIGN.md</a> → click <strong>Raw</strong> → Cmd+S → save into that folder</li>
+<li><em>(Optional but recommended)</em> also download <a href="https://github.com/jh-foong/pepper-design-system/blob/main/docs/token-reference.md">docs/token-reference.md</a> into the same folder for the cheatsheet</li>
+<li>Open Terminal → <code>cd</code> into the folder → run <code>claude</code></li>
+<li>Prompt: <em>"Follow <code>@DESIGN.md</code>. Build a [thing] and save it to <code>[feature-name]/index.html</code>."</em></li>
+</ol>
+<p>Your folder ends up looking like:
+<div class="highlight"><pre><span></span><code>Pepper Prototypes/
+├── DESIGN.md
+├── token-reference.md
+├── login-flow/
+├── trade-ticket/
+└── pricing-page/
+</code></pre></div></p>
+<p>The DS repo stays untouched. Reorganise or delete prototypes however you like — they're yours.</p>
+<p>Requires: <a href="https://docs.anthropic.com/claude/docs/claude-code">Claude Code installed</a>.</p>
+<blockquote>
+<p>💡 <strong>Updating tokens:</strong> when a new Pepper Design System release lands (<a href="https://github.com/jh-foong/pepper-design-system/releases">see Releases</a>), re-download <code>DESIGN.md</code> and overwrite the old copy in your scratch folder.</p>
+</blockquote>
+<hr />
+<h2 id="3-your-first-prompt-3-min">3. Your first prompt (3 min)<a class="headerlink" href="#3-your-first-prompt-3-min" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>📋 <strong>In a hurry?</strong> The <a href="../designer-cheat-sheet/">Designer Cheat Sheet</a> has the two key prompts (Design → HTML → React) on one page — the fastest path from screenshot to production-ready code.</p>
+</blockquote>
+<h3 id="pre-session-checklist">Pre-session checklist ✅<a class="headerlink" href="#pre-session-checklist" title="Permanent link">&para;</a></h3>
+<p>Before you prompt anything, take 30 seconds to check:</p>
+<ul>
+<li>[ ] <strong>Manrope</strong> is installed on your Mac (Font Book → search "Manrope")</li>
+<li>[ ] Your local <code>DESIGN.md</code> version matches the <a href="https://github.com/jh-foong/pepper-design-system/releases">latest release</a> — check the version line at the top of the file</li>
+<li>[ ] <code>DESIGN.md</code> is attached to your Claude Project / in your scratch folder / in the current Claude Code directory</li>
+</ul>
+<p>If all three are ✅, you're good. If <code>DESIGN.md</code> is out of date, grab the new one (see <a href="#stay-up-to-date">Stay up to date</a> below).</p>
+<h3 id="starter-prompts">Starter prompts<a class="headerlink" href="#starter-prompts" title="Permanent link">&para;</a></h3>
+<p>Try one of these in your AI tool of choice. All of them assume <code>DESIGN.md</code> is loaded as context.</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A landing hero</td>
+<td><em>"Design a landing page hero for a trading platform. Headline: 'Trade smarter.' Include a primary CTA and a secondary text link. Follow DESIGN.md."</em></td>
+</tr>
+<tr>
+<td>A pricing card</td>
+<td><em>"Design a pricing card with a title, monthly price, 4 feature bullet points, and a primary CTA at the bottom. Use Pepper tokens from DESIGN.md."</em></td>
+</tr>
+<tr>
+<td>A form</td>
+<td><em>"Design a sign-up form: email input, password input, a 'Create account' primary button, and a legal disclaimer below. Use DESIGN.md."</em></td>
+</tr>
+<tr>
+<td>A trading panel</td>
+<td><em>"Design a buy/sell button pair for a trading interface. Use the Pepper buysell component tokens from DESIGN.md."</em></td>
+</tr>
+<tr>
+<td>A dark-mode card</td>
+<td><em>"Design a dark-mode dashboard card showing 'Daily P&amp;L' with a value, a positive/negative indicator, and a small sparkline. Use DESIGN.md inverse tokens."</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="working-with-existing-figma-designs-old-tokens">Working with existing Figma designs (old tokens) 🥵🌶️🔥<a class="headerlink" href="#working-with-existing-figma-designs-old-tokens" title="Permanent link">&para;</a></h2>
+<p>Got a Figma file that uses the <strong>original</strong> Pepper Design System tokens and want to see what it'd look like in the new system?</p>
+<p>→ <strong><a href="../apply-tokens-guide/">Apply Tokens Guide</a></strong> — three methods (screenshot, Dev Mode CSS, Figma MCP) with spice-level ratings so you can pick the right one for your situation.</p>
+<hr />
+<h2 id="what-happens-when-the-ai-invents-something">What happens when the AI invents something<a class="headerlink" href="#what-happens-when-the-ai-invents-something" title="Permanent link">&para;</a></h2>
+<p><code>DESIGN.md</code> covers <strong>tokens</strong> (colours, typography, spacing, shadows, radii) but does <strong>not</strong> yet cover full component specs. If the AI generates a button that looks off, it's probably inventing the spec.</p>
+<p><strong>Fix:</strong> refine the prompt. E.g. <em>"Button should use <code>--pepper-typography-label-md</code>, 12px vertical padding, 24px horizontal, radius <code>md</code>, shadow <code>xs</code>."</em></p>
+<p>Longer-term, Pepper Design System will add component specs directly to <code>DESIGN.md</code> to reduce this.</p>
+<blockquote>
+<p>💡 Need to look up a token Claude suggested? See the <a href="../token-reference/">Token Reference &amp; Cheatsheet</a> — values for every category plus how to apply them in Figma.</p>
+</blockquote>
+<hr />
+<h2 id="stay-up-to-date">Stay up to date<a class="headerlink" href="#stay-up-to-date" title="Permanent link">&para;</a></h2>
+<p><code>DESIGN.md</code> is the only thing you <em>must</em> keep fresh. Three ways to stay in sync — pick whichever fits your workflow:</p>
+<h3 id="1-watch-the-repo-on-github-recommended-set-up-once">1. Watch the repo on GitHub <em>(recommended — set up once)</em><a class="headerlink" href="#1-watch-the-repo-on-github-recommended-set-up-once" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <a href="https://github.com/jh-foong/pepper-design-system">jh-foong/pepper-design-system</a></li>
+<li>Top-right: click <strong>Watch</strong> → <strong>Custom</strong> → check <strong>Releases</strong> → <strong>Apply</strong></li>
+</ol>
+<p>You'll get an email every time a new release ships. 5-second setup, zero ongoing effort.</p>
+<h3 id="2-version-stamp-self-check">2. Version-stamp self-check<a class="headerlink" href="#2-version-stamp-self-check" title="Permanent link">&para;</a></h3>
+<p>Every <code>DESIGN.md</code> has a version line at the top (e.g. <code>Version: v1.2.0</code>). Before a session, glance at it and compare against the <a href="https://github.com/jh-foong/pepper-design-system/releases">Releases page</a>. If they differ, re-download.</p>
+<h3 id="3-claude-code-users-fetch-the-latest-every-session-most-foolproof">3. Claude Code users — fetch the latest every session <em>(most foolproof)</em><a class="headerlink" href="#3-claude-code-users-fetch-the-latest-every-session-most-foolproof" title="Permanent link">&para;</a></h3>
+<p>Instead of keeping a local copy, prompt Claude Code to pull the live version straight from GitHub:</p>
+<blockquote>
+<p><em>"Fetch the latest DESIGN.md from <code>https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/DESIGN.md</code> and follow it. Build a [thing]."</em></p>
+</blockquote>
+<p>No syncing, always current. Only works with Claude Code (which has web access) — not Claude Design.</p>
+<h3 id="when-designmd-changes">When <code>DESIGN.md</code> changes<a class="headerlink" href="#when-designmd-changes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Overwrite the old <code>DESIGN.md</code> in your scratch folder / Claude Project knowledge</li>
+<li>Skim the <a href="https://github.com/jh-foong/pepper-design-system/releases">release notes</a> — if tokens were renamed, old prototypes may need a refresh</li>
+<li>Carry on</li>
+</ol>
+<hr />
+<h2 id="ping-vs-ship-it-yourself">Ping vs ship it yourself<a class="headerlink" href="#ping-vs-ship-it-yourself" title="Permanent link">&para;</a></h2>
+<p>To save everyone time, here's when to reach out and when to just go.</p>
+<p><strong>Ship it yourself if:</strong>
+- AI invented a token name → check <a href="../token-reference/"><code>docs/token-reference.md</code></a>, pick the right one, and re-prompt
+- The output looks "off" → refine your prompt with specific token names (see <a href="#what-happens-when-the-ai-invents-something">AI invents something</a>)
+- You need to retokenize an old Figma design → use the <a href="#working-with-existing-figma-designs-old-tokens">3 retokenization methods</a> above</p>
+<p><strong>Ping the DS team in <code>#design-systems-dojo</code> if:</strong>
+- A token you need genuinely doesn't exist in <code>DESIGN.md</code> or the <a href="../token-reference/">cheatsheet</a>
+- Something in <code>DESIGN.md</code> looks wrong or contradicts itself
+- You've found a bug in the tokens (e.g. a colour alias pointing at the wrong thing)
+- You want to propose a new component spec or token</p>
+<hr />
+<h2 id="where-to-go-for-help">Where to go for help<a class="headerlink" href="#where-to-go-for-help" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Slack:</strong> <code>#design-systems-dojo</code></li>
+<li><strong>Figma:</strong> comment directly on components in the library file</li>
+<li><strong>GitHub:</strong> open an issue at <a href="https://github.com/jh-foong/pepper-design-system/issues">jh-foong/pepper-design-system/issues</a></li>
+</ul>
+<hr />
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0.0</td>
+<td>2026-04-23</td>
+<td>Initial designer quickstart — fonts, Figma, DESIGN.md, AI tool setup, starter prompts</td>
+</tr>
+<tr>
+<td>v1.1.0</td>
+<td>2026-04-23</td>
+<td>Simplified AI tool setup — two clear options (Claude Code recommended, or quick-trial with any AI)</td>
+</tr>
+<tr>
+<td>v1.2.0</td>
+<td>2026-04-23</td>
+<td>Swapped recommended option to Claude Design (web, no install). Added "Working with existing Figma designs" section with three retokenization methods</td>
+</tr>
+<tr>
+<td>v1.2.1</td>
+<td>2026-04-23</td>
+<td>Expanded Dev Mode CSS and Figma MCP methods with concrete step-by-step instructions (enabling Dev Mode, installing Figma's MCP server, linking to official docs)</td>
+</tr>
+<tr>
+<td>v1.2.2</td>
+<td>2026-04-23</td>
+<td>Removed "Get Figma access" step — all designers already have it. Renumbered remaining sections (now 3 steps instead of 4). Updated setup time estimate to 10 min</td>
+</tr>
+<tr>
+<td>v1.2.3</td>
+<td>2026-04-23</td>
+<td>Updated Slack channel to <code>#design-systems-dojo</code>. Added 🌶️ spice-level ratings to the three retokenization methods (easiest → hardest)</td>
+</tr>
+<tr>
+<td>v1.2.4</td>
+<td>2026-04-23</td>
+<td>Linked to the new <code>docs/token-reference.md</code> cheatsheet in the "AI invents something" section</td>
+</tr>
+<tr>
+<td>v1.2.5</td>
+<td>2026-04-23</td>
+<td>Rewrote Option 2 (Claude Code) — designers now set up a separate scratch folder with <code>DESIGN.md</code> instead of cloning the DS repo. Keeps the source-of-truth repo clean and gives designers a dedicated prototype space.</td>
+</tr>
+<tr>
+<td>v1.2.6</td>
+<td>2026-04-23</td>
+<td>Added mental-model intro, pre-session checklist, "Stay up to date" section (Watch releases / version-stamp self-check / Claude Code WebFetch pattern), and "Ping vs ship it yourself" box — to help designers work independently.</td>
+</tr>
+<tr>
+<td>v1.2.7</td>
+<td>2026-04-24</td>
+<td>v2.0.0 sweep — corrected <code>--pepper-core-typography-label-md</code> example to <code>--pepper-typography-label-md</code> (typography is semantic, stays <code>--pepper-*</code>).</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
