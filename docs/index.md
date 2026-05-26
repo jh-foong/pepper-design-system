@@ -1,6 +1,6 @@
 # Pepper Design System
 
-Pepper DS Core is Pepperstone's design system. **Current version:** [v2.0.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v2.0.0) · [All releases →](https://github.com/jh-foong/pepper-design-system/releases)
+Pepper DS Core is Pepperstone's design system. **Current version:** [v2.2.0](https://github.com/jh-foong/pepper-design-system/releases/tag/v2.2.0) · [All releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
 ---
 

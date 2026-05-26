@@ -13,7 +13,7 @@ Pepper DS Core is Pepperstone's design system — a shared library of design dec
 > ### Quick scope
 >
 > - ✅ **Use Pepper Design System for:** new features, concepts, prototypes, pitches
-> - ⚠️ **Don't use for:** extending existing production designs (they'll mismatch until Figma library merges — pending vendor A handover)
+> - ⚠️ **Don't use for:** existing production designs — they reference older tokens and will visually mismatch
 > - 🎨 **Where to start:** see "Designers — start here" below
 > - 🆘 **Stuck?** → [Designer FAQ](docs/designer-faq.md)
 
@@ -89,9 +89,11 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 ```
 /
-├── DESIGN.md                # AI-ingestable visual spec
+├── DESIGN.md                # AI spec — rules, setup, dark mode, prompts. Load this into your AI tool.
+├── TOKENS.md                # All token values — colour, type, spacing, shadows. Load alongside DESIGN.md.
 ├── README.md                # This file
-├── CLAUDE.md                # Project context for Claude
+├── ROADMAP.md               # Planned features and upcoming work
+├── CLAUDE.md                # Project context for Claude Code
 ├── docs/                    # Designer and developer guides
 ├── tokens/
 │   ├── css/                 # CSS custom properties (canonical)
