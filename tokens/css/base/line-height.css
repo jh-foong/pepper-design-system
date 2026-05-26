@@ -40,6 +40,10 @@
   --pepper-line-height-heading-h4: var(--pepper-core-line-height-leading-36);
   --pepper-line-height-heading-h5: var(--pepper-core-line-height-leading-32);
   --pepper-line-height-heading-h6: var(--pepper-core-line-height-leading-28);
+  --pepper-line-height-display-xl: var(--pepper-core-line-height-leading-52);
+  --pepper-line-height-display-lg: var(--pepper-core-line-height-leading-40);
+  --pepper-line-height-display-md: var(--pepper-core-line-height-leading-36);
+  --pepper-line-height-display-sm: var(--pepper-core-line-height-leading-32);
   --pepper-line-height-body-lg: var(--pepper-core-line-height-leading-28);
   --pepper-line-height-body-md: var(--pepper-core-line-height-leading-24);
   --pepper-line-height-body-sm: var(--pepper-core-line-height-leading-20);

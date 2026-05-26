@@ -16,15 +16,15 @@
   --pepper-border-width-stroke-xs: 1px;
 
   /* Icon stroke widths (by icon size) */
-  --pepper-border-width-icon-icon-12: 0.75px;
-  --pepper-border-width-icon-icon-16: 1px;
-  --pepper-border-width-icon-icon-20: 1.25px;
-  --pepper-border-width-icon-icon-24: 1.5px;
-  --pepper-border-width-icon-icon-28: 1.75px;
-  --pepper-border-width-icon-icon-32: 2px;
-  --pepper-border-width-icon-icon-36: 2.25px;
-  --pepper-border-width-icon-icon-40: 2.5px;
-  --pepper-border-width-icon-icon-48: 3px;
-  --pepper-border-width-icon-icon-56: 3.5px;
-  --pepper-border-width-icon-icon-64: 4px;
+  --pepper-border-width-icon-12: 0.75px;
+  --pepper-border-width-icon-16: 1px;
+  --pepper-border-width-icon-20: 1.25px;
+  --pepper-border-width-icon-24: 1.5px;
+  --pepper-border-width-icon-28: 1.75px;
+  --pepper-border-width-icon-32: 2px;
+  --pepper-border-width-icon-36: 2.25px;
+  --pepper-border-width-icon-40: 2.5px;
+  --pepper-border-width-icon-48: 3px;
+  --pepper-border-width-icon-56: 3.5px;
+  --pepper-border-width-icon-64: 4px;
 }

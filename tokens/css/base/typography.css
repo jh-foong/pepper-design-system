@@ -15,6 +15,12 @@
   --pepper-typography-heading-h5: var(--pepper-font-weight-heading-h5) var(--pepper-font-size-heading-h5)/var(--pepper-line-height-heading-h5) var(--pepper-font-family-heading-h5);
   --pepper-typography-heading-h6: var(--pepper-font-weight-heading-h6) var(--pepper-font-size-heading-h6)/var(--pepper-line-height-heading-h6) var(--pepper-font-family-heading-h6);
 
+  /* Display (marketing / hero — semibold, not bold) */
+  --pepper-typography-display-xl: var(--pepper-font-weight-display-xl) var(--pepper-font-size-display-xl)/var(--pepper-line-height-display-xl) var(--pepper-font-family-display-xl);
+  --pepper-typography-display-lg: var(--pepper-font-weight-display-lg) var(--pepper-font-size-display-lg)/var(--pepper-line-height-display-lg) var(--pepper-font-family-display-lg);
+  --pepper-typography-display-md: var(--pepper-font-weight-display-md) var(--pepper-font-size-display-md)/var(--pepper-line-height-display-md) var(--pepper-font-family-display-md);
+  --pepper-typography-display-sm: var(--pepper-font-weight-display-sm) var(--pepper-font-size-display-sm)/var(--pepper-line-height-display-sm) var(--pepper-font-family-display-sm);
+
   /* Body */
   --pepper-typography-body-lg: var(--pepper-font-weight-body-lg) var(--pepper-font-size-body-lg)/var(--pepper-line-height-body-lg) var(--pepper-font-family-body-lg);
   --pepper-typography-body-md: var(--pepper-font-weight-body-md) var(--pepper-font-size-body-md)/var(--pepper-line-height-body-md) var(--pepper-font-family-body-md);

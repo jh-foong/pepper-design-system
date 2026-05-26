@@ -5,6 +5,15 @@
  * Naming convention (v2.0.0):
  * - --pepper-core-*  = primitives (raw scales). Don't use directly in product.
  * - --pepper-*       = semantic/component/static/state/overlay. Use these.
+ *
+ * NOTE — intentional exception to the two-prefix model:
+ * Border-radius tokens use --pepper-* (not --pepper-core-*) even though their
+ * names are scale-based (xs, sm, md…). This is a deliberate decision — radius
+ * values don't carry enough UI-role meaning to warrant semantic aliases at this
+ * stage of the system. They are used directly in components, similar to how
+ * spacing scales are used in most design systems. Revisit when component-level
+ * radius variation (e.g. --pepper-border-radius-chip vs --pepper-border-radius-modal)
+ * is needed. Decision recorded: April 2026.
  */
 
 :root {
