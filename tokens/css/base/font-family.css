@@ -25,6 +25,10 @@
   --pepper-font-family-heading-h4: var(--pepper-core-font-family-manrope);
   --pepper-font-family-heading-h5: var(--pepper-core-font-family-manrope);
   --pepper-font-family-heading-h6: var(--pepper-core-font-family-manrope);
+  --pepper-font-family-display-xl: var(--pepper-core-font-family-manrope);
+  --pepper-font-family-display-lg: var(--pepper-core-font-family-manrope);
+  --pepper-font-family-display-md: var(--pepper-core-font-family-manrope);
+  --pepper-font-family-display-sm: var(--pepper-core-font-family-manrope);
   --pepper-font-family-body-lg: var(--pepper-core-font-family-manrope);
   --pepper-font-family-body-md: var(--pepper-core-font-family-manrope);
   --pepper-font-family-body-sm: var(--pepper-core-font-family-manrope);

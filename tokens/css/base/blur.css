@@ -5,9 +5,18 @@
  * Naming convention (v2.0.0):
  * - --pepper-core-*  = primitives (raw scales). Don't use directly in product.
  * - --pepper-*       = semantic/component/static/state/overlay. Use these.
+ *
+ * NOTE — intentional exception to the two-prefix model:
+ * Blur scale tokens (--pepper-blur-xs through --pepper-blur-3xl) use --pepper-*
+ * even though their names are scale-based. Same reasoning as border-radius —
+ * blur values don't have enough UI-role variation to need semantic aliases yet.
+ * The --pepper-blur-state-* tokens below are genuinely semantic. Decision recorded: April 2026.
  */
 
 :root {
+  /* ============================================================
+     SCALE — raw blur sizes
+     ============================================================ */
   --pepper-blur-2xl: blur(40px);
   --pepper-blur-3xl: blur(64px);
   --pepper-blur-lg: blur(16px);
@@ -15,4 +24,13 @@
   --pepper-blur-sm: blur(8px);
   --pepper-blur-xl: blur(24px);
   --pepper-blur-xs: blur(4px);
+
+  /* ============================================================
+     STATE — overlay blur radii for disabled/loading states
+     (moved from space.css v2.0.1 — these are blur values, not spacing)
+     ============================================================ */
+  --pepper-blur-state-disabled: blur(10px);
+  --pepper-blur-state-loading: blur(5px);
+  --pepper-blur-state-inverse-disabled: blur(20px);
+  --pepper-blur-state-inverse-loading: blur(10px);
 }

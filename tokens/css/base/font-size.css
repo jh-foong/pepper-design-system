@@ -49,6 +49,10 @@
   --pepper-font-size-heading-h4: var(--pepper-core-font-size-3xl);
   --pepper-font-size-heading-h5: var(--pepper-core-font-size-2xl);
   --pepper-font-size-heading-h6: var(--pepper-core-font-size-xl);
+  --pepper-font-size-display-xl: var(--pepper-core-font-size-5xl);
+  --pepper-font-size-display-lg: var(--pepper-core-font-size-4xl);
+  --pepper-font-size-display-md: var(--pepper-core-font-size-3xl);
+  --pepper-font-size-display-sm: var(--pepper-core-font-size-2xl);
   --pepper-font-size-body-lg: var(--pepper-core-font-size-lg);
   --pepper-font-size-body-md: var(--pepper-core-font-size-base);
   --pepper-font-size-body-sm: var(--pepper-core-font-size-sm);

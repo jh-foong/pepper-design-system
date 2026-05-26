@@ -24,6 +24,10 @@
   --pepper-font-weight-heading-h4: var(--pepper-core-font-weight-bold);
   --pepper-font-weight-heading-h5: var(--pepper-core-font-weight-bold);
   --pepper-font-weight-heading-h6: var(--pepper-core-font-weight-bold);
+  --pepper-font-weight-display-xl: var(--pepper-core-font-weight-semi-bold);
+  --pepper-font-weight-display-lg: var(--pepper-core-font-weight-semi-bold);
+  --pepper-font-weight-display-md: var(--pepper-core-font-weight-semi-bold);
+  --pepper-font-weight-display-sm: var(--pepper-core-font-weight-semi-bold);
   --pepper-font-weight-body-lg: var(--pepper-core-font-weight-regular);
   --pepper-font-weight-body-md: var(--pepper-core-font-weight-regular);
   --pepper-font-weight-body-sm: var(--pepper-core-font-weight-regular);

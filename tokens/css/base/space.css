@@ -43,25 +43,61 @@
   --pepper-space-theme-spacing-layout-margin: 80px;
   --pepper-space-theme-spacing-layout-pad: 80px;
 
-  /* State Overlay Spacing (blur radius for disabled/loading overlays) */
-  --pepper-space-state-overlay-disabled: 10px;
-  --pepper-space-state-overlay-inverse-disabled: 20px;
-  --pepper-space-state-overlay-inverse-loading: 10px;
-  --pepper-space-state-overlay-loading: 5px;
+  /* Screen width breakpoints */
+  --pepper-core-size-screen-width-2xs: 320px;
+  --pepper-core-size-screen-width-xs: 375px;
+  --pepper-core-size-screen-width-sm: 640px;
+  --pepper-core-size-screen-width-md: 768px;
+  --pepper-core-size-screen-width-lg: 1024px;
+  --pepper-core-size-screen-width-xl: 1280px;
+  --pepper-core-size-screen-width-2xl: 1440px;
 
-  /* Shadow Offsets */
-  --pepper-space-shadow-2xl-offset-x: 0px;
-  --pepper-space-shadow-2xl-offset-y: 24px;
-  --pepper-space-shadow-2xs-offset-x: 0px;
-  --pepper-space-shadow-2xs-offset-y: 1px;
-  --pepper-space-shadow-lg-offset-x: 0px;
-  --pepper-space-shadow-lg-offset-y: 10px;
-  --pepper-space-shadow-md-offset-x: 0px;
-  --pepper-space-shadow-md-offset-y: 4px;
-  --pepper-space-shadow-sm-offset-x: 0px;
-  --pepper-space-shadow-sm-offset-y: 2px;
-  --pepper-space-shadow-xl-offset-x: 0px;
-  --pepper-space-shadow-xl-offset-y: 20px;
-  --pepper-space-shadow-xs-offset-x: 0px;
-  --pepper-space-shadow-xs-offset-y: 1px;
+  /* NOTE: State overlay blur tokens moved to blur.css as --pepper-blur-state-* */
+  /* NOTE: Shadow offset tokens moved to shadow.css as --pepper-shadow-*-offset-x/y */
+}
+
+/* ============================================================
+   TABLET — Responsive layout overrides
+   Applied when [data-theme="tablet"] is set on a parent element.
+   768px canvas · 8-column grid
+   ============================================================ */
+[data-theme="tablet"] {
+  --pepper-space-theme-spacing-layout-gutter: 20px;
+  --pepper-space-theme-spacing-layout-margin: 40px;
+  --pepper-space-theme-spacing-layout-pad: 64px;
+  --pepper-space-theme-spacing-layout-gap-lg: 40px;
+  --pepper-space-theme-spacing-layout-gap-md: 24px;
+  --pepper-space-theme-spacing-layout-gutter-stack-lg: 32px;
+  --pepper-space-theme-spacing-layout-gutter-stack-md: 20px;
+  --pepper-space-theme-spacing-layout-gutter-stack-stack-sm: 20px;
+  --pepper-space-theme-spacing-content-pad-sm: 24px;
+  --pepper-space-theme-spacing-content-pad-md: 32px;
+  --pepper-space-theme-spacing-content-pad-lg: 40px;
+  --pepper-space-theme-spacing-content-gap-xs: 16px;
+  --pepper-space-theme-spacing-content-gap-sm: 24px;
+  --pepper-space-theme-spacing-content-gap-md: 24px;
+  --pepper-space-theme-spacing-content-gap-lg: 40px;
+}
+
+/* ============================================================
+   MOBILE — Responsive layout overrides
+   Applied when [data-theme="mobile"] is set on a parent element.
+   375px canvas · 4-column grid
+   ============================================================ */
+[data-theme="mobile"] {
+  --pepper-space-theme-spacing-layout-gutter: 8px;
+  --pepper-space-theme-spacing-layout-margin: 20px;
+  --pepper-space-theme-spacing-layout-pad: 40px;
+  --pepper-space-theme-spacing-layout-gap-lg: 40px;
+  --pepper-space-theme-spacing-layout-gap-md: 24px;
+  --pepper-space-theme-spacing-layout-gutter-stack-lg: 32px;
+  --pepper-space-theme-spacing-layout-gutter-stack-md: 32px;
+  --pepper-space-theme-spacing-layout-gutter-stack-stack-sm: 8px;
+  --pepper-space-theme-spacing-content-pad-sm: 24px;
+  --pepper-space-theme-spacing-content-pad-md: 24px;
+  --pepper-space-theme-spacing-content-pad-lg: 24px;
+  --pepper-space-theme-spacing-content-gap-xs: 16px;
+  --pepper-space-theme-spacing-content-gap-sm: 24px;
+  --pepper-space-theme-spacing-content-gap-md: 24px;
+  --pepper-space-theme-spacing-content-gap-lg: 32px;
 }
