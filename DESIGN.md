@@ -62,7 +62,7 @@ When generating standalone HTML in a scratch folder (no build step, no framework
 
 ```html
 <!-- Pepper Design System tokens (CSS custom properties) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh-foong/pepper-design-system@v2.0.0/tokens/css/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh-foong/pepper-design-system@v2.2.0/tokens/css/index.css">
 
 <!-- Manrope (Pepperstone fork) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jh-foong/manrope@main/fonts/webfonts/Manrope.css">
