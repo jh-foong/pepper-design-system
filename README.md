@@ -89,9 +89,11 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 ```
 /
-├── DESIGN.md                # AI-ingestable visual spec
+├── DESIGN.md                # AI spec — rules, setup, dark mode, prompts. Load this into your AI tool.
+├── TOKENS.md                # All token values — colour, type, spacing, shadows. Load alongside DESIGN.md.
 ├── README.md                # This file
-├── CLAUDE.md                # Project context for Claude
+├── ROADMAP.md               # Planned features and upcoming work
+├── CLAUDE.md                # Project context for Claude Code
 ├── docs/                    # Designer and developer guides
 ├── tokens/
 │   ├── css/                 # CSS custom properties (canonical)
