@@ -51,7 +51,10 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 
 | | Link |
 |-|------|
-| Figma | [Pepperstone DS (branch)](https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT) |
+| Figma — 🌶️ Bell (Foundations) | [Open in Figma](https://www.figma.com/design/DNFMgdaw9WVdMl3vh6FGCa/) |
+| Figma — 🌶️🌶️ Jalapeño (Icons) | [Open in Figma](https://www.figma.com/design/c6BuAXsvA7AxrRV8MuZg13/) |
+| Figma — 🌶️🌶️🌶️ Habanero (Web Components) | [Open in Figma](https://www.figma.com/design/ASQlBKQihYPIRGnZEgGQWg/) |
+| Figma — 🌶️🌶️🌶️🌶️ Ghost (Native UI) | [Open in Figma](https://www.figma.com/design/cZNVSuWernKQ6liA6D98mi/) |
 | Fonts | [Manrope fork](https://github.com/jh-foong/manrope) · [Noto Sans Arabic](https://fonts.google.com/noto/specimen/Noto+Sans+Arabic) · [Noto Sans TC](https://fonts.google.com/noto/specimen/Noto+Sans+TC) · [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP) |
 | GitHub | [jh-foong/pepper-design-system](https://github.com/jh-foong/pepper-design-system) _(public sandbox — official home will move to Pepperstone org once permissions are sorted)_ |
 | Releases | [All versions](https://github.com/jh-foong/pepper-design-system/releases) |

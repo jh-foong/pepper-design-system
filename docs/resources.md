@@ -8,7 +8,10 @@ All external sources used in the Pepper Design System.
 
 | Resource | Link | Notes |
 |----------|------|-------|
-| Figma — Pepper DS | [Open in Figma](https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT) | Working branch — read-only until merged to main |
+| Figma — 🌶️ Bell (Foundations) | [Open in Figma](https://www.figma.com/design/DNFMgdaw9WVdMl3vh6FGCa/) | Colour, typography, spacing, radius, shadow, blur tokens |
+| Figma — 🌶️🌶️ Jalapeño (Icons) | [Open in Figma](https://www.figma.com/design/c6BuAXsvA7AxrRV8MuZg13/) | Icon & asset library |
+| Figma — 🌶️🌶️🌶️ Habanero (Web Components) | [Open in Figma](https://www.figma.com/design/ASQlBKQihYPIRGnZEgGQWg/) | Web component library |
+| Figma — 🌶️🌶️🌶️🌶️ Ghost (Native UI) | [Open in Figma](https://www.figma.com/design/cZNVSuWernKQ6liA6D98mi/) | Native app (iOS/Android) component library |
 
 ---
 
