@@ -37,7 +37,7 @@ class PepperCoreColors {
 
   static const colorBrandPrimaryBlue300 = Color(0xff3484fb);
 
-  static const colorBrandPrimaryBlue400 = Color(0xff0165fa);
+  static const colorBrandPrimaryBlue400 = Color(0xff0064fa);
 
   static const colorBrandPrimaryBlue50 = Color(0xffe6f0ff);
 
@@ -165,6 +165,8 @@ class PepperCoreColors {
 
   static const colorNeutral700 = Color(0xff404040);
 
+  static const colorNeutral750 = Color(0xff303030);
+
   static const colorNeutral800 = Color(0xff262626);
 
   static const colorNeutral900 = Color(0xff171717);
@@ -174,6 +176,34 @@ class PepperCoreColors {
   static const colorNeutralBlack = Color(0xff000000);
 
   static const colorNeutralWhite = Color(0xffffffff);
+
+  static const colorMidnightWhite = Color(0xffffffff);
+
+  static const colorMidnight50 = Color(0xfff2f2f4);
+
+  static const colorMidnight100 = Color(0xffe2e2e6);
+
+  static const colorMidnight200 = Color(0xffb9b9bc);
+
+  static const colorMidnight300 = Color(0xff898990);
+
+  static const colorMidnight400 = Color(0xff545560);
+
+  static const colorMidnight500 = Color(0xff263048);
+
+  static const colorMidnight600 = Color(0xff243a58);
+
+  static const colorMidnight700 = Color(0xff1a2d47);
+
+  static const colorMidnight750 = Color(0xff142238);
+
+  static const colorMidnight800 = Color(0xff0f1d30);
+
+  static const colorMidnight850 = Color(0xff0a1628);
+
+  static const colorMidnight900 = Color(0xff050f22);
+
+  static const colorMidnight950 = Color(0xff000b1c);
 
   static const colorSystemGreen100 = Color(0xffdcfce7);
 
@@ -188,6 +218,8 @@ class PepperCoreColors {
   static const colorSystemGreen500 = Color(0xff00c950);
 
   static const colorSystemGreen600 = Color(0xff00a63e);
+
+  static const colorSystemGreen650 = Color(0xff00a83c);
 
   static const colorSystemGreen700 = Color(0xff008236);
 
@@ -232,6 +264,8 @@ class PepperCoreColors {
   static const colorSystemRed500 = Color(0xfffb2c36);
 
   static const colorSystemRed600 = Color(0xffe7000b);
+
+  static const colorSystemRed650 = Color(0xffd4000a);
 
   static const colorSystemRed700 = Color(0xffc10007);
 
@@ -1685,7 +1719,7 @@ class PepperColors {
 
   static const colorStaticSurfaceBrandCrypto = Color(0xffff5000);
 
-  static const colorStaticSurfaceBrandPrimary = Color(0xff0165fa);
+  static const colorStaticSurfaceBrandPrimary = Color(0xff0064fa);
 
   static const colorStaticSurfaceBrandSecondary = Color(0xff00d3f3);
 
@@ -1695,7 +1729,7 @@ class PepperColors {
 
   static const colorStaticTextPrimary = Color(0xff0a0a0a);
 
-  static const overlayScrimHigh = Color(0xb2000000);
+  static const overlayScrimHigh = Color(0xb20a0a0a);
 
   static const overlayScrimInverseHigh = Color(0xccffffff);
 
@@ -1703,23 +1737,23 @@ class PepperColors {
 
   static const overlayScrimInverseMedium = Color(0x8cffffff);
 
-  static const overlayScrimLow = Color(0x33000000);
+  static const overlayScrimLow = Color(0x330a0a0a);
 
-  static const overlayScrimMedium = Color(0x73000000);
+  static const overlayScrimMedium = Color(0x730a0a0a);
 
-  static const shadow2xlColor = Color(0x40000000);
+  static const shadow2xlColor = Color(0x400a0a0a);
 
-  static const shadow2xsColor = Color(0x0d000000);
+  static const shadow2xsColor = Color(0x0d0a0a0a);
 
-  static const shadowLgColor = Color(0x1a000000);
+  static const shadowLgColor = Color(0x1a0a0a0a);
 
-  static const shadowMdColor = Color(0x1a000000);
+  static const shadowMdColor = Color(0x1a0a0a0a);
 
-  static const shadowSmColor = Color(0x0d000000);
+  static const shadowSmColor = Color(0x0d0a0a0a);
 
-  static const shadowXlColor = Color(0x1a000000);
+  static const shadowXlColor = Color(0x1a0a0a0a);
 
-  static const shadowXsColor = Color(0x0d000000);
+  static const shadowXsColor = Color(0x0d0a0a0a);
 
   /// Dark-mode value: #ffffff40
   static const stateOverlayHoverStrong = Color(0x330a0a0a);
