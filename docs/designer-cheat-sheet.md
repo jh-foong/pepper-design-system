@@ -7,15 +7,15 @@ Two prompts. That's the whole workflow.
 ## 🎨 STEP A — Design → tokenised HTML
 
 **You'll need open in Claude Design (claude.ai):**
-- 📄 `DESIGN.md` (download from GitHub repo, Raw view → Cmd+S)
+- 📄 `DESIGN.md` + `TOKENS.md` (download both from GitHub repo, Raw view → Cmd+S)
 - 🖼️ Screenshot of the design you want to rebuild (legacy screen, sketch, or reference)
 - 🖼️ *(Optional)* Component reference PNGs — buttons, cards, inputs from the Pepper Figma branch
 
 **Drag all files into Claude Design, then paste this prompt:**
 
-> Follow `DESIGN.md` strictly. Rebuild the attached screen using Pepper Design System tokens (`--pepper-*` CSS variables) for all colours, typography, spacing, radius, and shadows.
+> Follow `DESIGN.md` + `TOKENS.md` strictly. Rebuild the attached screen using Pepper Design System tokens (`--pepper-*` CSS variables) for all colours, typography, spacing, radius, and shadows.
 >
-> Use the attached component PNGs as **visual style reference only** — match the look (button shapes, card padding, input style). All token values must come from `DESIGN.md`, not the PNGs.
+> Use the attached component PNGs as **visual style reference only** — match the look (button shapes, card padding, input style). All token values must come from `TOKENS.md`, not the PNGs.
 >
 > Output a single self-contained `index.html` file.
 
@@ -51,7 +51,7 @@ Before moving to Step B, **rename `index.html`** to something descriptive — e.
 
 ## ⚠️ Quick rules
 
-- ✅ Always attach `DESIGN.md` in Step A
+- ✅ Always attach `DESIGN.md` + `TOKENS.md` in Step A
 - ✅ Always rename `index.html` before Step B
 - ✅ Use component PNGs as **style reference**, not layout to copy
 - ❌ Don't ask Claude to "make it look nice" — let `DESIGN.md` do the work
@@ -61,7 +61,7 @@ Before moving to Step B, **rename `index.html`** to something descriptive — e.
 
 ## 🆘 Stuck?
 
-- Wrong colours / fonts? → `DESIGN.md` probably wasn't attached. Re-attach and re-prompt.
+- Wrong colours / fonts? → `DESIGN.md` + `TOKENS.md` probably weren't attached. Re-attach both and re-prompt.
 - Buttons/cards look off? → Add component PNG references and re-run Step A.
 - Need help? → `#design-systems-dojo` on Slack.
 
@@ -72,7 +72,7 @@ Before moving to Step B, **rename `index.html`** to something descriptive — e.
 For documentation, design reviews, or "show your working" decks: turn an `index.html` from Step A into an annotated version where each component is labelled with the Pepper tokens it uses.
 
 **You'll need open in Claude Design:**
-- 📄 `DESIGN.md`
+- 📄 `DESIGN.md` + `TOKENS.md`
 - 📄 The `index.html` from Step A
 
 **Drag both in, then paste:**
