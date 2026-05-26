@@ -8,10 +8,12 @@ Things not working? Start here. This page is written for designers using the Pep
 
 Four quickest fixes that solve most problems:
 
-1. **Re-download `DESIGN.md`** from the [canonical URL](https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/DESIGN.md) — stale copies drift fast.
+1. **Re-download both spec files** — stale copies drift fast:
+   - [DESIGN.md](https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/DESIGN.md)
+   - [TOKENS.md](https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/TOKENS.md)
 2. **Confirm Manrope is installed** on your Mac (Font Book → search "Manrope"). Use the [Pepperstone fork](https://github.com/jh-foong/manrope), not Google Fonts.
-3. **Confirm `DESIGN.md` is attached to your AI** — in Claude Project knowledge, your Claude Code scratch folder, or pasted into the current chat.
-4. **Re-prompt with "follow DESIGN.md strictly"** — AI tools forget context mid-session. A single explicit instruction usually snaps output back on-brand.
+3. **Confirm both files are attached to your AI** — in Claude Project knowledge, your Claude Code scratch folder, or pasted into the current chat.
+4. **Re-prompt with "follow DESIGN.md + TOKENS.md strictly"** — AI tools forget context mid-session. A single explicit instruction usually snaps output back on-brand.
 
 If those four don't fix it, keep reading.
 
@@ -22,12 +24,12 @@ If those four don't fix it, keep reading.
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | AI generates wrong fonts | Manrope not installed | Install the [Pepperstone fork of Manrope](resources.md#fonts) |
-| AI hardcodes hex values | `DESIGN.md` not attached to the AI | Re-attach it — see [Designer Quickstart](designer-quickstart.md) |
-| Output only uses one prefix (all `--pepper-core-*` or all `--pepper-*`) | Stale `DESIGN.md` (pre-v2.0.0) | Re-download from the [canonical URL](https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/DESIGN.md) |
+| AI hardcodes hex values | `TOKENS.md` not attached to the AI | Re-attach both files — see [Designer Quickstart](designer-quickstart.md) |
+| Output only uses one prefix (all `--pepper-core-*` or all `--pepper-*`) | Stale `TOKENS.md` (pre-v2.0.0) | Re-download both files from the canonical URLs above |
 | "I don't see new tokens in Figma" | They're on a branch, not main | Use the Figma branch linked in the [README](../README.md#key-links) |
-| "I edited `DESIGN.md` and now things break" | Edits make your copy drift from canonical | Re-download the clean copy. If the change matters, [raise an issue](https://github.com/jh-foong/pepper-design-system/issues) |
+| "I edited `DESIGN.md` or `TOKENS.md` and now things break" | Edits make your copy drift from canonical | Re-download both clean copies. If the change matters, [raise an issue](https://github.com/jh-foong/pepper-design-system/issues) |
 | "How do I apply a token in Figma?" | — | See [Token Reference](token-reference.md#applying-tokens-in-figma) |
-| "AI output looks nothing like Pepper Design System" | Usually stale `DESIGN.md` + missing Manrope + weak prompt | Walk through the [Designer Quickstart](designer-quickstart.md) from the top |
+| "AI output looks nothing like Pepper Design System" | Usually stale files + missing Manrope + weak prompt | Walk through the [Designer Quickstart](designer-quickstart.md) from the top |
 
 ---
 

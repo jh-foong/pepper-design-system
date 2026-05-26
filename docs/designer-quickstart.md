@@ -12,9 +12,9 @@ Made for designers. No coding required.
 
 ## How this fits together (30-second mental model)
 
-- **`DESIGN.md`** is a single text file that tells any AI tool what on-brand Pepper Design System looks like (colours, type, spacing, shadows). It's the only thing you *have* to keep fresh.
-- **This GitHub repo** is the source of truth — where `DESIGN.md` and the raw token files live. You don't work *inside* the repo; you just pull `DESIGN.md` out of it.
-- **Your AI tool** (Claude Design / Claude Code) reads `DESIGN.md` as context, then outputs real coded prototypes or design artifacts using Pepper Design System tokens.
+- **`DESIGN.md` + `TOKENS.md`** are two files that together tell any AI tool what on-brand Pepper Design System looks like. `DESIGN.md` is the rules layer. `TOKENS.md` is the values layer (every colour, type, spacing, and shadow token). Both must be kept fresh.
+- **This GitHub repo** is the source of truth — where both files and the raw token files live. You don't work *inside* the repo; you just pull them out of it.
+- **Your AI tool** (Claude Design / Claude Code) reads both files as context, then outputs real coded prototypes or design artifacts using Pepper Design System tokens.
 - **Figma stays as-is for production work.** New Pepper Design System tokens aren't merged into the main Figma library yet, so keep shipping production designs on the existing library. Use this flow for concepts, pitches, user tests, and anything not shipping to prod.
 
 ---
@@ -56,31 +56,34 @@ Download from Google Fonts and install the same way:
 
 ### Option 1 — Claude Design *(recommended, no install)*
 
-1. Open [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md) → click **Raw** → **Cmd+S** to save it locally
-2. Open [claude.ai](https://claude.ai) → start a new chat → click **+** and attach `DESIGN.md`
-3. Prompt: *"Follow DESIGN.md. Design a [thing]."*
+1. Download both files → click **Raw** → **Cmd+S** to save locally:
+   - [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md)
+   - [TOKENS.md](https://github.com/jh-foong/pepper-design-system/blob/main/TOKENS.md)
+2. Open [claude.ai](https://claude.ai) → start a new chat → click **+** and attach both files
+3. Prompt: *"Follow DESIGN.md + TOKENS.md. Design a [thing]."*
 
-> 💡 **Pro tip — use a Claude Project:** go to [claude.ai/projects](https://claude.ai/projects), create a project called "Pepper Design," and upload `DESIGN.md` once into **Project knowledge**. Every chat inside that project automatically uses it — no re-uploading.
+> 💡 **Pro tip — use a Claude Project:** go to [claude.ai/projects](https://claude.ai/projects), create a project called "Pepper Design," and upload both `DESIGN.md` and `TOKENS.md` into **Project knowledge**. Every chat inside that project automatically uses them — no re-uploading.
 
 ### Option 2 — Claude Code *(for designers who want local prototype files)*
 
 Best if you want Claude to save prototypes as real files you can open in a browser, share, or screenshot.
 
-> ⚠️ **Don't clone the Pepper Design System repo to prototype in.** That repo is the source of truth for tokens — keep it clean. Make a **separate scratch folder** on your Mac and just drop `DESIGN.md` into it.
+> ⚠️ **Don't clone the Pepper Design System repo to prototype in.** That repo is the source of truth for tokens — keep it clean. Make a **separate scratch folder** on your Mac and drop the spec files into it.
 
 **Setup (one-time, ~5 min):**
 
 1. Make a folder anywhere on your Mac — e.g. `~/Documents/Pepper Prototypes/`
-2. Download [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md) → click **Raw** → Cmd+S → save into that folder
-3. *(Optional but recommended)* also download [docs/token-reference.md](https://github.com/jh-foong/pepper-design-system/blob/main/docs/token-reference.md) into the same folder for the cheatsheet
-4. Open Terminal → `cd` into the folder → run `claude`
-5. Prompt: *"Follow `@DESIGN.md`. Build a [thing] and save it to `[feature-name]/index.html`."*
+2. Download both files → click **Raw** → Cmd+S → save into that folder:
+   - [DESIGN.md](https://github.com/jh-foong/pepper-design-system/blob/main/DESIGN.md)
+   - [TOKENS.md](https://github.com/jh-foong/pepper-design-system/blob/main/TOKENS.md)
+3. Open Terminal → `cd` into the folder → run `claude`
+4. Prompt: *"Follow `@DESIGN.md` and `@TOKENS.md`. Build a [thing] and save it to `[feature-name]/index.html`."*
 
 Your folder ends up looking like:
 ```
 Pepper Prototypes/
 ├── DESIGN.md
-├── token-reference.md
+├── TOKENS.md
 ├── login-flow/
 ├── trade-ticket/
 └── pricing-page/
@@ -90,7 +93,7 @@ The DS repo stays untouched. Reorganise or delete prototypes however you like �
 
 Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-code).
 
-> 💡 **Updating tokens:** when a new Pepper Design System release lands ([see Releases](https://github.com/jh-foong/pepper-design-system/releases)), re-download `DESIGN.md` and overwrite the old copy in your scratch folder.
+> 💡 **Updating tokens:** when a new Pepper Design System release lands ([see Releases](https://github.com/jh-foong/pepper-design-system/releases)), re-download both `DESIGN.md` and `TOKENS.md` and overwrite the old copies in your scratch folder.
 
 ---
 
@@ -103,14 +106,14 @@ Requires: [Claude Code installed](https://docs.anthropic.com/claude/docs/claude-
 Before you prompt anything, take 30 seconds to check:
 
 - [ ] **Manrope** is installed on your Mac (Font Book → search "Manrope")
-- [ ] Your local `DESIGN.md` version matches the [latest release](https://github.com/jh-foong/pepper-design-system/releases) — check the version line at the top of the file
-- [ ] `DESIGN.md` is attached to your Claude Project / in your scratch folder / in the current Claude Code directory
+- [ ] Your local `DESIGN.md` + `TOKENS.md` version matches the [latest release](https://github.com/jh-foong/pepper-design-system/releases) — check the version line at the top of each file
+- [ ] Both files are attached to your Claude Project / in your scratch folder / in the current Claude Code directory
 
-If all three are ✅, you're good. If `DESIGN.md` is out of date, grab the new one (see [Stay up to date](#stay-up-to-date) below).
+If all three are ✅, you're good. If either file is out of date, grab both fresh (see [Stay up to date](#stay-up-to-date) below).
 
 ### Starter prompts
 
-Try one of these in your AI tool of choice. All of them assume `DESIGN.md` is loaded as context.
+Try one of these in your AI tool of choice. All of them assume `DESIGN.md` + `TOKENS.md` are loaded as context.
 
 | Goal | Prompt |
 |------|--------|
@@ -144,7 +147,7 @@ Longer-term, Pepper Design System will add component specs directly to `DESIGN.m
 
 ## Stay up to date
 
-`DESIGN.md` is the only thing you *must* keep fresh. Three ways to stay in sync — pick whichever fits your workflow:
+`DESIGN.md` and `TOKENS.md` are the two things you *must* keep fresh. Three ways to stay in sync — pick whichever fits your workflow:
 
 ### 1. Watch the repo on GitHub *(recommended — set up once)*
 
@@ -155,19 +158,19 @@ You'll get an email every time a new release ships. 5-second setup, zero ongoing
 
 ### 2. Version-stamp self-check
 
-Every `DESIGN.md` has a version line at the top (e.g. `Version: v1.2.0`). Before a session, glance at it and compare against the [Releases page](https://github.com/jh-foong/pepper-design-system/releases). If they differ, re-download.
+Both files have a version line at the top (e.g. `Version: v2.1.0`). Before a session, glance at it and compare against the [Releases page](https://github.com/jh-foong/pepper-design-system/releases). If they differ, re-download both.
 
 ### 3. Claude Code users — fetch the latest every session *(most foolproof)*
 
-Instead of keeping a local copy, prompt Claude Code to pull the live version straight from GitHub:
+Instead of keeping local copies, prompt Claude Code to pull the live versions straight from GitHub:
 
-> *"Fetch the latest DESIGN.md from `https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/DESIGN.md` and follow it. Build a [thing]."*
+> *"Fetch the latest DESIGN.md from `https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/DESIGN.md` and TOKENS.md from `https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/TOKENS.md` and follow them. Build a [thing]."*
 
 No syncing, always current. Only works with Claude Code (which has web access) — not Claude Design.
 
-### When `DESIGN.md` changes
+### When either file changes
 
-1. Overwrite the old `DESIGN.md` in your scratch folder / Claude Project knowledge
+1. Overwrite both files in your scratch folder / Claude Project knowledge
 2. Skim the [release notes](https://github.com/jh-foong/pepper-design-system/releases) — if tokens were renamed, old prototypes may need a refresh
 3. Carry on
 
