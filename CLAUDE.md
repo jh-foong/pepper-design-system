@@ -63,6 +63,7 @@ Do NOT remove these in future edits. If you're restructuring the README, move th
 | Figma — Bell (Foundations) | https://www.figma.com/design/DNFMgdaw9WVdMl3vh6FGCa/ | Colour, typography, spacing, radius, shadow, blur tokens |
 | Figma — Habanero (Components) | https://www.figma.com/design/ASQlBKQihYPIRGnZEgGQWg/ | Web component library |
 | Figma — Jalapeño (Icons) | https://www.figma.com/design/c6BuAXsvA7AxrRV8MuZg13/ | Icon & asset library |
+| Figma — Ghost (Native UI) | https://www.figma.com/design/cZNVSuWernKQ6liA6D98mi/ | Native app (iOS/Android) component library |
 | GitHub | https://github.com/jh-foong/pepper-design-system | Public sandbox — official home will move to Pepperstone org once permissions are sorted |
 
 ---
@@ -76,6 +77,7 @@ When using the `search_design_system` tool (or any Figma MCP tool that accepts `
 | 🌶️ Bell — Foundations (tokens, primitives, semantic colour) | `DNFMgdaw9WVdMl3vh6FGCa` | `lk-0a29fd87f9f08dc48a2aa461527bae9a18e5b4a64e623c8bccb3a56f8e61a88fb7fa6d20f8615f7660f119418c352e9385d3d3cb03a1a14bae3fcd406962b7e2` |
 | 🌶️🌶️🌶️ Habanero — Components (web UI library) | `ASQlBKQihYPIRGnZEgGQWg` | `lk-e98c506465048c1c28e3fa2a78bb2b665ec1f0a8e3a798aed2cf19df1bfca0c6e65b325c8088f3f858d04ec70d6d73e6744152ea4cdda9060c24761b04b90aca` |
 | 🌶️🌶️ Jalapeño — Icons & Assets | `c6BuAXsvA7AxrRV8MuZg13` | `lk-c7677147150f5bb2dce87cacc65ec76d6b1688b7b0d9980cdb0302d61c016c0df16d250813ef1b3beae46a5cd982287e9c8a3d937a1b3a4e502b885d18dc3e8e` |
+| 🌶️🌶️🌶️🌶️ Ghost — Native UI (iOS/Android app components) | `cZNVSuWernKQ6liA6D98mi` | `lk-8708e54bed13725be253172b815c2b94c3416adbd222784a36978c30908c0ab7c0613421d5b5d3bd930a38e8b3f141ed16cb6346c69d828912bb1afde8b3b8ba` |
 
 **Standing instruction:** whenever Claude uses `search_design_system` in this project, pass all three library keys in `includeLibraryKeys` unless the user explicitly asks to search a different scope.
 
