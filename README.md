@@ -13,7 +13,7 @@ Pepper DS Core is Pepperstone's design system — a shared library of design dec
 > ### Quick scope
 >
 > - ✅ **Use Pepper Design System for:** new features, concepts, prototypes, pitches
-> - ⚠️ **Don't use for:** extending existing production designs (they'll mismatch until Figma library merges — pending vendor A handover)
+> - ⚠️ **Don't use for:** existing production designs — they reference older tokens and will visually mismatch
 > - 🎨 **Where to start:** see "Designers — start here" below
 > - 🆘 **Stuck?** → [Designer FAQ](docs/designer-faq.md)
 
