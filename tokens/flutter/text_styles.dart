@@ -141,6 +141,51 @@ class PepperTypography {
     leadingDistribution: TextLeadingDistribution.even,
   );
 
+  // Display — marketing/hero styles (semibold, not bold)
+  static const displayXl = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 48,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.083333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const displayLg = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 36,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.111111,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const displayMd = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 30,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.2,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const displaySm = TextStyle(
+    fontFamily: "Manrope",
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    fontSize: 24,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    height: 1.333333,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
   static const bodyLg = TextStyle(
     fontFamily: "Manrope",
     fontWeight: FontWeight.w400,
