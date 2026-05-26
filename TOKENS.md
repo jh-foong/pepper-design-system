@@ -5,7 +5,7 @@
 > This is the canonical token reference for Pepper Design System. Re-download from the canonical URL if your copy drifts.
 >
 > - **Canonical URL:** https://raw.githubusercontent.com/jh-foong/pepper-design-system/main/TOKENS.md
-> - **Version:** v2.1.0
+> - **Version:** v2.2.0
 
 > **AI AGENT NOTE:** Read `DESIGN.md` first for rules and setup instructions. This file contains all token values — use it as a lookup reference when generating UI.
 
@@ -18,7 +18,7 @@ Pepper Design System is Pepperstone's design system. It defines the complete vis
 - **Primary font**: Manrope (Pepperstone fork)
 - **Language support**: English (Manrope), Arabic (Noto Sans Arabic), Traditional Chinese (Noto Sans TC), Japanese (Noto Sans JP)
 - **Grid**: 4px base unit
-- **Theme**: Light mode by default. Dark mode via `data-theme="dark"` on any ancestor element.
+- **Themes**: Light (default) · Dark (Midnight palette) · Dark-Neutral (neutral palette)
 
 ### Token naming (v2.0.0+)
 
@@ -36,56 +36,147 @@ Example: use `var(--pepper-color-fg-text-primary)`, not `var(--pepper-core-color
 ### Semantic tokens (use these)
 
 All semantic colours use CSS custom properties with prefixes:
-- `--pepper-color-fg-*` — foreground: text, stroke, icon
+- `--pepper-color-fg-*` — foreground: text, icon, stroke
 - `--pepper-color-bg-*` — backgrounds / surfaces
 - `--pepper-color-component-*` — component-specific
 - `--pepper-color-static-*` — theme-agnostic (e.g. data-viz)
 
+---
+
 #### Text (foreground/text/*)
 
-| Token | Value | Use |
-|-------|-------|-----|
-| `foreground/text/primary` | `#0a0a0a` | Primary body and heading text |
-| `foreground/text/secondary` | `#525252` | Secondary / supporting text |
-| `foreground/text/disabled` | `#a1a1a1` | Disabled states only — genuinely non-interactive or unavailable UI. **Never use for decorative, subtle, or supporting text.** Use `foreground/text/secondary` instead. |
-| `foreground/text/brand/default` | `#0165fa` | Links, brand-accented text |
-| `foreground/text/brand/strong` | `#000061` | Strong brand headings |
-| `foreground/text/inverse/primary` | `#ffffff` | Text on dark surfaces |
-| `foreground/text/inverse/secondary` | `#a1a1a1` | Secondary text on dark surfaces |
-| `foreground/text/positive` | `#008236` | Gains, confirmations |
-| `foreground/text/negative` | `#e7000b` | Losses, errors |
-| `foreground/text/system/success` | `#008236` | Success messages |
-| `foreground/text/system/error` | `#e7000b` | Error messages |
-| `foreground/text/system/warning` | `#ca3500` | Warning messages |
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `foreground/text/primary` | `#0a0a0a` | `#ffffff` | Primary body and heading text |
+| `foreground/text/secondary` | `#525252` | `#b9b9bc` | Secondary / supporting text |
+| `foreground/text/tertiary` | `#737373` | `#898990` | Tertiary / de-emphasised text |
+| `foreground/text/disabled` | `#0a0a0a4d` | `#ffffff66` | Disabled states only — genuinely non-interactive UI. **Never use for decorative text.** |
+| `foreground/text/brand/default` | `#0064fa` | `#3484fb` | Links, brand-accented text |
+| `foreground/text/brand/strong` | `#000061` | `#e6f0ff` | Strong brand headings |
+| `foreground/text/positive` | `#008236` | `#00a63e` | Gains, confirmations |
+| `foreground/text/negative` | `#e7000b` | `#fb2c36` | Losses, errors |
+| `foreground/text/system/success` | `#008236` | `#00a63e` | Success messages |
+| `foreground/text/system/error` | `#e7000b` | `#fb2c36` | Error messages |
+| `foreground/text/system/warning` | `#ca3500` | `#f54900` | Warning messages |
+| `foreground/text/inverse/primary` | `#ffffff` | `#000b1c` | Text on contrasting surfaces |
+| `foreground/text/inverse/secondary` | `#d4d4d4` | `#0f1d30` | Secondary text on contrasting surfaces |
+| `foreground/text/selected` | `#0064fa` | `#ffffff` | Selected / active state text |
+
+---
+
+#### Icons (foreground/icon/*)
+
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `foreground/icon/primary` | `#0a0a0a` | `#ffffff` | Primary icons |
+| `foreground/icon/secondary` | `#525252` | `#b9b9bc` | Secondary / subtle icons |
+| `foreground/icon/tertiary` | `#737373` | `#898990` | De-emphasised icons |
+| `foreground/icon/disabled` | `#0a0a0a4d` | `#ffffff66` | Disabled icons |
+| `foreground/icon/brand/default` | `#0064fa` | `#3484fb` | Brand icons |
+| `foreground/icon/positive` | `#008236` | `#00a63e` | Positive / gain icons |
+| `foreground/icon/negative` | `#e7000b` | `#fb2c36` | Negative / loss icons |
+| `foreground/icon/system/error` | `#e7000b` | `#fb2c36` | Error icons |
+| `foreground/icon/system/success` | `#008236` | `#00a63e` | Success icons |
+| `foreground/icon/system/warning` | `#ca3500` | `#f54900` | Warning icons |
+| `foreground/icon/selected` | `#0064fa` | `#ffffff` | Selected state icons |
+
+**Market status icons** (trading-specific):
+
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `foreground/icon/market/open/icon` | `#00a63e` | `#05df72` | Market open indicator |
+| `foreground/icon/market/open/surface` | `#dcfce7` | `#0d542b` | Market open background |
+| `foreground/icon/market/closed/icon` | `#000061` | `#e6f0ff` | Market closed indicator |
+| `foreground/icon/market/closed/surface` | `#e6f0ff` | `#000094` | Market closed background |
+| `foreground/icon/market/no-data/icon` | `#0a0a0a99` | `#898990` | No data indicator |
+| `foreground/icon/market/no-data/surface` | `#0a0a0a0d` | `#ffffff26` | No data background |
+
+---
 
 #### Stroke / borders (foreground/stroke/*)
 
-| Token | Value | Use |
-|-------|-------|-----|
-| `foreground/stroke/strong` | `#0a0a0a` | High-emphasis borders |
-| `foreground/stroke/subtle` | `#d4d4d4` | Dividers, subtle borders |
-| `foreground/stroke/brand/default` | `#0165fa` | Focused, selected borders |
-| `foreground/stroke/brand/strong` | `#000061` | Emphasised brand borders |
-| `foreground/stroke/inverse/strong` | `#ffffff` | Borders on dark surfaces |
-| `foreground/stroke/inverse/subtle` | `#525252` | Subtle borders on dark surfaces |
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `foreground/stroke/strong` | `#0a0a0a` | `#ffffff` | High-emphasis borders |
+| `foreground/stroke/subtle` | `#d4d4d4` | `#263048` | Dividers, subtle borders |
+| `foreground/stroke/brand/default` | `#0064fa` | `#3484fb` | Focused, selected borders |
+| `foreground/stroke/brand/strong` | `#000061` | `#e6f0ff` | Emphasised brand borders |
+| `foreground/stroke/positive` | `#008236` | `#00c950` | Positive state borders |
+| `foreground/stroke/negative` | `#e7000b` | `#fb2c36` | Negative state borders |
+| `foreground/stroke/system/error` | `#e7000b` | `#fb2c36` | Error borders |
+| `foreground/stroke/inverse/strong` | `#ffffff` | `#000b1c` | Borders on contrasting surfaces |
+| `foreground/stroke/inverse/subtle` | `#525252` | `#b9b9bc` | Subtle borders on contrasting surfaces |
+| `foreground/stroke/selected` | `#0064fa` | `#ffffff` | Selected state borders |
+
+---
 
 #### Surfaces (background/surface/*)
 
-| Token | Value | Use |
-|-------|-------|-----|
-| `background/surface/primary` | `#ffffff` | Default page / card background |
-| `background/surface/brand/primary` | `#0165fa` | Primary CTAs, brand surfaces |
-| `background/surface/brand/primary/hover` | `#0032c7` | Primary CTA hover |
-| `background/surface/brand/secondary` | `#00d3f3` | Secondary brand surfaces |
-| `background/surface/brand/secondary/hover` | `#00b8db` | Secondary brand hover |
-| `background/surface/brand/subtle` | `#e6f0ff` | Subtle brand tinted backgrounds |
-| `background/surface/brand/subtle/hover` | `#99c1fd` | Subtle brand hover |
-| `background/surface/brand/crypto` | `#ff5000` | Crypto-specific brand surface |
-| `background/surface/inverse/primary` | `#0a0a0a` | Dark-mode default surface |
-| `background/surface/inverse/secondary` | `#262626` | Dark-mode secondary surface |
-| `background/surface/system/success` | `#dcfce7` | Success notification background |
-| `background/surface/system/error` | `#ffe2e2` | Error notification background |
-| `background/surface/system/warning` | `#ffedd4` | Warning notification background |
+**Core surfaces:**
+
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `background/surface/primary` | `#ffffff` | `#050f22` | Default page / card background |
+| `background/surface/secondary` | `#f5f5f5` | `#0f1d30` | Secondary / nested backgrounds |
+| `background/surface/elevated` | `#ffffff` | `#142238` | Raised cards, popovers |
+| `background/surface/sunken` | `#f5f5f5` | `#000b1c` | Recessed / inset areas |
+| `background/surface/disabled` | `#0a0a0a1a` | `#ffffff33` | Disabled surface |
+| `background/surface/primary/hover` | `#f5f5f5` | `#0f1d30` | Primary surface hover |
+| `background/surface/secondary/hover` | `#e5e5e5` | `#1a2d47` | Secondary surface hover |
+
+**Brand surfaces:**
+
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `background/surface/brand/primary` | `#0064fa` | `#0064fa` | Primary CTAs, brand surfaces |
+| `background/surface/brand/primary/hover` | `#0032c7` | `#0032c7` | Primary CTA hover |
+| `background/surface/brand/secondary` | `#00d3f3` | `#00d3f3` | Secondary brand surfaces |
+| `background/surface/brand/secondary/hover` | `#00b8db` | `#00b8db` | Secondary brand hover |
+| `background/surface/brand/subtle` | `#e6f0ff` | `#000061` | Subtle brand tinted backgrounds |
+| `background/surface/brand/subtle/hover` | `#99c1fd` | `#000094` | Subtle brand hover |
+| `background/surface/brand/crypto` | `#ff5000` | `#ff5000` | Crypto-specific brand surface |
+
+**Positive / Negative surfaces (buy/sell, P&L):**
+
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `background/surface/positive` | `#008236` | `#00a83c` | Buy / gain surfaces |
+| `background/surface/positive/hover` | `#016630` | `#00c950` | Buy / gain hover |
+| `background/surface/negative` | `#d4000a` | `#e7000b` | Sell / loss surfaces |
+| `background/surface/negative/hover` | `#c10007` | `#fb2c36` | Sell / loss hover |
+
+**System surfaces:**
+
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `background/surface/system/success` | `#dcfce7` | `#0d542b` | Success notification background |
+| `background/surface/system/error` | `#ffe2e2` | `#82181a` | Error notification background |
+| `background/surface/system/warning` | `#ffedd4` | `#7e2a0c` | Warning notification background |
+
+**Inverse surfaces (contrasting context):**
+
+| Token | Light | Dark | Use |
+|-------|-------|------|-----|
+| `background/surface/inverse/primary` | `#171717` | `#ffffff` | Contrasting surface default |
+| `background/surface/inverse/secondary` | `#262626` | `#e2e2e6` | Contrasting surface secondary |
+| `background/surface/inverse/primary/hover` | `#262626` | `#e2e2e6` | Contrasting surface hover |
+
+**Accent colour surfaces:**
+
+| Token | Light subtle | Light strong | Use |
+|-------|-------------|-------------|-----|
+| `background/surface/accent/red/subtle` | `#ffe2e2` | `#d4000a` | Red accent backgrounds |
+| `background/surface/accent/orange/subtle` | `#ffedd4` | `#ff8904` | Orange accent backgrounds |
+| `background/surface/accent/yellow/subtle` | `#fef7c8` | `#eed12b` | Yellow accent backgrounds |
+| `background/surface/accent/lime/subtle` | `#d3f1a7` | `#94c748` | Lime accent backgrounds |
+| `background/surface/accent/green/subtle` | `#dcfce7` | `#008236` | Green accent backgrounds |
+| `background/surface/accent/turquoise/subtle` | `#d7f9ed` | `#47e0a8` | Turquoise accent backgrounds |
+| `background/surface/accent/cyan/subtle` | `#cefafe` | `#00d3f3` | Cyan accent backgrounds |
+| `background/surface/accent/blue/subtle` | `#e6f0ff` | `#0064fa` | Blue accent backgrounds |
+| `background/surface/accent/violet/subtle` | `#e3c0f0` | `#aa30d8` | Violet accent backgrounds |
+| `background/surface/accent/magenta/subtle` | `#fdd0ec` | `#e774bb` | Magenta accent backgrounds |
+
+---
 
 #### Component-specific
 
@@ -107,6 +198,19 @@ All semantic colours use CSS custom properties with prefixes:
 
 Always Manrope. Match weight, size, and line-height exactly.
 
+### Display styles (new in v2.2.0)
+
+Use for large feature numbers, hero stats, dashboard values — larger than headings, semi-bold weight.
+
+| Style | Weight | Size | Line height | Token |
+|-------|--------|------|-------------|-------|
+| Display XL | 600 | 48px | 52px | `--pepper-typography-display-xl` |
+| Display LG | 600 | 36px | 40px | `--pepper-typography-display-lg` |
+| Display MD | 600 | 30px | 36px | `--pepper-typography-display-md` |
+| Display SM | 600 | 24px | 32px | `--pepper-typography-display-sm` |
+
+### Heading styles
+
 | Style | Weight | Size | Line height | Token |
 |-------|--------|------|-------------|-------|
 | Heading H1 | 700 | 96px | 100px | `--pepper-typography-heading-h1` |
@@ -115,12 +219,17 @@ Always Manrope. Match weight, size, and line-height exactly.
 | Heading H4 | 700 | 30px | 36px | `--pepper-typography-heading-h4` |
 | Heading H5 | 700 | 24px | 32px | `--pepper-typography-heading-h5` |
 | Heading H6 | 700 | 20px | 28px | `--pepper-typography-heading-h6` |
+
+### Body, Label, Legal
+
+| Style | Weight | Size | Line height | Token |
+|-------|--------|------|-------------|-------|
 | Body lg | 400 | 18px | 28px | `--pepper-typography-body-lg` |
 | Body md | 400 | 16px | 24px | `--pepper-typography-body-md` |
 | Body sm | 400 | 14px | 20px | `--pepper-typography-body-sm` |
 | Body xs | 400 | 12px | 16px | `--pepper-typography-body-xs` |
 | Body 2xs | 400 | 10px | 14px | `--pepper-typography-body-2xs` |
-| Label lg | 600 | 18px | 24px | `--pepper-typography-label-lg` |
+| Label lg | 600 | 18px | 28px | `--pepper-typography-label-lg` |
 | Label md | 600 | 16px | 24px | `--pepper-typography-label-md` |
 | Label sm | 600 | 14px | 20px | `--pepper-typography-label-sm` |
 | Label xs | 600 | 12px | 16px | `--pepper-typography-label-xs` |
@@ -128,11 +237,12 @@ Always Manrope. Match weight, size, and line-height exactly.
 | Legal md | 400 | 16px | 24px | `--pepper-typography-legal-md` |
 | Legal xs | 400 | 12px | 16px | `--pepper-typography-legal-xs` |
 
-**Each style also has `*-underlined` and (for md sizes) `*-dashed` variants.**
+**Each style also has `*-underlined` and (for md/sm sizes) `*-dashed` variants.**
 
 ### When to use what
 
-- **Headings (H1–H6)** — Page titles, section titles, hero text. Never use for body copy.
+- **Display** — Feature numbers, hero stats, dashboard P&L values. Semi-bold, large. Not for body copy.
+- **Headings (H1–H6)** — Page titles, section titles, hero text. Bold.
 - **Body** — Paragraph text, descriptions, long-form content. Use `body-md` as default.
 - **Label** — Button text, form labels, UI affordances, metadata. Always 600 weight.
 - **Legal** — Disclaimers, compliance notices, fine print.
@@ -168,28 +278,43 @@ Always Manrope. Match weight, size, and line-height exactly.
 | `spacing-160` | `160px` | — |
 | `spacing-256` | `256px` | — |
 
-### Semantic layout
+### Semantic layout — responsive
 
-| Token | Value | Use |
-|-------|-------|-----|
-| `layout/margin` | `80px` | Outer page margin |
-| `layout/gutter` | `20px` | Column gutter |
-| `layout/pad` | `80px` | Section padding |
-| `layout/gap/md` | `40px` | Between layout blocks |
-| `layout/gap/lg` | `80px` | Between large sections |
-| `content/pad/sm` | `32px` | Card / container padding (sm) |
-| `content/pad/md` | `40px` | Card / container padding (md) |
-| `content/pad/lg` | `64px` | Card / container padding (lg) |
-| `content/gap/xs` | `24px` | Between related content items |
-| `content/gap/sm` | `32px` | Between content groups (sm) |
-| `content/gap/md` | `40px` | Between content groups (md) |
-| `content/gap/lg` | `64px` | Between content groups (lg) |
+Spacing values change across breakpoints. Always use the semantic token, not the raw scale value, for layout decisions.
 
-### Canvas
+| Token | Desktop | Tablet | Mobile | Use |
+|-------|---------|--------|--------|-----|
+| `layout/margin` | `80px` | `40px` | `20px` | Outer page margin |
+| `layout/gutter` | `20px` | `20px` | `8px` | Column gutter |
+| `layout/pad` | `80px` | `64px` | `40px` | Section padding |
+| `layout/gap/md` | `40px` | `24px` | `24px` | Between layout blocks |
+| `layout/gap/lg` | `80px` | `40px` | `40px` | Between large sections |
+| `content/pad/sm` | `32px` | `24px` | `24px` | Card / container padding (sm) |
+| `content/pad/md` | `40px` | `32px` | `24px` | Card / container padding (md) |
+| `content/pad/lg` | `64px` | `40px` | `24px` | Card / container padding (lg) |
+| `content/gap/xs` | `24px` | `16px` | `16px` | Between related content items |
+| `content/gap/sm` | `32px` | `24px` | `24px` | Between content groups (sm) |
+| `content/gap/md` | `40px` | `24px` | `24px` | Between content groups (md) |
+| `content/gap/lg` | `64px` | `40px` | `32px` | Between content groups (lg) |
 
-- **Viewport width**: 1440px
-- **Viewport height**: 1024px
-- **Columns**: 12
+### Breakpoints / Canvas
+
+| Breakpoint | Width | Columns |
+|------------|-------|---------|
+| Desktop (default) | 1440px | 12 |
+| Tablet | 768px | 8 |
+| Mobile | 375px | 4 |
+
+**Screen size tokens** (`size/screen-width/*`):
+
+| Token | Value |
+|-------|-------|
+| `size/screen-width/xs` | `375px` |
+| `size/screen-width/sm` | `640px` |
+| `size/screen-width/md` | `768px` |
+| `size/screen-width/lg` | `1024px` |
+| `size/screen-width/xl` | `1280px` |
+| `size/screen-width/2xl` | `1440px` |
 
 ---
 
@@ -205,7 +330,7 @@ Always Manrope. Match weight, size, and line-height exactly.
 | `radius/xl` | `16px` | Large cards, modals |
 | `radius/2xl` | `24px` | Feature cards |
 | `radius/3xl` | `32px` | Hero blocks |
-| `radius/full` | `9999px` | Pills, avatars |
+| `radius/full` | `999px` | Pills, avatars |
 
 ---
 
@@ -258,8 +383,55 @@ Always Manrope. Match weight, size, and line-height exactly.
 | Weight | Value | Use |
 |--------|-------|-----|
 | Regular | 400 | Body, legal |
-| Semi-bold | 600 | Labels |
+| Semi-bold | 600 | Labels, Display |
 | Bold | 700 | Headings |
+
+---
+
+## Dark mode
+
+Pepper Design System has two dark variants, both applied via `data-theme` on any ancestor element.
+
+```html
+<!-- Dark (Midnight — deep navy) -->
+<html data-theme="dark">
+
+<!-- Dark Neutral (classic dark grey) -->
+<html data-theme="dark-neutral">
+```
+
+### Dark vs Dark-Neutral
+
+| | Dark (Midnight) | Dark-Neutral |
+|--|----------------|-------------|
+| **Use** | Consumer trading products, flagship app | Internal tools, utility dashboards |
+| **Primary bg** | `#050f22` (deep midnight navy) | `#171717` (neutral-900) |
+| **Secondary bg** | `#0f1d30` | `#404040` |
+| **Elevated** | `#142238` | — |
+| **Palette** | Midnight (`color-midnight-*`) | Neutral (`color-neutral-*`) |
+
+### Key dark mode token changes
+
+These tokens flip in dark mode — do **not** hard-code light values when semantic tokens are available:
+
+| Token | Light | Dark (Midnight) |
+|-------|-------|-----------------|
+| `background/surface/primary` | `#ffffff` | `#050f22` |
+| `background/surface/secondary` | `#f5f5f5` | `#0f1d30` |
+| `background/surface/elevated` | `#ffffff` | `#142238` |
+| `foreground/text/primary` | `#0a0a0a` | `#ffffff` |
+| `foreground/text/secondary` | `#525252` | `#b9b9bc` |
+| `foreground/text/brand/default` | `#0064fa` | `#3484fb` |
+| `foreground/stroke/subtle` | `#d4d4d4` | `#263048` |
+| `foreground/text/positive` | `#008236` | `#00a63e` |
+| `foreground/text/negative` | `#e7000b` | `#fb2c36` |
+| `background/surface/system/error` | `#ffe2e2` | `#82181a` |
+
+**What flips automatically in dark mode:** all semantic `--pepper-color-fg-*`, `--pepper-color-bg-*`, state-overlay, component, and gradient-stop tokens.
+
+**What stays static (same in all themes):** primitives (`--pepper-core-*`), shadows, static tokens (`--pepper-color-static-*`), and data-viz colours.
+
+**Inverse-suffixed tokens** (e.g. `--pepper-color-fg-text-inverse-primary`) are for text/surfaces on a *contrasting* background within the current theme — not for switching themes.
 
 ---
 
@@ -272,6 +444,7 @@ Always Manrope. Match weight, size, and line-height exactly.
 | Spacing | Use tokens only. Never arbitrary px values. 4px grid. |
 | Radius | Use radius tokens only. |
 | Shadows | Use shadow tokens. Interactive elements must have a focus-ring token. |
+| Icons | Use `--pepper-color-fg-icon-*` tokens, not text tokens, for icon colours. |
 | Components | Mirror defined patterns. Buy actions use green buysell tokens; sell uses red. |
 | Accessibility | Every interactive element has a visible focus state. Respect contrast ratios. |
 | HTML | Output semantic HTML5 with ARIA roles. Responsive by default. |
@@ -350,7 +523,8 @@ Everything summarised here is derived from the authoritative token files in this
 | [`tokens/css/base/opacity.css`](tokens/css/base/opacity.css) | Opacity tokens |
 | [`tokens/css/base/gradient.css`](tokens/css/base/gradient.css) | Named gradients |
 | [`tokens/flutter/`](tokens/flutter/) | Flutter / Dart equivalents |
-| [`source/VARIABLE COLLECTIONS v2.0.0.md`](source/VARIABLE%20COLLECTIONS%20v2.0.0.md) | Raw Figma variable export (v2.0.0 — current) |
+| [`source/VARIABLE COLLECTIONS v2.2.0.md`](source/VARIABLE%20COLLECTIONS%20v2.2.0.md) | Raw Figma variable export (v2.2.0 — current) |
+| [`source/VARIABLE COLLECTIONS v2.0.0.md`](source/VARIABLE%20COLLECTIONS%20v2.0.0.md) | Raw Figma variable export (v2.0.0 — previous) |
 | [`source/STYLES v1.0.0.md`](source/STYLES%20v1.0.0.md) | Raw Figma style export |
 
 ---
@@ -359,6 +533,7 @@ Everything summarised here is derived from the authoritative token files in this
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v2.2.0 | 2026-05-26 | Token sync from Figma (Bell foundations). Dark mode now uses Midnight palette (`#050f22`). Added dark-neutral mode. New icon tokens, tertiary text/icon, display typography, accent colour surfaces, market status icons, responsive spacing, screen size tokens. Brand blue updated `#0165fa` → `#0064fa`. Disabled tokens now alpha-based. |
 | v2.1.0 | 2026-05-26 | **Structural:** token content moved from `DESIGN.md` into this dedicated `TOKENS.md`. DESIGN.md is now the manifest / rules layer. |
 | v2.0.1 | 2026-04-24 | CDN snippets, dark-mode toggle example, DO NOT EDIT banner, Edit log |
 | v2.0.0 | 2026-04-24 | **Breaking:** two-prefix token model. Dark mode via `[data-theme="dark"]`. New composite typography tokens. |

@@ -20,6 +20,7 @@ Design tokens are authored in Figma as Variables and synced to this repo using t
 |----------|------|-------|
 | Token files | [`tokens/`](../tokens/) | CSS and Dart outputs, updated on each sync |
 | Sync guide | [Figma → Claude Sync](./figma-claude-sync.md) | How to export and sync tokens |
+| Latest Figma export | [`source/VARIABLE COLLECTIONS v2.2.0.md`](../source/VARIABLE%20COLLECTIONS%20v2.2.0.md) | Raw DesignBridge export — Bell foundations |
 
 Token categories: Color, Typography, Font Family, Font Size, Font Weight, Line Height, Space, Dimension, Size, Border Radius, Border Width, Blur, Shadow, Opacity, Gradient.
 
