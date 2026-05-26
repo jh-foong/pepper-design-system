@@ -194,27 +194,27 @@
   --pepper-core-opacity-color-brand-primary-blue-300-opacity-85: #3484fbd9;
   --pepper-core-opacity-color-brand-primary-blue-300-opacity-90: #3484fbe5;
   --pepper-core-opacity-color-brand-primary-blue-300-opacity-95: #3484fbf2;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-0: #0165fa00;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-10: #0165fa1a;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-0: #0064fa00;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-10: #0064fa1a;
   --pepper-core-opacity-color-brand-primary-blue-400-opacity-100: #0064fa;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-15: #0165fa26;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-20: #0165fa33;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-25: #0165fa40;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-30: #0165fa4d;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-35: #0165fa59;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-40: #0165fa66;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-45: #0165fa73;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-5: #0165fa0d;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-50: #0165fa80;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-55: #0165fa8c;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-60: #0165fa99;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-65: #0165faa6;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-70: #0165fab2;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-75: #0165fabf;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-80: #0165facc;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-85: #0165fad9;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-90: #0165fae5;
-  --pepper-core-opacity-color-brand-primary-blue-400-opacity-95: #0165faf2;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-15: #0064fa26;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-20: #0064fa33;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-25: #0064fa40;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-30: #0064fa4d;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-35: #0064fa59;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-40: #0064fa66;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-45: #0064fa73;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-5: #0064fa0d;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-50: #0064fa80;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-55: #0064fa8c;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-60: #0064fa99;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-65: #0064faa6;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-70: #0064fab2;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-75: #0064fabf;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-80: #0064facc;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-85: #0064fad9;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-90: #0064fae5;
+  --pepper-core-opacity-color-brand-primary-blue-400-opacity-95: #0064faf2;
   --pepper-core-opacity-color-brand-secondary-cyan-400-opacity-0: #00d3f300;
   --pepper-core-opacity-color-brand-secondary-cyan-400-opacity-10: #00d3f31a;
   --pepper-core-opacity-color-brand-secondary-cyan-400-opacity-100: #00d3f3;
@@ -740,7 +740,7 @@
      Role-based tokens. Use these in product code.
      ============================================================ */
   --pepper-color-bg-overlay-highlight-brand-primary: #3484fb59;
-  --pepper-color-bg-overlay-highlight-inverse-brand-primary: #0165fa1a;
+  --pepper-color-bg-overlay-highlight-inverse-brand-primary: #0064fa1a;
   --pepper-color-bg-overlay-highlight-inverse-tonal-primary: #f5f5f533;
   --pepper-color-bg-overlay-highlight-tonal-primary: #0a0a0a0d;
   --pepper-color-bg-surface-accent-blue-strong: #0064fa;
@@ -847,7 +847,7 @@
   --pepper-color-fg-effects-gradient-surface-accent-red-full: #e7000b;
   --pepper-color-fg-effects-gradient-surface-accent-red-none: #e7000b00;
   --pepper-color-fg-effects-gradient-surface-brand-primary-full: #0064fa;
-  --pepper-color-fg-effects-gradient-surface-brand-primary-none: #0165fa00;
+  --pepper-color-fg-effects-gradient-surface-brand-primary-none: #0064fa00;
   --pepper-color-fg-effects-gradient-surface-inverse-primary-full: #171717;
   --pepper-color-fg-effects-gradient-surface-inverse-primary-none: #17171700;
   --pepper-color-fg-effects-gradient-surface-primary-full: #ffffff;
@@ -1109,11 +1109,11 @@
   --pepper-color-bg-surface-inverse-accent-violet-strong-hover: #aa30d8;
   --pepper-color-bg-surface-inverse-accent-magenta-subtle-hover: #9d174d;
   --pepper-color-bg-surface-inverse-accent-magenta-strong-hover: #e774bb;
-  --pepper-color-bg-overlay-state-selected-default: #0165fa1a;
+  --pepper-color-bg-overlay-state-selected-default: #0064fa1a;
   --pepper-color-bg-overlay-state-selected-neutral-default: #0a0a0a1a;
   --pepper-color-bg-overlay-state-selected-inverse-default: #ffffff26;
   --pepper-color-bg-overlay-state-selected-neutral-inverse-default: #ffffff33;
-  --pepper-color-bg-overlay-state-hover-default: #0165fa0d;
+  --pepper-color-bg-overlay-state-hover-default: #0064fa0d;
   --pepper-color-bg-overlay-state-hover-neutral-strong: #0a0a0a33;
   --pepper-color-bg-overlay-state-hover-neutral-subtle: #0a0a0a0d;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-subtle: #ffffff1a;
@@ -1320,14 +1320,14 @@
   /* Overlays */
   --pepper-color-bg-overlay-state-selected-default: #ffffff26;
   --pepper-color-bg-overlay-state-selected-neutral-default: #ffffff33;
-  --pepper-color-bg-overlay-state-selected-inverse-default: #0165fa1a;
+  --pepper-color-bg-overlay-state-selected-inverse-default: #0064fa1a;
   --pepper-color-bg-overlay-state-selected-neutral-inverse-default: #0a0a0a1a;
   --pepper-color-bg-overlay-state-hover-default: #ffffff1a;
   --pepper-color-bg-overlay-state-hover-neutral-strong: #ffffff40;
   --pepper-color-bg-overlay-state-hover-neutral-subtle: #ffffff1a;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-subtle: #0a0a0a0d;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-strong: #0a0a0a33;
-  --pepper-color-bg-overlay-state-hover-inverse-default: #0165fa0d;
+  --pepper-color-bg-overlay-state-hover-inverse-default: #0064fa0d;
   /* Foreground text */
   --pepper-color-fg-text-primary: #ffffff;
   --pepper-color-fg-text-secondary: #b9b9bc;
@@ -1665,14 +1665,14 @@
   /* Overlays */
   --pepper-color-bg-overlay-state-selected-default: #ffffff26;
   --pepper-color-bg-overlay-state-selected-neutral-default: #ffffff33;
-  --pepper-color-bg-overlay-state-selected-inverse-default: #0165fa1a;
+  --pepper-color-bg-overlay-state-selected-inverse-default: #0064fa1a;
   --pepper-color-bg-overlay-state-selected-neutral-inverse-default: #0a0a0a1a;
   --pepper-color-bg-overlay-state-hover-default: #ffffff1a;
   --pepper-color-bg-overlay-state-hover-neutral-strong: #ffffff40;
   --pepper-color-bg-overlay-state-hover-neutral-subtle: #ffffff1a;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-subtle: #0a0a0a0d;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-strong: #0a0a0a33;
-  --pepper-color-bg-overlay-state-hover-inverse-default: #0165fa1a;
+  --pepper-color-bg-overlay-state-hover-inverse-default: #0064fa1a;
   /* Foreground text */
   --pepper-color-fg-text-primary: #ffffff;
   --pepper-color-fg-text-secondary: #d4d4d4;

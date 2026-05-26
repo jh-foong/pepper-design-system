@@ -401,47 +401,47 @@ class PepperCoreColors {
 
   static const opacityColorBrandPrimaryBlue300Opacity95 = Color(0xf23484fb);
 
-  static const opacityColorBrandPrimaryBlue400Opacity0 = Color(0x000165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity0 = Color(0x000064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity10 = Color(0x1a0165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity10 = Color(0x1a0064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity100 = Color(0xff0165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity100 = Color(0xff0064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity15 = Color(0x260165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity15 = Color(0x260064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity20 = Color(0x330165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity20 = Color(0x330064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity25 = Color(0x400165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity25 = Color(0x400064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity30 = Color(0x4d0165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity30 = Color(0x4d0064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity35 = Color(0x590165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity35 = Color(0x590064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity40 = Color(0x660165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity40 = Color(0x660064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity45 = Color(0x730165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity45 = Color(0x730064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity5 = Color(0x0d0165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity5 = Color(0x0d0064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity50 = Color(0x800165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity50 = Color(0x800064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity55 = Color(0x8c0165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity55 = Color(0x8c0064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity60 = Color(0x990165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity60 = Color(0x990064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity65 = Color(0xa60165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity65 = Color(0xa60064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity70 = Color(0xb20165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity70 = Color(0xb20064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity75 = Color(0xbf0165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity75 = Color(0xbf0064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity80 = Color(0xcc0165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity80 = Color(0xcc0064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity85 = Color(0xd90165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity85 = Color(0xd90064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity90 = Color(0xe50165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity90 = Color(0xe50064fa);
 
-  static const opacityColorBrandPrimaryBlue400Opacity95 = Color(0xf20165fa);
+  static const opacityColorBrandPrimaryBlue400Opacity95 = Color(0xf20064fa);
 
   static const opacityColorBrandSecondaryCyan400Opacity0 = Color(0x0000d3f3);
 
@@ -1121,11 +1121,11 @@ class PepperCoreColors {
 /// Semantic, component, static, state, and overlay colours. Use these in product code.
 /// Dark-mode values are documented in doc comments; the live value depends on your theme switcher.
 class PepperColors {
-  /// Dark-mode value: #0165fa1a
+  /// Dark-mode value: #0064fa1a
   static const colorBgOverlayHighlightBrandPrimary = Color(0x593484fb);
 
   /// Dark-mode value: #3484fb59
-  static const colorBgOverlayHighlightInverseBrandPrimary = Color(0x1a0165fa);
+  static const colorBgOverlayHighlightInverseBrandPrimary = Color(0x1a0064fa);
 
   /// Dark-mode value: #0a0a0a0d
   static const colorBgOverlayHighlightInverseTonalPrimary = Color(0x33f5f5f5);
@@ -1134,7 +1134,7 @@ class PepperColors {
   static const colorBgOverlayHighlightTonalPrimary = Color(0x0d0a0a0a);
 
   /// Dark-mode value: #3484fb
-  static const colorBgSurfaceAccentBlueStrong = Color(0xff0165fa);
+  static const colorBgSurfaceAccentBlueStrong = Color(0xff0064fa);
 
   /// Dark-mode value: #000061
   static const colorBgSurfaceAccentBlueSubtle = Color(0xffe6f0ff);
@@ -1203,7 +1203,7 @@ class PepperColors {
 
   static const colorBgSurfaceBrandCryptoHover = Color(0xffcc3702);
 
-  static const colorBgSurfaceBrandPrimary = Color(0xff0165fa);
+  static const colorBgSurfaceBrandPrimary = Color(0xff0064fa);
 
   static const colorBgSurfaceBrandPrimaryHover = Color(0xff0032c7);
 
@@ -1223,7 +1223,7 @@ class PepperColors {
   /// Dark-mode value: #262626
   static const colorBgSurfaceElevated = Color(0xffffffff);
 
-  /// Dark-mode value: #0165fa
+  /// Dark-mode value: #0064fa
   static const colorBgSurfaceInverseAccentBlueStrong = Color(0xff3484fb);
 
   /// Dark-mode value: #e6f0ff
@@ -1292,7 +1292,7 @@ class PepperColors {
 
   static const colorBgSurfaceInverseBrandCryptoHover = Color(0xffcc3702);
 
-  static const colorBgSurfaceInverseBrandPrimary = Color(0xff0165fa);
+  static const colorBgSurfaceInverseBrandPrimary = Color(0xff0064fa);
 
   static const colorBgSurfaceInverseBrandPrimaryHover = Color(0xff0032c7);
 
@@ -1425,9 +1425,9 @@ class PepperColors {
   /// Dark-mode value: #fb2c3600
   static const colorFgEffectsGradientSurfaceAccentRedNone = Color(0x00e7000b);
 
-  static const colorFgEffectsGradientSurfaceBrandPrimaryFull = Color(0xff0165fa);
+  static const colorFgEffectsGradientSurfaceBrandPrimaryFull = Color(0xff0064fa);
 
-  static const colorFgEffectsGradientSurfaceBrandPrimaryNone = Color(0x000165fa);
+  static const colorFgEffectsGradientSurfaceBrandPrimaryNone = Color(0x000064fa);
 
   /// Dark-mode value: #ffffff
   static const colorFgEffectsGradientSurfaceInversePrimaryFull = Color(0xff0a0a0a);
@@ -1442,7 +1442,7 @@ class PepperColors {
   static const colorFgEffectsGradientSurfacePrimaryNone = Color(0x00ffffff);
 
   /// Dark-mode value: #3484fb
-  static const colorFgIconAccentBlueDefault = Color(0xff0165fa);
+  static const colorFgIconAccentBlueDefault = Color(0xff0064fa);
 
   /// Dark-mode value: #e6f0ff
   static const colorFgIconAccentBlueStrong = Color(0xff000061);
@@ -1502,7 +1502,7 @@ class PepperColors {
   static const colorFgIconAccentYellowStrong = Color(0xff451a03);
 
   /// Dark-mode value: #3484fb
-  static const colorFgIconBrandDefault = Color(0xff0165fa);
+  static const colorFgIconBrandDefault = Color(0xff0064fa);
 
   /// Dark-mode value: #53eafd
   static const colorFgIconBrandSecondaryDefault = Color(0xff00d3f3);
@@ -1547,7 +1547,7 @@ class PepperColors {
   static const colorFgStrokeAccentTonalDefault = Color(0x33000000);
 
   /// Dark-mode value: #3484fb
-  static const colorFgStrokeBrandDefault = Color(0xff0165fa);
+  static const colorFgStrokeBrandDefault = Color(0xff0064fa);
 
   /// Dark-mode value: #e6f0ff
   static const colorFgStrokeBrandStrong = Color(0xff000061);
@@ -1586,7 +1586,7 @@ class PepperColors {
   static const colorFgStrokeSystemError = Color(0xffe7000b);
 
   /// Dark-mode value: #3484fb
-  static const colorFgTextAccentBlueDefault = Color(0xff0165fa);
+  static const colorFgTextAccentBlueDefault = Color(0xff0064fa);
 
   /// Dark-mode value: #e6f0ff
   static const colorFgTextAccentBlueStrong = Color(0xff000061);
@@ -1646,7 +1646,7 @@ class PepperColors {
   static const colorFgTextAccentYellowStrong = Color(0xff451a03);
 
   /// Dark-mode value: #3484fb
-  static const colorFgTextBrandDefault = Color(0xff0165fa);
+  static const colorFgTextBrandDefault = Color(0xff0064fa);
 
   /// Dark-mode value: #53eafd
   static const colorFgTextBrandSecondaryDefault = Color(0xff00d3f3);
