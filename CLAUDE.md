@@ -119,6 +119,21 @@ The CSS files in `tokens/css/base/` are the source of truth. Every other format 
 
 See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workflow.
 
+### Standing flow: token drift check
+
+When the user asks "are tokens up to date?", "has Figma drifted?", "does TOKENS.md match Figma?", or any similar variant, run this flow:
+
+1. **Pull live variables from Bell** — use `search_design_system` with `includeLibraryKeys` scoped to Bell — Foundations (`lk-0a29fd87...`) to fetch current variable values from Figma
+2. **Compare against TOKENS.md** — check colour values, type scale, spacing, and any other tokens the user flagged
+3. **Report mismatches** — list any tokens where the Figma value differs from TOKENS.md, grouped by category (colour, type, spacing, etc.)
+4. **Report additions/removals** — flag any tokens that exist in Figma but not in TOKENS.md (new), or in TOKENS.md but not in Figma (deleted)
+5. **If drift is found** — offer to run the full token sync flow (see below) to bring TOKENS.md and all token files up to date
+6. **If no drift** — confirm "TOKENS.md matches Figma — no sync needed"
+
+Run this proactively whenever the user has just been working in Figma and returns to Claude Code, even if they don't explicitly ask.
+
+---
+
 ### Standing flow: token sync
 
 When the user says "I just updated some tokens — what do I do now?" (or any variant like "new token export", "I updated Figma tokens", "synced from Figma"), run this flow without re-asking the steps:
