@@ -9,7 +9,7 @@
 > - **If you need to change something:** raise an issue at https://github.com/jh-foong/pepper-design-system/issues
 > - **If you suspect drift:** re-download from the canonical URLs above
 >
-> **Version:** v2.1.0 · See [Releases](https://github.com/jh-foong/pepper-design-system/releases) for changelog.
+> **Version:** v2.2.0 · See [Releases](https://github.com/jh-foong/pepper-design-system/releases) for changelog.
 
 > ⚠️ **Scope — pre-merge state**
 >
@@ -81,12 +81,14 @@ For React / Vue / framework projects, replace the CDN with a local install of th
 
 ## Dark mode
 
-Pepper Design System supports dark mode via a single attribute on any ancestor element:
+Pepper Design System has two dark variants, applied via `data-theme` on any ancestor element:
 
 ```html
+<!-- Dark — Midnight palette (deep navy). Default dark mode. -->
 <html data-theme="dark">
-  <!-- everything inside flips automatically -->
-</html>
+
+<!-- Dark Neutral — neutral grey palette. For internal/utility UI. -->
+<html data-theme="dark-neutral">
 ```
 
 Working toggle example for designers prototyping in HTML:
@@ -98,9 +100,10 @@ Working toggle example for designers prototyping in HTML:
 </button>
 ```
 
-**What flips automatically:** semantic colour, component, overlay-highlight, state-overlay, and gradient-stop tokens.
-**What doesn't flip:** primitives (`--pepper-core-*`), shadows, and static tokens (e.g. data-viz colours).
-**Inverse-suffixed tokens** (e.g. `--pepper-color-fg-text-inverse-primary`) are for text/surfaces on a *contrasting* background within the current theme — not for dark-mode switching.
+**What flips automatically:** all semantic `--pepper-color-fg-*`, `--pepper-color-bg-*`, state-overlay, component, and gradient-stop tokens.
+**What doesn't flip:** primitives (`--pepper-core-*`), shadows, and static tokens (`--pepper-color-static-*`, e.g. data-viz colours).
+**Inverse-suffixed tokens** (e.g. `--pepper-color-fg-text-inverse-primary`) are for text/surfaces on a *contrasting* background within the current theme — not for theme switching.
+**See `TOKENS.md → Dark mode`** for the full light/dark value comparison table.
 
 ---
 
@@ -154,6 +157,7 @@ Starter prompts that produce on-brand Pepper output. Assume both `DESIGN.md` and
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v2.2.0 | 2026-05-26 | Token sync from Figma (Bell foundations). Updated dark mode section — two variants now: `dark` (Midnight) and `dark-neutral`. TOKENS.md updated with full new colour set. |
 | v2.1.0 | 2026-05-26 | **Structural:** split into manifest (`DESIGN.md`) + token values (`TOKENS.md`). DESIGN.md is now the front door — rules, setup, dark mode, prompts. TOKENS.md holds all token tables and code examples. |
 | v2.0.1 | 2026-04-24 | Designer-readiness pass — CDN snippets, dark-mode toggle example, DO NOT EDIT banner, Edit log |
 | v2.0.0 | 2026-04-24 | **Breaking:** two-prefix token model (`--pepper-core-*` primitives, `--pepper-*` semantic). Dark mode via `[data-theme="dark"]`. New composite typography tokens. |
