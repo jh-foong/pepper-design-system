@@ -47,11 +47,21 @@ Full walkthrough: [Designer Quickstart →](docs/designer-quickstart.md)
 - **Figma source files** — Raw DesignBridge exports in [`source/`](source/) for version history and diffing
 - **Documentation** — Guides for designers and developers on how to use the system
 
+## Figma Libraries
+
+Pepper Design System lives across four canonical Figma files, in order of spice level 🥵:
+
+| | Library | What's in it |
+|--|---------|-------------|
+| 🌶️ | [Bell — Foundations](https://www.figma.com/design/DNFMgdaw9WVdMl3vh6FGCa/) | Colour, typography, spacing, radius, shadow, blur tokens |
+| 🌶️🌶️ | [Jalapeño — Icons & Assets](https://www.figma.com/design/c6BuAXsvA7AxrRV8MuZg13/) | Icon & asset library |
+| 🌶️🌶️🌶️ | [Habanero — Web Components](https://www.figma.com/design/ASQlBKQihYPIRGnZEgGQWg/) | Web UI component library |
+| 🌶️🌶️🌶️🌶️ | [Ghost — Native UI](https://www.figma.com/design/cZNVSuWernKQ6liA6D98mi/) | iOS/Android app component library |
+
 ## Key Links
 
 | | Link |
 |-|------|
-| Figma | [Pepperstone DS (branch)](https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT) |
 | Fonts | [Manrope fork](https://github.com/jh-foong/manrope) · [Noto Sans Arabic](https://fonts.google.com/noto/specimen/Noto+Sans+Arabic) · [Noto Sans TC](https://fonts.google.com/noto/specimen/Noto+Sans+TC) · [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP) |
 | GitHub | [jh-foong/pepper-design-system](https://github.com/jh-foong/pepper-design-system) _(public sandbox — official home will move to Pepperstone org once permissions are sorted)_ |
 | Releases | [All versions](https://github.com/jh-foong/pepper-design-system/releases) |

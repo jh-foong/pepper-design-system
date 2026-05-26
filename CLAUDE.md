@@ -60,8 +60,26 @@ Do NOT remove these in future edits. If you're restructuring the README, move th
 | Resource | URL | Notes |
 |----------|-----|-------|
 | Docs site | https://jh-foong.github.io/pepper-design-system/ | Front door — hosted docs for designers, PMs, devs |
-| Figma | https://www.figma.com/design/0iR1o4UTpxXfbfviJD1HeI/branch/LTzjOzO6BCMCrsARXh61Wi/Pepperstone-DS-SSOT | Branch of main file — read-only until merged |
+| Figma — 🌶️ Bell (Foundations) | https://www.figma.com/design/DNFMgdaw9WVdMl3vh6FGCa/ | Colour, typography, spacing, radius, shadow, blur tokens |
+| Figma — 🌶️🌶️ Jalapeño (Icons) | https://www.figma.com/design/c6BuAXsvA7AxrRV8MuZg13/ | Icon & asset library |
+| Figma — 🌶️🌶️🌶️ Habanero (Web Components) | https://www.figma.com/design/ASQlBKQihYPIRGnZEgGQWg/ | Web component library |
+| Figma — 🌶️🌶️🌶️🌶️ Ghost (Native UI) | https://www.figma.com/design/cZNVSuWernKQ6liA6D98mi/ | Native app (iOS/Android) component library |
 | GitHub | https://github.com/jh-foong/pepper-design-system | Public sandbox — official home will move to Pepperstone org once permissions are sorted |
+
+---
+
+## Figma MCP — canonical library keys
+
+When using the `search_design_system` tool (or any Figma MCP tool that accepts `includeLibraryKeys`), **always** scope to these three libraries. Do not search the full org — it contains archived and legacy files that will produce wrong results.
+
+| Library | Figma file key | Library key |
+|---------|---------------|-------------|
+| 🌶️ Bell — Foundations (tokens, primitives, semantic colour) | `DNFMgdaw9WVdMl3vh6FGCa` | `lk-0a29fd87f9f08dc48a2aa461527bae9a18e5b4a64e623c8bccb3a56f8e61a88fb7fa6d20f8615f7660f119418c352e9385d3d3cb03a1a14bae3fcd406962b7e2` |
+| 🌶️🌶️ Jalapeño — Icons & Assets | `c6BuAXsvA7AxrRV8MuZg13` | `lk-c7677147150f5bb2dce87cacc65ec76d6b1688b7b0d9980cdb0302d61c016c0df16d250813ef1b3beae46a5cd982287e9c8a3d937a1b3a4e502b885d18dc3e8e` |
+| 🌶️🌶️🌶️ Habanero — Components (web UI library) | `ASQlBKQihYPIRGnZEgGQWg` | `lk-e98c506465048c1c28e3fa2a78bb2b665ec1f0a8e3a798aed2cf19df1bfca0c6e65b325c8088f3f858d04ec70d6d73e6744152ea4cdda9060c24761b04b90aca` |
+| 🌶️🌶️🌶️🌶️ Ghost — Native UI (iOS/Android app components) | `cZNVSuWernKQ6liA6D98mi` | `lk-8708e54bed13725be253172b815c2b94c3416adbd222784a36978c30908c0ab7c0613421d5b5d3bd930a38e8b3f141ed16cb6346c69d828912bb1afde8b3b8ba` |
+
+**Standing instruction:** whenever Claude uses `search_design_system` in this project, pass all three library keys in `includeLibraryKeys` unless the user explicitly asks to search a different scope.
 
 ---
 
@@ -100,6 +118,21 @@ The CSS files in `tokens/css/base/` are the source of truth. Every other format 
 - `tokens/experimental/` — Tier 3, untested platform exports (iOS Swift, Android XML, React Native TS, Tailwind), semantic tokens resolved to final values
 
 See [`docs/figma-claude-sync.md`](docs/figma-claude-sync.md) for the full workflow.
+
+### Standing flow: token drift check
+
+When the user asks "are tokens up to date?", "has Figma drifted?", "does TOKENS.md match Figma?", or any similar variant, run this flow:
+
+1. **Pull live variables from Bell** — use `search_design_system` with `includeLibraryKeys` scoped to Bell — Foundations (`lk-0a29fd87...`) to fetch current variable values from Figma
+2. **Compare against TOKENS.md** — check colour values, type scale, spacing, and any other tokens the user flagged
+3. **Report mismatches** — list any tokens where the Figma value differs from TOKENS.md, grouped by category (colour, type, spacing, etc.)
+4. **Report additions/removals** — flag any tokens that exist in Figma but not in TOKENS.md (new), or in TOKENS.md but not in Figma (deleted)
+5. **If drift is found** — offer to run the full token sync flow (see below) to bring TOKENS.md and all token files up to date
+6. **If no drift** — confirm "TOKENS.md matches Figma — no sync needed"
+
+Run this proactively whenever the user has just been working in Figma and returns to Claude Code, even if they don't explicitly ask.
+
+---
 
 ### Standing flow: token sync
 
