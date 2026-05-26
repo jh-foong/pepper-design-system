@@ -106,9 +106,21 @@ Defaults and inverses don't have to be exact mathematical opposites. The DS team
 | `surface/*` | Backgrounds, fills, cards | `--pepper-color-bg-surface-primary` |
 | `brand/*` | Brand-specific fills and accents | `--pepper-color-fg-stroke-brand-default` |
 
-**Full reference:** [`tokens/css/base/color.css`](../tokens/css/base/color.css) — 860+ lines, searchable with Cmd+F
+**Full reference:** [`tokens/css/base/color.css`](../tokens/css/base/color.css) — searchable with Cmd+F
 
 > 💡 Ask Claude: *"What's the hex value of `--pepper-color-bg-surface-primary` in light mode?"* — it can trace the alias chain for you.
+
+### New in v2.2.0 — notable primitives
+
+| Primitive | Value | Notes |
+|-----------|-------|-------|
+| `--pepper-core-color-neutral-750` | `#303030` | Between 700 and 800 — used by `dark-neutral` elevated surface |
+| `--pepper-core-color-system-red-650` | `#d4000a` | Between 600 and 700 — used by `bg-surface-negative` in light mode |
+| `--pepper-core-color-system-green-650` | `#00a83c` | Between 600 and 700 — used by inverse positive surfaces |
+| `--pepper-core-color-midnight-900` | `#050f22` | Midnight primary background (default dark mode) |
+| `--pepper-core-color-midnight-950` | `#000b1c` | Midnight sunken background |
+
+The **Midnight palette** (`--pepper-core-color-midnight-50` → `--pepper-core-color-midnight-950`) is a full 14-step navy scale used exclusively by `[data-theme="dark"]`. Don't reference these primitives directly — use the semantic `bg-surface-*` tokens and let the theme do the work.
 
 ### Static colours (theme-agnostic)
 
@@ -151,6 +163,19 @@ Heading sizes **adapt automatically** to screen size. A `h1` on desktop is large
 | `--pepper-typography-heading-h6` | 700 | Smallest headings / eyebrows |
 
 > 💡 **In Figma:** switch **modes** on the heading style to preview each breakpoint (e.g. mobile / tablet / desktop). The text resizes itself — you don't need separate styles per screen size.
+
+### Display — marketing & hero (semibold, not bold)
+
+Use these for landing pages, hero sections, and marketing surfaces where the heading scale feels too heavy. Display styles use **600 (semibold)** weight — distinct from the 700 (bold) heading scale.
+
+| Token | Size | Line-height | Use for |
+|-------|------|-------------|---------|
+| `--pepper-typography-display-xl` | 48px | 52px | Hero headlines, above-fold marketing |
+| `--pepper-typography-display-lg` | 36px | 40px | Section intros, feature headlines |
+| `--pepper-typography-display-md` | 30px | 36px | Sub-section display text |
+| `--pepper-typography-display-sm` | 24px | 32px | Card display headers, callouts |
+
+> 💡 **Display vs Heading:** both use Manrope, but Display is **semibold (600)** and Heading is **bold (700)**. Use Display for marketing tone; use Heading for structural hierarchy.
 
 ### Body, Label, Legal — fixed (same size across screens)
 
@@ -297,7 +322,7 @@ Plus focus-ring tokens (for accessibility):
 
 ## Applying tokens in Figma
 
-> ⚠️ **The new Pepper Design System Figma library isn't merged yet** (pending vendor A handover). Until then, use the interim workflow below.
+> ⚠️ **The new Pepper Design System Figma library isn't merged to the main Pepperstone library yet.** Until then, use the interim workflow below.
 
 ### Interim workflow (now)
 
@@ -351,3 +376,4 @@ Re-prompt: *"Rewrite using only `--pepper-*` semantic tokens from DESIGN.md (or 
 | v1.0.4 | 2026-04-23 | Added migration note for designers coming from the old DS — "fixed" tokens have been renamed to "static" and separated into their own layer |
 | v1.0.5 | 2026-04-23 | Added "Understanding light vs dark (and inverse)" section — mirror-line mental model, default vs inverse clarified (inverse ≠ dark), flip-vs-static behaviour table, 3-question decision flow, and a 1:1 mirror caveat. Adapted from the old Figma explainer frames. |
 | v1.1.0 | 2026-04-24 | v2.0.0 sweep — rewrote naming-convention section for two-prefix model (`--pepper-core-*` primitives vs `--pepper-*` semantic/static/etc), fixed semantic-example tokens that were still prefixed `--pepper-core-*` (static overlay, static glass, brand-primary mentions, typography in troubleshooting prompt). |
+| v1.2.0 | 2026-05-26 | v2.2.0 sweep — added Display typography section (display-xl/lg/md/sm, 600 weight), added new v2.2.0 primitives callout (neutral-750, red-650, green-650, Midnight palette), updated docs site brand blue, removed internal vendor reference from Figma workflow note. |
