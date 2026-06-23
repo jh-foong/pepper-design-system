@@ -12,6 +12,7 @@ Pepper DS Core is Pepperstone's design system. **Current version:** [v2.2.0](htt
 | ⚡ In a hurry | [Designer Cheat Sheet](designer-cheat-sheet.md) — two prompts, screenshot to React |
 | 🐛 Something's not working | [Designer FAQ](designer-faq.md) — symptom table + quick fixes |
 | 🔍 Looking up a token | [Token Reference](token-reference.md) — every token + Figma application |
+| ⬭ Rounded or square? | [Shape Rules](shape-rules.md) — when to use each, per component |
 | 🔄 Retokenising an old design | [Apply Tokens Guide](apply-tokens-guide.md) — 3 methods, pick your spice level |
 | 🛠️ A developer using token files | [Token Reference](token-reference.md#for-developers) — CSS + Flutter usage |
 | 📋 DS team / maintainer | [Figma → Claude Sync](figma-claude-sync.md) · [Supporting Designers](supporting-designers.md) |

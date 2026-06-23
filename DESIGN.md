@@ -27,7 +27,7 @@
 > 1. **Colours** — Use only semantic tokens from `TOKENS.md`, as `var(--token-name)`. Never hard-code hex values.
 > 2. **Typography** — Match font family, weight, size, and line-height exactly. Always Manrope.
 > 3. **Spacing** — Use only values from the spacing scale (4px grid). No arbitrary numbers.
-> 4. **Border radius** — Use only the defined radius tokens.
+> 4. **Border radius + shape** — Use only the defined radius tokens. Apply shape rules from the **Shape rules** section below: rounded for marketing/consumer/mobile contexts, square for trading/data-dense/enterprise contexts. Never mix shapes in the same UI context.
 > 5. **Shadows** — Apply defined elevation tokens. Do not invent shadows.
 > 6. **Focus rings** — All interactive elements must use a focus-ring token for accessibility.
 > 7. **Language** — Use semantic tokens (`--pepper-*`) over primitive tokens (`--pepper-core-*`).
@@ -107,6 +107,39 @@ Working toggle example for designers prototyping in HTML:
 
 ---
 
+## Shape rules
+
+Shape must be **consistent within a context** — if buttons are rounded, all adjacent interactive elements (inputs, segmented controls, cards) follow. Never mix rounded and square in the same UI context.
+
+> **Shortcut rule:** Match the button shape. If buttons are rounded, everything is rounded. If buttons are square, everything is square.
+
+### When to use each
+
+| Context | Shape | Radius |
+|---------|-------|--------|
+| Marketing, onboarding, consumer-facing, mobile | **Rounded** | `full` — 999px |
+| Trading dashboard, data-dense UI, toolbars, enterprise | **Square** | `sm` (4px) or `md` (8px) |
+
+### Per-component rules
+
+**Button — corner radius per size**
+
+| Size | Square | Rounded |
+|------|--------|---------|
+| XL | `md` — 8px | `full` — 999px |
+| LG | `md` — 8px | `full` — 999px |
+| MD | `md` — 8px | `full` — 999px |
+| SM | `sm` — 4px | `full` — 999px |
+| XS | `sm` — 4px | `full` — 999px |
+
+**Segmented control** — follows button shape in the same context.
+
+**Tag** — always pill (`full` — 999px). No square variant.
+
+**Card** — follows context shape. No pill variant — always `sm`, `md`, or square (0px).
+
+---
+
 ## What this spec covers
 
 **Covered — use tokens from `TOKENS.md`, never invent:**
@@ -115,6 +148,7 @@ Working toggle example for designers prototyping in HTML:
 - ✅ Typography (full type scale with weight, size, line-height)
 - ✅ Spacing (4px grid scale + semantic layout/content tokens)
 - ✅ Border radius (full radius scale)
+- ✅ Shape rules (rounded vs square — see Shape rules section below)
 - ✅ Shadows and elevation (including focus rings — mandatory for accessibility)
 - ✅ Blur (backdrop filters)
 - ✅ Font weights
@@ -122,7 +156,7 @@ Working toggle example for designers prototyping in HTML:
 **Not covered yet — ask the user before inventing:**
 
 - ❌ Full component specs (button padding, card anatomy, input states)
-- ❌ Usage patterns (when to use brand/primary vs brand/secondary)
+- ❌ Usage patterns (when to use brand/primary vs brand/secondary colour)
 - ❌ Motion / animation curves
 - ❌ Iconography library and sizes
 - ❌ Illustration / imagery guidelines
@@ -157,6 +191,7 @@ Starter prompts that produce on-brand Pepper output. Assume both `DESIGN.md` and
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v2.2.1 | 2026-06-23 | Added shape rules section (rounded vs square, per-component, shortcut rule). Shape now covered by spec — no longer in "not covered" list. |
 | v2.2.0 | 2026-05-26 | Token sync from Figma (Bell foundations). Updated dark mode section — two variants now: `dark` (Midnight) and `dark-neutral`. TOKENS.md updated with full new colour set. |
 | v2.1.0 | 2026-05-26 | **Structural:** split into manifest (`DESIGN.md`) + token values (`TOKENS.md`). DESIGN.md is now the front door — rules, setup, dark mode, prompts. TOKENS.md holds all token tables and code examples. |
 | v2.0.1 | 2026-04-24 | Designer-readiness pass — CDN snippets, dark-mode toggle example, DO NOT EDIT banner, Edit log |

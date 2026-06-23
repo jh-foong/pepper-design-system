@@ -12,19 +12,19 @@ class PepperGradients {
   static const iconGlassDark = LinearGradient(
     begin: Alignment.topRight,
     end: Alignment.bottomLeft,
-    colors: [Color(0xff0165fa), Color(0xff00d3f3)],
+    colors: [Color(0xff0064fa), Color(0xff00d3f3)],
   );
 
   static const bgBrandGradientBlue = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xff0165fa), Color(0xff00d3f3)],
+    colors: [Color(0xff0064fa), Color(0xff00d3f3)],
   );
 
   static const cardBgGradient = LinearGradient(
     begin: Alignment.bottomRight,
     end: Alignment.topLeft,
-    colors: [Color(0xff0165fa), Color(0xff00d3f3)],
+    colors: [Color(0xff0064fa), Color(0xff00d3f3)],
   );
 
   static const bgBrandGradientLight = LinearGradient(
@@ -34,7 +34,7 @@ class PepperGradients {
   );
 
   static const educationalBg = RadialGradient(
-    colors: [Color(0xff0165fa), Color(0xff00d3f3)],
+    colors: [Color(0xff0064fa), Color(0xff00d3f3)],
   );
 
   PepperGradients._();
