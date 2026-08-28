@@ -15,6 +15,13 @@
       "enabled": true
     },
     {
+      "skillId": "figma-doc",
+      "name": "figma-doc",
+      "description": "Generate token-scanned, copy-paste Figma component descriptions for Pepper DS ii components. Runs a token scan against the component, flags old-DS tokens before writing anything, and produces a complete component description in the established Pepper DS format.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
       "skillId": "accessibility-review",
       "name": "accessibility-review",
       "description": "Audit a Figma selection (Page contents, Section, Frame, Group, Component) against WCAG 2.2, pin one consolidated violation annotation per failing element on the canvas, plus a frame-level summary badge, and write final specs to the 'Accessibility' annotation category for downstream consumption.",
