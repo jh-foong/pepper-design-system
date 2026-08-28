@@ -6,6 +6,97 @@
       "description": "Safe git commit workflow for designers working on design system changes. Use this skill whenever the user wants to commit, stage, or push changes to git — even if they just say 'commit my changes', 'push this', 'save to git', or 'stage my files'. Always use this skill before any git commit or push action to prevent accidentally committing unrelated files.",
       "creatorType": "custom",
       "enabled": true
+    },
+    {
+      "skillId": "design-system-documentation",
+      "name": "design-system-documentation",
+      "description": "Analyzes the current Figma file and generates structured design system documentation directly inside it. The skill detects existing Styles, Variables, collections, modes, aliases and their relationships, then organizes them into clear tables with previews, values and technical references. If the file contains only Styles or only Variables, it documents only what exists. If both are present, it combines them into one consistent documentation structure without modifying the original design system.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "accessibility-review",
+      "name": "accessibility-review",
+      "description": "Audit a Figma selection (Page contents, Section, Frame, Group, Component) against WCAG 2.2, pin one consolidated violation annotation per failing element on the canvas, plus a frame-level summary badge, and write final specs to the 'Accessibility' annotation category for downstream consumption.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "component-handoff",
+      "name": "component-handoff",
+      "description": "Builds a complete documentation/handoff frame on the Figma canvas for the currently selected component: header with name/version/owner/description, live preview, a grid of every variant, a do's and don'ts section, an interaction/states section, and the main component tree plus nested components.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "document-component-migration",
+      "name": "document-component-migration",
+      "description": "Compare a legacy and new component side-by-side, documenting what's new (with rationale), a property comparison table, annotated visual/structural differences on the new component, and deprecation notes.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "component-spec-docs",
+      "name": "component-spec-docs",
+      "description": "Generate designer-facing component spec docs and build them on the canvas as a complete documentation frame. Covers what each component is for, every variant and when to reach for it, the property API, dos and don'ts, and accessibility considerations, with live component previews.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "ds-compliance-review",
+      "name": "ds-compliance-review",
+      "description": "Audit the selected Figma layers against the live published design system via Figma MCP. Flags and annotates hardcoded colors, off-token spacing, local/orphaned styles, detached instances, and missing component reuse. Adds one consolidated annotation per violating layer and a frame-level compliance score.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "design-system-drift-detector",
+      "name": "design-system-drift-detector",
+      "description": "Audits a selection, page, or file for design system drift — detached components, hardcoded colors, rogue typography, off-scale spacing, deprecated components, and unbound values that match existing tokens. Discovers the file's variables, styles, and libraries first and audits against those. Every scan produces a Drift Report frame plus a chat summary. Detects and reports only — never fixes without explicit approval.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "design-system-audit-for-mcp",
+      "name": "design-system-audit-for-mcp",
+      "description": "Read-only audit of an entire Figma design system for ambiguity, inconsistency, schema mismatches, structural confusion, and other patterns that make components, properties, variants, layers, tokens, or documentation difficult for AI agents to interpret and use reliably. Never modifies the file.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "design-system-inventory",
+      "name": "design-system-inventory",
+      "description": "AI-powered Figma design system inventory skill. Analyzes a Figma file, page, library, or selected screens to identify and count components, variants, variables, colors, typography styles, spacing patterns, icons, and reusable UI patterns. Detects potential duplicates, inconsistent usage, and missing design tokens, then produces a structured inventory with evidence and actionable recommendations without modifying the design unless explicitly asked.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "ios-app-design",
+      "name": "ios-app-design",
+      "description": "Designs and updates production-quality iOS mobile app screens and flows in an existing Figma file, preserving the product's existing design system, neighboring screens, Apple Human Interface Guidelines, accessibility, content rules, interaction patterns, and implementation feasibility.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "layer-cleanup",
+      "name": "layer-cleanup",
+      "description": "Cleans up a messy Figma file — renames layers semantically, removes hidden junk, groups logically, and normalizes structure. Use when someone says 'clean up my file', 'rename layers', 'organize this file', or 'fix layer names'.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "logarithmic-color-palette",
+      "name": "logarithmic-color-palette",
+      "description": "Generate a logarithmically distributed color swatch family based on human color perception physiology, computed in OKLCH so every step is perceptually even (min ΔE 3.5) for every hue including yellows and greens. Supports multiple base colors, light/dark scales, and optional Figma variable storage.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "tokenize",
+      "name": "tokenize",
+      "description": "Replaces hardcoded values (colors, padding, gap, corner radius, stroke, opacity, etc.) on selected layers with matching variables/tokens from the current file or attached libraries. Prioritizes same-project variables over third-party libraries.",
+      "creatorType": "custom",
+      "enabled": true
     }
   ]
 }
