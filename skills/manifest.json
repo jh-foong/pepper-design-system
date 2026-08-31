@@ -104,6 +104,34 @@
       "description": "Replaces hardcoded values (colors, padding, gap, corner radius, stroke, opacity, etc.) on selected layers with matching variables/tokens from the current file or attached libraries. Prioritizes same-project variables over third-party libraries.",
       "creatorType": "custom",
       "enabled": true
+    },
+    {
+      "skillId": "create-anatomy",
+      "name": "create-anatomy",
+      "description": "Generate a visual anatomy annotation on the Figma canvas for the currently selected component with a composition section containing numbered markers over a live component instance and a 4-column attribute table, plus per-sub-component sections showing internal elements (including hidden ones). Trigger when the user says \"anatomy\", \"anatomy annotation\", \"component anatomy\", \"create anatomy\", \"annotate structure\", or wants a component's structural elements annotated.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "create-api",
+      "name": "create-api",
+      "description": "Generate an API overview for the selected component - property table (values, defaults, required), sub-component tables, and configuration examples with live preview instances. Use for api, api spec, api overview, props, properties, properties documentation, component api.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "create-color",
+      "name": "create-color",
+      "description": "Generate a color annotation for a selected component: tables mapping every visual element to its design token, with live previews per variant or state. Use when the user mentions \"color\", \"color annotation\", \"color spec\", \"tokens\", \"design tokens\", \"which tokens does this use\", or wants to document a component's color usage.",
+      "creatorType": "custom",
+      "enabled": true
+    },
+    {
+      "skillId": "create-property",
+      "name": "create-property",
+      "description": "Generate a visual property annotation for the currently selected Figma component with one exhibit per variant axis, boolean toggle, variable-mode collection, and sub-component property, with live component-instance previews and a summary table. Use when the user mentions \"property\", \"properties\", \"property annotation\", \"variants overview\", or wants to document a component's configurable properties visually.",
+      "creatorType": "custom",
+      "enabled": true
     }
   ]
 }
