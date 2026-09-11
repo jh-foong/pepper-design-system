@@ -44,6 +44,7 @@ nav:
   - Workflows:
     - Figma → GitHub Sync: figma-claude-sync.md
     - Supporting Designers: supporting-designers.md
+  - Token Export (v2 Core): pepper-ds-v2-core-foundations.md
   - Resources: resources.md
 
 plugins:
