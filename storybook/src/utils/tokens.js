@@ -39,14 +39,18 @@ export function listTokens(prefix) {
   }));
 }
 
-/** Groups primitive tokens (…-family-name-100, …-family-name-500) by family. */
+/**
+ * Groups primitive tokens (…-family-name-100, …-family-name-500) by family.
+ * A few families also have a bare `-white` / `-black` entry outside the
+ * numbered scale (e.g. neutral-black, midnight-white) — those belong to
+ * their family too, not a family of their own.
+ */
 export function groupPrimitives(tokens, stripPrefix) {
   const groups = new Map();
   for (const token of tokens) {
     const family = token.name
       .replace(stripPrefix, '')
-      .replace(/-\d+$/, '')
-      .replace(/-opacity$/, '');
+      .replace(/-(\d+|white|black)(?:-opacity)?$/, '');
     if (!groups.has(family)) groups.set(family, []);
     groups.get(family).push(token);
   }
