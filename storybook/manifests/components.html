@@ -1,0 +1,3268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Components Manifest</title>
+  <style>
+      :root {
+          --bg: #0b0c10;
+          --panel: #121318;
+          --muted: #9aa0a6;
+          --fg: #e8eaed;
+          --ok: #22c55e;
+          --info: #1e88e5;
+          --err: #c62828;
+          --ok-bg: #0c1a13;
+          --info-bg: #0c1624;
+          --err-bg: #1a0e0e;
+          --chip: #1f2330;
+          --border: #2b2f3a;
+          --link: #8ab4f8;
+          --active-ring: 1px; /* 1px active ring for pills and toggles */
+      }
+
+      * {
+          box-sizing: border-box;
+      }
+
+      html,
+      body {
+          margin: 0;
+          background: var(--bg);
+          color: var(--fg);
+          font: 14px/1.5 system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Ubuntu,
+          Cantarell,
+          'Helvetica Neue',
+          Arial,
+          'Noto Sans';
+      }
+
+      .wrap {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 16px 20px;
+      }
+
+      header {
+          position: sticky;
+          top: 0;
+          backdrop-filter: blur(6px);
+          background: color-mix(in srgb, var(--bg) 84%, transparent);
+          border-bottom: 1px solid var(--border);
+          z-index: 10;
+      }
+
+      h1 {
+          font-size: 20px;
+          margin: 0 0 6px;
+      }
+
+      .summary {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          align-items: center;
+      }
+
+      /* Top filter pills */
+      .filter-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 12px;
+          border: 1px solid var(--border);
+          border-radius: 999px;
+          background: var(--panel);
+          text-decoration: none;
+          cursor: pointer;
+          user-select: none;
+          color: var(--fg);
+      }
+
+      .filter-pill.ok {
+          color: #b9f6ca;
+          border-color: color-mix(in srgb, var(--ok) 55%, var(--border));
+          background: color-mix(in srgb, var(--ok) 18%, #000);
+      }
+
+      .filter-pill.info {
+          color: #b3d9ff;
+          border-color: color-mix(in srgb, var(--info) 55%, var(--border));
+          background: var(--info-bg);
+      }
+
+      .filter-pill.err {
+          color: #ff9aa0;
+          border-color: color-mix(in srgb, var(--err) 55%, var(--border));
+          background: var(--err-bg);
+      }
+
+      .filter-pill.all {
+          color: #d7dbe0;
+          border-color: var(--border);
+          background: var(--panel);
+      }
+
+      .filter-pill[aria-disabled='true'] {
+          cursor: default;
+          text-decoration: none;
+      }
+
+      .filter-pill:focus,
+      .filter-pill:active {
+          outline: none;
+          box-shadow: none;
+      }
+
+      /* Selected top pill ring via :target */
+      #filter-all:target ~ header .filter-pill[data-k='all'],
+      #filter-errors:target ~ header .filter-pill[data-k='errors'],
+      #filter-infos:target ~ header .filter-pill[data-k='infos'],
+      #filter-story-errors:target ~ header .filter-pill[data-k='story-errors'],
+      #filter-story-warnings:target ~ header .filter-pill[data-k='story-warnings'],
+      #filter-no-api:target ~ header .filter-pill[data-k='no-api'],
+      #filter-doc-errors:target ~ header .filter-pill[data-k='docs'],
+      #filter-docs:target ~ header .filter-pill[data-k='docs'] {
+          box-shadow: 0 0 0 var(--active-ring) currentColor;
+          border-color: currentColor;
+      }
+
+      /* Hidden targets for filtering */
+      #filter-all,
+      #filter-errors,
+      #filter-infos,
+      #filter-story-errors,
+      #filter-story-warnings,
+      #filter-no-api,
+      #filter-doc-errors,
+      #filter-docs {
+          display: none;
+      }
+
+      main {
+          padding: 36px 0 40px;
+      }
+
+      .grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 18px;
+      }
+
+      /* one card per row */
+
+      .card {
+          border: 1px solid var(--border);
+          background: var(--panel);
+          border-radius: 14px;
+          padding: 14px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          /* Keep a deep-linked card clear of the sticky header when scrolled into view */
+          scroll-margin-top: 110px;
+      }
+
+      /* Highlight the card deep-linked via components.html#<manifest-id> */
+      .card:target {
+          box-shadow: 0 0 0 2px var(--info);
+          border-color: var(--info);
+      }
+
+      .head {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+      }
+
+      .title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+      }
+
+      .title h2 {
+          font-size: 16px;
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+
+      .meta {
+          font-size: 12px;
+          color: var(--muted);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+
+      .kv {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+      }
+
+      .chip {
+          font-size: 12px;
+          padding: 4px 8px;
+          border-radius: 999px;
+          background: var(--chip);
+          border: 1px solid var(--border);
+      }
+
+      .hint {
+          color: var(--muted);
+          font-size: 12px;
+      }
+
+      .badges {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+      }
+
+      /* Per-card badges: labels become toggles when clickable */
+      .badge {
+          font-size: 12px;
+          padding: 3px 8px;
+          border-radius: 999px;
+          border: 1px solid var(--border);
+          background: var(--chip);
+          color: #d7dbe0;
+      }
+
+      .badge.ok {
+          color: #b9f6ca;
+          border-color: color-mix(in srgb, var(--ok) 55%, var(--border));
+      }
+
+      .badge.info {
+          color: #b3d9ff;
+          border-color: color-mix(in srgb, var(--info) 55%, var(--border));
+      }
+
+      .badge.err {
+          color: #ff9aa0;
+          border-color: color-mix(in srgb, var(--err) 55%, var(--border));
+      }
+
+      .snippet-warning {
+          margin-top: 8px;
+          padding: 8px 10px;
+          border-radius: 8px;
+          border: 1px solid color-mix(in srgb, var(--info) 45%, var(--border));
+          background: var(--info-bg);
+          color: #b3d9ff;
+          font-size: 12px;
+      }
+
+      .as-toggle {
+          cursor: pointer;
+      }
+
+      /* 1px ring on active toggle */
+      .tg-err:checked + label.as-toggle,
+      .tg-info:checked + label.as-toggle,
+      .tg-stories:checked + label.as-toggle,
+      .tg-docs:checked + label.as-toggle,
+      .tg-subcomponents:checked + label.as-toggle,
+      .tg-content:checked + label.as-toggle,
+      .tg-props:checked + label.as-toggle {
+          box-shadow: 0 0 0 var(--active-ring) currentColor;
+          border-color: currentColor;
+      }
+
+      /* Panels: hidden by default, shown when respective toggle checked */
+      .panels {
+          display: grid;
+          gap: 10px;
+      }
+
+      .panel {
+          display: none;
+      }
+
+      .tg-err:checked ~ .panels .panel-err {
+          display: grid;
+      }
+
+      .tg-info:checked ~ .panels .panel-info {
+          display: grid;
+          gap: 8px;
+      }
+
+      .tg-stories:checked ~ .panels .panel-stories {
+          display: grid;
+          gap: 8px;
+      }
+
+      .tg-docs:checked ~ .panels .panel-docs {
+          display: grid;
+          gap: 8px;
+      }
+
+      .tg-subcomponents:checked ~ .panels .panel-subcomponents {
+          display: grid;
+          gap: 8px;
+      }
+
+      .tg-content:checked ~ .panels .panel-content {
+          display: grid;
+          gap: 8px;
+      }
+
+      .tg-props:checked ~ .panels .panel-props {
+          display: grid;
+      }
+
+      /* Colored notes for API error + info */
+      .note {
+          padding: 12px;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+      }
+
+      .note.err {
+          border-color: color-mix(in srgb, var(--err) 55%, var(--border));
+          background: var(--err-bg);
+          color: #ffd1d4;
+      }
+
+      .note.info {
+          border-color: color-mix(in srgb, var(--info) 55%, var(--border));
+          background: var(--info-bg);
+          color: #d6e8ff;
+      }
+
+      .note.ok {
+          border-color: color-mix(in srgb, var(--ok) 55%, var(--border));
+          background: var(--ok-bg);
+          color: var(--fg);
+      }
+
+      .note-title {
+          font-weight: 600;
+          margin-bottom: 6px;
+      }
+
+      .note-body {
+          white-space: normal;
+      }
+
+      /* Story error cards */
+      .ex {
+          padding: 10px;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          background: #0f131b;
+      }
+
+      .ex.err {
+          border-color: color-mix(in srgb, var(--err) 55%, var(--border));
+      }
+
+      .row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex-wrap: wrap;
+      }
+
+      .status-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          display: inline-block;
+      }
+
+      .dot-ok {
+          background: var(--ok);
+      }
+
+      .dot-err {
+          background: var(--err);
+      }
+
+      .ex-name {
+          font-weight: 600;
+      }
+
+      /* Error groups (visible in errors filter) */
+      .error-groups {
+          display: none;
+          margin-bottom: 16px;
+      }
+
+      .group {
+          border: 1px solid var(--border);
+          background: var(--panel);
+          border-radius: 14px;
+          overflow: hidden;
+      }
+
+      .group + .group {
+          margin-top: 12px;
+      }
+
+      .group-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px 14px;
+          cursor: pointer;
+          border-bottom: 1px solid var(--border);
+      }
+
+      .group-header:hover {
+          background: #141722;
+      }
+
+      .group-title {
+          font-weight: 600;
+          flex: 1;
+      }
+
+      .group-count {
+          font-size: 12px;
+          color: var(--muted);
+      }
+
+      .group-cards {
+          display: none;
+          padding: 12px;
+      }
+
+      .group .card {
+          margin: 12px 0;
+      }
+
+      .group .card:first-child {
+          margin-top: 0;
+      }
+
+      .group .card:last-child {
+          margin-bottom: 0;
+      }
+
+      /* caret rotation */
+      .group-tg:checked + label .caret {
+          transform: rotate(90deg);
+      }
+
+      .caret {
+          transition: transform 0.15s ease;
+      }
+
+      /* toggle body */
+      .group-tg:checked ~ .group-cards {
+          display: block;
+      }
+
+      /* CSS-only filtering of cards via top pills */
+      #filter-errors:target ~ main .card:not(.has-error):not(.has-story-error) {
+          display: none;
+      }
+
+      #filter-infos:target ~ main .card:not(.has-info) {
+          display: none;
+      }
+
+      #filter-story-errors:target ~ main .card:not(.has-story-error) {
+          display: none;
+      }
+
+      #filter-story-warnings:target ~ main .card:not(.has-story-warning) {
+          display: none;
+      }
+
+      #filter-no-api:target ~ main .card:not(.missing-api) {
+          display: none;
+      }
+
+      #filter-doc-errors:target ~ main .card:not(.has-doc-error) {
+          display: none;
+      }
+
+      #filter-docs:target ~ main .card:has(> .tg-docs),
+      #filter-docs:target ~ main .card.is-doc {
+          display: block;
+      }
+
+      #filter-docs:target ~ main .card:not(:has(> .tg-docs)):not(.is-doc) {
+          display: none;
+      }
+
+      #filter-all:target ~ main .card {
+          display: block;
+      }
+
+      /* In errors view, hide standalone component-error cards in the regular grid (they will appear in groups) */
+      #filter-errors:target ~ main .grid .card.has-error {
+          display: none;
+      }
+
+      /* Show grouped section only in errors view */
+      #filter-errors:target ~ main .error-groups {
+          display: block;
+      }
+
+      /* Section titles */
+      .section-title {
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--muted);
+          margin: 24px 0 12px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid var(--border);
+      }
+      .section-title:first-child {
+          margin-top: 0;
+      }
+
+      /* When a toggle is checked, show the corresponding panel */
+      .card > .tg-err:checked ~ .panels .panel-err {
+          display: grid;
+      }
+      
+      .card > .tg-info:checked ~ .panels .panel-info {
+          display: grid;
+      }
+      
+      .card > .tg-stories:checked ~ .panels .panel-stories {
+          display: grid;
+      }
+
+      .card > .tg-docs:checked ~ .panels .panel-docs {
+          display: grid;
+      }
+
+      .card > .tg-subcomponents:checked ~ .panels .panel-subcomponents {
+          display: grid;
+      }
+
+      .card > .tg-content:checked ~ .panels .panel-content {
+          display: grid;
+      }
+
+      /* Add vertical spacing around panels only when any panel is visible */
+      .card > .tg-err:checked ~ .panels,
+      .card > .tg-info:checked ~ .panels,
+      .card > .tg-stories:checked ~ .panels,
+      .card > .tg-docs:checked ~ .panels,
+      .card > .tg-subcomponents:checked ~ .panels,
+      .card > .tg-content:checked ~ .panels,
+      .card > .tg-props:checked ~ .panels {
+          margin: 10px 0;
+      }
+
+      /* Optional: a subtle 1px ring on the active badge, using :has() if available */
+      @supports selector(.card:has(.tg-err:checked)) {
+          .card:has(.tg-err:checked) label[for$='-err'],
+          .card:has(.tg-info:checked) label[for$='-info'],
+          .card:has(.tg-stories:checked) label[for$='-stories'],
+          .card:has(.tg-docs:checked) label[for$='-docs'],
+          .card:has(.tg-subcomponents:checked) label[for$='-subcomponents'],
+          .card:has(.tg-content:checked) label[for$='-content'],
+          .card:has(.tg-props:checked) label[for$='-props'] {
+              box-shadow: 0 0 0 1px currentColor;
+              border-color: currentColor;
+          }
+      }
+
+      /* Wrap long lines in code blocks at ~120 characters */
+      pre, code {
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+      pre {
+          white-space: pre-wrap;
+          overflow-wrap: anywhere;
+          word-break: break-word;
+          overflow-x: auto; /* fallback for extremely long tokens */
+          margin: 8px 0 0;
+      }
+      pre > code {
+          display: block;
+          white-space: inherit;
+          overflow-wrap: inherit;
+          word-break: inherit;
+          inline-size: min(100%, 120ch);
+      }
+
+      /* MDX content container for docs */
+      .mdx-content {
+          background: #0f131b;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          padding: 12px;
+          max-height: 400px;
+          overflow-y: auto;
+          margin-top: 8px;
+      }
+  </style>
+</head>
+<body>
+<!-- Hidden targets for the top-level filters -->
+<span id="filter-all"></span>
+<span id="filter-errors"></span>
+<span id="filter-infos"></span>
+<span id="filter-story-errors"></span>
+<span id="filter-story-warnings"></span>
+<span id="filter-no-api"></span>
+<span id="filter-doc-errors"></span>
+<span id="filter-docs"></span>
+<header>
+  <div class="wrap">
+    <h1>Manifest Debugger</h1>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">5/5 API errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">5/5 infos</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">1/13 story errors</a></div>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="note info" style="margin-bottom: 16px;">
+            <strong>Tip:</strong> You are using <code>react-docgen</code> (the default). Generation took <strong>0.1s</strong>. For higher quality prop types, consider switching to <code>react-docgen-typescript</code> in your <code>main.ts</code>:
+            <pre><code>typescript: {
+  reactDocgen: 'react-docgen-typescript',
+}</code></pre>
+            Note: <code>react-docgen-typescript</code> can be slower. If performance is acceptable for your project, it generally produces better results.
+            <a href="https://storybook.js.org/docs/api/main-config/main-config-typescript#reactdocgen" target="_blank">Learn more</a>
+          </div>
+    <h2 class="section-title">Components</h2>
+    <div class="grid" role="list">
+      
+<article
+  id="foundations-color"
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Color">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Color</h2>
+      <div class="badges">
+        <label for="c-0-foundations-color-err" class="badge err as-toggle">API error</label>
+        <label for="c-0-foundations-color-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-0-foundations-color-stories" class="badge ok as-toggle">2 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Color.stories.jsx">foundations-color · ./src/stories/foundations/Color.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-0-foundations-color-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-0-foundations-color-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-0-foundations-color-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  290 | }
+  291 |
+&gt; 292 | export default {
+      | ^
+  293 |   title: &#39;Foundations/Color&#39;,
+  294 |   tags: [&#39;ai-generated&#39;],
+  295 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Color.stories.jsx:
+import { useMemo, useState } from &#39;react&#39;;
+import { listTokens, groupPrimitives } from &#39;../../utils/tokens&#39;;
+
+const CODE_FONT = &quot;&#39;SF Mono&#39;, &#39;Roboto Mono&#39;, ui-monospace, monospace&quot;;
+
+function Swatch({ name, value }) {
+  return (
+    &lt;div style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 12, padding: &#39;6px 0&#39; }}&gt;
+      &lt;div
+        style={{
+          width: 40,
+          height: 40,
+          borderRadius: 8,
+          border: &#39;1px solid var(--pepper-color-fg-stroke, #ccc)&#39;,
+          background: `var(${name})`,
+          flexShrink: 0,
+        }}
+      /&gt;
+      &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12, lineHeight: 1.4 }}&gt;
+        &lt;div&gt;{name}&lt;/div&gt;
+        &lt;div style={{ opacity: 0.6 }}&gt;{value}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function TokenGrid({ tokens }) {
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(260px, 1fr))&#39;, gap: 4 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;Swatch key={t.name} {...t} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+// Matches the curated family order on the &quot;Colors: Primitives&quot; page in Bell
+// (Figma node 40001040:1549) — anything not listed falls back to the end,
+// alphabetically, so a new family never disappears, just lands out of order.
+const PRIMITIVE_FAMILY_ORDER = [
+  &#39;brand-primary-blue&#39;,
+  &#39;brand-crypto-orange&#39;,
+  &#39;brand-secondary-cyan&#39;,
+  &#39;midnight&#39;,
+  &#39;neutral&#39;,
+  &#39;system-green&#39;,
+  &#39;system-orange&#39;,
+  &#39;system-red&#39;,
+  &#39;decorative-lime&#39;,
+  &#39;decorative-magenta&#39;,
+  &#39;decorative-turquoise&#39;,
+  &#39;decorative-violet&#39;,
+  &#39;decorative-yellow&#39;,
+];
+
+function orderFamilies(families) {
+  const known = PRIMITIVE_FAMILY_ORDER.filter((f) =&gt; families.has(f));
+  const rest = [...families.keys()].filter((f) =&gt; !PRIMITIVE_FAMILY_ORDER.includes(f)).sort();
+  return [...known, ...rest];
+}
+
+function familyDisplayName(family) {
+  return family.split(&#39;-&#39;).join(&#39; / &#39;);
+}
+
+function stepOf(name) {
+  const match = name.match(/-(\d+|white|black)(?:-opacity)?$/);
+  return match ? match[1] : name;
+}
+
+// white sorts lighter than every numbered step, black sorts darker than all of them.
+function stepSortValue(step) {
+  if (step === &#39;white&#39;) return -1;
+  if (step === &#39;black&#39;) return Infinity;
+  return Number(step);
+}
+
+// Ramp presentation, styled after the Atlassian Design System&#39;s color
+// palette page (atlassian.design/foundations/color/color-palette) — a
+// continuous stack of full-width ramp bars per family, step name on top in
+// auto-contrast text. Click a bar to reveal Hex/RGB/Token copy actions;
+// hover any one for a &quot;Copy to clipboard&quot; tooltip, click to copy.
+function hexToRgb(hex) {
+  const c = hex.replace(&#39;#&#39;, &#39;&#39;);
+  const r = parseInt(c.substring(0, 2), 16);
+  const g = parseInt(c.substring(2, 4), 16);
+  const b = parseInt(c.substring(4, 6), 16);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function contrastTextColor(hex) {
+  if (!hex?.startsWith(&#39;#&#39;) || hex.length &lt; 7) return &#39;#000&#39;;
+  const c = hex.replace(&#39;#&#39;, &#39;&#39;);
+  const lin = (v) =&gt; (v &lt;= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+  const [r, g, b] = [0, 2, 4].map((i) =&gt; lin(parseInt(c.substring(i, i + 2), 16) / 255));
+  const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  return luminance &gt; 0.4 ? &#39;#000&#39; : &#39;#fff&#39;;
+}
+
+function CopyIcon({ color }) {
+  return (
+    &lt;svg width=&quot;13&quot; height=&quot;13&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; style={{ flexShrink: 0 }}&gt;
+      &lt;rect x=&quot;5.5&quot; y=&quot;5.5&quot; width=&quot;8&quot; height=&quot;8&quot; rx=&quot;1.5&quot; stroke={color} strokeWidth=&quot;1.2&quot; /&gt;
+      &lt;path d=&quot;M3.5 10.5h-1a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v1&quot; stroke={color} strokeWidth=&quot;1.2&quot; /&gt;
+    &lt;/svg&gt;
+  );
+}
+
+// Custom tooltip (not the native `title` attribute) so it can switch its own
+// text to &quot;Copied&quot; right after the click, the way Atlassian&#39;s copy buttons do.
+function CopyLabel({ text, value, color }) {
+  const [copied, setCopied] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+  const handleClick = async (e) =&gt; {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch {
+      // clipboard unavailable (e.g. insecure context) — tooltip still told them what it does
+    }
+    setCopied(true);
+    setTimeout(() =&gt; setCopied(false), 1200);
+  };
+
+  return (
+    &lt;span
+      onClick={handleClick}
+      onMouseEnter={() =&gt; setHovered(true)}
+      onMouseLeave={() =&gt; setHovered(false)}
+      style={{
+        position: &#39;relative&#39;,
+        display: &#39;inline-flex&#39;,
+        alignItems: &#39;center&#39;,
+        gap: 4,
+        textDecoration: &#39;underline&#39;,
+        cursor: &#39;pointer&#39;,
+      }}
+    &gt;
+      {text}
+      {(hovered || copied) &amp;&amp; (
+        &lt;span
+          style={{
+            position: &#39;absolute&#39;,
+            bottom: &#39;100%&#39;,
+            left: &#39;50%&#39;,
+            transform: &#39;translateX(-50%)&#39;,
+            marginBottom: 6,
+            background: &#39;#1a1a1a&#39;,
+            color: &#39;#fff&#39;,
+            padding: &#39;4px 8px&#39;,
+            borderRadius: 4,
+            fontSize: 11,
+            whiteSpace: &#39;nowrap&#39;,
+            pointerEvents: &#39;none&#39;,
+            zIndex: 10,
+          }}
+        &gt;
+          {copied ? &#39;Copied&#39; : `Copy &#39;${value}&#39; to clipboard`}
+        &lt;/span&gt;
+      )}
+    &lt;/span&gt;
+  );
+}
+
+function RampBar({ token, isFirst, isLast }) {
+  const [revealed, setRevealed] = useState(false);
+  const textColor = contrastTextColor(token.value);
+  return (
+    &lt;div
+      role=&quot;button&quot;
+      tabIndex={0}
+      onClick={() =&gt; setRevealed((r) =&gt; !r)}
+      onKeyDown={(e) =&gt; e.key === &#39;Enter&#39; &amp;&amp; setRevealed((r) =&gt; !r)}
+      style={{
+        background: `var(${token.name})`,
+        color: textColor,
+        padding: &#39;10px 12px&#39;,
+        fontSize: 13,
+        cursor: &#39;pointer&#39;,
+        display: &#39;flex&#39;,
+        alignItems: &#39;center&#39;,
+        justifyContent: &#39;space-between&#39;,
+        gap: 12,
+        // corners rounded per-bar, not via a clipped wrapper — a wrapper with
+        // overflow:hidden would cut off the copy tooltips popping out of it
+        borderTopLeftRadius: isFirst ? 8 : 0,
+        borderTopRightRadius: isFirst ? 8 : 0,
+        borderBottomLeftRadius: isLast ? 8 : 0,
+        borderBottomRightRadius: isLast ? 8 : 0,
+      }}
+    &gt;
+      &lt;span&gt;{stepOf(token.name)}&lt;/span&gt;
+      {revealed &amp;&amp; (
+        &lt;span style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 8, fontFamily: CODE_FONT }}&gt;
+          &lt;CopyLabel text=&quot;Hex&quot; value={token.value} /&gt;
+          &lt;CopyIcon color={textColor} /&gt;
+          &lt;CopyLabel text=&quot;RGB&quot; value={hexToRgb(token.value)} /&gt;
+          &lt;CopyIcon color={textColor} /&gt;
+          &lt;CopyLabel text=&quot;Token&quot; value={token.name} /&gt;
+        &lt;/span&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+
+function ColorRamp({ family, tokens }) {
+  const sorted = useMemo(
+    () =&gt; [...tokens].sort((a, b) =&gt; stepSortValue(stepOf(a.name)) - stepSortValue(stepOf(b.name))),
+    [tokens],
+  );
+  return (
+    &lt;div&gt;
+      &lt;p style={{ fontSize: 14, fontWeight: 600, marginBottom: 8 }}&gt;{familyDisplayName(family)}&lt;/p&gt;
+      &lt;div&gt;
+        {sorted.map((t, i) =&gt; (
+          &lt;RampBar key={t.name} token={t} isFirst={i === 0} isLast={i === sorted.length - 1} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function PrimitiveRamps() {
+  const tokens = useMemo(
+    () =&gt; listTokens(&#39;--pepper-core-color-&#39;).filter((t) =&gt; !t.name.includes(&#39;opacity&#39;)),
+    [],
+  );
+  const families = useMemo(() =&gt; groupPrimitives(tokens, &#39;--pepper-core-color-&#39;), [tokens]);
+  const order = useMemo(() =&gt; orderFamilies(families), [families]);
+
+  return (
+    &lt;div&gt;
+      &lt;h3 style={{ font: &#39;var(--pepper-typography-heading-h3)&#39;, margin: &#39;0 0 8px&#39; }}&gt;Primitives&lt;/h3&gt;
+      &lt;p style={{ font: &#39;var(--pepper-typography-body-md)&#39;, margin: &#39;0 0 24px&#39; }}&gt;
+        Raw palette scales — the building blocks behind every semantic token. Don&#39;t reference these
+        directly in product code; use the semantic tokens instead.
+      &lt;/p&gt;
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(200px, 1fr))&#39;, gap: 24 }}&gt;
+        {order.map((family) =&gt; (
+          &lt;ColorRamp key={family} family={family} tokens={families.get(family)} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function semanticGroup(name) {
+  const rest = name.replace(&#39;--pepper-color-&#39;, &#39;&#39;);
+  const segs = rest.split(&#39;-&#39;);
+  if (segs[0] === &#39;fg&#39;) return `fg-${segs[1]}`; // fg-text, fg-icon, fg-stroke
+  return segs[0]; // bg, component, static, border, etc.
+}
+
+function SemanticPalette() {
+  const tokens = useMemo(
+    () =&gt;
+      listTokens(&#39;--pepper-color-&#39;).concat(listTokens(&#39;--pepper-overlay-&#39;)).concat(listTokens(&#39;--pepper-state-&#39;)),
+    [],
+  );
+  const groups = useMemo(() =&gt; {
+    const map = new Map();
+    for (const token of tokens) {
+      const key = token.name.startsWith(&#39;--pepper-color-&#39;)
+        ? semanticGroup(token.name)
+        : token.name.startsWith(&#39;--pepper-overlay-&#39;)
+          ? &#39;overlay&#39;
+          : &#39;state&#39;;
+      if (!map.has(key)) map.set(key, []);
+      map.get(key).push(token);
+    }
+    return map;
+  }, [tokens]);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;
+        Semantic / component / static / overlay / state tokens (&lt;code&gt;--pepper-*&lt;/code&gt;) — use these
+        in product. They reference primitives above and are the ones that flip with the theme toggle
+        in the toolbar.
+      &lt;/p&gt;
+      {[...groups.entries()].map(([group, groupTokens]) =&gt; (
+        &lt;section key={group} style={{ marginBottom: 24 }}&gt;
+          &lt;h4 style={{ marginBottom: 4 }}&gt;{group}&lt;/h4&gt;
+          &lt;TokenGrid tokens={groupTokens} /&gt;
+        &lt;/section&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Color&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const Semantic = {
+  render: () =&gt; &lt;SemanticPalette /&gt;,
+};
+
+export const Primitives = {
+  render: () =&gt; &lt;PrimitiveRamps /&gt;,
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Color } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Semantic</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Semantic = () =&gt; &lt;SemanticPalette /&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Primitives</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Primitives = () =&gt; &lt;PrimitiveRamps /&gt;;</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  id="foundations-effects"
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Effects">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Effects</h2>
+      <div class="badges">
+        <label for="c-1-foundations-effects-err" class="badge err as-toggle">API error</label>
+        <label for="c-1-foundations-effects-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-1-foundations-effects-stories" class="badge ok as-toggle">6 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Effects.stories.jsx">foundations-effects · ./src/stories/foundations/Effects.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-1-foundations-effects-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-1-foundations-effects-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-1-foundations-effects-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  20 | }
+  21 |
+&gt; 22 | export default {
+     | ^
+  23 |   title: &#39;Foundations/Effects&#39;,
+  24 |   tags: [&#39;ai-generated&#39;],
+  25 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Effects.stories.jsx:
+import { useMemo } from &#39;react&#39;;
+import { listTokens } from &#39;../../utils/tokens&#39;;
+
+const swatchBase = {
+  width: 96,
+  height: 64,
+  background: &#39;var(--pepper-color-bg-surface-brand-primary, #0064fa)&#39;,
+};
+
+function EffectRow({ name, value, style }) {
+  return (
+    &lt;div style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 16, padding: &#39;8px 0&#39; }}&gt;
+      &lt;div style={{ ...swatchBase, ...style }} /&gt;
+      &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;
+        &lt;div&gt;{name}&lt;/div&gt;
+        &lt;div style={{ opacity: 0.6 }}&gt;{value}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Effects&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const BorderRadius = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-border-radius-&#39;);
+    return (
+      &lt;div&gt;
+        {tokens.map((t) =&gt; (
+          &lt;EffectRow key={t.name} {...t} style={{ borderRadius: t.value }} /&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const BorderWidth = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-border-width-&#39;);
+    return (
+      &lt;div&gt;
+        {tokens.map((t) =&gt; (
+          &lt;EffectRow
+            key={t.name}
+            {...t}
+            style={{ background: &#39;transparent&#39;, border: `${t.value} solid var(--pepper-color-fg-stroke, #333)` }}
+          /&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Shadow = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-shadow-&#39;).filter((t) =&gt; !t.name.includes(&#39;offset&#39;));
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(180px, 1fr))&#39;, gap: 32, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                ...swatchBase,
+                width: &#39;100%&#39;,
+                borderRadius: 8,
+                boxShadow: `var(${t.name})`,
+                margin: &#39;0 auto 12px&#39;,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Blur = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-blur-&#39;);
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(140px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                ...swatchBase,
+                width: &#39;100%&#39;,
+                borderRadius: 8,
+                filter: `var(${t.name})`,
+                margin: &#39;0 auto 12px&#39;,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Opacity = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-core-opacity-values-&#39;);
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(90px, 1fr))&#39;, gap: 12, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                width: 56,
+                height: 56,
+                borderRadius: 8,
+                margin: &#39;0 auto 8px&#39;,
+                background: &#39;var(--pepper-core-color-brand-primary-blue-400, #0064fa)&#39;,
+                opacity: `var(${t.name})`,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 11 }}&gt;{t.value}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Gradient = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-gradient-&#39;);
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(220px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                ...swatchBase,
+                width: &#39;100%&#39;,
+                height: 100,
+                borderRadius: 8,
+                background: `var(${t.name})`,
+                margin: &#39;0 auto 12px&#39;,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Effects } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Border Radius</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const BorderRadius = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-border-radius-&#39;);
+  return (
+    &lt;div&gt;
+      {tokens.map((t) =&gt; (
+        &lt;EffectRow key={t.name} {...t} style={{ borderRadius: t.value }} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Border Width</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const BorderWidth = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-border-width-&#39;);
+  return (
+    &lt;div&gt;
+      {tokens.map((t) =&gt; (
+        &lt;EffectRow
+          key={t.name}
+          {...t}
+          style={{ background: &#39;transparent&#39;, border: `${t.value} solid var(--pepper-color-fg-stroke, #333)` }}
+        /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Shadow</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Shadow = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-shadow-&#39;).filter((t) =&gt; !t.name.includes(&#39;offset&#39;));
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(180px, 1fr))&#39;, gap: 32, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              ...swatchBase,
+              width: &#39;100%&#39;,
+              borderRadius: 8,
+              boxShadow: `var(${t.name})`,
+              margin: &#39;0 auto 12px&#39;,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Blur</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Blur = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-blur-&#39;);
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(140px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              ...swatchBase,
+              width: &#39;100%&#39;,
+              borderRadius: 8,
+              filter: `var(${t.name})`,
+              margin: &#39;0 auto 12px&#39;,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Opacity</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Opacity = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-core-opacity-values-&#39;);
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(90px, 1fr))&#39;, gap: 12, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              width: 56,
+              height: 56,
+              borderRadius: 8,
+              margin: &#39;0 auto 8px&#39;,
+              background: &#39;var(--pepper-core-color-brand-primary-blue-400, #0064fa)&#39;,
+              opacity: `var(${t.name})`,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 11 }}&gt;{t.value}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Gradient</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Gradient = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-gradient-&#39;);
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(220px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              ...swatchBase,
+              width: &#39;100%&#39;,
+              height: 100,
+              borderRadius: 8,
+              background: `var(${t.name})`,
+              margin: &#39;0 auto 12px&#39;,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  id="foundations-spacing"
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Spacing">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Spacing</h2>
+      <div class="badges">
+        <label for="c-2-foundations-spacing-err" class="badge err as-toggle">API error</label>
+        <label for="c-2-foundations-spacing-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-2-foundations-spacing-stories" class="badge ok as-toggle">2 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Spacing.stories.jsx">foundations-spacing · ./src/stories/foundations/Spacing.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-2-foundations-spacing-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-2-foundations-spacing-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-2-foundations-spacing-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  19 | }
+  20 |
+&gt; 21 | export default {
+     | ^
+  22 |   title: &#39;Foundations/Spacing&#39;,
+  23 |   tags: [&#39;ai-generated&#39;],
+  24 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Spacing.stories.jsx:
+import { useMemo } from &#39;react&#39;;
+import { listTokens } from &#39;../../utils/tokens&#39;;
+
+function SpaceGroup({ prefix, label }) {
+  const tokens = useMemo(() =&gt; listTokens(prefix), [prefix]);
+  return (
+    &lt;section style={{ marginBottom: 24 }}&gt;
+      &lt;h4&gt;{label}&lt;/h4&gt;
+      {tokens.map(({ name, value }) =&gt; (
+        &lt;div key={name} style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 12, padding: &#39;4px 0&#39; }}&gt;
+          &lt;div style={{ width: value, height: 16, background: &#39;var(--pepper-core-color-brand-primary-blue-400, #0064fa)&#39; }} /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;
+            {name} — {value}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/section&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Spacing&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const InsetAndGap = {
+  render: () =&gt; (
+    &lt;div&gt;
+      &lt;p&gt;
+        &lt;code&gt;--pepper-space-inset-*&lt;/code&gt; (internal padding) and &lt;code&gt;--pepper-space-gap-*&lt;/code&gt;
+        (space between elements). Bar width shows the actual token value.
+      &lt;/p&gt;
+      &lt;SpaceGroup prefix=&quot;--pepper-space-inset-&quot; label=&quot;Inset (padding)&quot; /&gt;
+      &lt;SpaceGroup prefix=&quot;--pepper-space-gap-&quot; label=&quot;Gap (proximity/stacking)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+};
+
+export const LayoutSpacing = {
+  render: () =&gt; (
+    &lt;div&gt;
+      &lt;p&gt;
+        Responsive layout tokens — desktop values shown here. Tablet/mobile overrides live under
+        &lt;code&gt; [data-theme=&quot;tablet&quot;|&quot;mobile&quot;]&lt;/code&gt; in &lt;code&gt;space.css&lt;/code&gt;.
+      &lt;/p&gt;
+      &lt;SpaceGroup prefix=&quot;--pepper-space-theme-spacing-&quot; label=&quot;Layout spacing (desktop)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Spacing } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Inset And Gap</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const InsetAndGap = () =&gt; (
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;code&gt;--pepper-space-inset-*&lt;/code&gt; (internal padding) and &lt;code&gt;--pepper-space-gap-*&lt;/code&gt;
+      (space between elements). Bar width shows the actual token value.
+    &lt;/p&gt;
+    &lt;SpaceGroup prefix=&quot;--pepper-space-inset-&quot; label=&quot;Inset (padding)&quot; /&gt;
+    &lt;SpaceGroup prefix=&quot;--pepper-space-gap-&quot; label=&quot;Gap (proximity/stacking)&quot; /&gt;
+  &lt;/div&gt;
+);</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Layout Spacing</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const LayoutSpacing = () =&gt; (
+  &lt;div&gt;
+    &lt;p&gt;
+      Responsive layout tokens — desktop values shown here. Tablet/mobile overrides live under
+      &lt;code&gt; [data-theme=&quot;tablet&quot;|&quot;mobile&quot;]&lt;/code&gt; in &lt;code&gt;space.css&lt;/code&gt;.
+    &lt;/p&gt;
+    &lt;SpaceGroup prefix=&quot;--pepper-space-theme-spacing-&quot; label=&quot;Layout spacing (desktop)&quot; /&gt;
+  &lt;/div&gt;
+);</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  id="foundations-tokensloaded"
+  class="card 
+  has-error
+  has-info
+  has-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="TokenProbe">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> TokenProbe</h2>
+      <div class="badges">
+        <label for="c-3-foundations-tokensloaded-err" class="badge err as-toggle">API error</label>
+        <label for="c-3-foundations-tokensloaded-info" class="badge info as-toggle">1 info</label>
+        <label for="c-3-foundations-tokensloaded-stories" class="badge err as-toggle">1/1 story errors</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/TokensLoaded.stories.jsx">foundations-tokensloaded · ./src/stories/foundations/TokensLoaded.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-3-foundations-tokensloaded-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-3-foundations-tokensloaded-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-3-foundations-tokensloaded-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;TokenProbe&quot; component.
+  15 | }
+  16 |
+&gt; 17 | export default {
+     | ^
+  18 |   title: &#39;Foundations/TokensLoaded&#39;,
+  19 |   component: TokenProbe,
+  20 |   tags: [&#39;ai-generated&#39;],
+
+./src/stories/foundations/TokensLoaded.stories.jsx:
+import { expect } from &#39;storybook/test&#39;;
+
+/**
+ * Sanity check that pepper-tokens.css actually loaded and resolves to the
+ * values declared in tokens/css/base/color.css — not a component test, just
+ * a guard so a broken import path fails loudly instead of silently.
+ */
+function TokenProbe() {
+  return (
+    &lt;div
+      data-testid=&quot;token-probe&quot;
+      style={{ background: &#39;var(--pepper-core-color-brand-primary-blue-400)&#39;, width: 40, height: 40 }}
+    /&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/TokensLoaded&#39;,
+  component: TokenProbe,
+  tags: [&#39;ai-generated&#39;],
+};
+
+export const CssCheck = {
+  play: async ({ canvas }) =&gt; {
+    const probe = canvas.getByTestId(&#39;token-probe&#39;);
+    const resolved = getComputedStyle(probe).backgroundColor;
+    // --pepper-core-color-brand-primary-blue-400 is #0064fa in tokens/css/base/color.css
+    await expect(resolved).toBe(&#39;rgb(0, 100, 250)&#39;);
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Css Check</span>
+                <span class="badge err">story error</span>
+                
+              </div>
+              
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { TokenProbe } from 'pepper-ds-storybook';</code></pre>
+              </div>
+          
+          
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  id="foundations-typography"
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Typography">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Typography</h2>
+      <div class="badges">
+        <label for="c-4-foundations-typography-err" class="badge err as-toggle">API error</label>
+        <label for="c-4-foundations-typography-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-4-foundations-typography-stories" class="badge ok as-toggle">2 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Typography.stories.jsx">foundations-typography · ./src/stories/foundations/Typography.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-4-foundations-typography-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-4-foundations-typography-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-4-foundations-typography-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  44 | }
+  45 |
+&gt; 46 | export default {
+     | ^
+  47 |   title: &#39;Foundations/Typography&#39;,
+  48 |   tags: [&#39;ai-generated&#39;],
+  49 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Typography.stories.jsx:
+import { useMemo } from &#39;react&#39;;
+import { listTokens } from &#39;../../utils/tokens&#39;;
+
+function TypeSample() {
+  const styles = useMemo(() =&gt; listTokens(&#39;--pepper-typography-&#39;), []);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;
+        Composite &lt;code&gt;--pepper-typography-*&lt;/code&gt; tokens — each one bundles weight, size,
+        line-height and family from the primitives below into a single &lt;code&gt;font&lt;/code&gt; shorthand.
+        Rendered with the real token, not a hardcoded style.
+      &lt;/p&gt;
+      {styles.map(({ name }) =&gt; (
+        &lt;div key={name} style={{ borderBottom: &#39;1px solid #eee&#39;, padding: &#39;16px 0&#39; }}&gt;
+          &lt;div style={{ font: `var(${name})` }}&gt;The quick brown fox jumps over the lazy dog&lt;/div&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 11, opacity: 0.6, marginTop: 4 }}&gt;{name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+function PrimitiveScale({ prefix, label, render }) {
+  const tokens = useMemo(() =&gt; listTokens(prefix), [prefix]);
+  return (
+    &lt;section style={{ marginBottom: 24 }}&gt;
+      &lt;h4&gt;{label}&lt;/h4&gt;
+      &lt;table style={{ borderCollapse: &#39;collapse&#39;, width: &#39;100%&#39; }}&gt;
+        &lt;tbody&gt;
+          {tokens.map(({ name, value }) =&gt; (
+            &lt;tr key={name} style={{ borderBottom: &#39;1px solid #eee&#39; }}&gt;
+              &lt;td style={{ fontFamily: &#39;monospace&#39;, fontSize: 12, padding: &#39;4px 12px 4px 0&#39; }}&gt;{name}&lt;/td&gt;
+              &lt;td style={{ fontFamily: &#39;monospace&#39;, fontSize: 12, padding: &#39;4px 12px&#39;, opacity: 0.6 }}&gt;
+                {value}
+              &lt;/td&gt;
+              &lt;td style={{ padding: &#39;4px 0&#39; }}&gt;{render(value)}&lt;/td&gt;
+            &lt;/tr&gt;
+          ))}
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Typography&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const CompositeStyles = {
+  render: () =&gt; &lt;TypeSample /&gt;,
+};
+
+export const Primitives = {
+  render: () =&gt; (
+    &lt;div&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-font-size-&quot;
+        label=&quot;Font size&quot;
+        render={(v) =&gt; &lt;span style={{ fontSize: v }}&gt;Aa&lt;/span&gt;}
+      /&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-font-weight-&quot;
+        label=&quot;Font weight&quot;
+        render={(v) =&gt; &lt;span style={{ fontWeight: v }}&gt;Aa&lt;/span&gt;}
+      /&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-line-height-&quot;
+        label=&quot;Line height&quot;
+        render={(v) =&gt; &lt;span&gt;{v}&lt;/span&gt;}
+      /&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-core-font-family-&quot;
+        label=&quot;Font family&quot;
+        render={(v) =&gt; &lt;span style={{ fontFamily: v }}&gt;Aa Bb Cc&lt;/span&gt;}
+      /&gt;
+    &lt;/div&gt;
+  ),
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Typography } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Composite Styles</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const CompositeStyles = () =&gt; &lt;TypeSample /&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Primitives</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Primitives = () =&gt; (
+  &lt;div&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-font-size-&quot;
+      label=&quot;Font size&quot;
+      render={(v) =&gt; &lt;span style={{ fontSize: v }}&gt;Aa&lt;/span&gt;}
+    /&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-font-weight-&quot;
+      label=&quot;Font weight&quot;
+      render={(v) =&gt; &lt;span style={{ fontWeight: v }}&gt;Aa&lt;/span&gt;}
+    /&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-line-height-&quot;
+      label=&quot;Line height&quot;
+      render={(v) =&gt; &lt;span&gt;{v}&lt;/span&gt;}
+    /&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-core-font-family-&quot;
+      label=&quot;Font family&quot;
+      render={(v) =&gt; &lt;span style={{ fontFamily: v }}&gt;Aa Bb Cc&lt;/span&gt;}
+    /&gt;
+  &lt;/div&gt;
+);</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+    </div>
+    <div class="error-groups" role="region" aria-label="API error groups">
+        <section class="group">
+          <input id="no-component-found-toggle" class="group-tg" type="checkbox" hidden />
+          <label for="no-component-found-toggle" class="group-header">
+            <span class="caret">▸</span>
+            <span class="group-title">No component found</span>
+            <span class="group-count">4</span>
+          </label>
+          <div class="group-cards">
+<article
+  
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Color">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Color</h2>
+      <div class="badges">
+        <label for="c-error-0-foundations-color-err" class="badge err as-toggle">API error</label>
+        <label for="c-error-0-foundations-color-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-error-0-foundations-color-stories" class="badge ok as-toggle">2 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Color.stories.jsx">foundations-color · ./src/stories/foundations/Color.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-0-foundations-color-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-0-foundations-color-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-0-foundations-color-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  290 | }
+  291 |
+&gt; 292 | export default {
+      | ^
+  293 |   title: &#39;Foundations/Color&#39;,
+  294 |   tags: [&#39;ai-generated&#39;],
+  295 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Color.stories.jsx:
+import { useMemo, useState } from &#39;react&#39;;
+import { listTokens, groupPrimitives } from &#39;../../utils/tokens&#39;;
+
+const CODE_FONT = &quot;&#39;SF Mono&#39;, &#39;Roboto Mono&#39;, ui-monospace, monospace&quot;;
+
+function Swatch({ name, value }) {
+  return (
+    &lt;div style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 12, padding: &#39;6px 0&#39; }}&gt;
+      &lt;div
+        style={{
+          width: 40,
+          height: 40,
+          borderRadius: 8,
+          border: &#39;1px solid var(--pepper-color-fg-stroke, #ccc)&#39;,
+          background: `var(${name})`,
+          flexShrink: 0,
+        }}
+      /&gt;
+      &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12, lineHeight: 1.4 }}&gt;
+        &lt;div&gt;{name}&lt;/div&gt;
+        &lt;div style={{ opacity: 0.6 }}&gt;{value}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function TokenGrid({ tokens }) {
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(260px, 1fr))&#39;, gap: 4 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;Swatch key={t.name} {...t} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+// Matches the curated family order on the &quot;Colors: Primitives&quot; page in Bell
+// (Figma node 40001040:1549) — anything not listed falls back to the end,
+// alphabetically, so a new family never disappears, just lands out of order.
+const PRIMITIVE_FAMILY_ORDER = [
+  &#39;brand-primary-blue&#39;,
+  &#39;brand-crypto-orange&#39;,
+  &#39;brand-secondary-cyan&#39;,
+  &#39;midnight&#39;,
+  &#39;neutral&#39;,
+  &#39;system-green&#39;,
+  &#39;system-orange&#39;,
+  &#39;system-red&#39;,
+  &#39;decorative-lime&#39;,
+  &#39;decorative-magenta&#39;,
+  &#39;decorative-turquoise&#39;,
+  &#39;decorative-violet&#39;,
+  &#39;decorative-yellow&#39;,
+];
+
+function orderFamilies(families) {
+  const known = PRIMITIVE_FAMILY_ORDER.filter((f) =&gt; families.has(f));
+  const rest = [...families.keys()].filter((f) =&gt; !PRIMITIVE_FAMILY_ORDER.includes(f)).sort();
+  return [...known, ...rest];
+}
+
+function familyDisplayName(family) {
+  return family.split(&#39;-&#39;).join(&#39; / &#39;);
+}
+
+function stepOf(name) {
+  const match = name.match(/-(\d+|white|black)(?:-opacity)?$/);
+  return match ? match[1] : name;
+}
+
+// white sorts lighter than every numbered step, black sorts darker than all of them.
+function stepSortValue(step) {
+  if (step === &#39;white&#39;) return -1;
+  if (step === &#39;black&#39;) return Infinity;
+  return Number(step);
+}
+
+// Ramp presentation, styled after the Atlassian Design System&#39;s color
+// palette page (atlassian.design/foundations/color/color-palette) — a
+// continuous stack of full-width ramp bars per family, step name on top in
+// auto-contrast text. Click a bar to reveal Hex/RGB/Token copy actions;
+// hover any one for a &quot;Copy to clipboard&quot; tooltip, click to copy.
+function hexToRgb(hex) {
+  const c = hex.replace(&#39;#&#39;, &#39;&#39;);
+  const r = parseInt(c.substring(0, 2), 16);
+  const g = parseInt(c.substring(2, 4), 16);
+  const b = parseInt(c.substring(4, 6), 16);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function contrastTextColor(hex) {
+  if (!hex?.startsWith(&#39;#&#39;) || hex.length &lt; 7) return &#39;#000&#39;;
+  const c = hex.replace(&#39;#&#39;, &#39;&#39;);
+  const lin = (v) =&gt; (v &lt;= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+  const [r, g, b] = [0, 2, 4].map((i) =&gt; lin(parseInt(c.substring(i, i + 2), 16) / 255));
+  const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  return luminance &gt; 0.4 ? &#39;#000&#39; : &#39;#fff&#39;;
+}
+
+function CopyIcon({ color }) {
+  return (
+    &lt;svg width=&quot;13&quot; height=&quot;13&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; style={{ flexShrink: 0 }}&gt;
+      &lt;rect x=&quot;5.5&quot; y=&quot;5.5&quot; width=&quot;8&quot; height=&quot;8&quot; rx=&quot;1.5&quot; stroke={color} strokeWidth=&quot;1.2&quot; /&gt;
+      &lt;path d=&quot;M3.5 10.5h-1a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v1&quot; stroke={color} strokeWidth=&quot;1.2&quot; /&gt;
+    &lt;/svg&gt;
+  );
+}
+
+// Custom tooltip (not the native `title` attribute) so it can switch its own
+// text to &quot;Copied&quot; right after the click, the way Atlassian&#39;s copy buttons do.
+function CopyLabel({ text, value, color }) {
+  const [copied, setCopied] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+  const handleClick = async (e) =&gt; {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch {
+      // clipboard unavailable (e.g. insecure context) — tooltip still told them what it does
+    }
+    setCopied(true);
+    setTimeout(() =&gt; setCopied(false), 1200);
+  };
+
+  return (
+    &lt;span
+      onClick={handleClick}
+      onMouseEnter={() =&gt; setHovered(true)}
+      onMouseLeave={() =&gt; setHovered(false)}
+      style={{
+        position: &#39;relative&#39;,
+        display: &#39;inline-flex&#39;,
+        alignItems: &#39;center&#39;,
+        gap: 4,
+        textDecoration: &#39;underline&#39;,
+        cursor: &#39;pointer&#39;,
+      }}
+    &gt;
+      {text}
+      {(hovered || copied) &amp;&amp; (
+        &lt;span
+          style={{
+            position: &#39;absolute&#39;,
+            bottom: &#39;100%&#39;,
+            left: &#39;50%&#39;,
+            transform: &#39;translateX(-50%)&#39;,
+            marginBottom: 6,
+            background: &#39;#1a1a1a&#39;,
+            color: &#39;#fff&#39;,
+            padding: &#39;4px 8px&#39;,
+            borderRadius: 4,
+            fontSize: 11,
+            whiteSpace: &#39;nowrap&#39;,
+            pointerEvents: &#39;none&#39;,
+            zIndex: 10,
+          }}
+        &gt;
+          {copied ? &#39;Copied&#39; : `Copy &#39;${value}&#39; to clipboard`}
+        &lt;/span&gt;
+      )}
+    &lt;/span&gt;
+  );
+}
+
+function RampBar({ token, isFirst, isLast }) {
+  const [revealed, setRevealed] = useState(false);
+  const textColor = contrastTextColor(token.value);
+  return (
+    &lt;div
+      role=&quot;button&quot;
+      tabIndex={0}
+      onClick={() =&gt; setRevealed((r) =&gt; !r)}
+      onKeyDown={(e) =&gt; e.key === &#39;Enter&#39; &amp;&amp; setRevealed((r) =&gt; !r)}
+      style={{
+        background: `var(${token.name})`,
+        color: textColor,
+        padding: &#39;10px 12px&#39;,
+        fontSize: 13,
+        cursor: &#39;pointer&#39;,
+        display: &#39;flex&#39;,
+        alignItems: &#39;center&#39;,
+        justifyContent: &#39;space-between&#39;,
+        gap: 12,
+        // corners rounded per-bar, not via a clipped wrapper — a wrapper with
+        // overflow:hidden would cut off the copy tooltips popping out of it
+        borderTopLeftRadius: isFirst ? 8 : 0,
+        borderTopRightRadius: isFirst ? 8 : 0,
+        borderBottomLeftRadius: isLast ? 8 : 0,
+        borderBottomRightRadius: isLast ? 8 : 0,
+      }}
+    &gt;
+      &lt;span&gt;{stepOf(token.name)}&lt;/span&gt;
+      {revealed &amp;&amp; (
+        &lt;span style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 8, fontFamily: CODE_FONT }}&gt;
+          &lt;CopyLabel text=&quot;Hex&quot; value={token.value} /&gt;
+          &lt;CopyIcon color={textColor} /&gt;
+          &lt;CopyLabel text=&quot;RGB&quot; value={hexToRgb(token.value)} /&gt;
+          &lt;CopyIcon color={textColor} /&gt;
+          &lt;CopyLabel text=&quot;Token&quot; value={token.name} /&gt;
+        &lt;/span&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+
+function ColorRamp({ family, tokens }) {
+  const sorted = useMemo(
+    () =&gt; [...tokens].sort((a, b) =&gt; stepSortValue(stepOf(a.name)) - stepSortValue(stepOf(b.name))),
+    [tokens],
+  );
+  return (
+    &lt;div&gt;
+      &lt;p style={{ fontSize: 14, fontWeight: 600, marginBottom: 8 }}&gt;{familyDisplayName(family)}&lt;/p&gt;
+      &lt;div&gt;
+        {sorted.map((t, i) =&gt; (
+          &lt;RampBar key={t.name} token={t} isFirst={i === 0} isLast={i === sorted.length - 1} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function PrimitiveRamps() {
+  const tokens = useMemo(
+    () =&gt; listTokens(&#39;--pepper-core-color-&#39;).filter((t) =&gt; !t.name.includes(&#39;opacity&#39;)),
+    [],
+  );
+  const families = useMemo(() =&gt; groupPrimitives(tokens, &#39;--pepper-core-color-&#39;), [tokens]);
+  const order = useMemo(() =&gt; orderFamilies(families), [families]);
+
+  return (
+    &lt;div&gt;
+      &lt;h3 style={{ font: &#39;var(--pepper-typography-heading-h3)&#39;, margin: &#39;0 0 8px&#39; }}&gt;Primitives&lt;/h3&gt;
+      &lt;p style={{ font: &#39;var(--pepper-typography-body-md)&#39;, margin: &#39;0 0 24px&#39; }}&gt;
+        Raw palette scales — the building blocks behind every semantic token. Don&#39;t reference these
+        directly in product code; use the semantic tokens instead.
+      &lt;/p&gt;
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(200px, 1fr))&#39;, gap: 24 }}&gt;
+        {order.map((family) =&gt; (
+          &lt;ColorRamp key={family} family={family} tokens={families.get(family)} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function semanticGroup(name) {
+  const rest = name.replace(&#39;--pepper-color-&#39;, &#39;&#39;);
+  const segs = rest.split(&#39;-&#39;);
+  if (segs[0] === &#39;fg&#39;) return `fg-${segs[1]}`; // fg-text, fg-icon, fg-stroke
+  return segs[0]; // bg, component, static, border, etc.
+}
+
+function SemanticPalette() {
+  const tokens = useMemo(
+    () =&gt;
+      listTokens(&#39;--pepper-color-&#39;).concat(listTokens(&#39;--pepper-overlay-&#39;)).concat(listTokens(&#39;--pepper-state-&#39;)),
+    [],
+  );
+  const groups = useMemo(() =&gt; {
+    const map = new Map();
+    for (const token of tokens) {
+      const key = token.name.startsWith(&#39;--pepper-color-&#39;)
+        ? semanticGroup(token.name)
+        : token.name.startsWith(&#39;--pepper-overlay-&#39;)
+          ? &#39;overlay&#39;
+          : &#39;state&#39;;
+      if (!map.has(key)) map.set(key, []);
+      map.get(key).push(token);
+    }
+    return map;
+  }, [tokens]);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;
+        Semantic / component / static / overlay / state tokens (&lt;code&gt;--pepper-*&lt;/code&gt;) — use these
+        in product. They reference primitives above and are the ones that flip with the theme toggle
+        in the toolbar.
+      &lt;/p&gt;
+      {[...groups.entries()].map(([group, groupTokens]) =&gt; (
+        &lt;section key={group} style={{ marginBottom: 24 }}&gt;
+          &lt;h4 style={{ marginBottom: 4 }}&gt;{group}&lt;/h4&gt;
+          &lt;TokenGrid tokens={groupTokens} /&gt;
+        &lt;/section&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Color&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const Semantic = {
+  render: () =&gt; &lt;SemanticPalette /&gt;,
+};
+
+export const Primitives = {
+  render: () =&gt; &lt;PrimitiveRamps /&gt;,
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Color } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Semantic</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Semantic = () =&gt; &lt;SemanticPalette /&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Primitives</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Primitives = () =&gt; &lt;PrimitiveRamps /&gt;;</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Effects">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Effects</h2>
+      <div class="badges">
+        <label for="c-error-1-foundations-effects-err" class="badge err as-toggle">API error</label>
+        <label for="c-error-1-foundations-effects-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-error-1-foundations-effects-stories" class="badge ok as-toggle">6 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Effects.stories.jsx">foundations-effects · ./src/stories/foundations/Effects.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-1-foundations-effects-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-1-foundations-effects-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-1-foundations-effects-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  20 | }
+  21 |
+&gt; 22 | export default {
+     | ^
+  23 |   title: &#39;Foundations/Effects&#39;,
+  24 |   tags: [&#39;ai-generated&#39;],
+  25 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Effects.stories.jsx:
+import { useMemo } from &#39;react&#39;;
+import { listTokens } from &#39;../../utils/tokens&#39;;
+
+const swatchBase = {
+  width: 96,
+  height: 64,
+  background: &#39;var(--pepper-color-bg-surface-brand-primary, #0064fa)&#39;,
+};
+
+function EffectRow({ name, value, style }) {
+  return (
+    &lt;div style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 16, padding: &#39;8px 0&#39; }}&gt;
+      &lt;div style={{ ...swatchBase, ...style }} /&gt;
+      &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;
+        &lt;div&gt;{name}&lt;/div&gt;
+        &lt;div style={{ opacity: 0.6 }}&gt;{value}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Effects&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const BorderRadius = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-border-radius-&#39;);
+    return (
+      &lt;div&gt;
+        {tokens.map((t) =&gt; (
+          &lt;EffectRow key={t.name} {...t} style={{ borderRadius: t.value }} /&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const BorderWidth = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-border-width-&#39;);
+    return (
+      &lt;div&gt;
+        {tokens.map((t) =&gt; (
+          &lt;EffectRow
+            key={t.name}
+            {...t}
+            style={{ background: &#39;transparent&#39;, border: `${t.value} solid var(--pepper-color-fg-stroke, #333)` }}
+          /&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Shadow = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-shadow-&#39;).filter((t) =&gt; !t.name.includes(&#39;offset&#39;));
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(180px, 1fr))&#39;, gap: 32, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                ...swatchBase,
+                width: &#39;100%&#39;,
+                borderRadius: 8,
+                boxShadow: `var(${t.name})`,
+                margin: &#39;0 auto 12px&#39;,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Blur = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-blur-&#39;);
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(140px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                ...swatchBase,
+                width: &#39;100%&#39;,
+                borderRadius: 8,
+                filter: `var(${t.name})`,
+                margin: &#39;0 auto 12px&#39;,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Opacity = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-core-opacity-values-&#39;);
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(90px, 1fr))&#39;, gap: 12, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                width: 56,
+                height: 56,
+                borderRadius: 8,
+                margin: &#39;0 auto 8px&#39;,
+                background: &#39;var(--pepper-core-color-brand-primary-blue-400, #0064fa)&#39;,
+                opacity: `var(${t.name})`,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 11 }}&gt;{t.value}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+
+export const Gradient = {
+  render: () =&gt; {
+    const tokens = listTokens(&#39;--pepper-gradient-&#39;);
+    return (
+      &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(220px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+        {tokens.map((t) =&gt; (
+          &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+            &lt;div
+              style={{
+                ...swatchBase,
+                width: &#39;100%&#39;,
+                height: 100,
+                borderRadius: 8,
+                background: `var(${t.name})`,
+                margin: &#39;0 auto 12px&#39;,
+              }}
+            /&gt;
+            &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Effects } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Border Radius</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const BorderRadius = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-border-radius-&#39;);
+  return (
+    &lt;div&gt;
+      {tokens.map((t) =&gt; (
+        &lt;EffectRow key={t.name} {...t} style={{ borderRadius: t.value }} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Border Width</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const BorderWidth = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-border-width-&#39;);
+  return (
+    &lt;div&gt;
+      {tokens.map((t) =&gt; (
+        &lt;EffectRow
+          key={t.name}
+          {...t}
+          style={{ background: &#39;transparent&#39;, border: `${t.value} solid var(--pepper-color-fg-stroke, #333)` }}
+        /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Shadow</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Shadow = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-shadow-&#39;).filter((t) =&gt; !t.name.includes(&#39;offset&#39;));
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(180px, 1fr))&#39;, gap: 32, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              ...swatchBase,
+              width: &#39;100%&#39;,
+              borderRadius: 8,
+              boxShadow: `var(${t.name})`,
+              margin: &#39;0 auto 12px&#39;,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Blur</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Blur = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-blur-&#39;);
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(140px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              ...swatchBase,
+              width: &#39;100%&#39;,
+              borderRadius: 8,
+              filter: `var(${t.name})`,
+              margin: &#39;0 auto 12px&#39;,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Opacity</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Opacity = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-core-opacity-values-&#39;);
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(90px, 1fr))&#39;, gap: 12, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              width: 56,
+              height: 56,
+              borderRadius: 8,
+              margin: &#39;0 auto 8px&#39;,
+              background: &#39;var(--pepper-core-color-brand-primary-blue-400, #0064fa)&#39;,
+              opacity: `var(${t.name})`,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 11 }}&gt;{t.value}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Gradient</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Gradient = () =&gt; {
+  const tokens = listTokens(&#39;--pepper-gradient-&#39;);
+  return (
+    &lt;div style={{ display: &#39;grid&#39;, gridTemplateColumns: &#39;repeat(auto-fill, minmax(220px, 1fr))&#39;, gap: 24, padding: 16 }}&gt;
+      {tokens.map((t) =&gt; (
+        &lt;div key={t.name} style={{ textAlign: &#39;center&#39; }}&gt;
+          &lt;div
+            style={{
+              ...swatchBase,
+              width: &#39;100%&#39;,
+              height: 100,
+              borderRadius: 8,
+              background: `var(${t.name})`,
+              margin: &#39;0 auto 12px&#39;,
+            }}
+          /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;{t.name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Spacing">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Spacing</h2>
+      <div class="badges">
+        <label for="c-error-2-foundations-spacing-err" class="badge err as-toggle">API error</label>
+        <label for="c-error-2-foundations-spacing-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-error-2-foundations-spacing-stories" class="badge ok as-toggle">2 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Spacing.stories.jsx">foundations-spacing · ./src/stories/foundations/Spacing.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-2-foundations-spacing-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-2-foundations-spacing-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-2-foundations-spacing-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  19 | }
+  20 |
+&gt; 21 | export default {
+     | ^
+  22 |   title: &#39;Foundations/Spacing&#39;,
+  23 |   tags: [&#39;ai-generated&#39;],
+  24 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Spacing.stories.jsx:
+import { useMemo } from &#39;react&#39;;
+import { listTokens } from &#39;../../utils/tokens&#39;;
+
+function SpaceGroup({ prefix, label }) {
+  const tokens = useMemo(() =&gt; listTokens(prefix), [prefix]);
+  return (
+    &lt;section style={{ marginBottom: 24 }}&gt;
+      &lt;h4&gt;{label}&lt;/h4&gt;
+      {tokens.map(({ name, value }) =&gt; (
+        &lt;div key={name} style={{ display: &#39;flex&#39;, alignItems: &#39;center&#39;, gap: 12, padding: &#39;4px 0&#39; }}&gt;
+          &lt;div style={{ width: value, height: 16, background: &#39;var(--pepper-core-color-brand-primary-blue-400, #0064fa)&#39; }} /&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 12 }}&gt;
+            {name} — {value}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/section&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Spacing&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const InsetAndGap = {
+  render: () =&gt; (
+    &lt;div&gt;
+      &lt;p&gt;
+        &lt;code&gt;--pepper-space-inset-*&lt;/code&gt; (internal padding) and &lt;code&gt;--pepper-space-gap-*&lt;/code&gt;
+        (space between elements). Bar width shows the actual token value.
+      &lt;/p&gt;
+      &lt;SpaceGroup prefix=&quot;--pepper-space-inset-&quot; label=&quot;Inset (padding)&quot; /&gt;
+      &lt;SpaceGroup prefix=&quot;--pepper-space-gap-&quot; label=&quot;Gap (proximity/stacking)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+};
+
+export const LayoutSpacing = {
+  render: () =&gt; (
+    &lt;div&gt;
+      &lt;p&gt;
+        Responsive layout tokens — desktop values shown here. Tablet/mobile overrides live under
+        &lt;code&gt; [data-theme=&quot;tablet&quot;|&quot;mobile&quot;]&lt;/code&gt; in &lt;code&gt;space.css&lt;/code&gt;.
+      &lt;/p&gt;
+      &lt;SpaceGroup prefix=&quot;--pepper-space-theme-spacing-&quot; label=&quot;Layout spacing (desktop)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Spacing } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Inset And Gap</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const InsetAndGap = () =&gt; (
+  &lt;div&gt;
+    &lt;p&gt;
+      &lt;code&gt;--pepper-space-inset-*&lt;/code&gt; (internal padding) and &lt;code&gt;--pepper-space-gap-*&lt;/code&gt;
+      (space between elements). Bar width shows the actual token value.
+    &lt;/p&gt;
+    &lt;SpaceGroup prefix=&quot;--pepper-space-inset-&quot; label=&quot;Inset (padding)&quot; /&gt;
+    &lt;SpaceGroup prefix=&quot;--pepper-space-gap-&quot; label=&quot;Gap (proximity/stacking)&quot; /&gt;
+  &lt;/div&gt;
+);</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Layout Spacing</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const LayoutSpacing = () =&gt; (
+  &lt;div&gt;
+    &lt;p&gt;
+      Responsive layout tokens — desktop values shown here. Tablet/mobile overrides live under
+      &lt;code&gt; [data-theme=&quot;tablet&quot;|&quot;mobile&quot;]&lt;/code&gt; in &lt;code&gt;space.css&lt;/code&gt;.
+    &lt;/p&gt;
+    &lt;SpaceGroup prefix=&quot;--pepper-space-theme-spacing-&quot; label=&quot;Layout spacing (desktop)&quot; /&gt;
+  &lt;/div&gt;
+);</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Typography">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Typography</h2>
+      <div class="badges">
+        <label for="c-error-3-foundations-typography-err" class="badge err as-toggle">API error</label>
+        <label for="c-error-3-foundations-typography-info" class="badge info as-toggle">2 infos</label>
+        <label for="c-error-3-foundations-typography-stories" class="badge ok as-toggle">2 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/Typography.stories.jsx">foundations-typography · ./src/stories/foundations/Typography.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-3-foundations-typography-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-3-foundations-typography-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-3-foundations-typography-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>We could not detect the component from your story file. Specify meta.component.
+  44 | }
+  45 |
+&gt; 46 | export default {
+     | ^
+  47 |   title: &#39;Foundations/Typography&#39;,
+  48 |   tags: [&#39;ai-generated&#39;],
+  49 |   parameters: { layout: &#39;padded&#39; },
+
+./src/stories/foundations/Typography.stories.jsx:
+import { useMemo } from &#39;react&#39;;
+import { listTokens } from &#39;../../utils/tokens&#39;;
+
+function TypeSample() {
+  const styles = useMemo(() =&gt; listTokens(&#39;--pepper-typography-&#39;), []);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;
+        Composite &lt;code&gt;--pepper-typography-*&lt;/code&gt; tokens — each one bundles weight, size,
+        line-height and family from the primitives below into a single &lt;code&gt;font&lt;/code&gt; shorthand.
+        Rendered with the real token, not a hardcoded style.
+      &lt;/p&gt;
+      {styles.map(({ name }) =&gt; (
+        &lt;div key={name} style={{ borderBottom: &#39;1px solid #eee&#39;, padding: &#39;16px 0&#39; }}&gt;
+          &lt;div style={{ font: `var(${name})` }}&gt;The quick brown fox jumps over the lazy dog&lt;/div&gt;
+          &lt;div style={{ fontFamily: &#39;monospace&#39;, fontSize: 11, opacity: 0.6, marginTop: 4 }}&gt;{name}&lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+function PrimitiveScale({ prefix, label, render }) {
+  const tokens = useMemo(() =&gt; listTokens(prefix), [prefix]);
+  return (
+    &lt;section style={{ marginBottom: 24 }}&gt;
+      &lt;h4&gt;{label}&lt;/h4&gt;
+      &lt;table style={{ borderCollapse: &#39;collapse&#39;, width: &#39;100%&#39; }}&gt;
+        &lt;tbody&gt;
+          {tokens.map(({ name, value }) =&gt; (
+            &lt;tr key={name} style={{ borderBottom: &#39;1px solid #eee&#39; }}&gt;
+              &lt;td style={{ fontFamily: &#39;monospace&#39;, fontSize: 12, padding: &#39;4px 12px 4px 0&#39; }}&gt;{name}&lt;/td&gt;
+              &lt;td style={{ fontFamily: &#39;monospace&#39;, fontSize: 12, padding: &#39;4px 12px&#39;, opacity: 0.6 }}&gt;
+                {value}
+              &lt;/td&gt;
+              &lt;td style={{ padding: &#39;4px 0&#39; }}&gt;{render(value)}&lt;/td&gt;
+            &lt;/tr&gt;
+          ))}
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/Typography&#39;,
+  tags: [&#39;ai-generated&#39;],
+  parameters: { layout: &#39;padded&#39; },
+};
+
+export const CompositeStyles = {
+  render: () =&gt; &lt;TypeSample /&gt;,
+};
+
+export const Primitives = {
+  render: () =&gt; (
+    &lt;div&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-font-size-&quot;
+        label=&quot;Font size&quot;
+        render={(v) =&gt; &lt;span style={{ fontSize: v }}&gt;Aa&lt;/span&gt;}
+      /&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-font-weight-&quot;
+        label=&quot;Font weight&quot;
+        render={(v) =&gt; &lt;span style={{ fontWeight: v }}&gt;Aa&lt;/span&gt;}
+      /&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-line-height-&quot;
+        label=&quot;Line height&quot;
+        render={(v) =&gt; &lt;span&gt;{v}&lt;/span&gt;}
+      /&gt;
+      &lt;PrimitiveScale
+        prefix=&quot;--pepper-core-font-family-&quot;
+        label=&quot;Font family&quot;
+        render={(v) =&gt; &lt;span style={{ fontFamily: v }}&gt;Aa Bb Cc&lt;/span&gt;}
+      /&gt;
+    &lt;/div&gt;
+  ),
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">Specify an @import jsdoc tag on your component or your stories meta such as @import import { Typography } from &#39;my-design-system&#39;;</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Composite Styles</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const CompositeStyles = () =&gt; &lt;TypeSample /&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Primitives</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Primitives = () =&gt; (
+  &lt;div&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-font-size-&quot;
+      label=&quot;Font size&quot;
+      render={(v) =&gt; &lt;span style={{ fontSize: v }}&gt;Aa&lt;/span&gt;}
+    /&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-font-weight-&quot;
+      label=&quot;Font weight&quot;
+      render={(v) =&gt; &lt;span style={{ fontWeight: v }}&gt;Aa&lt;/span&gt;}
+    /&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-line-height-&quot;
+      label=&quot;Line height&quot;
+      render={(v) =&gt; &lt;span&gt;{v}&lt;/span&gt;}
+    /&gt;
+    &lt;PrimitiveScale
+      prefix=&quot;--pepper-core-font-family-&quot;
+      label=&quot;Font family&quot;
+      render={(v) =&gt; &lt;span style={{ fontFamily: v }}&gt;Aa Bb Cc&lt;/span&gt;}
+    /&gt;
+  &lt;/div&gt;
+);</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article></div>
+        </section>
+      
+        <section class="group">
+          <input id="no-component-import-found-toggle" class="group-tg" type="checkbox" hidden />
+          <label for="no-component-import-found-toggle" class="group-header">
+            <span class="caret">▸</span>
+            <span class="group-title">No component import found</span>
+            <span class="group-count">1</span>
+          </label>
+          <div class="group-cards">
+<article
+  
+  class="card 
+  has-error
+  has-info
+  has-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="TokenProbe">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> TokenProbe</h2>
+      <div class="badges">
+        <label for="c-error-0-foundations-tokensloaded-err" class="badge err as-toggle">API error</label>
+        <label for="c-error-0-foundations-tokensloaded-info" class="badge info as-toggle">1 info</label>
+        <label for="c-error-0-foundations-tokensloaded-stories" class="badge err as-toggle">1/1 story errors</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/stories/foundations/TokensLoaded.stories.jsx">foundations-tokensloaded · ./src/stories/foundations/TokensLoaded.stories.jsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-0-foundations-tokensloaded-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-0-foundations-tokensloaded-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-0-foundations-tokensloaded-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;TokenProbe&quot; component.
+  15 | }
+  16 |
+&gt; 17 | export default {
+     | ^
+  18 |   title: &#39;Foundations/TokensLoaded&#39;,
+  19 |   component: TokenProbe,
+  20 |   tags: [&#39;ai-generated&#39;],
+
+./src/stories/foundations/TokensLoaded.stories.jsx:
+import { expect } from &#39;storybook/test&#39;;
+
+/**
+ * Sanity check that pepper-tokens.css actually loaded and resolves to the
+ * values declared in tokens/css/base/color.css — not a component test, just
+ * a guard so a broken import path fails loudly instead of silently.
+ */
+function TokenProbe() {
+  return (
+    &lt;div
+      data-testid=&quot;token-probe&quot;
+      style={{ background: &#39;var(--pepper-core-color-brand-primary-blue-400)&#39;, width: 40, height: 40 }}
+    /&gt;
+  );
+}
+
+export default {
+  title: &#39;Foundations/TokensLoaded&#39;,
+  component: TokenProbe,
+  tags: [&#39;ai-generated&#39;],
+};
+
+export const CssCheck = {
+  play: async ({ canvas }) =&gt; {
+    const probe = canvas.getByTestId(&#39;token-probe&#39;);
+    const resolved = getComputedStyle(probe).backgroundColor;
+    // --pepper-core-color-brand-primary-blue-400 is #0064fa in tokens/css/base/color.css
+    await expect(resolved).toBe(&#39;rgb(0, 100, 250)&#39;);
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Css Check</span>
+                <span class="badge err">story error</span>
+                
+              </div>
+              
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { TokenProbe } from 'pepper-ds-storybook';</code></pre>
+              </div>
+          
+          
+        </div>
+    
+    
+  </div>
+</article></div>
+        </section>
+      </div>
+    
+    
+  </div>
+</main>
+</body>
+</html>  

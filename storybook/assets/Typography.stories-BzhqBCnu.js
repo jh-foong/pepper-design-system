@@ -1,0 +1,16 @@
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{n as t,y as n}from"./iframe-CC-2YB8m.js";import{r}from"./tokens-DEg4FDa5.js";function i(){let e=(0,o.useMemo)(()=>r(`--pepper-typography-`),[]);return(0,s.jsxs)(`div`,{children:[(0,s.jsxs)(`p`,{children:[`Composite `,(0,s.jsx)(`code`,{children:`--pepper-typography-*`}),` tokens — each one bundles weight, size, line-height and family from the primitives below into a single `,(0,s.jsx)(`code`,{children:`font`}),` shorthand. Rendered with the real token, not a hardcoded style.`]}),e.map(({name:e})=>(0,s.jsxs)(`div`,{style:{borderBottom:`1px solid #eee`,padding:`16px 0`},children:[(0,s.jsx)(`div`,{style:{font:`var(${e})`},children:`The quick brown fox jumps over the lazy dog`}),(0,s.jsx)(`div`,{style:{fontFamily:`monospace`,fontSize:11,opacity:.6,marginTop:4},children:e})]},e))]})}function a({prefix:e,label:t,render:n}){let i=(0,o.useMemo)(()=>r(e),[e]);return(0,s.jsxs)(`section`,{style:{marginBottom:24},children:[(0,s.jsx)(`h4`,{children:t}),(0,s.jsx)(`table`,{style:{borderCollapse:`collapse`,width:`100%`},children:(0,s.jsx)(`tbody`,{children:i.map(({name:e,value:t})=>(0,s.jsxs)(`tr`,{style:{borderBottom:`1px solid #eee`},children:[(0,s.jsx)(`td`,{style:{fontFamily:`monospace`,fontSize:12,padding:`4px 12px 4px 0`},children:e}),(0,s.jsx)(`td`,{style:{fontFamily:`monospace`,fontSize:12,padding:`4px 12px`,opacity:.6},children:t}),(0,s.jsx)(`td`,{style:{padding:`4px 0`},children:n(t)})]},e))})})]})}var o,s,c,l,u,d;function f(){return(f=e((()=>{o=n(),s=t(),c={title:`Foundations/Typography`,tags:[`ai-generated`],parameters:{layout:`padded`}},l={render:()=>(0,s.jsx)(i,{})},u={render:()=>(0,s.jsxs)(`div`,{children:[(0,s.jsx)(a,{prefix:`--pepper-font-size-`,label:`Font size`,render:e=>(0,s.jsx)(`span`,{style:{fontSize:e},children:`Aa`})}),(0,s.jsx)(a,{prefix:`--pepper-font-weight-`,label:`Font weight`,render:e=>(0,s.jsx)(`span`,{style:{fontWeight:e},children:`Aa`})}),(0,s.jsx)(a,{prefix:`--pepper-line-height-`,label:`Line height`,render:e=>(0,s.jsx)(`span`,{children:e})}),(0,s.jsx)(a,{prefix:`--pepper-core-font-family-`,label:`Font family`,render:e=>(0,s.jsx)(`span`,{style:{fontFamily:e},children:`Aa Bb Cc`})})]})},d=[`CompositeStyles`,`Primitives`],l.parameters={...l.parameters,docs:{...l.parameters?.docs,source:{originalSource:`{
+  render: () => <TypeSample />
+}`,...l.parameters?.docs?.source}}},u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
+  render: () => <div>
+      <PrimitiveScale prefix="--pepper-font-size-" label="Font size" render={v => <span style={{
+      fontSize: v
+    }}>Aa</span>} />
+      <PrimitiveScale prefix="--pepper-font-weight-" label="Font weight" render={v => <span style={{
+      fontWeight: v
+    }}>Aa</span>} />
+      <PrimitiveScale prefix="--pepper-line-height-" label="Line height" render={v => <span>{v}</span>} />
+      <PrimitiveScale prefix="--pepper-core-font-family-" label="Font family" render={v => <span style={{
+      fontFamily: v
+    }}>Aa Bb Cc</span>} />
+    </div>
+}`,...u.parameters?.docs?.source}}}})))()}f();export{l as CompositeStyles,u as Primitives,d as __namedExportsOrder,c as default};
