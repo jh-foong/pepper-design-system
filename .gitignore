@@ -2,6 +2,7 @@ node_modules/
 .claude/*
 !.claude/commands/
 .DS_Store
+storybook/storybook-static/
 
 # Personal Claude context — loaded by Claude locally, never synced to other repos
 CLAUDE.local.md
