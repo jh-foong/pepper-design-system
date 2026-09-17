@@ -1,0 +1,63 @@
+<!--
+  Manrope (Pepperstone fork, github.com/jh-foong/manrope).
+
+  NOTE: DESIGN.md's documented CDN link —
+  https://cdn.jsdelivr.net/gh/jh-foong/manrope@main/fonts/webfonts/Manrope.css —
+  404s. The fork's default branch is `master`, not `main`, and there's no
+  bundled Manrope.css in the repo at all — just individual .woff2 files. The
+  @font-face block below points at those files directly. Worth fixing at the
+  source (either add fonts/webfonts/Manrope.css to the fork, or update
+  DESIGN.md's snippet) so every other consumer of that snippet isn't also
+  silently falling back to a system font.
+-->
+<style>
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/jh-foong/manrope@master/fonts/webfonts/Manrope-ExtraLight.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/jh-foong/manrope@master/fonts/webfonts/Manrope-Light.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/jh-foong/manrope@master/fonts/webfonts/Manrope-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/jh-foong/manrope@master/fonts/webfonts/Manrope-Medium.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/jh-foong/manrope@master/fonts/webfonts/Manrope-SemiBold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/jh-foong/manrope@master/fonts/webfonts/Manrope-Bold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/jh-foong/manrope@master/fonts/webfonts/Manrope-ExtraBold.woff2') format('woff2');
+  }
+</style>
