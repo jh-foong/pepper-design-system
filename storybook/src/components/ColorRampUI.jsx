@@ -3,9 +3,10 @@ import { useState } from 'react';
 /**
  * Shared ramp presentation, styled after the Atlassian Design System's color
  * palette page (atlassian.design/foundations/color/color-palette) — a
- * continuous stack of full-width bars per group. Click a bar to reveal
- * Hex/RGB/Token copy actions; hover any one for a "Copy to clipboard"
- * tooltip, click to copy. Used by both the Primitives and Opacities stories.
+ * continuous stack of full-width bars per group. Hover (or keyboard-focus) a
+ * bar to reveal Hex/RGB/Token copy actions; hover any one of those for a
+ * "Copy to clipboard" tooltip, click to copy. Used by both the Primitives
+ * and Opacities stories.
  */
 
 const CODE_FONT = "'SF Mono', 'Roboto Mono', ui-monospace, monospace";
@@ -18,18 +19,27 @@ export function hexToRgb(hex) {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-// Opacity ramp bars render an 8-digit #RRGGBBAA straight over this story's
-// white page background — a low-alpha swatch reads as pale near-white no
-// matter how dark its base colour is, so contrast must be judged on the
-// colour actually composited over white, not the raw (fully opaque) RGB.
+// Opacity ramp bars render an 8-digit #RRGGBBAA straight over the story's
+// page background — a low-alpha swatch reads as close to that background no
+// matter how dark or light its base colour is, so contrast must be judged on
+// the colour actually composited over the CURRENT page background (which
+// flips between light and dark with the theme toggle), not a hardcoded one.
+function resolvedPageBackground() {
+  if (typeof document === 'undefined') return [255, 255, 255];
+  const match = getComputedStyle(document.body).backgroundColor.match(/[\d.]+/g);
+  if (!match || match.length < 3) return [255, 255, 255];
+  return match.slice(0, 3).map(Number);
+}
+
 export function contrastTextColor(hex) {
   if (!hex?.startsWith('#') || hex.length < 7) return '#000';
   const c = hex.replace('#', '');
   const alpha = c.length >= 8 ? parseInt(c.substring(6, 8), 16) / 255 : 1;
+  const bg = resolvedPageBackground();
   const lin = (v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
-  const [r, g, b] = [0, 2, 4].map((i) => {
+  const [r, g, b] = [0, 2, 4].map((i, idx) => {
     const channel = parseInt(c.substring(i, i + 2), 16);
-    const composited = alpha * channel + (1 - alpha) * 255; // over white
+    const composited = alpha * channel + (1 - alpha) * bg[idx];
     return lin(composited / 255);
   });
   const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -108,16 +118,16 @@ export function RampBar({ token, label, isFirst, isLast }) {
   const textColor = contrastTextColor(token.value);
   return (
     <div
-      role="button"
       tabIndex={0}
-      onClick={() => setRevealed((r) => !r)}
-      onKeyDown={(e) => e.key === 'Enter' && setRevealed((r) => !r)}
+      onMouseEnter={() => setRevealed(true)}
+      onMouseLeave={() => setRevealed(false)}
+      onFocus={() => setRevealed(true)}
+      onBlur={() => setRevealed(false)}
       style={{
         background: `var(${token.name})`,
         color: textColor,
         padding: '10px 12px',
         fontSize: 13,
-        cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
