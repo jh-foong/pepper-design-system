@@ -15,11 +15,40 @@
   --pepper-typography-heading-h5: var(--pepper-font-weight-heading-h5) var(--pepper-font-size-heading-h5)/var(--pepper-line-height-heading-h5) var(--pepper-font-family-heading-h5);
   --pepper-typography-heading-h6: var(--pepper-font-weight-heading-h6) var(--pepper-font-size-heading-h6)/var(--pepper-line-height-heading-h6) var(--pepper-font-family-heading-h6);
 
+  /* Headings — responsive breakpoint variants, read directly off Figma's
+     bound Tablet/Mobile-mode variables in the Semantic Typography collection
+     (Bell, nodes 40001132:1114 "Heading · Tablet" and 40001132:1156
+     "Heading · Mobile") — not inferred, confirmed against the live values. */
+  --pepper-typography-heading-h1-tablet: var(--pepper-font-weight-heading-h1) var(--pepper-core-font-size-7xl)/var(--pepper-core-line-height-leading-76) var(--pepper-font-family-heading-h1); /* 72/76 */
+  --pepper-typography-heading-h1-mobile: var(--pepper-font-weight-heading-h1) var(--pepper-core-font-size-5xl)/var(--pepper-core-line-height-leading-52) var(--pepper-font-family-heading-h1); /* 48/52 */
+  --pepper-typography-heading-h2-tablet: var(--pepper-font-weight-heading-h2) var(--pepper-core-font-size-5xl)/var(--pepper-core-line-height-leading-52) var(--pepper-font-family-heading-h2); /* 48/52 */
+  --pepper-typography-heading-h2-mobile: var(--pepper-font-weight-heading-h2) var(--pepper-core-font-size-4xl)/var(--pepper-core-line-height-leading-40) var(--pepper-font-family-heading-h2); /* 36/40 */
+  --pepper-typography-heading-h3-tablet: var(--pepper-font-weight-heading-h3) var(--pepper-core-font-size-4xl)/var(--pepper-core-line-height-leading-40) var(--pepper-font-family-heading-h3); /* 36/40 */
+  --pepper-typography-heading-h3-mobile: var(--pepper-font-weight-heading-h3) var(--pepper-core-font-size-3xl)/var(--pepper-core-line-height-leading-36) var(--pepper-font-family-heading-h3); /* 30/36 */
+  --pepper-typography-heading-h4-tablet: var(--pepper-font-weight-heading-h4) var(--pepper-core-font-size-3xl)/var(--pepper-core-line-height-leading-36) var(--pepper-font-family-heading-h4); /* 30/36, same as desktop */
+  --pepper-typography-heading-h4-mobile: var(--pepper-font-weight-heading-h4) var(--pepper-core-font-size-2xl)/var(--pepper-core-line-height-leading-36) var(--pepper-font-family-heading-h4); /* 24/36 — confirmed via Figma, breaks the usual 24→32 pairing */
+  --pepper-typography-heading-h5-tablet: var(--pepper-font-weight-heading-h5) var(--pepper-core-font-size-2xl)/var(--pepper-core-line-height-leading-32) var(--pepper-font-family-heading-h5); /* 24/32, same as desktop */
+  --pepper-typography-heading-h5-mobile: var(--pepper-font-weight-heading-h5) var(--pepper-core-font-size-xl)/var(--pepper-core-line-height-leading-28) var(--pepper-font-family-heading-h5); /* 20/28 */
+  --pepper-typography-heading-h6-tablet: var(--pepper-font-weight-heading-h6) var(--pepper-core-font-size-xl)/var(--pepper-core-line-height-leading-28) var(--pepper-font-family-heading-h6); /* 20/28, same as desktop */
+  --pepper-typography-heading-h6-mobile: var(--pepper-font-weight-heading-h6) var(--pepper-core-font-size-lg)/var(--pepper-core-line-height-leading-28) var(--pepper-font-family-heading-h6); /* 18/28 */
+
   /* Display (marketing / hero — semibold, not bold) */
   --pepper-typography-display-xl: var(--pepper-font-weight-display-xl) var(--pepper-font-size-display-xl)/var(--pepper-line-height-display-xl) var(--pepper-font-family-display-xl);
   --pepper-typography-display-lg: var(--pepper-font-weight-display-lg) var(--pepper-font-size-display-lg)/var(--pepper-line-height-display-lg) var(--pepper-font-family-display-lg);
   --pepper-typography-display-md: var(--pepper-font-weight-display-md) var(--pepper-font-size-display-md)/var(--pepper-line-height-display-md) var(--pepper-font-family-display-md);
   --pepper-typography-display-sm: var(--pepper-font-weight-display-sm) var(--pepper-font-size-display-sm)/var(--pepper-line-height-display-sm) var(--pepper-font-family-display-sm);
+
+  /* Display — responsive breakpoint variants, read directly off Figma's
+     bound Tablet/Mobile-mode variables (Bell, nodes 40000621:232 "Display ·
+     Tablet" and 40000621:313 "Display · Mobile"). */
+  --pepper-typography-display-xl-tablet: var(--pepper-font-weight-display-xl) var(--pepper-core-font-size-4xl)/var(--pepper-core-line-height-leading-40) var(--pepper-font-family-display-xl); /* 36/40 */
+  --pepper-typography-display-xl-mobile: var(--pepper-font-weight-display-xl) var(--pepper-core-font-size-3xl)/var(--pepper-core-line-height-leading-36) var(--pepper-font-family-display-xl); /* 30/36 */
+  --pepper-typography-display-lg-tablet: var(--pepper-font-weight-display-lg) var(--pepper-core-font-size-3xl)/var(--pepper-core-line-height-leading-36) var(--pepper-font-family-display-lg); /* 30/36 */
+  --pepper-typography-display-lg-mobile: var(--pepper-font-weight-display-lg) var(--pepper-core-font-size-2xl)/var(--pepper-core-line-height-leading-32) var(--pepper-font-family-display-lg); /* 24/32 */
+  --pepper-typography-display-md-tablet: var(--pepper-font-weight-display-md) var(--pepper-core-font-size-2xl)/var(--pepper-core-line-height-leading-32) var(--pepper-font-family-display-md); /* 24/32 */
+  --pepper-typography-display-md-mobile: var(--pepper-font-weight-display-md) var(--pepper-core-font-size-xl)/var(--pepper-core-line-height-leading-28) var(--pepper-font-family-display-md); /* 20/28 */
+  --pepper-typography-display-sm-tablet: var(--pepper-font-weight-display-sm) var(--pepper-core-font-size-2xl)/var(--pepper-core-line-height-leading-32) var(--pepper-font-family-display-sm); /* 24/32, same as desktop */
+  --pepper-typography-display-sm-mobile: var(--pepper-font-weight-display-sm) var(--pepper-core-font-size-xl)/var(--pepper-core-line-height-leading-28) var(--pepper-font-family-display-sm); /* 20/28 */
 
   /* Body */
   --pepper-typography-body-lg: var(--pepper-font-weight-body-lg) var(--pepper-font-size-body-lg)/var(--pepper-line-height-body-lg) var(--pepper-font-family-body-lg);
