@@ -2,9 +2,13 @@
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
+  // Only Color (Primitives + Opacities) is ready to show. Semantic colours,
+  // Effects, Spacing, Typography and TokensLoaded are still being ironed out —
+  // widen this back to "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)" once they're ready.
   "stories": [
     "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+    "../src/stories/foundations/Color.stories.jsx",
+    "../src/stories/foundations/Opacity.stories.jsx"
   ],
   "addons": [
     "@chromatic-com/storybook",
