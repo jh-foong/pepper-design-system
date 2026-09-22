@@ -86,14 +86,14 @@ function FilterButton({ label, active, onClick }) {
 }
 
 // Habanero "Segment Control" component, Selected Color=Default, Size=md
-// (node 6003:322218): a tonal track with a white "thumb" pill around the
-// active segment; muted text for the inactive segments.
+// (node 6003:322218): a bordered, unfilled track; the active segment gets a
+// tonal-grey "thumb" pill, inactive segments sit directly on the track.
 function BreakpointToggle({ value, onChange }) {
   return (
     <div
       style={{
         display: 'inline-flex',
-        background: 'var(--pepper-color-bg-surface-accent-tonal-subtle)',
+        border: '1px solid var(--pepper-color-fg-stroke-subtle)',
         borderRadius: 8,
         padding: 2,
         gap: 2,
@@ -113,9 +113,8 @@ function BreakpointToggle({ value, onChange }) {
               borderRadius: 6,
               border: 'none',
               cursor: 'pointer',
-              background: active ? 'var(--pepper-color-bg-surface-primary)' : 'transparent',
-              color: active ? 'var(--pepper-color-fg-text-primary)' : 'var(--pepper-color-fg-text-secondary)',
-              boxShadow: active ? '0 1px 2px rgba(10, 10, 10, 0.12)' : 'none',
+              background: active ? 'var(--pepper-color-bg-surface-accent-tonal-subtle)' : 'transparent',
+              color: 'var(--pepper-color-fg-text-primary)',
             }}
           >
             {bp}
