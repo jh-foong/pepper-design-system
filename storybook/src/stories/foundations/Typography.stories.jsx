@@ -3,7 +3,7 @@ import { listTokens, resolvedValue } from '../../utils/tokens';
 import { CopyLabel, CopyIcon } from '../../components/ColorRampUI';
 
 const CODE_FONT = "'SF Mono', 'Roboto Mono', ui-monospace, monospace";
-const DEFAULT_SAMPLE = 'The quick brown fox jumps over the lazy dog';
+const DEFAULT_SAMPLE = 'ABC123';
 
 // Matches the section order on the Bell "Typography" spec board (node
 // 40000617:2476). Heading and Display scale across Desktop/Tablet/Mobile —
@@ -62,28 +62,66 @@ function parseFontShorthand(value) {
   return { weight, size: `${size}px`, lineHeight: `${lineHeight}px`, family };
 }
 
+// Habanero "Filter Buttons" component, Style=Bold (Brand), Size=md (node
+// 9336:5302): selected = brand-blue fill + inverse text; unselected = white
+// fill + subtle border. Fully rounded (corner-radius/button-md = 999).
+function FilterButton({ label, active, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      style={{
+        font: 'var(--pepper-typography-label-sm)',
+        padding: '10px 16px',
+        borderRadius: 999,
+        border: active ? 'none' : '1px solid var(--pepper-color-fg-stroke-subtle)',
+        background: active ? 'var(--pepper-color-bg-surface-brand-primary)' : 'var(--pepper-color-bg-surface-primary)',
+        color: active ? 'var(--pepper-color-static-text-inverse-primary)' : 'var(--pepper-color-fg-text-primary)',
+        cursor: 'pointer',
+      }}
+    >
+      {label}
+    </button>
+  );
+}
+
+// Habanero "Segment Control" component, Selected Color=Default, Size=md
+// (node 6003:322218): a tonal track with a white "thumb" pill around the
+// active segment; muted text for the inactive segments.
 function BreakpointToggle({ value, onChange }) {
   return (
-    <div style={{ display: 'inline-flex', border: '1px solid #d4d4d4', borderRadius: 8, overflow: 'hidden' }}>
-      {['desktop', 'tablet', 'mobile'].map((bp) => (
-        <button
-          key={bp}
-          type="button"
-          onClick={() => onChange(bp)}
-          style={{
-            border: 'none',
-            padding: '8px 16px',
-            fontSize: 13,
-            fontWeight: 600,
-            textTransform: 'capitalize',
-            cursor: 'pointer',
-            background: value === bp ? '#0a0a0a' : '#fff',
-            color: value === bp ? '#fff' : '#0a0a0a',
-          }}
-        >
-          {bp}
-        </button>
-      ))}
+    <div
+      style={{
+        display: 'inline-flex',
+        background: 'var(--pepper-color-bg-surface-accent-tonal-subtle)',
+        borderRadius: 8,
+        padding: 2,
+        gap: 2,
+      }}
+    >
+      {['desktop', 'tablet', 'mobile'].map((bp) => {
+        const active = value === bp;
+        return (
+          <button
+            key={bp}
+            type="button"
+            onClick={() => onChange(bp)}
+            style={{
+              font: 'var(--pepper-typography-label-sm)',
+              textTransform: 'capitalize',
+              padding: '8px 16px',
+              borderRadius: 6,
+              border: 'none',
+              cursor: 'pointer',
+              background: active ? 'var(--pepper-color-bg-surface-primary)' : 'transparent',
+              color: active ? 'var(--pepper-color-fg-text-primary)' : 'var(--pepper-color-fg-text-secondary)',
+              boxShadow: active ? '0 1px 2px rgba(10, 10, 10, 0.12)' : 'none',
+            }}
+          >
+            {bp}
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -133,11 +171,15 @@ function TypeRow({ meta, breakpoint, responsive, sampleText }) {
 }
 
 function TypographyShowcase() {
+  const [activeCategory, setActiveCategory] = useState(CATEGORIES[0].key);
   const [breakpoint, setBreakpoint] = useState('desktop');
   const [sampleText, setSampleText] = useState('');
 
   const tokens = useMemo(() => listTokens('--pepper-typography-'), []);
   const styles = useMemo(() => buildTypeStyles(tokens), [tokens]);
+
+  const category = CATEGORIES.find((c) => c.key === activeCategory);
+  const rows = styles.filter((s) => s.category === activeCategory);
 
   return (
     <div>
@@ -147,6 +189,17 @@ function TypographyShowcase() {
         <code>font</code> shorthand. Heading and Display scale down at Tablet and Mobile; Body, Label and
         Legal stay the same size at every breakpoint.
       </p>
+
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 24 }}>
+        {CATEGORIES.map((c) => (
+          <FilterButton
+            key={c.key}
+            label={c.label}
+            active={c.key === activeCategory}
+            onClick={() => setActiveCategory(c.key)}
+          />
+        ))}
+      </div>
 
       <div
         style={{
@@ -175,30 +228,23 @@ function TypographyShowcase() {
             }}
           />
         </label>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          <span style={{ fontSize: 12, fontWeight: 600 }}>Breakpoint (Heading &amp; Display only)</span>
-          <BreakpointToggle value={breakpoint} onChange={setBreakpoint} />
-        </div>
+        {category.responsive && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <span style={{ fontSize: 12, fontWeight: 600 }}>Breakpoint</span>
+            <BreakpointToggle value={breakpoint} onChange={setBreakpoint} />
+          </div>
+        )}
       </div>
 
-      {CATEGORIES.map(({ key, label, responsive }) => {
-        const rows = styles.filter((s) => s.category === key);
-        if (rows.length === 0) return null;
-        return (
-          <section key={key} style={{ marginBottom: 32 }}>
-            <h4 style={{ font: 'var(--pepper-typography-label-lg)', margin: '0 0 4px' }}>{label}</h4>
-            {rows.map((meta) => (
-              <TypeRow
-                key={`${meta.category}-${meta.step}`}
-                meta={meta}
-                breakpoint={breakpoint}
-                responsive={responsive}
-                sampleText={sampleText}
-              />
-            ))}
-          </section>
-        );
-      })}
+      {rows.map((meta) => (
+        <TypeRow
+          key={`${meta.category}-${meta.step}`}
+          meta={meta}
+          breakpoint={breakpoint}
+          responsive={category.responsive}
+          sampleText={sampleText}
+        />
+      ))}
     </div>
   );
 }
