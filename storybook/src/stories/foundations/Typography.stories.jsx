@@ -5,6 +5,45 @@ import { CopyLabel, CopyIcon } from '../../components/ColorRampUI';
 const CODE_FONT = "'SF Mono', 'Roboto Mono', ui-monospace, monospace";
 const DEFAULT_SAMPLE = 'ABC123';
 
+// Real-world sample copy per style, taken directly from the Bell "Typography"
+// spec board's own preview rows (node 40000617:2476) — e.g. H1's preview
+// literally reads "Hero Headline", Display/xl reads "$1,245,890.00". Used
+// whenever the Controls panel's "Preview text" override is left blank.
+const EXAMPLES = {
+  heading: {
+    h1: 'Hero Headline',
+    h2: 'Section Title',
+    h3: 'Feature Group Header',
+    h4: 'Card Title',
+    h5: 'Panel Title',
+    h6: 'Inline Section Divider',
+  },
+  display: {
+    xl: '$1,245,890.00',
+    lg: '$84,520.75',
+    md: '2,847.50 USD',
+    sm: '98.72%',
+  },
+  body: {
+    lg: 'This is a lead paragraph introducing a feature or section. It provides context and sets expectations for the content that follows.',
+    md: 'Standard body copy used throughout the interface for descriptions, explanations, and general content. This is the default reading size for Desktop.',
+    sm: 'Secondary text that provides additional context. Default reading size for Mobile and Tablet breakpoints.',
+    xs: 'Caption text — Jan 15, 2025 at 3:42 PM',
+    '2xs': 'Fine print or compact metadata',
+  },
+  label: {
+    lg: 'Navigation Item',
+    md: 'Button Text',
+    sm: 'Tag Label',
+    xs: 'Status',
+    '2xs': 'OVERLINE',
+  },
+  legal: {
+    md: 'By continuing, you agree to our Terms of Service and Privacy Policy. Your data will be processed in accordance with applicable regulations.',
+    xs: 'Copyright 2025 Pepper DS. All rights reserved.',
+  },
+};
+
 // Matches the section order on the Bell "Typography" spec board (node
 // 40000617:2476). Heading and Display scale across Desktop/Tablet/Mobile —
 // confirmed against Figma's bound Tablet/Mobile-mode variables, not
@@ -125,10 +164,11 @@ function BreakpointToggle({ value, onChange }) {
   );
 }
 
-function TypeRow({ meta, breakpoint, responsive, sampleText }) {
+function TypeRow({ meta, breakpoint, responsive, sampleTextOverride }) {
   const tokenName = (responsive && meta.tokens[breakpoint]) || meta.tokens.desktop;
   const value = resolvedValue(tokenName);
   const spec = parseFontShorthand(value);
+  const sampleText = sampleTextOverride || EXAMPLES[meta.category]?.[meta.step] || DEFAULT_SAMPLE;
 
   return (
     <div
@@ -147,7 +187,7 @@ function TypeRow({ meta, breakpoint, responsive, sampleText }) {
           overflowWrap: 'break-word',
         }}
       >
-        {sampleText || DEFAULT_SAMPLE}
+        {sampleText}
       </div>
       <div style={{ fontFamily: CODE_FONT, fontSize: 12, lineHeight: 1.7 }}>
         <div style={{ fontWeight: 600, fontSize: 13, marginBottom: 4, fontFamily: 'inherit' }}>
@@ -169,10 +209,9 @@ function TypeRow({ meta, breakpoint, responsive, sampleText }) {
   );
 }
 
-function TypographyShowcase() {
+function TypographyShowcase({ sampleTextOverride }) {
   const [activeCategory, setActiveCategory] = useState(CATEGORIES[0].key);
   const [breakpoint, setBreakpoint] = useState('desktop');
-  const [sampleText, setSampleText] = useState('');
 
   const tokens = useMemo(() => listTokens('--pepper-typography-'), []);
   const styles = useMemo(() => buildTypeStyles(tokens), [tokens]);
@@ -186,7 +225,8 @@ function TypographyShowcase() {
       <p style={{ font: 'var(--pepper-typography-body-md)', margin: '0 0 24px' }}>
         Composite type styles — each one bundles weight, size, line-height and family into a single{' '}
         <code>font</code> shorthand. Heading and Display scale down at Tablet and Mobile; Body, Label and
-        Legal stay the same size at every breakpoint.
+        Legal stay the same size at every breakpoint. Each row previews real sample copy from the Bell
+        spec board — use the "Preview text" control below to override it for every row at once.
       </p>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 24 }}>
@@ -200,40 +240,11 @@ function TypographyShowcase() {
         ))}
       </div>
 
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: 16,
-          alignItems: 'center',
-          marginBottom: 32,
-          padding: 16,
-          background: '#fafafa',
-          borderRadius: 8,
-        }}
-      >
-        <label style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: '1 1 320px' }}>
-          <span style={{ fontSize: 12, fontWeight: 600 }}>Preview text</span>
-          <input
-            type="text"
-            value={sampleText}
-            onChange={(e) => setSampleText(e.target.value)}
-            placeholder={DEFAULT_SAMPLE}
-            style={{
-              padding: '8px 12px',
-              fontSize: 14,
-              border: '1px solid #d4d4d4',
-              borderRadius: 6,
-            }}
-          />
-        </label>
-        {category.responsive && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <span style={{ fontSize: 12, fontWeight: 600 }}>Breakpoint</span>
-            <BreakpointToggle value={breakpoint} onChange={setBreakpoint} />
-          </div>
-        )}
-      </div>
+      {category.responsive && (
+        <div style={{ marginBottom: 32 }}>
+          <BreakpointToggle value={breakpoint} onChange={setBreakpoint} />
+        </div>
+      )}
 
       {rows.map((meta) => (
         <TypeRow
@@ -241,7 +252,7 @@ function TypographyShowcase() {
           meta={meta}
           breakpoint={breakpoint}
           responsive={category.responsive}
-          sampleText={sampleText}
+          sampleTextOverride={sampleTextOverride}
         />
       ))}
     </div>
@@ -252,8 +263,18 @@ export default {
   title: 'Foundations/Typography',
   tags: ['ai-generated'],
   parameters: { layout: 'padded' },
+  argTypes: {
+    previewText: {
+      control: 'text',
+      name: 'Preview text',
+      description: 'Override the example text shown for every row. Leave blank to use each style\'s own real-world sample from the Bell spec board.',
+    },
+  },
+  args: {
+    previewText: '',
+  },
 };
 
 export const Showcase = {
-  render: () => <TypographyShowcase />,
+  render: (args) => <TypographyShowcase sampleTextOverride={args.previewText} />,
 };
