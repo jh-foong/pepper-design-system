@@ -101,9 +101,11 @@ function parseFontShorthand(value) {
   return { weight, size: `${size}px`, lineHeight: `${lineHeight}px`, family };
 }
 
-// Habanero "Filter Buttons" component, Style=Bold (Brand), Size=md (node
-// 9336:5302): selected = brand-blue fill + inverse text; unselected = white
-// fill + subtle border. Fully rounded (corner-radius/button-md = 999).
+// Habanero "Filter Buttons" component, Style=Bold (Brand), Size=md (40px)
+// (node 9336:5302): selected = brand-blue fill + inverse text; unselected =
+// white fill + subtle border. Fully rounded (corner-radius/button-md = 999).
+// Height is set explicitly rather than via padding — line-height/font-metric
+// rounding meant 10px vertical padding rendered at 42px, not the true 40px.
 function FilterButton({ label, active, onClick }) {
   return (
     <button
@@ -111,7 +113,10 @@ function FilterButton({ label, active, onClick }) {
       onClick={onClick}
       style={{
         font: 'var(--pepper-typography-label-sm)',
-        padding: '10px 16px',
+        height: 40,
+        padding: '0 16px',
+        display: 'inline-flex',
+        alignItems: 'center',
         borderRadius: 999,
         border: active ? 'none' : '1px solid var(--pepper-color-fg-stroke-subtle)',
         background: active ? 'var(--pepper-color-bg-surface-brand-primary)' : 'var(--pepper-color-bg-surface-primary)',
@@ -124,20 +129,12 @@ function FilterButton({ label, active, onClick }) {
   );
 }
 
-// Habanero "Segment Control" component, Selected Color=Default, Size=md
-// (node 6003:322218): a bordered, unfilled track; the active segment gets a
-// tonal-grey "thumb" pill, inactive segments sit directly on the track.
-function BreakpointToggle({ value, onChange }) {
+// Habanero "Tab" component (node 9171:6561): plain underline tabs on a
+// shared subtle divider — selected tab gets brand-blue text and a blue
+// underline, unselected tabs sit in secondary grey text.
+function BreakpointTabs({ value, onChange }) {
   return (
-    <div
-      style={{
-        display: 'inline-flex',
-        border: '1px solid var(--pepper-color-fg-stroke-subtle)',
-        borderRadius: 8,
-        padding: 2,
-        gap: 2,
-      }}
-    >
+    <div style={{ display: 'flex', gap: 24, borderBottom: '1px solid var(--pepper-color-fg-stroke-subtle)' }}>
       {['desktop', 'tablet', 'mobile'].map((bp) => {
         const active = value === bp;
         return (
@@ -148,12 +145,13 @@ function BreakpointToggle({ value, onChange }) {
             style={{
               font: 'var(--pepper-typography-label-sm)',
               textTransform: 'capitalize',
-              padding: '8px 16px',
-              borderRadius: 6,
+              padding: '8px 2px',
+              marginBottom: -1,
               border: 'none',
+              borderBottom: active ? '2px solid var(--pepper-color-fg-stroke-brand-default)' : '2px solid transparent',
+              background: 'transparent',
               cursor: 'pointer',
-              background: active ? 'var(--pepper-color-bg-surface-accent-tonal-subtle)' : 'transparent',
-              color: 'var(--pepper-color-fg-text-primary)',
+              color: active ? 'var(--pepper-color-fg-text-brand-default)' : 'var(--pepper-color-fg-text-secondary)',
             }}
           >
             {bp}
@@ -229,7 +227,11 @@ function TypographyShowcase({ sampleTextOverride }) {
         spec board — use the "Preview text" control below to override it for every row at once.
       </p>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 24 }}>
+      <div style={{ marginBottom: 24 }}>
+        <BreakpointTabs value={breakpoint} onChange={setBreakpoint} />
+      </div>
+
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 32 }}>
         {CATEGORIES.map((c) => (
           <FilterButton
             key={c.key}
@@ -239,12 +241,6 @@ function TypographyShowcase({ sampleTextOverride }) {
           />
         ))}
       </div>
-
-      {category.responsive && (
-        <div style={{ marginBottom: 32 }}>
-          <BreakpointToggle value={breakpoint} onChange={setBreakpoint} />
-        </div>
-      )}
 
       {rows.map((meta) => (
         <TypeRow
