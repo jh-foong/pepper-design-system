@@ -31,6 +31,23 @@ export function resolvedValue(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
+/**
+ * Resolved value of a token under a given `[data-theme]` breakpoint override
+ * (space.css defines Tablet/Mobile responsive overrides this way, unlike
+ * Typography's separate per-breakpoint token names). Reads live from the
+ * cascade via a detached element carrying the attribute, rather than
+ * hardcoding the three breakpoints' values in story code.
+ */
+export function resolvedValueForBreakpoint(name, breakpoint) {
+  const el = document.createElement('div');
+  if (breakpoint && breakpoint !== 'desktop') el.setAttribute('data-theme', breakpoint);
+  el.style.display = 'none';
+  document.body.appendChild(el);
+  const value = getComputedStyle(el).getPropertyValue(name).trim();
+  document.body.removeChild(el);
+  return value;
+}
+
 /** All declared token names under a prefix, with their resolved values. */
 export function listTokens(prefix) {
   return declaredTokenNames(prefix).map((name) => ({
