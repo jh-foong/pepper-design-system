@@ -70,6 +70,25 @@ export function stepSortValue(step) {
 }
 
 /**
+ * Groups semantic tokens (…-brand-primary, …-inverse-accent-blue-strong) by
+ * their first dash-separated segment after the category prefix — the closest
+ * thing semantic names have to a "family", since unlike primitives they don't
+ * end in a numbered step. `labelFor` on the group's tokens should strip
+ * `stripPrefix + group + '-'` the same way, falling back to the group name
+ * itself when nothing is left (e.g. a bare `-inverse` with no suffix).
+ */
+export function groupByFirstSegment(tokens, stripPrefix) {
+  const groups = new Map();
+  for (const token of tokens) {
+    const rest = token.name.slice(stripPrefix.length);
+    const first = rest.split('-')[0];
+    if (!groups.has(first)) groups.set(first, []);
+    groups.get(first).push(token);
+  }
+  return groups;
+}
+
+/**
  * Groups primitive tokens (…-family-name-100, …-family-name-500) by family.
  * A few families also have a bare `-white` / `-black` entry outside the
  * numbered scale (e.g. neutral-black, midnight-white) — those belong to

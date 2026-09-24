@@ -2,16 +2,17 @@
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  // Only Color (Primitives + Opacities), Typography, Shape (Radius + Stroke
-  // Width), Effects (Shadow + Focus Ring + Blur), Spacing (Primitives +
-  // Gap + Inset), and Layout (Breakpoints + Responsive Spacing) are ready to
-  // show. Semantic colours and TokensLoaded are still being ironed out —
+  // Only Color (Primitives + Opacities + Semantic), Typography, Shape
+  // (Radius + Stroke Width), Effects (Shadow + Focus Ring + Blur), Spacing
+  // (Primitives + Gap + Inset), and Layout (Breakpoints + Responsive
+  // Spacing) are ready to show. TokensLoaded is still being ironed out —
   // widen this back to "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)" once
-  // they're ready.
+  // it's ready.
   "stories": [
     "../src/**/*.mdx",
     "../src/stories/foundations/Color.stories.jsx",
     "../src/stories/foundations/Opacity.stories.jsx",
+    "../src/stories/foundations/Semantic.stories.jsx",
     "../src/stories/foundations/Typography.stories.jsx",
     "../src/stories/foundations/Shape.stories.jsx",
     "../src/stories/foundations/Effects.stories.jsx",
