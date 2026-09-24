@@ -1,8 +1,6 @@
 import { useMemo } from 'react';
 import { listTokens } from '../../utils/tokens';
-import { CopyLabel, CopyIcon } from '../../components/ColorRampUI';
-
-const CODE_FONT = "'SF Mono', 'Roboto Mono', ui-monospace, monospace";
+import { SpecRow } from '../../components/SpecRow';
 
 const RADIUS_ORDER = ['none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', 'full'];
 const STROKE_ORDER = ['none', 'xs', 'sm', 'md', 'lg'];
@@ -39,34 +37,6 @@ function stepSortValue(order, step) {
   return idx === -1 ? order.length : idx;
 }
 
-function ShapeRow({ step, value, tokenName, description, preview }) {
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '88px 100px minmax(0, 1fr) auto',
-        gap: 24,
-        alignItems: 'center',
-        padding: '16px 0',
-        borderBottom: '1px solid #eee',
-      }}
-    >
-      {preview}
-      <div>
-        <div style={{ font: 'var(--pepper-typography-label-sm)', textTransform: 'uppercase' }}>{step}</div>
-        <div style={{ fontFamily: CODE_FONT, fontSize: 12, opacity: 0.6 }}>{value}</div>
-      </div>
-      <div style={{ font: 'var(--pepper-typography-body-sm)', color: 'var(--pepper-color-fg-text-secondary)' }}>
-        {description}
-      </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontFamily: CODE_FONT, fontSize: 12 }}>
-        <CopyLabel text="Token" value={tokenName} />
-        <CopyIcon color="#0a0a0a" />
-      </div>
-    </div>
-  );
-}
-
 function RadiusShowcase() {
   const tokens = useMemo(() => listTokens('--pepper-border-radius-'), []);
   const sorted = useMemo(
@@ -85,7 +55,7 @@ function RadiusShowcase() {
         values don't carry enough UI-role meaning to warrant semantic aliases at this stage.
       </p>
       {sorted.map((token) => (
-        <ShapeRow
+        <SpecRow
           key={token.name}
           step={token.step}
           value={token.value}
@@ -125,7 +95,7 @@ function StrokeWidthShowcase() {
         Border thickness for outlines, accents, and dividers.
       </p>
       {sorted.map((token) => (
-        <ShapeRow
+        <SpecRow
           key={token.name}
           step={token.step}
           value={token.value}
