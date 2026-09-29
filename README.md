@@ -4,7 +4,7 @@ Pepper DS Core is Pepperstone's design system — a shared library of design dec
 
 **Current version:** [`v2.2.0`](https://github.com/jh-foong/pepper-design-system/releases/tag/v2.2.0) · [See all releases →](https://github.com/jh-foong/pepper-design-system/releases)
 
-**Docs site:** [jh-foong.github.io/pepper-design-system](https://jh-foong.github.io/pepper-design-system/)
+**Docs site:** [jh-foong.github.io/pepper-design-system](https://jh-foong.github.io/pepper-design-system/) · **Storybook:** [jh-foong.github.io/pepper-design-system/storybook](https://jh-foong.github.io/pepper-design-system/storybook/)
 
 > 🌶️ **Heads up — things are about to get spicy.** 🎵 [Press play first](https://www.youtube.com/watch?v=rbc_LxfhSoY)
 
@@ -62,6 +62,7 @@ Pepper Design System lives across four canonical Figma files, in order of spice 
 
 | | Link |
 |-|------|
+| Storybook | [jh-foong.github.io/pepper-design-system/storybook](https://jh-foong.github.io/pepper-design-system/storybook/) — live, browsable foundations (colour, type, spacing, layout) reading straight off the token files |
 | Fonts | [Manrope fork](https://github.com/jh-foong/manrope) · [Noto Sans Arabic](https://fonts.google.com/noto/specimen/Noto+Sans+Arabic) · [Noto Sans TC](https://fonts.google.com/noto/specimen/Noto+Sans+TC) · [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP) |
 | GitHub | [jh-foong/pepper-design-system](https://github.com/jh-foong/pepper-design-system) _(public sandbox — official home will move to Pepperstone org once permissions are sorted)_ |
 | Releases | [All versions](https://github.com/jh-foong/pepper-design-system/releases) |
