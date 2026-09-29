@@ -909,7 +909,7 @@
   --pepper-color-fg-text-accent-lime-default: #4d7c0f;
   --pepper-color-fg-text-accent-lime-strong: #1a2e05;
   --pepper-color-fg-text-accent-magenta-default: #9d174d;
-  --pepper-color-fg-text-accent-magenta-strong-9: #500724;
+  --pepper-color-fg-text-accent-magenta-strong: #500724;
   --pepper-color-fg-text-accent-orange-default: #ca3500;
   --pepper-color-fg-text-accent-orange-strong: #7e2a0c;
   --pepper-color-fg-text-accent-red-default: #e7000b;
@@ -986,7 +986,7 @@
   --pepper-color-fg-text-accent-tonal-default: #0a0a0a99;
   --pepper-color-fg-text-inverse-accent-tonal-default: #ffffffb2;
   --pepper-color-fg-icon-accent-tonal-default: #0a0a0a99;
-  --pepper-color-fg-icon-inverse-accent-opacity-default: #ffffffb2;
+  --pepper-color-fg-icon-inverse-accent-tonal-default: #ffffffb2;
   --pepper-color-fg-text-inverse-positive: #00a83c;
   --pepper-color-fg-text-inverse-negative: #fb2c36;
   --pepper-color-fg-text-inverse-disabled: #ffffff66;
@@ -1046,7 +1046,7 @@
   --pepper-color-fg-icon-inverse-accent-violet-default: #e3c0f0;
   --pepper-color-fg-icon-inverse-accent-violet-strong: #fcf4ff;
   --pepper-color-fg-icon-inverse-accent-magenta-default: #fdd0ec;
-  --pepper-color-fg-icon-inverse-accent-magenta-strong-9: #ffecf8;
+  --pepper-color-fg-icon-inverse-accent-magenta-strong: #ffecf8;
   --pepper-color-fg-icon-market-no-data-icon: #0a0a0a99;
   --pepper-color-fg-icon-market-open-icon: #00a63e;
   --pepper-color-fg-icon-market-open-surface: #dcfce7;
@@ -1366,7 +1366,7 @@
   --pepper-color-fg-text-accent-lime-default: #d3f1a7;
   --pepper-color-fg-text-accent-lime-strong: #efffd6;
   --pepper-color-fg-text-accent-magenta-default: #fdd0ec;
-  --pepper-color-fg-text-accent-magenta-strong-9: #ffecf8;
+  --pepper-color-fg-text-accent-magenta-strong: #ffecf8;
   --pepper-color-fg-text-accent-orange-default: #f54900;
   --pepper-color-fg-text-accent-orange-strong: #ff8904;
   --pepper-color-fg-text-accent-red-default: #fb2c36;
@@ -1449,7 +1449,7 @@
   --pepper-color-fg-icon-accent-yellow-default: #f5e989;
   --pepper-color-fg-icon-accent-yellow-strong: #fef7c8;
   --pepper-color-fg-icon-accent-tonal-default: #ffffffb2;
-  --pepper-color-fg-icon-inverse-accent-opacity-default: #000b1c99;
+  --pepper-color-fg-icon-inverse-accent-tonal-default: #000b1c99;
   --pepper-color-fg-icon-inverse-accent-red-default: #e7000b;
   --pepper-color-fg-icon-inverse-accent-red-strong: #460809;
   --pepper-color-fg-icon-inverse-accent-orange-default: #ca3500;
@@ -1469,7 +1469,7 @@
   --pepper-color-fg-icon-inverse-accent-violet-default: #3f144f;
   --pepper-color-fg-icon-inverse-accent-violet-strong: #260333;
   --pepper-color-fg-icon-inverse-accent-magenta-default: #9d174d;
-  --pepper-color-fg-icon-inverse-accent-magenta-strong-9: #500724;
+  --pepper-color-fg-icon-inverse-accent-magenta-strong: #500724;
   --pepper-color-fg-icon-market-no-data-icon: #898990;
   --pepper-color-fg-icon-market-open-icon: #05df72;
   --pepper-color-fg-icon-market-open-surface: #0d542b;
@@ -1711,7 +1711,7 @@
   --pepper-color-fg-text-accent-lime-default: #d3f1a7;
   --pepper-color-fg-text-accent-lime-strong: #efffd6;
   --pepper-color-fg-text-accent-magenta-default: #fdd0ec;
-  --pepper-color-fg-text-accent-magenta-strong-9: #ffecf8;
+  --pepper-color-fg-text-accent-magenta-strong: #ffecf8;
   --pepper-color-fg-text-accent-orange-default: #f54900;
   --pepper-color-fg-text-accent-orange-strong: #ff8904;
   --pepper-color-fg-text-accent-red-default: #fb2c36;
@@ -1794,7 +1794,7 @@
   --pepper-color-fg-icon-accent-yellow-default: #f5e989;
   --pepper-color-fg-icon-accent-yellow-strong: #fef7c8;
   --pepper-color-fg-icon-accent-tonal-default: #ffffffb2;
-  --pepper-color-fg-icon-inverse-accent-opacity-default: #0a0a0a99;
+  --pepper-color-fg-icon-inverse-accent-tonal-default: #0a0a0a99;
   --pepper-color-fg-icon-inverse-accent-red-default: #e7000b;
   --pepper-color-fg-icon-inverse-accent-red-strong: #460809;
   --pepper-color-fg-icon-inverse-accent-orange-default: #ca3500;
@@ -1814,7 +1814,7 @@
   --pepper-color-fg-icon-inverse-accent-violet-default: #3f144f;
   --pepper-color-fg-icon-inverse-accent-violet-strong: #260333;
   --pepper-color-fg-icon-inverse-accent-magenta-default: #9d174d;
-  --pepper-color-fg-icon-inverse-accent-magenta-strong-9: #500724;
+  --pepper-color-fg-icon-inverse-accent-magenta-strong: #500724;
   --pepper-color-fg-icon-market-no-data-icon: #737373;
   --pepper-color-fg-icon-market-open-icon: #05df72;
   --pepper-color-fg-icon-market-open-surface: #0d542b;

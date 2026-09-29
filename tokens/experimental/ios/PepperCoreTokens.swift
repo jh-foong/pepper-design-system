@@ -715,7 +715,7 @@ public enum PepperCoreColor {
     public static let semanticColorForegroundTextAccentLimeDefault = UIColor(red: 0x4d/255.0, green: 0x7c/255.0, blue: 0x0f/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentLimeStrong = UIColor(red: 0x1a/255.0, green: 0x2e/255.0, blue: 0x05/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentMagentaDefault = UIColor(red: 0x9d/255.0, green: 0x17/255.0, blue: 0x4d/255.0, alpha: 1.0)
-    public static let semanticColorForegroundTextAccentMagentaStrong9 = UIColor(red: 0x50/255.0, green: 0x07/255.0, blue: 0x24/255.0, alpha: 1.0)
+    public static let semanticColorForegroundTextAccentMagentaStrong = UIColor(red: 0x50/255.0, green: 0x07/255.0, blue: 0x24/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentOrangeDefault = UIColor(red: 0xca/255.0, green: 0x35/255.0, blue: 0x00/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentOrangeStrong = UIColor(red: 0x7e/255.0, green: 0x2a/255.0, blue: 0x0c/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentRedDefault = UIColor(red: 0xe7/255.0, green: 0x00/255.0, blue: 0x0b/255.0, alpha: 1.0)
