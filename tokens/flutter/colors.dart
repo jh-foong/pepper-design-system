@@ -1613,7 +1613,7 @@ class PepperColors {
   static const colorFgTextAccentMagentaDefault = Color(0xff9d174d);
 
   /// Dark-mode value: #ffecf8
-  static const colorFgTextAccentMagentaStrong9 = Color(0xff500724);
+  static const colorFgTextAccentMagentaStrong = Color(0xff500724);
 
   /// Dark-mode value: #f54900
   static const colorFgTextAccentOrangeDefault = Color(0xffca3500);
