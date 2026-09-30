@@ -834,7 +834,7 @@ module.exports = {
       borderRadius: {
         "pepper-core-2xl": "24px",
         "pepper-core-3xl": "32px",
-        "pepper-core-full": "9999px",
+        "pepper-core-full": "999px",
         "pepper-core-lg": "12px",
         "pepper-core-md": "8px",
         "pepper-core-none": "0px",

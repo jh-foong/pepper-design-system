@@ -23,7 +23,7 @@ const RADIUS_DESCRIPTIONS = {
 const STROKE_DESCRIPTIONS = {
   none: 'No border.',
   xs: 'Standard border.',
-  sm: 'Border, accents, etc. Can also be used for "focus states" or to imply when something is being "selected".',
+  sm: 'Bolder border, accents, etc. Can also be used for "focus states" or to imply when something is being "selected".',
   md: 'Heavy. Use for decorative accents.',
   lg: 'Very heavy. Use for heavy branding or for decorative use.',
 };
