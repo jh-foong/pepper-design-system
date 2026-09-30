@@ -1039,7 +1039,7 @@ public enum PepperCoreSize {
 public enum PepperCoreRadius {
     public static let _2xl: CGFloat = 24
     public static let _3xl: CGFloat = 32
-    public static let full: CGFloat = 9999
+    public static let full: CGFloat = 999
     public static let lg: CGFloat = 12
     public static let md: CGFloat = 8
     public static let none: CGFloat = 0

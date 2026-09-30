@@ -5,7 +5,7 @@ export const border = {
   radius: {
     "2xl": 24,
     "3xl": 32,
-    full: 9999,
+    full: 999,
     lg: 12,
     md: 8,
     none: 0,
