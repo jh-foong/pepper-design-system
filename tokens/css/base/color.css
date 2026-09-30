@@ -961,12 +961,13 @@
   --pepper-overlay-scrim-inverse-medium: #ffffff8c;
   --pepper-overlay-scrim-low: #0a0a0a33;
   --pepper-overlay-scrim-medium: #0a0a0a73;
-  --pepper-core-shadow-2xl-color: #0a0a0a40;
+  --pepper-core-shadow-2xl-color: #0a0a0a4d;
+  --pepper-core-shadow-2xs-color: #0a0a0a0d;
 
-  --pepper-core-shadow-lg-color: #0a0a0a1a;
+  --pepper-core-shadow-lg-color: #0a0a0a26;
   --pepper-core-shadow-md-color: #0a0a0a1a;
-  --pepper-core-shadow-sm-color: #0a0a0a0d;
-  --pepper-core-shadow-xl-color: #0a0a0a1a;
+  --pepper-core-shadow-sm-color: #0a0a0a1a;
+  --pepper-core-shadow-xl-color: #0a0a0a26;
   --pepper-core-shadow-xs-color: #0a0a0a0d;
   --pepper-state-overlay-hover-strong: #0a0a0a33;
   --pepper-state-overlay-hover-subtle: #0a0a0a0d;
