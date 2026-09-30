@@ -1741,17 +1741,15 @@ class PepperColors {
 
   static const overlayScrimMedium = Color(0x730a0a0a);
 
-  static const shadow2xlColor = Color(0x400a0a0a);
+  static const shadow2xlColor = Color(0x4d0a0a0a);
 
-  static const shadow2xsColor = Color(0x0d0a0a0a);
-
-  static const shadowLgColor = Color(0x1a0a0a0a);
+  static const shadowLgColor = Color(0x260a0a0a);
 
   static const shadowMdColor = Color(0x1a0a0a0a);
 
-  static const shadowSmColor = Color(0x0d0a0a0a);
+  static const shadowSmColor = Color(0x1a0a0a0a);
 
-  static const shadowXlColor = Color(0x1a0a0a0a);
+  static const shadowXlColor = Color(0x260a0a0a);
 
   static const shadowXsColor = Color(0x0d0a0a0a);
 

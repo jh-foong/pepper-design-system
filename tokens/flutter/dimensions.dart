@@ -404,10 +404,6 @@ class PepperDimensions {
 
   static const spaceShadow2xlOffsetY = 24;
 
-  static const spaceShadow2xsOffsetX = 0;
-
-  static const spaceShadow2xsOffsetY = 1;
-
   static const spaceShadowLgOffsetX = 0;
 
   static const spaceShadowLgOffsetY = 10;

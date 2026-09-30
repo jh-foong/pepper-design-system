@@ -6,21 +6,26 @@
  * into the hex value (e.g. `#0000000d` = black @ 5%), so they're used directly
  * without an `rgba()` wrapper.
  *
- * NOTE (v2.0.0): shadow colours are treated as theme-agnostic for now — a
- * proper dark-mode shadow palette will land in v2.1.
+ * Shadows deliberately DON'T invert in dark mode or on an inverse surface —
+ * this is a documented design decision, not an unfinished v2.1 item. A shadow
+ * that's dark in light mode stays that same dark colour in dark mode, rather
+ * than flipping to white or lightening. Since shadow colour can't carry an
+ * elevation signal there, dark mode shows elevation through surface colour
+ * instead — that's why there are four surface tokens (primary, secondary,
+ * elevated, sunken), each at its own lightness level.
  */
 
 :root {
   /* ============================================================
      ELEVATION — drop shadows
+     Geometry confirmed against Figma's Effects page (v2.0.0, June 1 2026).
      ============================================================ */
-  --pepper-shadow-2xs: 0px 1px 1px 0px var(--pepper-core-shadow-2xs-color);
-  --pepper-shadow-xs: 0px 1px 3px 0px var(--pepper-core-shadow-xs-color);
+  --pepper-shadow-xs: 0px 1px 2px 0px var(--pepper-core-shadow-xs-color);
   --pepper-shadow-sm: 0px 2px 4px -1px var(--pepper-core-shadow-sm-color);
   --pepper-shadow-md: 0px 4px 6px -1px var(--pepper-core-shadow-md-color);
-  --pepper-shadow-lg: 0px 10px 15px -3px var(--pepper-core-shadow-lg-color);
-  --pepper-shadow-xl: 0px 20px 25px -5px var(--pepper-core-shadow-xl-color);
-  --pepper-shadow-2xl: 0px 25px 50px -12px var(--pepper-core-shadow-2xl-color);
+  --pepper-shadow-lg: 0px 10px 14px -4px var(--pepper-core-shadow-lg-color);
+  --pepper-shadow-xl: 0px 20px 24px -6px var(--pepper-core-shadow-xl-color);
+  --pepper-shadow-2xl: 0px 24px 48px -12px var(--pepper-core-shadow-2xl-color);
 
   /* ============================================================
      FOCUS RINGS — 4px outer ring + 2px inner offset ring
@@ -34,8 +39,6 @@
      SHADOW OFFSETS — x/y offset values per elevation level
      (moved from space.css v2.0.1 — these are shadow geometry, not spacing)
      ============================================================ */
-  --pepper-shadow-2xs-offset-x: 0px;
-  --pepper-shadow-2xs-offset-y: 1px;
   --pepper-shadow-xs-offset-x: 0px;
   --pepper-shadow-xs-offset-y: 1px;
   --pepper-shadow-sm-offset-x: 0px;
