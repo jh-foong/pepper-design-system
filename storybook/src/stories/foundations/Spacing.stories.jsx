@@ -15,10 +15,13 @@ function stepSortValue(step) {
   return idx === -1 ? SCALE_ORDER.length : idx;
 }
 
-// Do/Don't and "common mistakes" copy taken verbatim from the Bell "Spacing"
-// board (node 40000018:881) — checked against Figma's bound variables first;
-// the primitive scale and Gap/Inset values already match tokens/css/base/
-// space.css exactly (that file documents its own prior re-sync), no drift.
+// "Usage rules" and "Common mistakes to avoid" copy taken verbatim from the
+// Bell "Spacing" board (node 40000018:881) — re-checked 2026-10-01 against a
+// screenshot of the actual guidance boxes, since the two columns don't split
+// along "positive vs negative phrasing" (several "Usage rules" bullets are
+// phrased as "Never…") — they're two independent lists under their own
+// headings. The primitive scale and Gap/Inset values already match
+// tokens/css/base/space.css exactly, no drift there.
 function GuidanceList({ title, items }) {
   return (
     <div style={{ flex: '1 1 280px' }}>
@@ -54,7 +57,7 @@ function GuidanceBox({ doItems, dontItems }) {
         borderRadius: 8,
       }}
     >
-      <GuidanceList title="Do" items={doItems} />
+      <GuidanceList title="Usage rules" items={doItems} />
       <GuidanceList title="Common mistakes to avoid" items={dontItems} />
     </div>
   );
@@ -125,10 +128,12 @@ function GapShowcase() {
         doItems={[
           'Use gap tokens for spacing between two or more separate elements, components or content blocks.',
           'Always use gap when elements sit side by side or stack vertically with space between them.',
-        ]}
-        dontItems={[
           "Never use gap inside a single component — that's an inset.",
           'Never hardcode spacing values — always reference a gap token.',
+        ]}
+        dontItems={[
+          'Stacking multiple inset tokens to approximate a gap — use the correct gap token.',
+          'Using a gap token as padding inside a button or input — use inset instead.',
           'Using layout/theme spacing tokens (64px, 80px) for component-level spacing — those are reserved for page-level layout only.',
         ]}
       />
@@ -172,11 +177,13 @@ function InsetShowcase() {
         doItems={[
           'Use inset tokens for internal padding within a single component or container.',
           "Always use inset for the space between a component's boundary and its content.",
-        ]}
-        dontItems={[
           "Never use inset between two separate elements — that's a gap.",
           'Never mix inset and gap within the same spacing decision.',
           'Never hardcode padding values — always reference an inset token.',
+        ]}
+        dontItems={[
+          'Using an inset token to space two cards apart — use gap instead.',
+          'Stacking multiple inset tokens to approximate a gap — use the correct gap token.',
         ]}
       />
       {sorted.map((token) => (
