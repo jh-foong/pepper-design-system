@@ -1,0 +1,26 @@
+@keyframes pepper-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[data-pepper-button] {
+  background: var(--pepper-button-bg);
+  color: var(--pepper-button-text);
+}
+
+[data-pepper-button]:hover:not(:disabled) {
+  background: var(--pepper-button-bg-hover);
+}
+
+[data-pepper-button]:focus-visible {
+  outline: none;
+  box-shadow: var(--pepper-button-focus-ring);
+}
+
+[data-pepper-button]:disabled {
+  background: var(--pepper-color-bg-surface-disabled) !important;
+  color: var(--pepper-color-fg-text-disabled) !important;
+  border-color: transparent !important;
+  cursor: not-allowed;
+}
