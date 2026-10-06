@@ -4,10 +4,10 @@
 const config = {
   // Only Color (Primitives + Opacities + Semantic), Typography, Shape
   // (Radius + Stroke Width), Effects (Shadow + Focus Ring + Blur), Spacing
-  // (Primitives + Gap + Inset), and Layout (Breakpoints + Responsive
-  // Spacing) are ready to show. TokensLoaded is still being ironed out —
-  // widen this back to "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)" once
-  // it's ready.
+  // (Primitives + Gap + Inset), Layout (Breakpoints + Responsive Spacing),
+  // and the Button component are ready to show. TokensLoaded is still being
+  // ironed out — widen this back to "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  // once it's ready.
   "stories": [
     "../src/**/*.mdx",
     "../src/stories/foundations/Color.stories.jsx",
@@ -17,7 +17,8 @@ const config = {
     "../src/stories/foundations/Shape.stories.jsx",
     "../src/stories/foundations/Effects.stories.jsx",
     "../src/stories/foundations/Spacing.stories.jsx",
-    "../src/stories/foundations/Layout.stories.jsx"
+    "../src/stories/foundations/Layout.stories.jsx",
+    "../src/stories/components/Button.stories.jsx"
   ],
   "addons": [
     "@chromatic-com/storybook",
