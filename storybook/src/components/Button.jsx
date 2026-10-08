@@ -76,7 +76,7 @@ const STYLES = {
   },
   'outline-brand': {
     background: 'transparent',
-    backgroundHover: 'var(--pepper-color-bg-overlay-state-hover-default)',
+    backgroundHover: 'var(--pepper-color-bg-surface-brand-subtle)',
     text: 'var(--pepper-color-fg-text-brand-default)',
     border: 'var(--pepper-color-fg-stroke-brand-default)',
   },
