@@ -1,0 +1,21 @@
+/**
+ * Pulls the canonical Pepper DS tokens straight from ../tokens/css/base —
+ * nothing here is duplicated, so this file always reflects the same source
+ * of truth as the rest of the repo. Run `npm run sync-tokens` (see README)
+ * after a token export to make sure this Storybook picks up new files.
+ */
+@import '../../tokens/css/base/color.css';
+@import '../../tokens/css/base/dimension.css';
+@import '../../tokens/css/base/space.css';
+@import '../../tokens/css/base/size.css';
+@import '../../tokens/css/base/border-radius.css';
+@import '../../tokens/css/base/border-width.css';
+@import '../../tokens/css/base/shadow.css';
+@import '../../tokens/css/base/blur.css';
+@import '../../tokens/css/base/opacity.css';
+@import '../../tokens/css/base/gradient.css';
+@import '../../tokens/css/base/font-family.css';
+@import '../../tokens/css/base/font-size.css';
+@import '../../tokens/css/base/font-weight.css';
+@import '../../tokens/css/base/line-height.css';
+@import '../../tokens/css/base/typography.css';

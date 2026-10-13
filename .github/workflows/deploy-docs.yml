@@ -18,6 +18,21 @@ jobs:
         with:
           python-version: 3.x
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - run: pip install mkdocs-material
+
+      - name: Build Storybook pilot
+        working-directory: storybook
+        run: |
+          npm ci
+          npm run build-storybook
+
+      - name: Fold Storybook build into the mkdocs site
+        run: |
+          rm -rf docs/storybook
+          cp -r storybook/storybook-static docs/storybook
 
       - run: mkdocs gh-deploy --force

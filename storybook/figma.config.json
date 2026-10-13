@@ -1,0 +1,6 @@
+{
+  "codeConnect": {
+    "include": ["src/components/**/*.{jsx,tsx}"],
+    "exclude": ["node_modules/**"]
+  }
+}
