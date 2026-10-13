@@ -794,7 +794,7 @@
   --pepper-color-bg-surface-inverse-accent-turquoise-strong: #3ac190;
   --pepper-color-bg-surface-inverse-accent-turquoise-subtle: #134e4a;
   --pepper-color-bg-surface-inverse-accent-violet-strong: #7f00ad;
-  --pepper-color-bg-surface-inverse-accent-violet-subtle: #260333;
+  --pepper-color-bg-surface-inverse-accent-violet-subtle: #3f144f;
   --pepper-color-bg-surface-inverse-accent-yellow-strong: #ddb30e;
   --pepper-color-bg-surface-inverse-accent-yellow-subtle: #451a03;
   --pepper-color-bg-surface-inverse-brand-crypto: #ff5000;
@@ -886,7 +886,7 @@
   --pepper-color-fg-icon-system-error: #e7000b;
   --pepper-color-fg-icon-system-success: #008236;
   --pepper-color-fg-icon-system-warning: #ca3500;
-  --pepper-color-fg-stroke-accent-tonal-default: #00000033;
+  --pepper-color-fg-stroke-accent-tonal-default: #0a0a0a33;
   --pepper-color-fg-stroke-brand-default: #0064fa;
   --pepper-color-fg-stroke-brand-strong: #000061;
   --pepper-color-fg-stroke-inverse-accent-tonal-default: #ffffff4d;
@@ -942,7 +942,7 @@
   --pepper-color-static-effect-glass-inverse-primary-high: #ffffff59;
   --pepper-color-static-effect-glass-inverse-primary-low: #ffffff26;
   --pepper-color-static-effect-glass-inverse-primary-medium: #ffffff40;
-  --pepper-color-static-effect-glass-primary-high: #2626264d;
+  --pepper-color-static-effect-glass-primary-high: #0a0a0a4d;
   --pepper-color-static-effect-glass-primary-low: #0a0a0a1a;
   --pepper-color-static-effect-glass-primary-medium: #0a0a0a33;
   --pepper-color-static-icon-inverse-primary: #ffffff;
@@ -962,7 +962,6 @@
   --pepper-overlay-scrim-low: #0a0a0a33;
   --pepper-overlay-scrim-medium: #0a0a0a73;
   --pepper-core-shadow-2xl-color: #0a0a0a4d;
-
   --pepper-core-shadow-lg-color: #0a0a0a26;
   --pepper-core-shadow-md-color: #0a0a0a1a;
   --pepper-core-shadow-sm-color: #0a0a0a1a;
@@ -1111,7 +1110,7 @@
   --pepper-color-bg-surface-inverse-accent-magenta-strong-hover: #e774bb;
   --pepper-color-bg-overlay-state-selected-default: #0064fa1a;
   --pepper-color-bg-overlay-state-selected-neutral-default: #0a0a0a1a;
-  --pepper-color-bg-overlay-state-selected-inverse-default: #ffffff26;
+  --pepper-color-bg-overlay-state-selected-inverse-default: #ffffff33;
   --pepper-color-bg-overlay-state-selected-neutral-inverse-default: #ffffff33;
   --pepper-color-bg-overlay-state-hover-default: #0064fa0d;
   --pepper-color-bg-overlay-state-hover-neutral-strong: #0a0a0a33;
@@ -1318,12 +1317,12 @@
   --pepper-color-bg-surface-inverse-accent-magenta-subtle-hover: #fcb6e1;
   --pepper-color-bg-surface-inverse-accent-magenta-strong-hover: #da62ac;
   /* Overlays */
-  --pepper-color-bg-overlay-state-selected-default: #ffffff26;
+  --pepper-color-bg-overlay-state-selected-default: #ffffff33;
   --pepper-color-bg-overlay-state-selected-neutral-default: #ffffff33;
   --pepper-color-bg-overlay-state-selected-inverse-default: #0064fa1a;
   --pepper-color-bg-overlay-state-selected-neutral-inverse-default: #0a0a0a1a;
   --pepper-color-bg-overlay-state-hover-default: #ffffff1a;
-  --pepper-color-bg-overlay-state-hover-neutral-strong: #ffffff40;
+  --pepper-color-bg-overlay-state-hover-neutral-strong: #ffffff4d;
   --pepper-color-bg-overlay-state-hover-neutral-subtle: #ffffff1a;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-subtle: #0a0a0a0d;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-strong: #0a0a0a33;
@@ -1478,7 +1477,7 @@
   --pepper-color-fg-icon-market-no-data-surface: #ffffff26;
   /* Strokes */
   --pepper-color-fg-stroke-strong: #ffffff;
-  --pepper-color-fg-stroke-subtle: #263048;
+  --pepper-color-fg-stroke-subtle: #545560;
   --pepper-color-fg-stroke-brand-default: #3484fb;
   --pepper-color-fg-stroke-brand-strong: #e6f0ff;
   --pepper-color-fg-stroke-negative: #fb2c36;
