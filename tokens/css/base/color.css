@@ -102,8 +102,8 @@
   --pepper-core-color-system-green-400: #05df72;
   --pepper-core-color-system-green-50: #f0fdf4;
   --pepper-core-color-system-green-500: #00c950;
-  --pepper-core-color-system-green-600: #00a63e;
-  --pepper-core-color-system-green-650: #00a83c;
+  --pepper-core-color-system-green-600: #00a83c;
+  --pepper-core-color-system-green-650: #00953a;
   --pepper-core-color-system-green-700: #008236;
   --pepper-core-color-system-green-800: #016630;
   --pepper-core-color-system-green-900: #0d542b;
@@ -600,8 +600,8 @@
   --pepper-core-color-midnight-200: #b9b9bc;
   --pepper-core-color-midnight-300: #898990;
   --pepper-core-color-midnight-400: #545560;
-  --pepper-core-color-midnight-500: #263048;
-  --pepper-core-color-midnight-600: #243a58;
+  --pepper-core-color-midnight-500: #424758;
+  --pepper-core-color-midnight-600: #2c3a53;
   --pepper-core-color-midnight-700: #1a2d47;
   --pepper-core-color-midnight-750: #142238;
   --pepper-core-color-midnight-800: #0f1d30;
@@ -747,7 +747,7 @@
   --pepper-color-bg-surface-accent-blue-subtle: #e6f0ff;
   --pepper-color-bg-surface-accent-cyan-strong: #00d3f3;
   --pepper-color-bg-surface-accent-cyan-subtle: #cefafe;
-  --pepper-color-bg-surface-accent-green-strong: #00a63e;
+  --pepper-color-bg-surface-accent-green-strong: #008236;
   --pepper-color-bg-surface-accent-green-subtle: #dcfce7;
   --pepper-color-bg-surface-accent-lime-strong: #94c748;
   --pepper-color-bg-surface-accent-lime-subtle: #d3f1a7;
@@ -794,7 +794,7 @@
   --pepper-color-bg-surface-inverse-accent-turquoise-strong: #3ac190;
   --pepper-color-bg-surface-inverse-accent-turquoise-subtle: #134e4a;
   --pepper-color-bg-surface-inverse-accent-violet-strong: #7f00ad;
-  --pepper-color-bg-surface-inverse-accent-violet-subtle: #260333;
+  --pepper-color-bg-surface-inverse-accent-violet-subtle: #3f144f;
   --pepper-color-bg-surface-inverse-accent-yellow-strong: #ddb30e;
   --pepper-color-bg-surface-inverse-accent-yellow-subtle: #451a03;
   --pepper-color-bg-surface-inverse-brand-crypto: #ff5000;
@@ -886,7 +886,7 @@
   --pepper-color-fg-icon-system-error: #e7000b;
   --pepper-color-fg-icon-system-success: #008236;
   --pepper-color-fg-icon-system-warning: #ca3500;
-  --pepper-color-fg-stroke-accent-tonal-default: #00000033;
+  --pepper-color-fg-stroke-accent-tonal-default: #0a0a0a33;
   --pepper-color-fg-stroke-brand-default: #0064fa;
   --pepper-color-fg-stroke-brand-strong: #000061;
   --pepper-color-fg-stroke-inverse-accent-tonal-default: #ffffff4d;
@@ -909,7 +909,7 @@
   --pepper-color-fg-text-accent-lime-default: #4d7c0f;
   --pepper-color-fg-text-accent-lime-strong: #1a2e05;
   --pepper-color-fg-text-accent-magenta-default: #9d174d;
-  --pepper-color-fg-text-accent-magenta-strong-9: #500724;
+  --pepper-color-fg-text-accent-magenta-strong: #500724;
   --pepper-color-fg-text-accent-orange-default: #ca3500;
   --pepper-color-fg-text-accent-orange-strong: #7e2a0c;
   --pepper-color-fg-text-accent-red-default: #e7000b;
@@ -942,7 +942,7 @@
   --pepper-color-static-effect-glass-inverse-primary-high: #ffffff59;
   --pepper-color-static-effect-glass-inverse-primary-low: #ffffff26;
   --pepper-color-static-effect-glass-inverse-primary-medium: #ffffff40;
-  --pepper-color-static-effect-glass-primary-high: #2626264d;
+  --pepper-color-static-effect-glass-primary-high: #0a0a0a4d;
   --pepper-color-static-effect-glass-primary-low: #0a0a0a1a;
   --pepper-color-static-effect-glass-primary-medium: #0a0a0a33;
   --pepper-color-static-icon-inverse-primary: #ffffff;
@@ -961,12 +961,12 @@
   --pepper-overlay-scrim-inverse-medium: #ffffff8c;
   --pepper-overlay-scrim-low: #0a0a0a33;
   --pepper-overlay-scrim-medium: #0a0a0a73;
-  --pepper-core-shadow-2xl-color: #0a0a0a40;
+  --pepper-core-shadow-2xl-color: #0a0a0a4d;
   --pepper-core-shadow-2xs-color: #0a0a0a0d;
-  --pepper-core-shadow-lg-color: #0a0a0a1a;
+  --pepper-core-shadow-lg-color: #0a0a0a26;
   --pepper-core-shadow-md-color: #0a0a0a1a;
-  --pepper-core-shadow-sm-color: #0a0a0a0d;
-  --pepper-core-shadow-xl-color: #0a0a0a1a;
+  --pepper-core-shadow-sm-color: #0a0a0a1a;
+  --pepper-core-shadow-xl-color: #0a0a0a26;
   --pepper-core-shadow-xs-color: #0a0a0a0d;
   --pepper-state-overlay-hover-strong: #0a0a0a33;
   --pepper-state-overlay-hover-subtle: #0a0a0a0d;
@@ -986,12 +986,12 @@
   --pepper-color-fg-text-accent-tonal-default: #0a0a0a99;
   --pepper-color-fg-text-inverse-accent-tonal-default: #ffffffb2;
   --pepper-color-fg-icon-accent-tonal-default: #0a0a0a99;
-  --pepper-color-fg-icon-inverse-accent-opacity-default: #ffffffb2;
-  --pepper-color-fg-text-inverse-positive: #00a63e;
+  --pepper-color-fg-icon-inverse-accent-tonal-default: #ffffffb2;
+  --pepper-color-fg-text-inverse-positive: #00a83c;
   --pepper-color-fg-text-inverse-negative: #fb2c36;
   --pepper-color-fg-text-inverse-disabled: #ffffff66;
   --pepper-color-fg-text-inverse-system-warning: #f54900;
-  --pepper-color-fg-text-inverse-system-success: #00a63e;
+  --pepper-color-fg-text-inverse-system-success: #00a83c;
   --pepper-color-fg-text-inverse-system-error: #fb2c36;
   --pepper-color-fg-text-inverse-brand-default: #3484fb;
   --pepper-color-fg-text-inverse-brand-strong: #e6f0ff;
@@ -1005,7 +1005,7 @@
   --pepper-color-fg-text-inverse-accent-yellow-strong: #fef7c8;
   --pepper-color-fg-text-inverse-accent-lime-default: #d3f1a7;
   --pepper-color-fg-text-inverse-accent-lime-strong: #efffd6;
-  --pepper-color-fg-text-inverse-accent-green-default: #00a63e;
+  --pepper-color-fg-text-inverse-accent-green-default: #00a83c;
   --pepper-color-fg-text-inverse-accent-green-strong: #05df72;
   --pepper-color-fg-text-inverse-accent-turquoise-default: #d7f9ed;
   --pepper-color-fg-text-inverse-accent-turquoise-strong: #ecfcf6;
@@ -1019,9 +1019,9 @@
   --pepper-color-fg-text-inverse-accent-magenta-strong: #ffecf8;
   --pepper-color-fg-icon-inverse-disabled: #ffffff66;
   --pepper-color-fg-icon-inverse-negative: #fb2c36;
-  --pepper-color-fg-icon-inverse-positive: #00a63e;
+  --pepper-color-fg-icon-inverse-positive: #00a83c;
   --pepper-color-fg-icon-inverse-system-error: #fb2c36;
-  --pepper-color-fg-icon-inverse-system-success: #00a63e;
+  --pepper-color-fg-icon-inverse-system-success: #00a83c;
   --pepper-color-fg-icon-inverse-system-warning: #f54900;
   --pepper-color-fg-icon-inverse-brand-default: #3484fb;
   --pepper-color-fg-icon-inverse-brand-strong: #e6f0ff;
@@ -1035,7 +1035,7 @@
   --pepper-color-fg-icon-inverse-accent-yellow-strong: #fef7c8;
   --pepper-color-fg-icon-inverse-accent-lime-default: #d3f1a7;
   --pepper-color-fg-icon-inverse-accent-lime-strong: #efffd6;
-  --pepper-color-fg-icon-inverse-accent-green-default: #00a63e;
+  --pepper-color-fg-icon-inverse-accent-green-default: #00a83c;
   --pepper-color-fg-icon-inverse-accent-green-strong: #05df72;
   --pepper-color-fg-icon-inverse-accent-turquoise-default: #d7f9ed;
   --pepper-color-fg-icon-inverse-accent-turquoise-strong: #ecfcf6;
@@ -1046,7 +1046,7 @@
   --pepper-color-fg-icon-inverse-accent-violet-default: #e3c0f0;
   --pepper-color-fg-icon-inverse-accent-violet-strong: #fcf4ff;
   --pepper-color-fg-icon-inverse-accent-magenta-default: #fdd0ec;
-  --pepper-color-fg-icon-inverse-accent-magenta-strong-9: #ffecf8;
+  --pepper-color-fg-icon-inverse-accent-magenta-strong: #ffecf8;
   --pepper-color-fg-icon-market-no-data-icon: #0a0a0a99;
   --pepper-color-fg-icon-market-open-icon: #00a63e;
   --pepper-color-fg-icon-market-open-surface: #dcfce7;
@@ -1111,7 +1111,7 @@
   --pepper-color-bg-surface-inverse-accent-magenta-strong-hover: #e774bb;
   --pepper-color-bg-overlay-state-selected-default: #0064fa1a;
   --pepper-color-bg-overlay-state-selected-neutral-default: #0a0a0a1a;
-  --pepper-color-bg-overlay-state-selected-inverse-default: #ffffff26;
+  --pepper-color-bg-overlay-state-selected-inverse-default: #ffffff33;
   --pepper-color-bg-overlay-state-selected-neutral-inverse-default: #ffffff33;
   --pepper-color-bg-overlay-state-hover-default: #0064fa0d;
   --pepper-color-bg-overlay-state-hover-neutral-strong: #0a0a0a33;
@@ -1318,12 +1318,12 @@
   --pepper-color-bg-surface-inverse-accent-magenta-subtle-hover: #fcb6e1;
   --pepper-color-bg-surface-inverse-accent-magenta-strong-hover: #da62ac;
   /* Overlays */
-  --pepper-color-bg-overlay-state-selected-default: #ffffff26;
+  --pepper-color-bg-overlay-state-selected-default: #ffffff33;
   --pepper-color-bg-overlay-state-selected-neutral-default: #ffffff33;
   --pepper-color-bg-overlay-state-selected-inverse-default: #0064fa1a;
   --pepper-color-bg-overlay-state-selected-neutral-inverse-default: #0a0a0a1a;
   --pepper-color-bg-overlay-state-hover-default: #ffffff1a;
-  --pepper-color-bg-overlay-state-hover-neutral-strong: #ffffff40;
+  --pepper-color-bg-overlay-state-hover-neutral-strong: #ffffff4d;
   --pepper-color-bg-overlay-state-hover-neutral-subtle: #ffffff1a;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-subtle: #0a0a0a0d;
   --pepper-color-bg-overlay-state-hover-neutral-inverse-strong: #0a0a0a33;
@@ -1342,9 +1342,9 @@
   --pepper-color-fg-text-brand-secondary-default: #53eafd;
   --pepper-color-fg-text-brand-secondary-strong: #ecfeff;
   --pepper-color-fg-text-negative: #fb2c36;
-  --pepper-color-fg-text-positive: #00a63e;
+  --pepper-color-fg-text-positive: #00a83c;
   --pepper-color-fg-text-system-error: #fb2c36;
-  --pepper-color-fg-text-system-success: #00a63e;
+  --pepper-color-fg-text-system-success: #00a83c;
   --pepper-color-fg-text-system-warning: #f54900;
   --pepper-color-fg-text-selected: #ffffff;
   --pepper-color-fg-text-inverse-selected: #0064fa;
@@ -1366,7 +1366,7 @@
   --pepper-color-fg-text-accent-lime-default: #d3f1a7;
   --pepper-color-fg-text-accent-lime-strong: #efffd6;
   --pepper-color-fg-text-accent-magenta-default: #fdd0ec;
-  --pepper-color-fg-text-accent-magenta-strong-9: #ffecf8;
+  --pepper-color-fg-text-accent-magenta-strong: #ffecf8;
   --pepper-color-fg-text-accent-orange-default: #f54900;
   --pepper-color-fg-text-accent-orange-strong: #ff8904;
   --pepper-color-fg-text-accent-red-default: #fb2c36;
@@ -1409,9 +1409,9 @@
   --pepper-color-fg-icon-inverse-tertiary: #1a2d47;
   --pepper-color-fg-icon-inverse-disabled: #000b1c4d;
   --pepper-color-fg-icon-negative: #fb2c36;
-  --pepper-color-fg-icon-positive: #00a63e;
+  --pepper-color-fg-icon-positive: #00a83c;
   --pepper-color-fg-icon-system-error: #fb2c36;
-  --pepper-color-fg-icon-system-success: #00a63e;
+  --pepper-color-fg-icon-system-success: #00a83c;
   --pepper-color-fg-icon-system-warning: #f54900;
   --pepper-color-fg-icon-brand-default: #3484fb;
   --pepper-color-fg-icon-brand-strong: #e6f0ff;
@@ -1432,7 +1432,7 @@
   --pepper-color-fg-icon-accent-blue-strong: #e6f0ff;
   --pepper-color-fg-icon-accent-cyan-default: #53eafd;
   --pepper-color-fg-icon-accent-cyan-strong: #ecfeff;
-  --pepper-color-fg-icon-accent-green-default: #00a63e;
+  --pepper-color-fg-icon-accent-green-default: #00a83c;
   --pepper-color-fg-icon-accent-green-strong: #05df72;
   --pepper-color-fg-icon-accent-lime-default: #d3f1a7;
   --pepper-color-fg-icon-accent-lime-strong: #efffd6;
@@ -1449,7 +1449,7 @@
   --pepper-color-fg-icon-accent-yellow-default: #f5e989;
   --pepper-color-fg-icon-accent-yellow-strong: #fef7c8;
   --pepper-color-fg-icon-accent-tonal-default: #ffffffb2;
-  --pepper-color-fg-icon-inverse-accent-opacity-default: #000b1c99;
+  --pepper-color-fg-icon-inverse-accent-tonal-default: #000b1c99;
   --pepper-color-fg-icon-inverse-accent-red-default: #e7000b;
   --pepper-color-fg-icon-inverse-accent-red-strong: #460809;
   --pepper-color-fg-icon-inverse-accent-orange-default: #ca3500;
@@ -1469,7 +1469,7 @@
   --pepper-color-fg-icon-inverse-accent-violet-default: #3f144f;
   --pepper-color-fg-icon-inverse-accent-violet-strong: #260333;
   --pepper-color-fg-icon-inverse-accent-magenta-default: #9d174d;
-  --pepper-color-fg-icon-inverse-accent-magenta-strong-9: #500724;
+  --pepper-color-fg-icon-inverse-accent-magenta-strong: #500724;
   --pepper-color-fg-icon-market-no-data-icon: #898990;
   --pepper-color-fg-icon-market-open-icon: #05df72;
   --pepper-color-fg-icon-market-open-surface: #0d542b;
@@ -1478,7 +1478,7 @@
   --pepper-color-fg-icon-market-no-data-surface: #ffffff26;
   /* Strokes */
   --pepper-color-fg-stroke-strong: #ffffff;
-  --pepper-color-fg-stroke-subtle: #263048;
+  --pepper-color-fg-stroke-subtle: #545560;
   --pepper-color-fg-stroke-brand-default: #3484fb;
   --pepper-color-fg-stroke-brand-strong: #e6f0ff;
   --pepper-color-fg-stroke-negative: #fb2c36;
@@ -1711,7 +1711,7 @@
   --pepper-color-fg-text-accent-lime-default: #d3f1a7;
   --pepper-color-fg-text-accent-lime-strong: #efffd6;
   --pepper-color-fg-text-accent-magenta-default: #fdd0ec;
-  --pepper-color-fg-text-accent-magenta-strong-9: #ffecf8;
+  --pepper-color-fg-text-accent-magenta-strong: #ffecf8;
   --pepper-color-fg-text-accent-orange-default: #f54900;
   --pepper-color-fg-text-accent-orange-strong: #ff8904;
   --pepper-color-fg-text-accent-red-default: #fb2c36;
@@ -1794,7 +1794,7 @@
   --pepper-color-fg-icon-accent-yellow-default: #f5e989;
   --pepper-color-fg-icon-accent-yellow-strong: #fef7c8;
   --pepper-color-fg-icon-accent-tonal-default: #ffffffb2;
-  --pepper-color-fg-icon-inverse-accent-opacity-default: #0a0a0a99;
+  --pepper-color-fg-icon-inverse-accent-tonal-default: #0a0a0a99;
   --pepper-color-fg-icon-inverse-accent-red-default: #e7000b;
   --pepper-color-fg-icon-inverse-accent-red-strong: #460809;
   --pepper-color-fg-icon-inverse-accent-orange-default: #ca3500;
@@ -1814,7 +1814,7 @@
   --pepper-color-fg-icon-inverse-accent-violet-default: #3f144f;
   --pepper-color-fg-icon-inverse-accent-violet-strong: #260333;
   --pepper-color-fg-icon-inverse-accent-magenta-default: #9d174d;
-  --pepper-color-fg-icon-inverse-accent-magenta-strong-9: #500724;
+  --pepper-color-fg-icon-inverse-accent-magenta-strong: #500724;
   --pepper-color-fg-icon-market-no-data-icon: #737373;
   --pepper-color-fg-icon-market-open-icon: #05df72;
   --pepper-color-fg-icon-market-open-surface: #0d542b;

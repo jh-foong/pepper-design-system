@@ -5,28 +5,90 @@
  * Naming convention (v2.0.0):
  * - --pepper-core-*  = primitives (raw scales). Don't use directly in product.
  * - --pepper-*       = semantic/component/static/state/overlay. Use these.
+ *
+ * Gap and Inset were re-synced against Figma's "Spacing v2.0.0" board (released
+ * June 1, 2026): new 3xs/2xs steps were added, which shifted what several
+ * existing step names point to (e.g. gap-lg was 24px, is now 20px — the old
+ * 24px value is gap-xl). This is a breaking rename versus the prior export;
+ * every consumer of --pepper-space-gap-* / --pepper-space-inset-* needs to be
+ * checked against the new values, not just re-pointed at the same name.
+ *
+ * Theme Layout Spacing (Desktop/Tablet/Mobile) was re-synced against Figma's
+ * "Layout Grid & Responsive Spacing" board, cross-checked row by row against
+ * its "Variables · Responsive — all values below are live bound Figma
+ * variables" table. Most Tablet/Mobile override values were wrong (the
+ * previous export's Desktop defaults were correct, but the responsive
+ * overrides look like they were guessed/approximated rather than read from
+ * the actual bound variables). Also fixed a naming bug: the "gutter-stack"
+ * tokens had a duplicated "stack" segment (gutter-stack-stack-sm) — Figma's
+ * own developer-token column confirms the correct name is gutter-stack-sm.
  */
 
 :root {
+  /* ============================================================
+     PRIMITIVES — Spacing scale (base unit: 8px)
+     Figma's own curated "scale/spacing-*" collection — a named subset of the
+     exhaustive raw unit table in dimension.css, specifically for spacing use.
+     ============================================================ */
+  --pepper-core-spacing-0: 0px;
+  --pepper-core-spacing-2: 2px;
+  --pepper-core-spacing-4: 4px;
+  --pepper-core-spacing-8: 8px;
+  --pepper-core-spacing-12: 12px;
+  --pepper-core-spacing-16: 16px;
+  --pepper-core-spacing-20: 20px;
+  --pepper-core-spacing-24: 24px;
+  --pepper-core-spacing-28: 28px;
+  --pepper-core-spacing-32: 32px;
+  --pepper-core-spacing-36: 36px;
+  --pepper-core-spacing-40: 40px;
+  --pepper-core-spacing-48: 48px;
+  --pepper-core-spacing-56: 56px;
+  --pepper-core-spacing-64: 64px;
+  --pepper-core-spacing-80: 80px;
+  --pepper-core-spacing-96: 96px;
+  --pepper-core-spacing-128: 128px;
+  --pepper-core-spacing-160: 160px;
+  --pepper-core-spacing-256: 256px;
+
   /* Inset Tokens (Internal Padding) — space inside a container */
-  --pepper-space-inset-2xs: 4px;
-  --pepper-space-inset-3xs: 2px;
-  --pepper-space-inset-lg: 24px;
-  --pepper-space-inset-md: 16px;
-  --pepper-space-inset-none: 0px;
-  --pepper-space-inset-sm: 12px;
-  --pepper-space-inset-xl: 32px;
-  --pepper-space-inset-xs: 8px;
+  --pepper-space-inset-none: var(--pepper-core-spacing-0);
+  --pepper-space-inset-3xs: var(--pepper-core-spacing-2);
+  --pepper-space-inset-2xs: var(--pepper-core-spacing-4);
+  --pepper-space-inset-xs: var(--pepper-core-spacing-8);
+  --pepper-space-inset-sm: var(--pepper-core-spacing-12);
+  --pepper-space-inset-md: var(--pepper-core-spacing-16);
+  --pepper-space-inset-lg: var(--pepper-core-spacing-20);
+  --pepper-space-inset-xl: var(--pepper-core-spacing-24);
+  --pepper-space-inset-2xl: var(--pepper-core-spacing-32);
 
   /* Gap Tokens (Proximity/Stacking) — space between elements */
-  --pepper-space-gap-lg: 24px;
-  --pepper-space-gap-md: 16px;
-  --pepper-space-gap-none: 0px;
-  --pepper-space-gap-sm: 8px;
-  --pepper-space-gap-xl: 48px;
-  --pepper-space-gap-xs: 4px;
+  --pepper-space-gap-none: var(--pepper-core-spacing-0);
+  --pepper-space-gap-3xs: var(--pepper-core-spacing-2);
+  --pepper-space-gap-2xs: var(--pepper-core-spacing-4);
+  --pepper-space-gap-xs: var(--pepper-core-spacing-8);
+  --pepper-space-gap-sm: var(--pepper-core-spacing-12);
+  --pepper-space-gap-md: var(--pepper-core-spacing-16);
+  --pepper-space-gap-lg: var(--pepper-core-spacing-20);
+  --pepper-space-gap-xl: var(--pepper-core-spacing-24);
+  --pepper-space-gap-2xl: var(--pepper-core-spacing-32);
+  --pepper-space-gap-3xl: var(--pepper-core-spacing-40);
+  --pepper-space-gap-4xl: var(--pepper-core-spacing-48);
 
-  /* Theme Layout Spacing — responsive layout values (desktop defaults; tablet/mobile v2.1) */
+  /* ============================================================
+     GRID — canvas/viewport primitives per breakpoint
+     ============================================================ */
+  --pepper-core-size-canvas-viewport-width-desktop: 1440px;
+  --pepper-core-size-canvas-viewport-width-tablet: 768px;
+  --pepper-core-size-canvas-viewport-width-mobile: 375px;
+  --pepper-core-size-canvas-viewport-height-desktop: 900px;
+  --pepper-core-size-canvas-viewport-height-tablet: 1024px;
+  --pepper-core-size-canvas-viewport-height-mobile: 812px;
+  --pepper-core-size-canvas-columns-desktop: 12;
+  --pepper-core-size-canvas-columns-tablet: 8;
+  --pepper-core-size-canvas-columns-mobile: 4;
+
+  /* Theme Layout Spacing — responsive layout values (Desktop defaults; Tablet/Mobile below). */
   --pepper-space-theme-spacing-content-gap-lg: 64px;
   --pepper-space-theme-spacing-content-gap-md: 40px;
   --pepper-space-theme-spacing-content-gap-sm: 32px;
@@ -37,9 +99,9 @@
   --pepper-space-theme-spacing-layout-gap-lg: 80px;
   --pepper-space-theme-spacing-layout-gap-md: 40px;
   --pepper-space-theme-spacing-layout-gutter: 20px;
-  --pepper-space-theme-spacing-layout-gutter-stack-lg: 20px;
-  --pepper-space-theme-spacing-layout-gutter-stack-md: 20px;
-  --pepper-space-theme-spacing-layout-gutter-stack-stack-sm: 20px;
+  --pepper-space-theme-spacing-layout-gutter-stack-lg: 32px;
+  --pepper-space-theme-spacing-layout-gutter-stack-md: 24px;
+  --pepper-space-theme-spacing-layout-gutter-stack-sm: 20px;
   --pepper-space-theme-spacing-layout-margin: 80px;
   --pepper-space-theme-spacing-layout-pad: 80px;
 
@@ -52,7 +114,6 @@
   --pepper-core-size-screen-width-xl: 1280px;
   --pepper-core-size-screen-width-2xl: 1440px;
 
-  /* NOTE: State overlay blur tokens moved to blur.css as --pepper-blur-state-* */
   /* NOTE: Shadow offset tokens moved to shadow.css as --pepper-shadow-*-offset-x/y */
 }
 
@@ -64,18 +125,18 @@
 [data-theme="tablet"] {
   --pepper-space-theme-spacing-layout-gutter: 20px;
   --pepper-space-theme-spacing-layout-margin: 40px;
-  --pepper-space-theme-spacing-layout-pad: 64px;
+  --pepper-space-theme-spacing-layout-pad: 40px;
   --pepper-space-theme-spacing-layout-gap-lg: 40px;
   --pepper-space-theme-spacing-layout-gap-md: 24px;
-  --pepper-space-theme-spacing-layout-gutter-stack-lg: 32px;
-  --pepper-space-theme-spacing-layout-gutter-stack-md: 20px;
-  --pepper-space-theme-spacing-layout-gutter-stack-stack-sm: 20px;
+  --pepper-space-theme-spacing-layout-gutter-stack-lg: 24px;
+  --pepper-space-theme-spacing-layout-gutter-stack-md: 16px;
+  --pepper-space-theme-spacing-layout-gutter-stack-sm: 8px;
   --pepper-space-theme-spacing-content-pad-sm: 24px;
   --pepper-space-theme-spacing-content-pad-md: 32px;
   --pepper-space-theme-spacing-content-pad-lg: 40px;
   --pepper-space-theme-spacing-content-gap-xs: 16px;
   --pepper-space-theme-spacing-content-gap-sm: 24px;
-  --pepper-space-theme-spacing-content-gap-md: 24px;
+  --pepper-space-theme-spacing-content-gap-md: 32px;
   --pepper-space-theme-spacing-content-gap-lg: 40px;
 }
 
@@ -87,17 +148,17 @@
 [data-theme="mobile"] {
   --pepper-space-theme-spacing-layout-gutter: 8px;
   --pepper-space-theme-spacing-layout-margin: 20px;
-  --pepper-space-theme-spacing-layout-pad: 40px;
-  --pepper-space-theme-spacing-layout-gap-lg: 40px;
-  --pepper-space-theme-spacing-layout-gap-md: 24px;
-  --pepper-space-theme-spacing-layout-gutter-stack-lg: 32px;
-  --pepper-space-theme-spacing-layout-gutter-stack-md: 32px;
-  --pepper-space-theme-spacing-layout-gutter-stack-stack-sm: 8px;
-  --pepper-space-theme-spacing-content-pad-sm: 24px;
+  --pepper-space-theme-spacing-layout-pad: 20px;
+  --pepper-space-theme-spacing-layout-gap-lg: 32px;
+  --pepper-space-theme-spacing-layout-gap-md: 20px;
+  --pepper-space-theme-spacing-layout-gutter-stack-lg: 24px;
+  --pepper-space-theme-spacing-layout-gutter-stack-md: 16px;
+  --pepper-space-theme-spacing-layout-gutter-stack-sm: 8px;
+  --pepper-space-theme-spacing-content-pad-sm: 16px;
   --pepper-space-theme-spacing-content-pad-md: 24px;
-  --pepper-space-theme-spacing-content-pad-lg: 24px;
-  --pepper-space-theme-spacing-content-gap-xs: 16px;
-  --pepper-space-theme-spacing-content-gap-sm: 24px;
+  --pepper-space-theme-spacing-content-pad-lg: 32px;
+  --pepper-space-theme-spacing-content-gap-xs: 8px;
+  --pepper-space-theme-spacing-content-gap-sm: 16px;
   --pepper-space-theme-spacing-content-gap-md: 24px;
   --pepper-space-theme-spacing-content-gap-lg: 32px;
 }

@@ -715,7 +715,7 @@ public enum PepperCoreColor {
     public static let semanticColorForegroundTextAccentLimeDefault = UIColor(red: 0x4d/255.0, green: 0x7c/255.0, blue: 0x0f/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentLimeStrong = UIColor(red: 0x1a/255.0, green: 0x2e/255.0, blue: 0x05/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentMagentaDefault = UIColor(red: 0x9d/255.0, green: 0x17/255.0, blue: 0x4d/255.0, alpha: 1.0)
-    public static let semanticColorForegroundTextAccentMagentaStrong9 = UIColor(red: 0x50/255.0, green: 0x07/255.0, blue: 0x24/255.0, alpha: 1.0)
+    public static let semanticColorForegroundTextAccentMagentaStrong = UIColor(red: 0x50/255.0, green: 0x07/255.0, blue: 0x24/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentOrangeDefault = UIColor(red: 0xca/255.0, green: 0x35/255.0, blue: 0x00/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentOrangeStrong = UIColor(red: 0x7e/255.0, green: 0x2a/255.0, blue: 0x0c/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextAccentRedDefault = UIColor(red: 0xe7/255.0, green: 0x00/255.0, blue: 0x0b/255.0, alpha: 1.0)
@@ -741,7 +741,6 @@ public enum PepperCoreColor {
     public static let semanticColorForegroundTextSystemSuccess = UIColor(red: 0x00/255.0, green: 0x82/255.0, blue: 0x36/255.0, alpha: 1.0)
     public static let semanticColorForegroundTextSystemWarning = UIColor(red: 0xca/255.0, green: 0x35/255.0, blue: 0x00/255.0, alpha: 1.0)
     public static let shadow2xlColor = UIColor(red: 0x00/255.0, green: 0x00/255.0, blue: 0x00/255.0, alpha: 0x40/255.0)
-    public static let shadow2xsColor = UIColor(red: 0x00/255.0, green: 0x00/255.0, blue: 0x00/255.0, alpha: 0x0d/255.0)
     public static let shadowLgColor = UIColor(red: 0x00/255.0, green: 0x00/255.0, blue: 0x00/255.0, alpha: 0x1a/255.0)
     public static let shadowMdColor = UIColor(red: 0x00/255.0, green: 0x00/255.0, blue: 0x00/255.0, alpha: 0x1a/255.0)
     public static let shadowSmColor = UIColor(red: 0x00/255.0, green: 0x00/255.0, blue: 0x00/255.0, alpha: 0x0d/255.0)
@@ -970,10 +969,6 @@ public enum PepperCoreDimension {
     public static let shadow2xlOffsetX: CGFloat = 0
     public static let shadow2xlOffsetY: CGFloat = 24
     public static let shadow2xlSpreadRadius: CGFloat = -12
-    public static let shadow2xsBlurRadius: CGFloat = 1
-    public static let shadow2xsOffsetX: CGFloat = 0
-    public static let shadow2xsOffsetY: CGFloat = 1
-    public static let shadow2xsSpreadRadius: CGFloat = 0
     public static let shadowLgBlurRadius: CGFloat = 14
     public static let shadowLgOffsetX: CGFloat = 0
     public static let shadowLgOffsetY: CGFloat = 10
@@ -1039,7 +1034,7 @@ public enum PepperCoreSize {
 public enum PepperCoreRadius {
     public static let _2xl: CGFloat = 24
     public static let _3xl: CGFloat = 32
-    public static let full: CGFloat = 9999
+    public static let full: CGFloat = 999
     public static let lg: CGFloat = 12
     public static let md: CGFloat = 8
     public static let none: CGFloat = 0

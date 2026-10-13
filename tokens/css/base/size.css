@@ -20,6 +20,19 @@
   --pepper-core-size-screen-width-xs: 375px;
 
   /* ============================================================
+     PRIMITIVES — screen-height breakpoints (new: added from Figma's
+     "Layout Grid & Responsive Spacing" board — the repo previously
+     only had screen-width, not screen-height)
+     ============================================================ */
+  --pepper-core-size-screen-height-2xl: 900px;
+  --pepper-core-size-screen-height-2xs: 568px;
+  --pepper-core-size-screen-height-lg: 768px;
+  --pepper-core-size-screen-height-md: 1024px;
+  --pepper-core-size-screen-height-sm: 960px;
+  --pepper-core-size-screen-height-xl: 800px;
+  --pepper-core-size-screen-height-xs: 812px;
+
+  /* ============================================================
      SEMANTIC — icon sizes by context (system / utility / instrument / marketing)
      ============================================================ */
   --pepper-size-instrument-icon-size-icon-12: 12px;

@@ -188,10 +188,6 @@
     <dimen name="dimension_shadow_2xl_offset_x">0dp</dimen>
     <dimen name="dimension_shadow_2xl_offset_y">24dp</dimen>
     <dimen name="dimension_shadow_2xl_spread_radius">-12dp</dimen>
-    <dimen name="dimension_shadow_2xs_blur_radius">1dp</dimen>
-    <dimen name="dimension_shadow_2xs_offset_x">0dp</dimen>
-    <dimen name="dimension_shadow_2xs_offset_y">1dp</dimen>
-    <dimen name="dimension_shadow_2xs_spread_radius">0dp</dimen>
     <dimen name="dimension_shadow_lg_blur_radius">14dp</dimen>
     <dimen name="dimension_shadow_lg_offset_x">0dp</dimen>
     <dimen name="dimension_shadow_lg_offset_y">10dp</dimen>
@@ -251,7 +247,7 @@
     <dimen name="size_utility_icon_size_icon_40">40dp</dimen>
     <dimen name="border_radius_2xl">24dp</dimen>
     <dimen name="border_radius_3xl">32dp</dimen>
-    <dimen name="border_radius_full">9999dp</dimen>
+    <dimen name="border_radius_full">999dp</dimen>
     <dimen name="border_radius_lg">12dp</dimen>
     <dimen name="border_radius_md">8dp</dimen>
     <dimen name="border_radius_none">0dp</dimen>

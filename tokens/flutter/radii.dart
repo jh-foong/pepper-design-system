@@ -11,7 +11,7 @@ class PepperBorderRadius {
 
   static const 3xl = 32;
 
-  static const full = 9999;
+  static const full = 999;
 
   static const lg = 12;
 

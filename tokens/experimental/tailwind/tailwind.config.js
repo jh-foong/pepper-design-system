@@ -716,7 +716,7 @@ module.exports = {
         "pepper-core-semantic-color-foreground-text-accent-lime-default": "#4d7c0f",
         "pepper-core-semantic-color-foreground-text-accent-lime-strong": "#1a2e05",
         "pepper-core-semantic-color-foreground-text-accent-magenta-default": "#9d174d",
-        "pepper-core-semantic-color-foreground-text-accent-magenta-strong-9": "#500724",
+        "pepper-core-semantic-color-foreground-text-accent-magenta-strong": "#500724",
         "pepper-core-semantic-color-foreground-text-accent-orange-default": "#ca3500",
         "pepper-core-semantic-color-foreground-text-accent-orange-strong": "#7e2a0c",
         "pepper-core-semantic-color-foreground-text-accent-red-default": "#e7000b",
@@ -834,7 +834,7 @@ module.exports = {
       borderRadius: {
         "pepper-core-2xl": "24px",
         "pepper-core-3xl": "32px",
-        "pepper-core-full": "9999px",
+        "pepper-core-full": "999px",
         "pepper-core-lg": "12px",
         "pepper-core-md": "8px",
         "pepper-core-none": "0px",

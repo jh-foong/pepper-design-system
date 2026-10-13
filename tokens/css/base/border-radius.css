@@ -19,7 +19,7 @@
 :root {
   --pepper-border-radius-2xl: 24px;
   --pepper-border-radius-3xl: 32px;
-  --pepper-border-radius-full: 9999px;
+  --pepper-border-radius-full: 999px;
   --pepper-border-radius-lg: 12px;
   --pepper-border-radius-md: 8px;
   --pepper-border-radius-none: 0px;
