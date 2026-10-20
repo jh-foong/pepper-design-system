@@ -18,7 +18,8 @@ const config = {
     "../src/stories/foundations/Effects.stories.jsx",
     "../src/stories/foundations/Spacing.stories.jsx",
     "../src/stories/foundations/Layout.stories.jsx",
-    "../src/stories/components/Button.stories.jsx"
+    "../src/stories/components/Button.stories.jsx",
+    "../src/stories/components/ButtonPressPoC.stories.jsx"
   ],
   "addons": [
     "@chromatic-com/storybook",

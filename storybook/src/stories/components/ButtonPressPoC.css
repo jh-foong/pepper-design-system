@@ -1,0 +1,63 @@
+/*
+ * PROOF OF CONCEPT — pressed-state animation for Button.
+ * Idea: pressed = the existing hover colour + motion. No new colour tokens.
+ * Scoped to opt-in classes so the real Button is untouched.
+ * Motion values are local placeholders; they'd become --pepper-motion-* tokens.
+ */
+
+.pepper-press-poc {
+  --poc-duration-hover: 150ms;
+  --poc-duration-press: 90ms;
+  --poc-easing: cubic-bezier(0.2, 0, 0, 1);
+  --poc-scale-pressed: 0.97;
+  position: relative;
+  overflow: hidden;
+  /* Button.jsx sets an inline `transition`, so !important is needed here. */
+  transition:
+    background var(--poc-duration-hover) var(--poc-easing),
+    transform var(--poc-duration-press) var(--poc-easing) !important;
+}
+
+/* Pressed keeps the hover colour (needed on touch, where :hover is unreliable). */
+.pepper-press-poc:active:not(:disabled) {
+  background: var(--pepper-button-bg-hover);
+}
+
+/* Variant A: scale down */
+.pepper-press-scale:active:not(:disabled) {
+  transform: scale(var(--poc-scale-pressed));
+}
+
+/* Variant B: ripple from the pointer position */
+.pepper-press-ripple-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.18;
+  pointer-events: none;
+  transform: scale(0);
+  animation: pepper-press-ripple 450ms var(--poc-easing) forwards;
+}
+
+@keyframes pepper-press-ripple {
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Reduced motion: no scale, no ripple. A small static cue keeps pressed distinct. */
+@media (prefers-reduced-motion: reduce) {
+  .pepper-press-poc {
+    transition: background 0s !important;
+  }
+  .pepper-press-scale:active:not(:disabled) {
+    transform: none;
+  }
+  .pepper-press-ripple-dot {
+    display: none;
+  }
+  .pepper-press-poc:active:not(:disabled) {
+    box-shadow: inset 0 0 0 1px currentColor;
+  }
+}
